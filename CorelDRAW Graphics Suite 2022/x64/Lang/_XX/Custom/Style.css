@@ -1,0 +1,647 @@
+﻿/* CSS RESET */
+
+ {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+/* HIGH-DPI IMAGES */
+
+img {
+	-ms-interpolation-mode: bicubic;
+	max-width: 100%;
+	height: auto;
+}
+
+
+/* FONT HIERARCHY */
+
+/* S: 13/18px @1x */
+/*.s,span,label 
+{
+	font-size: 0.875em;/*0.8125em*/
+	/*line-height: 1.3846153846153846em;*/
+}
+/* M: 16/24px @1x */
+body 
+{
+	font-size: 1em;
+	/*line-height: 1.5em;*/
+	-webkit-text-size-adjust: 100%;
+}
+
+/* L: 21/28px @1x */
+.l 
+{
+	font-size: 1.3125em;
+	/*line-height: 1.33333333333333em; */
+}
+
+/* XL: 26/36px @1x */
+.xl{
+	font-size: 1.625em;
+	/*line-height: 1.3846153846153846em; */
+	font-weight: 300;
+}
+
+/* XXL: 42/48px @1x */
+.xxl, h2 {
+	font-size: 2.625em;
+	/*line-height: 1.1428571428571428em; */
+	font-weight: 100;
+}
+.Initiator
+{
+	cursor: auto;
+	width: 9.2em;
+	font-family: 'Segoe UI' , Tahoma;
+	font-size: 0.8125em;
+	color: #FFFFFF;
+	border: solid 1px #B3B3B3; 
+	background: #61A706;
+	
+}
+
+.Failure
+{
+	cursor: auto;
+	color: #FF0000;
+}
+
+.Success
+{
+	cursor: auto;
+	color: #61A706;
+}
+
+.Header
+{
+    color: #000000;
+}
+
+.Desc
+{
+
+    color: #333333;    
+}
+.Highlight
+{
+	color: #FF0000;
+}
+/* SCALING EMs BASED ON WINDOW SIZE */
+/* 790px wide is standard Welcome Book size on 1x screen */
+/* This contains scalings for window sizes up to 2x, in 16 increments */
+/* For Reference: 100% = 1 em ~= 16px ~= 14pt */
+
+@media only screen and (min-width: 676px) {
+	body {
+		/* 1em = 17px */
+		font-size: 1.0625em;
+	}
+}
+
+@media only screen and (min-width: 716x) {
+	body {
+		/* 1em = 18px */
+		font-size: 1.125em;
+	}
+}
+
+@media only screen and (min-width: 755px) {
+	body {
+		/* 1em = 19px */
+		font-size: 1.1875em;
+	}
+}
+
+@media only screen and (min-width: 795px) {
+	body {
+		/* 1em = 20px */
+		font-size: 1.25em;
+	}
+}
+
+@media only screen and (min-width: 835px) {
+	body {
+		/* 1em = 21px */
+		font-size: 1.3125em;
+	}
+}
+
+@media only screen and (min-width: 875px) {
+	body {
+		/* 1em =1.38em */
+		font-size: 1.375em;
+	}
+}
+
+@media only screen and (min-width: 914px) {
+	body {
+		/* 1em = 23px */
+		font-size: 1.4375em;
+	}
+}
+
+@media only screen and (min-width: 954px) {
+	body {
+		/* 1em = 24px */
+		font-size: 1.5em;
+	}
+}
+
+@media only screen and (min-width: 994px) {
+	body {
+		/* 1em = 25px */
+		font-size: 1.5625em;
+	}
+}
+
+@media only screen and (min-width: 1034px) {
+	body {
+		/* 1em = 26px */
+		font-size: 1.625em;
+	}
+}
+
+@media only screen and (min-width: 1073px) {
+	body {
+		/* 1em = 27px */
+		font-size: 1.6875em;
+	}
+}
+
+@media only screen and (min-width: 1113px) {
+	body {
+		/* 1em = 28px */
+		font-size: 1.75em;
+	}
+}
+
+@media only screen and (min-width: 1153px) {
+	body {
+		/* 1em = 29px */
+		font-size: 1.8125em;
+	}
+}
+
+@media only screen and (min-width: 1193px) {
+	body {
+		/* 1em = 30px */
+		font-size: 1.875em;
+	}
+}
+
+@media only screen and (min-width: 1232px) {
+	body {
+		/* 1em = 31px */
+		font-size: 1.9375em;
+	}
+}
+
+@media only screen and (min-width: 1272px) {
+	body {
+		/* 1em = 32px */
+		font-size: 2.0em;
+	}
+}
+
+body
+{
+	background-color: #FFFFFF;
+	behavior: url(js\Refresh.htc);
+	font-family: 'Segoe UI' , Tahoma;
+	/*color: #CDCCCC; */
+	color: black;
+	cursor: auto;
+	
+}
+input.geomsize 
+{
+width: 1em;
+height: 1em;
+}
+
+button
+{
+	cursor: auto;
+	width: 9.2em;
+	font-family: 'Segoe UI' , Tahoma;
+	font-size: 0.8125em; /* 13px */
+	color: #333333;
+	border: solid 1px #333333; 
+	background: #FFFFFF;
+}
+input
+{
+	vertical-align: middle;
+}
+
+/*	Close Button	************************************************
+*
+*	.CloseBtn		- normal close button
+*	.CloseBtnOver	- mouse over close button
+*
+*	-	Styles are swapped in CloseBtn.htc
+********************************************************************/
+.CloseBtn
+{
+	z-index: 1;
+	left: 35.13em; /* 562px */
+	width: 0.75em;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 1em; /* 13px */
+	height: 0.75em; /* 12px */
+
+	background-color: transparent;
+	border: none;
+}
+
+.CloseBtnOver
+{
+	z-index: 1;
+	left: 35.13em;
+	width: 0.75em;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 1em;
+	height: 0.75em;
+
+	background-color: transparent;  
+	border: none;
+}
+
+
+
+/*	Background	*****************************************************
+*
+*	#idBackGrd	-	Area behind main tab panel <Size of dialog>
+* 0, 128, 128
+*  ICA:DlgHW="702,588" 
+********************************************************************/
+#idBackGrd
+{
+	width: 36.75em; /* 588px */
+	height: 43.88em; /* 702px */
+	left: 0em;
+	top: 0em;
+	position: absolute;
+	z-index: 0;
+	/*background-image: url(..\..\_XX\Custom\Images\Background_with_shadow-HDPI.png);  */
+
+}
+
+#idBackGrd1
+{
+	width: 39.06em; /* 588px */
+	height: 46.44em; /* 702px */
+	left: 0em;
+	top: 0em;
+	position: absolute;
+	z-index: 0;
+	/*background-image: url(..\..\_XX\Custom\Images\BackGrd1.png); */
+}
+
+.stretch
+{
+    width:100%;
+    height:100%;
+}
+#idBranding
+{
+	top: 1em; 
+	width: 17.06em; 
+	height: 4.88em;
+	position: absolute;
+	z-index: 0;
+
+	left: 1.25em;
+
+}
+/*	Tabs and Content Panel	****************************************
+*
+*	#idTab(n)	-	id for each tab, used to set background .gif
+*
+********************************************************************/
+
+
+
+
+/**
+*	\remarks	Pannel for non-tabbed pages
+*/
+#idPanel
+{
+
+	left: 1.75em; /* 28px */
+	width: 33.13em; /*530px*/
+	position: absolute;
+	top: 10em; /*160px*/
+	height: 31.25em; /* 500px */
+	/*border: dotted 1px green;*/
+}
+
+/**#idBrandingLeft
+{
+	top: 1.875em; /*30px*/
+/**	width: 17.5em; /*280px*/
+/**	height: 5em; /*80px*/
+/**	position: absolute;
+	z-index: 1;
+	left: 1.75em;
+	background-color: transparent;
+	background-repeat: no-repeat;
+}*/
+#idBrandingLeft
+{
+    top: 1.88em;
+    width: 17.4375em;
+    height: 3.875em;
+    position: absolute;
+    z-index: 1;
+    left: 1.75em;
+}
+#idBrandingRight
+{
+	top: 1.875em; 
+	width: 2.75em; /*44px*/
+	height: 3.75em; /*60px*/
+	position: absolute;
+	z-index: 0;
+	background-image: url(../../_XX/Custom/Images/cdgs_suite_balloon.png);
+	left: 32.125em; /*514px*/
+	background-color: transparent;
+	background-repeat: no-repeat;
+}
+/*	Positioning Containers	****************************************
+*
+*	.DlgWizardBtns	-	Positions the 'wizard' buttons at the bottom
+*						of the screen (left and width should match .TabPanel)
+*
+*	.DlgBlock		-	A block on the dialog
+*
+*	.DlgHeader		-	Header block (coloured background)
+*
+*	.DlgCheckboxLabel	-	Used for <Labels> on checkboxes
+*							It aligns the text with the label, instead
+*							of the checkbox (it looks better if the
+*							text wrapps)
+	left: 22px;
+	width: 747px;
+	position: absolute;
+	top: 149px;
+	height: 386px;
+********************************************************************/
+.DlgWizardBtns
+{
+	top: 39.88em; /*638px*/
+	z-index: 2;
+	position: absolute;
+	height: 2.81em; /*45px*/
+	left: 1.69em;
+	border-top: #333333 1px solid;
+	padding-top: 0.94em; /*15px*/
+	left: 1.69em; /*27px*/
+	width: 33.13em; /*530px*/
+}
+.Dragable
+{
+
+	/*left: 0.0em; /* 28px */
+	width: 100%; /*565px*/
+	position: absolute;
+	top: 0em; /*160px*/
+	Left: 0em; /*160px*/
+	height: 9.5em; /* 500px */
+	z-index: 0;
+	font-size: 43.88em;   /*14px */
+	/*border: dotted 1px green;*/
+}
+
+.DlgBlock
+{ 
+	width: 100%;
+	left: 0em;
+	position: absolute;
+	background-color: Transparent;
+	z-index: 1;
+	/*border: solid 1px gray;*/
+	font-size: 0.875em;   /*14px */
+}
+.DlgBlockLeft
+{ 
+	/*width: 31.56em; /*505px*/
+	left: 1.5625em; /*25px*/
+	position: absolute;
+	background-color: Transparent;
+	z-index: 1;
+	/*border: solid 1px gray;*/
+}
+.DlgBlockLeftSub
+{ 
+	/*width: 31.56em; /*505px*/
+	left: 3em; /*25px*/
+	position: absolute;
+	background-color: Transparent;
+	z-index: 1;
+	/*border: solid 1px gray;*/
+}
+.DlgHeader
+{
+	top: 0.625em;
+	width: 100%; /*565px*/
+	left: 0em;
+	position: absolute;
+	z-index: 1;
+	padding-bottom: 0.75em; /*padding-top: 3px;*/
+	border-bottom: #333333 1px solid;
+  font-size: 0.94em;   /*14px */
+}
+.DlgHeaderLicense
+{
+	top: 0.625em;
+	width: 100%; /*565px*/
+	left: 0em;
+	position: absolute;
+	z-index: 1;
+	padding-bottom: 0.75em; /*padding-top: 3px;*/
+  font-size: 0.94em;   /*14px */
+}
+.DlgHeaderAdminLicense
+{
+	top: 0.625em;
+	width: 100%; /*565px*/
+	left: 0em;
+	position: absolute;
+	z-index: 1;
+	padding-bottom: 0.75em; /*padding-top: 3px;*/
+  font-size: 0.875em;   /*14px */
+}
+.DlgHeaderWtBox
+{
+	top: 0.625em;
+	width: 35.31em; /*565px*/
+	left: 0em;
+	position: absolute;
+	z-index: 1;
+	padding-bottom: 0.75em; /*padding-top: 3px;*/
+  font-size: 0.875em; 
+}
+
+/*	.MenuBtn	*****************************************************
+*
+*	.Menu		-	Main selector (Includes text)
+*	.MenuOn		-	Main selector (Includes text -- for mouse over)
+*	.MenuBtn	-	Button used to activate menu when tabbing
+*	.MenuPopUp	-	'Fly-out' part of menu
+/********************************************************************/
+.Menu
+{
+	position: absolute;
+	width: 18.6em;
+	left: 18.6em;
+	top: 3.75em; 
+	vertical-align: middle;
+	background-image: url(../../_XX/Custom/Images/MenuOn.gif);
+	background-color: white;
+	text-align: left;
+	border: silver 0.0625em solid;
+	padding-right: 0.125em;
+	padding-left: 0.625em;
+	padding-bottom: 0.125em;
+	padding-top: 0.125em;
+	background-position: right center;
+	background-repeat: no-repeat;
+	color: Black;
+}
+
+.MenuOn
+{
+	position: absolute;
+	width: 18.6em;
+	left: 18.6em;
+	top: 3.75em; 
+	vertical-align: middle;
+	background-image: url(../../_XX/Custom/Images/MenuOn.gif);
+	text-align: left;
+	border: silver 0.0625em solid;
+	background-color: #61A706;/*#D0E8D9*/
+	padding-right: 0.125em;
+	padding-left: 0.625em;
+	padding-bottom: 0.125em;
+	padding-top: 0.125em;
+	background-position: right center;
+	background-repeat: no-repeat;
+	color: white;
+}
+
+.MenuBtn
+{
+	width: 0em;
+	height: 0.0625em;
+	border: none;
+	background-color: white;
+}
+
+
+.MenuPopUp
+{
+	border: silver 0.0625em solid;
+	position: absolute;
+	overflow: auto;
+	width: 19.6em;
+	left: 0.5em;
+	top: 1.5em;
+	background-color: white;
+	FILTER: progid:DXImageTransform.Microsoft.Shadow(direction=135,color=dimgray,strength=3);
+	display: none;
+	color: Black;
+}
+
+.MenuPopUpItem:hover
+{
+	background-color: #D0E8D9;
+}
+
+
+/*	Application Launcher on Finish Page ****************************
+*
+*	-	Used for the launch Draw or Photo-PAINT links on the
+*		finish page
+*
+********************************************************************/
+
+
+button:hover
+{
+	background-color: #D0E8D9;
+	
+}
+
+
+/*	Progress Bar(s)	************************************************
+*
+*	-	Progress bars are made of 2 containers
+*			- 1 .ProgressOuter	- for the outer boarder
+*			- 2 .ProgressInner	- for the inner solid part (the progress)
+*
+*	-	Specify the look of the progress bar here, the style 
+*		in the html markup should position the bar on the page
+*
+*	Example:
+*	<div id="idProgressOuter" class="ProgressOuter" style="top: 75px; width: 630px;">
+*		<div id="idProgressInner" class="ProgressInner"></div>
+*	</div>
+Top: 91be44
+Bottom: 456901
+********************************************************************/
+.ProgressOuter
+{
+	height: 1.375em;
+	position: absolute;
+	border-right: dimgray 0.0625em solid;
+	border-top: dimgray 0.0625em solid;
+	border-left: dimgray 0.0625em solid;
+	border-bottom: dimgray 0.0625em solid;
+	/*background-color: whitesmoke;*/
+	filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#f5f5f5,endColorStr=#efefef);
+}
+
+.ProgressOuter .ProgressInner
+{
+	top: 0.0625em;
+	height: 1.125em;
+	position: absolute;
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;
+	border-bottom-style: none;
+filter: progid:DXImageTransform.Microsoft.Light() progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#D0E8D9,endColorStr=#61A706);
+}
+
+#dpi {
+  height: 1in;
+  left: -100%;
+  position: absolute;
+  top: -100%;
+  width: 1in;
+}
+
+select.dropdown {
+  margin: 0em;
+  margin-top: .75em;
+  height: 3em;
+  width: 100%;
+  border-width: .063em;
+  border-style: solid;
+  border-color: #D0E8D9;
+  padding: .563em;
+  font-family: 'Segoe UI' , Tahoma;
+  font-size: 1em;
+  color: #333333;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0em;
+  -moz-appearance: none;
+  appearance: none; 
+}

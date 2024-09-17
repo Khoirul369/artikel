@@ -1,0 +1,236 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+
+<html xmlns:ICA="ICA">
+<head>
+    <title>ARP</title>
+    <link href="Style.css" rel="stylesheet" type="text/css" />
+    <meta http-equiv="MSThemeCompatible" content="Yes"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta content="text/html" name="ICADlg" id="ICADlg" 
+  ICA:DlgHW="702,588" 
+          ICA:DlgFrame="0"
+          ICA:TransparencyColorRBG="51,52,53"
+          ICA:ProgressState="TBPF_NOPROGRESS"
+    />
+<script type="text/jscript" language="jscript" src="js/topics.js"></script> 
+    <script language="jscript" type="text/jscript" src="js/Setup.js"></script>
+    
+    
+    <script language="jscript" type="text/jscript">
+        
+        var Setup = window.external;
+        
+        function OnBodyLoad()
+        {
+            initPage(document.title);
+			 ConfigLocUI(); 
+            try
+            {
+                UpdatePage(Setup.GetProperty("ICA.Maintenance.Mode"));
+
+            }
+            catch (err) {}          
+                 
+        }
+        
+        function UpdatePage(str)
+        {
+            var strCompare = str.toLowerCase();
+      
+            id_Str_Btn_Next.style.display = "none";
+            id_Str_Btn_Repair.style.display = "none";
+            id_Str_Btn_Remove.style.display = "none";
+   	idOffline.style.display = "none";
+       
+            if ("modify" == strCompare)
+            {
+                id_Str_Btn_Next.style.display = "block";
+                Setup.SetProperty("REMOVEUSERFILES", "0");
+            }
+
+            else if ("repair" == strCompare)
+            {
+                id_Str_Btn_Repair.style.display = "block";
+                Setup.SetProperty("REMOVEUSERFILES", "0");
+            }
+                
+            else if ("remove" == strCompare)
+            {
+                id_Str_Btn_Remove.style.display = "block";
+                if (g_bIsConnected == false)
+                {
+                	idOffline.style.display = "block";
+                }
+            }
+            
+        }
+        
+        function ClickRemoveUserFiles()
+        {
+            Setup.SetProperty("ICA.Maintenance.Mode", "Remove");
+            
+            id_Str_Btn_Next.style.display = "none";
+            id_Str_Btn_Repair.style.display = "none";
+            id_Str_Btn_Remove.style.display = "block";
+            if (g_bIsConnected == false)
+            {
+            	idOffline.style.display = "block";
+            }
+
+        }
+        
+        function OnNext()
+        {
+            try
+            { 
+                var sPage = "Install.htm";
+
+                window.location = sPage;
+            }
+            catch(err) {}
+        }
+    function ConfigLocUI()
+    {
+      if (g_sLang == "DE" )
+      {
+        idRemoveUserFilesLbl.style.top="4.5em";
+        idRemoveUserFilesChk.style.top="4.2em";
+      }
+    }
+    </script>
+
+	<style type="text/css">
+	.style1 {
+		width: 46.25em;
+		left: 0px;
+		position: absolute;
+		background-color: Transparent;
+		z-index: 1;
+		margin-bottom: 0px;
+	}
+        .Image
+        {
+	        width: 3em;
+	        height: 3em;
+        }
+	
+	</style>
+
+</head>
+
+<body onload="OnBodyLoad();">
+<div id="dpi"></div>
+    <!-- background -->
+    <div id="idBackGrd">
+<img src="Images/backgrd.png" class="stretch" />
+
+</div>
+	<img id="idBrandingLeft" name="BrandingLeft" src="Images/banner" />  
+    <img id="idClose" alt="" class="CloseBtn" src="Images/close.png" onmouseover="HighLightClose();" onmouseout="UnHighLightClose();" ICA:Function="ICACancelSetup" />
+	<div id="idDragMe" class="Dragable">&nbsp;&nbsp;&nbsp;</div>
+    
+    <!-- page content panel -->
+    <div id="idPanel">
+    
+        <div class="DlgHeader" id="id_Str_ARP_Header"></div>
+    
+    <!-- ************* Modify ************* -->
+    <div class="DlgBlock" style="top: 6.25em; height: 4.06em; position: relative;" >
+
+       <div style="position: absolute; top: .8em; "> 
+       <input id="idRadioModify" type="radio" class="geomsize" name="ICA.Maintenance.Mode" value="Modify" onclick="UpdatePage('Modify');" >
+		</div>
+         <div style="margin-left: 1.5em; position: absolute; vertical-align:middle; ">
+            <img src="Images/Modify.png" class="Image" alt="" style="vertical-align:middle;" >
+        </div>
+
+        <div style="left: 5.13em; position:absolute; top:-0.3em;">
+            <label for="idRadioModify" >
+	            <span class="Header" id="id_Str_ARP_Modify" ></span><br >
+	            <span id="id_Str_ARP_ModifyDesc" class="Desc" ></span>
+            </label>
+        </div>
+        
+    </div>
+        
+        
+    <!-- ************* Repair ************* -->
+    <div class="DlgBlock" style="top: 9.50em; height: 4.06em; position: relative;" >
+    
+       <div style="position: absolute; top: .8em; "> 
+            <input id="idRadioRepair" type="radio" class="geomsize" name="ICA.Maintenance.Mode" value="Repair" onclick="UpdatePage('Repair');" >
+        </div>
+
+       <div style="margin-left: 1.5em; position: absolute; vertical-align:middle; ">
+            <img src="Images/Repair.png" class="Image" alt="" style="vertical-align:middle;" >
+        </div>
+        
+        
+        <div style="left: 5.13em; position:absolute; top:-0.3em;">
+        <label for="idRadioRepair" >
+                <span class="Header" id="id_Str_ARP_Repair"></span><br>
+                <span id="id_Str_ARP_RepairDesc"class="Desc" ></span>
+            </label>
+        </div>
+        
+    </div>
+        
+        
+    <!-- ************* Remove ************* -->
+    <div class="DlgBlock" style="top: 12.75em; height: 4.06em; position: relative;">
+         
+        <div style="position: absolute; top: .8em; "> 
+            <input id="idRadioRemove" type="radio" class="geomsize" name="ICA.Maintenance.Mode" value="Remove" onclick="UpdatePage('Remove');" >
+        </div>
+   
+        <div style="margin-left: 1.5em; position: absolute; vertical-align:middle; ">
+            <img src="Images/Remove.png" class="Image" alt="" style="vertical-align:middle;" >
+        </div>
+        
+         <div style="left: 5.13em; position:absolute; top:-0.3em;">
+            <label for="idRadioRemove" >
+            <span class="Header" id="id_Str_ARP_Remove"></span><br>
+            <span id="id_Str_ARP_RemoveDesc" class="Desc" ></span>
+            </label>
+        </div>
+        
+        <div style="left: 3.25em; top: 3.69em; width: 28.94em; position:absolute;" id="idRemoveUserFilesLbl" >
+            <input id="chkUserFiles" class="geomsize" type="checkbox" name="REMOVEUSERFILES" value="1" onclick="ClickRemoveUserFiles();" >
+        </div>
+        <div style="left: 5em; top: 3.69em; width: 32.75em; position:absolute;" id="idRemoveUserFilesChk"  >
+            <label for="chkUserFiles">
+              <span class="Header" id="id_Str_ARP_UserFiles"></span><br />
+              <span id="id_Str_ARP_UserFilesDesc" class="Desc" ></span>
+            </label>
+        </div>
+        
+    </div>
+      <div id="idOffline" class="DlgBlock" style="top: 29.88em; display: none;" >
+    	<span id="id_Str_ARP_Offline_Uninstall" class="Highlight" ></span>
+    </div>
+    
+    </div> <!-- div id="idTabPanel" END -->
+        
+    <!-- ------------------------------------------------------------ -->
+    <!-- <div> Wizard Buttons (at bottom of dialog) - START -->
+    <div class="DlgWizardBtns">
+        <table border="0" width="100%">
+            <tr>
+
+                <td align="left">
+                    <button type="button" ICA:Function="ICACancelSetup" ID="id_Str_Btn_Cancel" ></button>
+                    
+                </td>
+
+                <td width="7.50em" align="right">
+                    <button type="button" class="Initiator" onmouseover="HighLightButton('id_Str_Btn_Next');" onmouseout="UnHighLightButton('id_Str_Btn_Next');" onclick="OnNext();" ID="id_Str_Btn_Next" style="display: none; " ></button>
+                    <button type="button" class="Initiator" onmouseover="HighLightButton('id_Str_Btn_Repair');" onmouseout="UnHighLightButton('id_Str_Btn_Repair');" ICA:Function="ICABeginRepair" ID="id_Str_Btn_Repair" style="display: none; " ></button>
+                    <button type="button" class="Initiator" onmouseover="HighLightButton('id_Str_Btn_Remove');" onmouseout="UnHighLightButton('id_Str_Btn_Remove');" ICA:Function="ICABeginRemove" ID="id_Str_Btn_Remove" style="display: none; " ></button>
+                </td>
+            </tr>
+        </table>
+    </div>  <!-- <div class="DlgBlock"> Wizard Buttons (at bottom of dialog) - END -->
+
+</body>
+</html>

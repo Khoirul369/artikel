@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ICA lang="use_os">
+  <Setups productcode="ICA.productcode">
+    <Msi productcode="{ADC51EF8-283D-4E02-99BF-8A122370FFB0}" file="MSIs\Setup_x64.msi" adminsupport="1" progresstext="Str.ProgressText.Common" cmdline="ICA_ALL_PUBLIC" managed="1">
+      <Dbm productcode="VC_X64" file="Redist\VC\vc_redist.x64.exe" cmdline="/install /quiet /norestart" adminsupport="0" noupgrade="1" progresstext="Str.ProgressText.VC" ignorereturn="1" scheduled="0" />
+      <Dbm productcode="{96452E3F-6D3A-4B93-B36B-3410F10CA34D}" file="MSIs\Common_x64.msi" adminsupport="0" progresstext="Str.ProgressText.Common" cmdline="ESTIMATEDSIZE=[ICA.DiskSpace.Drive.Required.0] LANG=[REGAPPLANG] VIDEOTUTORIALCHANNELNAME=[VIDEOTUTORIALCHANNELNAME] ANALYTICSANDRELATON=[ANALYTICSANDRELATON]" />
+      <Dbm productcode="{21D251A6-5B55-4D06-A16C-70A9F1E31DAD}" file="MSIs\Draw_x64.msi" adminsupport="0" progresstext="Str.ProgressText.Draw" />
+      <Dbm productcode="{85DD0693-CEFE-4C58-A4BD-65FCB0BC225B}" file="MSIs\PHOTO-PAINT_x64.msi" adminsupport="0" progresstext="Str.ProgressText.Paint" />
+      <Dbm productcode="{282034FF-19CA-4A26-A129-DB3A3CFFA02C}" file="MSIs\FontManager_x64.msi" adminsupport="0" progresstext="Str.ProgressText.FontManager" />
+      <Dbm productcode="{D101CA4F-75D6-4AEE-A8C9-06D0C1F42C26}" file="MSIs\Filters_x64.msi" adminsupport="0" progresstext="Str.ProgressText.Common" />
+      <Dbm productcode="{8111DA5D-1BC6-4557-AE68-54CCA9435401}" file="MSIs\Capture_x64.msi" adminsupport="0" progresstext="Str.ProgressText.Capture" />
+      <Dbm productcode="{AC8E15CA-CBEE-48AD-9E69-81AE80CD8713}" file="MSIs\CustomData_x64.msi" adminsupport="0" progresstext="Str.ProgressText.Common" />
+      <Dbm productcode="{65B37B2C-B6E3-4CCE-A715-6FD107CDFD66}" file="MSIs\Models_x64.msi" adminsupport="0" progresstext="Str.ProgressText.Common" />
+      <Dbm productcode="{3A966D42-2486-467F-B347-D37052D93748}" file="MSIs\Discovery_x64.msi" adminsupport="0" progresstext="Str.ProgressText.Common" />
+      <Dbm productcode="{FE8E73A2-9B0F-4369-8162-CC45D39C069B}" file="MSIs\Workspaces_x64.msi" adminsupport="1" progresstext="Str.ProgressText.Common" cmdline="TARGETDIR=&quot;[TARGETDIR]&quot; ISADMINPACKAGE=[ISADMINPACKAGE]" />
+      <Dbm productcode="{20250BA3-AC88-4733-8777-7FDC12A2B115}" file="MSIs\EN_x64.msi" adminsupport="0" progresstext="Str.ProgressText.EN" />
+      <Dbm productcode="{E4106E1B-D15B-4BC1-94E7-F4D8BB5E4E8F}" file="MSIs\IPM_Content_EN_x64.msi" adminsupport="0" progresstext="Str.ProgressText.EN" cmdline="PCUSOURCEID=[PCUSOURCEID] PREMIUMFEATURES_PCUSOURCEID=[PREMIUMFEATURES_PCUSOURCEID]" />
+      <Dbm productcode="{4E44512E-72FB-467C-B432-6DF68C9988EC}" file="MSIs\RU_x64.msi" adminsupport="0" progresstext="Str.ProgressText.RU" />
+      <Dbm productcode="{34EDBF0A-481F-4314-AD70-5A162A7B14E1}" file="MSIs\IPM_Content_RU_x64.msi" adminsupport="0" progresstext="Str.ProgressText.RU" cmdline="PCUSOURCEID=[PCUSOURCEID] PREMIUMFEATURES_PCUSOURCEID=[PREMIUMFEATURES_PCUSOURCEID]" />
+      <Dbm productcode="{C3AA2B13-47FD-4A79-8B12-371D41CEBA58}" file="MSIs\IPM_x64.msi" adminsupport="0" progresstext="Str.ProgressText.Common" cmdline="PCUSOURCEID=[PCUSOURCEID] PREMIUMFEATURES_PCUSOURCEID=[PREMIUMFEATURES_PCUSOURCEID] ALLOW_PRODUCTUPDATES=&quot;[ALLOW_PRODUCTUPDATES]&quot; PRODUCTDISPLAYVERSION=&quot;[PRODUCTDISPLAYVERSION]&quot; SERIALNUMBER=&quot;[SERIALNUMBER]&quot; USERNAME=&quot;[USERNAME]&quot; SHOW_EULA=[AcceptLicense] SKU=[SKU] PROFILEID=[PROFILEID] ISADMINPACKAGE=[ISADMINPACKAGE] CHANNEL_ID=&quot;[CHANNEL_ID]&quot; IPP_SERVER_URL=&quot;[IPP_SERVER_URL]&quot;" />
+      <Dbm productcode="{7DCFAD1B-69CB-4394-8EF6-E2ECECDF098C}" file="MSIs\WT_x64.msi" adminsupport="0" progresstext="Str.ProgressText.Common" cmdline="DEFAULT_UI_DIALECT=en" />
+      <Dbm productcode="{7C64336F-E4E9-448C-A8A7-6E7744BCB147}" file="MSIs\VBA_x64.msi" adminsupport="0" progresstext="Str.ProgressText.VBA" />
+      <Dbm productcode="ShellExt.msi" file="MSIs\ShellExt.msi" adminsupport="0" condition="CGS_ScheduleWindowsShellExtention" progresstext="Str.ProgressText.ShellExt" cmdline="INSTALLDIR=&quot;[CommonFiles64Folder]Corel\Shared\Shell Extension&quot;" />
+      <Dbm productcode="32BitKey.msi" file="MSIs\32BitKey.msi" adminsupport="0" condition="CGS_ScheduleWindowsShellExtention" progresstext="Str.ProgressText.ShellExt" cmdline="INSTALLDIR=&quot;[CommonFiles64Folder]Corel\Shared\Shell Extension&quot;" />
+      <Dbm productcode="{90120064-0070-0000-0000-4000000FF1CE}" file="MSIs\VBA\Vba71.msi" condition="Install.MsVba" progresstext="Str.ProgressText.VBA" adminsupport="0" />
+      <Dbm productcode="{90F60409-7000-11D3-8CFE-0150048383C9}" file="MSIs\VBA\Vba71_1033.MSI" condition="Install.MsVba.1033" progresstext="Str.ProgressText.VBA" adminsupport="0" />
+      <Dbm productcode="{90F60404-7000-11D3-8CFE-0150048383C9}" file="MSIs\VBA\Vba71_1028.MSI" condition="Install.MsVba.1028" progresstext="Str.ProgressText.VBA" adminsupport="0" />
+      <Dbm productcode="{90F60407-7000-11D3-8CFE-0150048383C9}" file="MSIs\VBA\Vba71_1031.MSI" condition="Install.MsVba.1031" progresstext="Str.ProgressText.VBA" adminsupport="0" />
+      <Dbm productcode="{90F6040C-7000-11D3-8CFE-0150048383C9}" file="MSIs\VBA\Vba71_1036.MSI" condition="Install.MsVba.1036" progresstext="Str.ProgressText.VBA" adminsupport="0" />
+      <Dbm productcode="{90F60410-7000-11D3-8CFE-0150048383C9}" file="MSIs\VBA\Vba71_1040.MSI" condition="Install.MsVba.1040" progresstext="Str.ProgressText.VBA" adminsupport="0" />
+      <Dbm productcode="{90F60411-7000-11D3-8CFE-0150048383C9}" file="MSIs\VBA\Vba71_1041.MSI" condition="Install.MsVba.1041" progresstext="Str.ProgressText.VBA" adminsupport="0" />
+      <Dbm productcode="{90F60413-7000-11D3-8CFE-0150048383C9}" file="MSIs\VBA\Vba71_1043.MSI" condition="Install.MsVba.1043" progresstext="Str.ProgressText.VBA" adminsupport="0" />
+      <Dbm productcode="{90F60416-7000-11D3-8CFE-0150048383C9}" file="MSIs\VBA\Vba71_1046.MSI" condition="Install.MsVba.1046" progresstext="Str.ProgressText.VBA" adminsupport="0" />
+      <Dbm productcode="{90F60804-7000-11D3-8CFE-0150048383C9}" file="MSIs\VBA\Vba71_2052.MSI" condition="Install.MsVba.2052" progresstext="Str.ProgressText.VBA" adminsupport="0" />
+      <Dbm productcode="{90F60C0A-7000-11D3-8CFE-0150048383C9}" file="MSIs\VBA\Vba71_3082.MSI" condition="Install.MsVba.3082" progresstext="Str.ProgressText.VBA" adminsupport="0" />
+      <Dbm productcode="{1E4B5F2C-0532-4CDA-AFCD-674E9C37521E}" file="ICA_x64.msi" cmdline="ESTIMATEDSIZE=&quot;[ICA.DiskSpace.Drive.Required.0]&quot; PRODUCTDISPLAYVERSION=[PRODUCTDISPLAYVERSION]" nomodify="1" progresstext="Str.ProgressText.Common" adminsupport="0" comment="all Dbm nodes need to be in the same folder as their parent Msi node, otherwise you can not support admin installs - this one is listed under a Msi node for admin installs only" />
+      <Dbm productcode="{4BAE1A4E-9E7A-4DEB-93DF-F2EB7539C3E2}" file="MSIs\IPM_Common_x64.msi" ignorereboot="1" adminsupport="0" progresstext="Str.ProgressText.Common" cmdline="ICA_ALL_PUBLIC" />
+      <SupportFile file="MSIs\Common_x64.cab" />
+      <SupportFile file="MSIs\CustomData_x64.cab" />
+      <SupportFile file="MSIs\Administrator\CorelDRAW Graphics Suite BR.sms" />
+      <SupportFile file="MSIs\Administrator\CorelDRAW Graphics Suite CS.sms" />
+      <SupportFile file="MSIs\Administrator\CorelDRAW Graphics Suite CT.sms" />
+      <SupportFile file="MSIs\Administrator\CorelDRAW Graphics Suite CZ.sms" />
+      <SupportFile file="MSIs\Administrator\CorelDRAW Graphics Suite DE.sms" />
+      <SupportFile file="MSIs\Administrator\CorelDRAW Graphics Suite EN.sms" />
+      <SupportFile file="MSIs\Administrator\CorelDRAW Graphics Suite ES.sms" />
+      <SupportFile file="MSIs\Administrator\CorelDRAW Graphics Suite FR.sms" />
+      <SupportFile file="MSIs\Administrator\CorelDRAW Graphics Suite IT.sms" />
+      <SupportFile file="MSIs\Administrator\CorelDRAW Graphics Suite JP.sms" />
+      <SupportFile file="MSIs\Administrator\CorelDRAW Graphics Suite KR.sms" />
+      <SupportFile file="MSIs\Administrator\CorelDRAW Graphics Suite MA.sms" />
+      <SupportFile file="MSIs\Administrator\CorelDRAW Graphics Suite NL.sms" />
+      <SupportFile file="MSIs\Administrator\CorelDRAW Graphics Suite PL.sms" />
+      <SupportFile file="MSIs\Administrator\CorelDRAW Graphics Suite RU.sms" />
+      <SupportFile file="MSIs\Administrator\CorelDRAW Graphics Suite SU.sms" />
+      <SupportFile file="MSIs\Administrator\CorelDRAW Graphics Suite SV.sms" />
+      <SupportFile file="MSIs\Administrator\CorelDRAW Graphics Suite.zap" />
+      <SupportFile file="Setup.xml" />
+    </Msi>
+    <Msi productcode="vsta_setup.exe" file="MSIs\VSTA\vsta_setup.exe" condition="Install.MsVSTA" progresstext="Str.ProgressText.VSTA" adminsupport="0" cmdline="/Quiet /NoRestart /Full" ignorereturn="1" scheduled="0" />
+    <Msi productcode="Ghostscript" file="MSIs\Ghostscript_v10.msi" cmdline="ALLUSERS=1 ADDLOCAL=ALL" adminsupport="0" condition="GPL=1" checked="1" progresstext="Str.ProgressText.Common" />
+    <Msi productcode="{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}" file="ICA_x64.msi" condition="ACTION=ADMIN" cmdline="ICA_ALL_PUBLIC" comment="Added here for admin support only, productcode is only used for local installs and should be unique -- therefore this node has a bogus one -- the other option is to explictly list all ICA files in SupportFile nodes -- NOTE the condition must be ACTION=ADMIN" />
+    <Msi productcode="IPM_PreAdmin.msi" file="MSIs\IPM_PreAdmin_x64.msi" condition="ManuallyInstall" cmdline="PCU_LICID=[PCU_LICID]  PREMIUMFEATURES_PCU_LICID=[PREMIUMFEATURES_PCU_LICID] PREMIUMFEATURES_PCUSOURCEID=[PREMIUMFEATURES_PCUSOURCEID] SERIALNUMBER=&quot;[SERIALNUMBER]&quot; USERNAME=&quot;[USERNAME]&quot; ACTION=INSTALL PRODUCTROOTKEY=&quot;[PRODUCTROOTKEY]&quot;" progresstext="Str.ProgressText.Common" adminsupport="0" />
+    <Repair productcode="{27AE72A4-B217-4CDC-B82B-3311E9D7460E}" comment="CDGSX6(x64) - Draw_x64.msi" />
+    <Repair productcode="{D7C2687D-924E-4485-B367-C7D95CBF8DDD}" comment="CDGSX6(x64) - PHOTO-PAINT_x64.msi" />
+    <Repair productcode="{CBC1BFA3-E641-4FCA-8EFA-77E2B7D7E552}" comment="CDGSX6(x64) - Setup_x64.msi (R)" />
+    <Repair productcode="{CCE7423E-1D84-4CD3-9E32-220EC9358D97}" comment="CDGSX6(x64) - Setup_x64.msi (T)" />
+    <Repair productcode="{80D0E22C-24CA-4CAA-A49A-991CC56D3A65}" comment="CDGSX6 - Setup.msi (R)" />
+    <Repair productcode="{7F9F6864-8CAB-440C-AF44-030D0135666D}" comment="CDGSX6 - Setup.msi (T)" />
+    <Repair productcode="{C5262276-0075-498B-B80F-7D997482E4DB}" comment="CDGSX6 - Draw.msi" />
+    <Repair productcode="{6F53FB68-6620-423E-B7CD-B8205655B421}" comment="CDGSX6 - PHOTO-PAINT.msi" />
+    <Repair productcode="{1C7B3947-F890-4A1C-BF6E-92DAD93B9E01}" comment="CDTSX6(x64) - Draw_x64.msi" />
+    <Repair productcode="{84ADAB20-4DAB-4C0A-AB65-D9B43B1CED20}" comment="CDTSX6(x64) - PHOTO-PAINT_x64.msi" />
+    <Repair productcode="{DE652665-8599-4617-A5C5-8AA866322E9F}" comment="CDTSX6(x64) - Setup_x64.msi (R)" />
+    <Repair productcode="{27F2222C-49E6-464C-8006-CE3FFB765B92}" comment="CDTSX6(x64) - Setup_x64.msi (T)" />
+    <Repair productcode="{BE5A3790-C8E1-4C0D-8F94-C83E45BED3DD}" comment="CDTSX6 - Setup.msi (R)" />
+    <Repair productcode="{77B75A66-40C0-4878-9CE9-C54FDA1F3DB5}" comment="CDTSX6 - Setup.msi (T)" />
+    <Repair productcode="{B6A55FF8-71D7-406A-A4F1-D056164476D4}" comment="CDTSX6 - Draw.msi" />
+    <Repair productcode="{08B95186-14CB-4B39-8E78-7E9773416507}" comment="CDTSX6 - PHOTO-PAINT.msi" />
+    <Repair productcode="{BA416081-ABF9-433F-B367-A02E1099BF93}" comment="CDGSX7 - Setup.msi (R)" />
+    <Repair productcode="{08A60D9D-C206-46BF-9602-1F2616878CF7}" comment="CDGSX7 - Setup.msi (T)" />
+    <Repair productcode="{30FAE453-9F77-4F70-928E-042BEF00D011}" comment="CDGSX7 - Draw.msi" />
+    <Repair productcode="{0A0143FF-ECB5-4960-A2E0-DC3150ABBBE0}" comment="CDGSX7 - PHOTO-PAINT.msi" />
+    <Repair productcode="{2C0DDC74-5234-43DD-BB5A-0645B8FE5289}" comment="CDGSX7(x64) - Draw_x64.msi" />
+    <Repair productcode="{C922F325-DD52-4E22-B204-431A06E63E51}" comment="CDGSX7(x64) - PHOTO-PAINT_x64.msi" />
+    <Repair productcode="{A6B7D078-EDC4-4D8A-BD3D-CB2B11440219}" comment="CDGSX7(x64) - Setup_x64.msi (R)" />
+    <Repair productcode="{83646B67-A878-4E95-BB4B-AF4A6E61F28C}" comment="CDGSX7(x64) - Setup_x64.msi (T)" />
+    <Repair productcode="{13D9CD72-79DB-4F0F-890D-0A3E45DCBED9}" comment="CDGSX8 - Setup.msi (R)" />
+    <Repair productcode="{BD9B2CD9-7CC9-4C8C-92E5-4A1F19446B3D}" comment="CDGSX8 - Setup.msi (T)" />
+    <Repair productcode="{406E4433-96CF-4D4D-8317-6B8E6BDD8856}" comment="CDGSX8 - Draw.msi" />
+    <Repair productcode="{7546E875-C203-4E87-8A3D-FD179944A763}" comment="CDGSX8 - PHOTO-PAINT.msi" />
+    <Repair productcode="{A66E09BB-9892-421D-9EB9-311D12AA5244}" comment="CDGSX8(x64) - Draw_x64.msi" />
+    <Repair productcode="{04D8C47E-C0FE-4CA5-8878-91ECD9552109}" comment="CDGSX8(x64) - PHOTO-PAINT_x64.msi" />
+    <Repair productcode="{ECFAF1D6-342D-4AE2-B6BF-82B22F9FE8DE}" comment="CDGSX8(x64) - Setup_x64.msi (R)" />
+    <Repair productcode="{AFBFA0AC-1173-4C13-B9DC-5CF211EB50DF}" comment="CDGSX8(x64) - Setup_x64.msi (T)" />
+    <Repair productcode="{5D96DB2A-C6E1-43B4-9700-171F7C09D533}" comment="CDGS2018 - Setup.msi (R)" />
+    <Repair productcode="{1B27CE51-4504-421A-88FC-BD7D4971289E}" comment="CDGS2018 - Setup.msi (T)" />
+    <Repair productcode="{8D7FDEE7-AB4D-401A-A17C-9A40AF8B7A97}" comment="CDGS2018 - Draw.msi" />
+    <Repair productcode="{E1AB8927-DD17-417C-80FE-0CB98318C254}" comment="CDGS2018 - PHOTO-PAINT.msi" />
+    <Repair productcode="{121B4D48-BDC1-4037-B150-28037FA47510}" comment="CDGS2018(x64) - Draw_x64.msi" />
+    <Repair productcode="{CA42C3C9-6A8C-423E-885E-064B06DAD20E}" comment="CDGS2018(x64) - PHOTO-PAINT_x64.msi" />
+    <Repair productcode="{5F18CC22-B399-48EC-BB9D-E92510E218EF}" comment="CDGS2018(x64) - Setup_x64.msi (R)" />
+    <Repair productcode="{23465DF5-08D9-4150-9621-7A127B208936}" comment="CDGS2018(x64) - Setup_x64.msi (T)" />
+  </Setups>
+  <FeatureTree>
+    <Feature name="Str.Feature.MainApp" desc="Str.Feature.MainApp.Desc" property="MainApp" expanded="1" size="28000" sizerfn="5000">
+      <Feature name="Connect" desc="" property="_CONNECT_APP" required="1" size="30000" />
+      <Feature name="Ipm" desc="" property="_Messaging" required="1" dest="CommonAppDataFolder" size="46080" sizerfn="43008" />
+      <Feature name="Setup" desc="" property="_SETUPFILES" required="1" size="15360" sizerfn="20480" />
+      <Feature name="Common" desc="" property="COMMON" required="1" size="882155" sizerfn="882155" />
+      <Feature name="Str.Feature.Lang" desc="" property="LANGUAGES" checked="1">
+        <Feature name="Str.Feature.Lang.EN" desc="" property="EN" size="45000" condition="Include.EN=1" checked="0" />
+        <Feature name="Str.Feature.Lang.RU" desc="" property="RU" size="45000" condition="Include.RU=1" checked="0" />
+      </Feature>
+      <Feature name="Str.Feature.Draw" property="Draw" size="84237" />
+      <Feature name="Str.Feature.PP" property="PP" size="24685" />
+      <Feature name="Str.Feature.Capture" property="Capture" size="1486" />
+      <Feature name="Str.Feature.FontManager" property="FontManager" size="5000" />
+      <Feature name="Str.GPL" desc="Str.GPL" property="GPL" size="30720" dest="ProgramFilesFolder" />
+      <Feature name="Str.Feature.Utilities" desc="" property="Utility">
+        <Feature name="Str.Feature.Utilities.Duplexing" property="DupWiz" size="500" />
+        <Feature name="Str.Feature.Utilities.VBA" property="VBAFiles" dest="CommonFilesFolder" size="35480" />
+        <Feature name="Str.Feature.Utilities.VSTA" property="VSTA" dest="CommonFilesFolder" size="35480" />
+        <Feature name="Str.Feature.Utilities.WindowsShellExtension" dest="CommonFilesFolder" property="ShellExt" size="5000" />
+      </Feature>
+      <Feature name="Str.Feature.Filters" property="Filters" checked="1" required="1" size="54913" />
+      <Feature name="Str.Feature.WT" property="WTools" size="34845" />
+      <Feature name="CopyCabs" desc="CopyCabs" property="CACHE_SETUP_SOURCE" condition="!Installed" />
+    </Feature>
+  </FeatureTree>
+  <SharedDiskCost>
+    <Size size="7349" feature="|PPPFiles|DrPFiles|" />
+    <Size size="47852" feature="|DrTiFra|PPPFiles|" />
+  </SharedDiskCost>
+  <SourceFiles>
+    <SourceFile file="MSIs\*.*" />
+  </SourceFiles>
+  <RestartManager>
+    <App file="[INSTALLDIR]Programs64\BarCode.exe" />
+    <App file="[INSTALLDIR]Programs64\Cap.exe" />
+    <App file="[INSTALLDIR]Programs64\CorelDRW.exe" />
+    <App file="[INSTALLDIR]Programs64\CorelPP.exe" />
+    <App file="[INSTALLDIR]Programs64\FontManager.exe" />
+    <App file="[INSTALLDIR]Programs64\PrintWiz.exe" />
+    <App file="[INSTALLDIR]WritingTools\Bin64\WTsptlEN.exe" />
+  </RestartManager>
+  <UserFiles>
+    <UserFile file="Corel\CorelDRAW Graphics Suite 2022\*.*" />
+    <UserFile file="Corel\CorelDRAW Graphics Suite 2022" />
+    <UserFile file="Corel\Messages\540111163_407007\*.*" />
+    <UserFile file="Corel\Messages\540111163_407007" />
+    <UserFile file="Corel\Messages\540111163_410003\*.*" />
+    <UserFile file="Corel\Messages\540111163_410003" />
+    <UserFile file="Corel\Messages\540227504_999924\*.*" />
+    <UserFile file="Corel\Messages\540227504_999924" />
+    <UserFile file="Corel\Messages" />
+  </UserFiles>
+  <Properties>
+    <Property name="ICA.Dlg.AllowDrag" value="1" />
+    <Property name="MAX_PATH" value="90" />
+    <Property name="AcceptLicense" value="1" persist="1" />
+    <Property name="SERIALNUMBER" value="DR24R49-ATB5QP4-AAJZVCX-YA8JA64" persist="1" comment="When you remove the hardcoded serial number, just set the value to blank, do not remove this node or the SERIALNUMBER will not be saved after you perform an admin install " />
+    <Property name="ALLOW_PRODUCTUPDATES" value="2" persist="1" comment="needs to be saved from admin installs, Script.dll will default it off if we are running an admin setup" />
+    <Property name="ALLOW_INTERNETFEATURES" value="0" persist="1" comment="needs to be saved from admin installs, Script.dll will default it off if we are running an admin setup" />
+    <Property name="ALLOW_CORPORATECLOUDFEATURES" value="0" persist="1" comment="needs to be saved from admin installs, Script.dll will default it off if we are running an admin setup" />
+    <Property name="WELCOMESCREENONLINE" value="0" persist="1" comment="needs to be saved from admin installs, Script.dll will default it off if we are running an admin setup" />
+    <Property name="CDAENTERPRISEACCESS" value="0" persist="1" />
+    <Property name="CDAENTERPRISEACCESS.UI" value="0" persist="1" />
+    <Property name="NETWORKINSTALLDIR" value="" persist="1" comment="This property contains the path to the Content for Network installs" />
+    <Property name="CUSTOM_DEFAULT_WORKSPACE_DRAW" value="" comment="Add a custom default workspace for draw here or in Persist.xml" />
+    <Property name="CUSTOM_DEFAULT_WORKSPACE_PP" value="" comment="Add a custom default workspace for draw here or in Persist.xml" />
+    <Property name="ICA.Default.InstallFolder" value="CorelDRAW Graphics Suite 2022" />
+    <Property name="ICA.Default.TargetDir" value="CorelDRAW Graphics Suite 2022" />
+    <Property name="ICA.LogOptions" value="voicewarmup" />
+    <Property name="DESKTOPSHORTCUTS" value="1" Comment="set DESKTOPSHORTCUTS to 1 to check by default" />
+    <Property name="CACHE_SETUP_SOURCE" value="1" />
+    <Property name="CACHE_SETUP_SOURCE_SHOWUI" value="Show" comment="Hide - will remove the Copy Installation Files option" />
+    <Property name="EULA_SHOWUI" value="0" comment="0 - will hide from installer" />
+    <Property name="BULA_SHOWUI" value="0" comment="0 - will hide from installer" />
+    <Property name="NO_CONTENT_UI" value="1" comment="1 - will Hide the prompt for path to Content in AdminDes.htm" />
+    <Property name="ShowApplicationLanguageSelector" value="0" comment="use 1 - to show the Extra's tab in the UI" />
+    <Property name="ICA.Maintenance.Mode" value="Modify" comment="sets the default radio button on ARP.htm" />
+    <Property name="Include.Default" value="EN" />
+    <Property name="Include.EN" value="1" />
+    <Property name="Include.RU" value="1" />
+    <Property name="Vba.CmdLine.Install" value="ADDLOCAL=ALL ALLUSERS=1 REBOOT=ReallySuppress" />
+    <Property name="Vba.CmdLine.Remove" value="REMOVE=ALL REBOOT=ReallySuppress" />
+    <Property name="PatchEnginePatchSequenceInfo" value="xml" />
+    <Property name="PatchSearchFile" value="ica.msi" />
+    <Property name="Patchable_Product_0" value="{ADC51EF8-283D-4E02-99BF-8A122370FFB0}" comment="x64 retail" />
+    <Property name="ICA.Patches.Folder" value="Patches" />
+    <Property name="PRODUCTDISPLAYVERSION" value="24.5.0.731" />
+    <Property name="PRODUCTSHOWSERIAL" value="1" />
+    <Property name="PCUSOURCEID_TRIAL" value="410003" />
+    <Property name="PCUSOURCEID" value="407007" />
+    <Property name="PREMIUMFEATURES_PCUSOURCEID" value="999924" />
+    <Property name="PCU_LICID" value="540111163" />
+    <Property name="PREMIUMFEATURES_PCU_LICID" value="540227504" />
+    <Property name="PROFILEID" value="" persist="1" />
+    <Property name="PIDPREFIX" value="DR24" />
+    <Property name="PIDPREFIX_SUB" value="DR24S" />
+    <Property name="NLRFILE" value="DRPCUNLR.DLL" />
+    <Property name="NLRFILE_ADMIN" value="FPPCUNLR.DLL" />
+    <Property name="Script.RT.GUID" value="{C478443A-7E62-4AFF-9B34-5E020F6A50CC}" />
+    <Property name="GPL" value="0" />
+    <Property name="ICA_DotNETVersionShipped" value="4.7.2" />
+    <Property name="ICA_DotNETMinReleaseVersion" value="461808" />
+    <Property name="SerChckModule" value="SerChckv2.DLL" />
+    <Property name="64BIT" value="1" />
+    <Property name="NLRFILE_SUB" value="RMPCUNLR.DLL" />
+    <Property name="PRODUCTROOTKEY" value="Corel\CorelDRAW\24.0" />
+    <Property name="ProductRegKey1" value="CorelDRAW\24.0\IPM_CDGS" />
+    <Property name="ProductRegKey_PremiumFeatures1" value="CorelDRAW\24.0\IPM_CDGS\PremiumFeatures" />
+    <Property name="ProductRegKey_PremiumFeatures_Admin" value="CorelDRAW Admin\24.0\IPM_CDGS\PremiumFeatures" />
+    <Property name="CHANNEL_ID" value="crlrdvd-corporate-ent" />
+    <Property name="IPP_SERVER_URL" value="https://www.corelstore.com" />
+    <Property name="Doc_Redirect" value="http://apps.corel.com/redirect?_redirect=command&amp;function=help&amp;app=suite&amp;lang=&lt;LangCode&gt;&amp;licenseid=&lt;licenseid&gt;&amp;version=&lt;version&gt;" />
+    <Property name="ICA.MultiSeat.Support" value="1" />
+    <Property name="VIDEOTUTORIALCHANNELNAME" value="cdgs" comment="cdgs or cdts" />
+    <Property name="ANALYTICSANDRELATON" value="0" />
+    <!-- Stub -->
+    <Property name="CHANNEL_ID_TRACKING_ONLY" value="CorelDRAW2022_InstallData" />
+    <Property name="STUB_PRODUCT_ID" value="CorelDraw" />
+    <Property name="STUB_PRODUCT_VERSION" value="24.0" />
+    <Property name="STUB_CLIENT_VERSION" value="1.0.0" />
+    <Property name="STUB_CHANNEL_ID" value="crlrdvd-corporate-ent" comment="x-channel, this is the default value.  Any builds that get distributed via stub or as an iso, ie corp, will use STUB.INSTALLER.PARAMETERS" />
+    <Property name="STUB.INSTALLER.PARAMETERS" value="x-at=cdgs2022-xx-crlrdvd-corporate-ent;x-channel=crlrdvd-corporate-ent" />
+    <!-- RegApp -->
+    <Property name="LAUNCHREGAPP" value="0" comment="set to 0 do disable regApp" />
+    <Property name="SetupURL" value="%WINDIR%\system32\cmdkey.exe"/>
+    <!-- Tracking -->
+    <Property comment="tracker" name="TrackerURL" value="http://apps.corel.com/redirect?_redirect=command&amp;function=&lt;tracking_function&gt;&amp;passprms=1&amp;lang=&lt;lang&gt;&amp;version=&lt;majorversion&gt;&amp;app=&lt;appID&gt;&amp;productID=&lt;suiteID&gt;&amp;versionID=&lt;version&gt;&amp;platformID=&lt;platformID&gt;&amp;channelID=&lt;channel&gt;&amp;licenseType=&lt;licenseType&gt;&amp;installType=&lt;installType&gt;&amp;installResult=&lt;installResult&gt;&amp;cid=&lt;gaguid&gt;" />
+    <Property name="SuiteID" value="CorelDRAWGraphicsSuite" />
+    <Property name="AppID" value="CorelDRAW" />
+    <Property name="InstallerID" value="CDGS2022" />
+    <Property name="SkipTracker" value="1" />
+    <Property name="SkipIPTracking" value="1" comment="set to 0 to track extra properties in IP" />
+  </Properties>
+</ICA>

@@ -1,0 +1,167 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:ICA="ICA">
+	<head>
+		<meta name="vs_showGrid" content="True" />
+		<title>Setup Wizard - Command Line Help</title>
+		<LINK href="../../_XX/Required/Style.css" type="text/css" rel="STYLESHEET" />
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1" />
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+		<meta name="ICADlg" 
+		      content="text/html" 
+		      id="ICADlg" 
+		      ICA:DlgHW="550,480" 
+		      ICA:DlgTitle="Setup.exe /? - command line help" 
+		      ICA:PromptForCancel="no" />
+		
+		<style type="text/css">
+    
+    	    .HelpTable
+		    {
+		        border-top-style: none;
+	            border-right-style: none;
+	            border-left-style: none;
+	            border-bottom-style: none;
+		    }
+		    
+            .HelpItem
+            {
+	            vertical-align: top;
+	            font-size: 14px;
+	            font-family: 'Segoe UI' , Tahoma;
+	            border-bottom: gray 1px solid;
+	            margin-top: 10px;
+	            margin-bottom: 10px;
+	            padding-top: 5;
+	            padding-bottom: 5;
+            }
+		</style>
+		
+	</head>
+	
+	<body>
+	
+	<div id="idContent"
+	     class="Panel"
+	     style="overflow: auto;
+	            padding: 5 5 5 5;
+	            border: double 3px silver;
+	            background-color: white;
+	            width: 450px;
+	            height: 440px; 
+	            text-align: left;">
+
+
+        <table id="idContentTable" cellspacing="0">
+        
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    Dit is een snelle referentiegids voor de meest algemeen voorkomende opdrachtregels bij Setup.exe.<br /><br /> Setup.exe /Optie &lt;vereiste parameter&gt; [Optional Parameter] <br /><br /> <u>Installatieopties:</u>
+                </td>
+            </tr>
+                        
+            <tr> <!-- /a admin -->
+                <td class="HelpItem" style="width: 55px;">/a</td>
+                <td class="HelpItem">
+                    Geeft aan dat u een serverimage wilt maken.  Installatie voor beheerders - Installeert een product op het netwerk <br /><br /> Setup.exe /a
+                </td>
+            </tr>
+
+            <tr> <!-- /a /q(n) admin -->
+                <td class="HelpItem" style="width: 55px;">/a /q(n)</td>
+                <td class="HelpItem">
+                    De /q(n)-schakelaar in opdrachtregels wordt niet meer ondersteund. Zie de nieuwste versie van de installatiegids van CorelDRAW Graphics Suite voor ondersteunde schakelaars.
+                    <br /><br />
+                    Setup.exe /a /q(n)
+                </td>
+            </tr>
+            
+            <tr> <!-- /s push profile ID -->
+                <td class="HelpItem" style="width: 55px;">/s</td>
+                <td class="HelpItem">
+                    Wordt gebruikt om PROFILEID naar werkstations te pushen. Het openbare PROFILEID wordt gebruikt om alle gebruikers op het account aan te melden door hun accountgegevens naar werkstations te pushen.
+                    <br /><br />
+                    Setup.exe /s PROFILEID=XXXXXXXXXXXXXXX
+                </td>
+            </tr>            
+            <tr> <!-- /x uninstall -->
+                <td class="HelpItem" style="width: 55px;">/x <br /> /uninstall</td>
+                <td class="HelpItem">
+                    Geeft aan dat u de installatie van de software wilt verwijderen.  Installatie voor beheerders - Installeert een product op het netwerk <br /><br /> Setup.exe /x
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    <br /><br /> <u>Weergaveopties:</u>
+                </td>
+            </tr>
+            
+            <tr> <!-- /q silent -->
+                <td class="HelpItem" style="width: 55px;">/q[n|b|r|f]</td>
+                <td class="HelpItem">
+                    Stelt in hoe de gebruikersinterface van de installatie wordt weergegeven. <br /> n - Geen gebruikersinterface<br /> b - Basisinterface<br /> r - Beperkte gebruikersinterface<br /> f - Volledige gebruikersinterface (standaard)<br /><br /> Setup.exe /q
+        		</td>
+            </tr>
+            
+            <tr> <!-- /q silent -->
+                <td class="HelpItem" style="width: 55px;">/quiet</td>
+                <td class="HelpItem">
+                    Stille modus, zonder gebruikersinterface. Gelijk aan /qn
+        		</td>
+            </tr>
+            
+            <tr> <!-- /q silent -->
+                <td class="HelpItem" style="width: 55px;">/passive</td>
+                <td class="HelpItem">
+                    Onbemande modus - alleen de voortgangsbalk is zichtbaar. Gelijk aan /qb
+        		</td>
+            </tr>
+            
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    <br /><br /> <u>Registratieopties:</u>
+                </td>
+            </tr>
+            
+            <tr> <!-- /l log -->
+                <td class="HelpItem" style="width: 55px;">/l[i|w|e|a|r|u|c|m|o|p|v|x|*]</td>
+                <td class="HelpItem">
+                    Registreert algemene informatie over de installatie in een logbestand. Als u geen pad of bestandsnaam opgeeft, komt het logbestand in de tijdelijke map van de huidige gebruiker terecht. <br /><br /> i - Statusberichten<br /> w - Niet-fatale waarschuwingen <br /> e - Alle foutberichten <br /> a - Acties opstarten <br /> r - Actie-specifieke records <br /> u - Gebruikersaanvragen <br /> c - Startparameters gebruikersinterface <br /> m - Informatie over onvoldoende geheugen of gedwongen afsluiten <br /> o - Berichten over onvoldoende schijfruimte <br /> p - Terminaleigenschappen <br /> v - Uitgebreide uitvoer <br /> x - Extra debugging-informatie <br /> * - Alle informatie registreren, behalve voor de opties v en x <br /><br /> Standaard is /lvoicewarmup<br /><br /> Setup.exe /l&quot;C:\Install.log&quot;
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    <br /><br /> <u>Reparatieopties:</u>
+                </td>
+            </tr>
+            
+            <tr> <!-- /a admin -->
+                <td class="HelpItem" style="width: 55px;">/f[p|e|c|m|s|o|d|a|u]</td>
+                <td class="HelpItem">
+                Repareert een product.<br /> p - alleen als bestand ontbreekt<br /> o - als bestand ontbreekt of als er een oudere versie ge&iuml;nstalleerd is (standaard)<br /> e - als bestand ontbreekt of als er een oudere of gelijke versie ge&iuml;nstalleerd is<br /> d - als bestand ontbreekt of als er een andere versie ge&iuml;nstalleerd is<br /> c - als bestand ontbreekt of als de checksum niet overeenkomt met de berekende waarde<br /> a - forceert de herinstallatie van alle bestanden<br /> u - alle vereiste gebruikerspecifieke registervermeldingen (standaard)<br /> m - alle vereiste computerspecifieke registervermeldingen (standaard)<br /> s - alle bestaande snelkoppelingen (standaard)<br /> <br /><br /> Standaard is /foums<br /><br /> Setup.exe /f
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    <br /><br /> <u>Openbare eigenschappen instellen:</u><br /><br /> [PROPERTY=PropertyValue]
+                </td>
+            </tr>
+        
+        </table> <!-- table id="idContentTable" -->
+
+    </div> <!-- id="idContent" -->
+
+	<div class="DlgBlock"
+	     style="text-align: right;
+	            width: 450px;
+	            top: 470px;">
+	            
+	    <button onclick="window.external.EndModalLoop(0);" ID="idOk" accesskey="O"><u>O</u>K</button>
+	    
+    </div>
+		
+	</body>
+</html>

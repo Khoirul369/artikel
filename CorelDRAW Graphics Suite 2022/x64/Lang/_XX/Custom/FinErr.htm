@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+
+<html xmlns:ICA="ICA">
+
+<head>
+    <title>FinErr</title>
+    <link href="Style.css" rel="stylesheet" type="text/css" />
+    <meta http-equiv="MSThemeCompatible" content="Yes"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta content="text/html" name="ICADlg" id="ICADlg" 
+  ICA:DlgHW="702,588" 
+          ICA:DlgFrame="0"
+          ICA:TransparencyColorRBG="51,52,53"
+          ICA:PromptForCancel="no"
+
+          ICA:ProgressState="TBPF_ERROR"
+    />
+    <script type="text/jscript" language="jscript" src="js/topics.js"></script>    
+    <script type="text/jscript" language="jscript" src="js/Setup.js"></script>      
+    <script type="text/jscript" language="jscript">
+        var Setup = window.external;
+        function OnBodyLoad()
+        {
+            initPage(document.title);
+        }
+   
+    </script>
+    <style type="text/css">
+    
+        a
+        {
+            color: #A31A1C;
+            text-decoration: underline;
+            cursor: default;
+        }
+        
+        a:hover
+        {
+            color: #A31A1C;
+            text-decoration: underline;
+            cursor: auto;
+        }
+        
+        a:active
+        {
+            color: #A31A1C;
+            text-decoration: underline;
+            cursor: auto;
+        }
+        
+        a:visited
+        {
+            color: #A31A1C;
+            text-decoration: underline;
+            cursor: auto;
+        }
+
+
+    </style>    
+</head>
+
+<body onload="OnBodyLoad();">
+<div id="dpi"></div>
+    <!-- background -->
+    <div id="idBackGrd">
+<img src="Images/backgrd.png" class="stretch" />
+
+</div>
+	<img id="idBrandingLeft" name="BrandingLeft" src="Images/banner" />  
+    <img id="idClose" alt="" class="CloseBtn" src="Images/close.png" onmouseover="HighLightClose();" onmouseout="UnHighLightClose();" ICA:Function="ICACancelSetup" />
+	<div id="idDragMe" class="Dragable">&nbsp;&nbsp;&nbsp;</div>
+    
+    <!-- ------------------------------------------------------------ -->
+    <!-- page content panel -->
+    <div id="idPanel">
+
+        <div class="DlgHeader" id="id_Str_FinErr_Header"></div>
+
+        <div class="DlgBlock" style="top: 4.06em; ">
+	        <div id="id_Str_FinErr_Desc"></div>
+    	     <br />
+	        <div >
+	            <label class="Failure" ICA:Property="ICA.Installation.Result.Text">[Reason for failure]</label>
+	        </div>
+	         <br />
+        <div id="id_Str_FinSuc_FreshFinish"></div>
+
+        </div>
+        <!-- -------------------------------------------------------------------- -->
+        
+    </div> <!-- div id="idTabPanel" END -->
+
+
+    <!-- ------------------------------------------------------------ -->
+    <!-- <div> Wizard Buttons (at bottom of dialog) - START -->
+    <div class="DlgWizardBtns">
+        <table border="0" width="100%">
+            <tr>
+         
+                <td align="right">
+                    <button type="button" class="Initiator" onmouseover="HighLightButton('id_Str_Btn_Finish');" onmouseout="UnHighLightButton('id_Str_Btn_Finish');" onclick="g_Setup.EndModalLoop(0);" ID="id_Str_Btn_Finish" ></button>
+                </td>
+            </tr>
+        </table>
+    </div>  <!-- <div class="DlgWizardBtns"> Wizard Buttons (at bottom of dialog) - END -->
+
+</body>
+</html>

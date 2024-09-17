@@ -1,0 +1,212 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:ICA="ICA">
+	<head>
+		<meta name="vs_showGrid" content="True" />
+		<title>Setup Wizard</title>
+		<LINK href="../../_XX/Required/Style.css" type="text/css" rel="STYLESHEET" />
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1" />
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+		<meta name="ICADlg" 
+		      content="text/html" 
+		      id="ICADlg" 
+		      ICA:DlgHW="550,480" 
+		      ICA:DlgTitle="Setup.exe /? - command line help" 
+		      ICA:PromptForCancel="no" />
+		
+		<style type="text/css">
+    
+    	    .HelpTable
+		    {
+		        border-top-style: none;
+	            border-right-style: none;
+	            border-left-style: none;
+	            border-bottom-style: none;
+		    }
+		    
+            .HelpItem
+            {
+	            vertical-align: top;
+	            font-size: 14px;
+	            font-family: 'Segoe UI' , Tahoma;
+	            border-bottom: gray 1px solid;
+	            margin-top: 10px;
+	            margin-bottom: 10px;
+	            padding-top: 5;
+	            padding-bottom: 5;
+            }
+		</style>
+		
+	</head>
+	
+	<body>
+	
+	<div id="idContent"
+	     class="Panel"
+	     style="overflow: auto;
+	            padding: 5 5 5 5;
+	            border: double 3px silver;
+	            background-color: white;
+	            width: 450px;
+	            height: 440px; 
+	            text-align: left;">
+
+
+        <table id="idContentTable" cellspacing="0">
+        
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    Jest to skrócony podręcznik referencyjny dla typowych poleceń wiersza używanych w połączeniu z programem Setup.exe.<br /><br />
+                    Setup.exe /Option &lt;Parametr wymagany&gt; [Parametr opcjonalny]
+                    <br /><br />
+                    <u>Opcje instalacji:</u>
+                </td>
+            </tr>
+                        
+            <tr> <!-- /a admin -->
+                <td class="HelpItem" style="width: 55px;">/a</td>
+                <td class="HelpItem">
+                    Informuje o zamiarze utworzenia obrazu serwera.  Instalacja administracyjna — instaluje produkt w sieci
+                    <br /><br />
+                    Setup.exe /a
+                </td>
+            </tr>
+
+            <tr> <!-- /a /q(n) admin -->
+                <td class="HelpItem" style="width: 55px;">/a /q(n)</td>
+                <td class="HelpItem">
+                    Przełącznik /q(n) w wierszu polecenia nie jest już obsługiwany. Obsługiwane przełączniki można znaleźć w najnowszej wersji podręcznika wdrożeniowego pakietu graficznego CorelDRAW.
+                    <br /><br />
+                    Setup.exe /a /q(n)
+                </td>
+            </tr>
+
+            <tr> <!-- /s push profile ID -->
+                <td class="HelpItem" style="width: 55px;">/s</td>
+                <td class="HelpItem">
+                    Służy do przesyłania pozycji PROFILEID do stacji roboczych. Własność publiczna PROFILEID jest używana do logowania wszystkich użytkowników na konto poprzez przesłanie uwierzytelnień konta do stacji roboczych.
+                    <br /><br />
+                    Setup.exe /s PROFILEID=XXXXXXXXXXXXXXX
+                </td>
+            </tr>            
+            <tr> <!-- /x uninstall -->
+                <td class="HelpItem" style="width: 55px;">/x <br /> /uninstall</td>
+                <td class="HelpItem">
+                    Informuje o zamiarze odinstalowania oprogramowania.  Instalacja administracyjna — instaluje produkt w sieci
+                    <br /><br />
+                    Setup.exe /x
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    <br /><br />
+                    <u>Opcje wyświetlania:</u>
+                </td>
+            </tr>
+            
+            <tr> <!-- /q silent -->
+                <td class="HelpItem" style="width: 55px;">/q[n|b|r|f]</td>
+                <td class="HelpItem">
+                    Określa zakres wyświetlania interfejsu użytkownika podczas instalacji.
+                    <br />
+                    n — bez interfejsu<br />
+            		b — podstawowy interfejs<br />
+        		    r — ograniczony interfejs<br />
+		            f — pełny interfejs (domyślnie)<br /><br />
+                    Setup.exe /q
+        		</td>
+            </tr>
+            
+            <tr> <!-- /q silent -->
+                <td class="HelpItem" style="width: 55px;">/quiet</td>
+                <td class="HelpItem">
+                    Tryb cichy, bez interakcji ze strony użytkownika. Tak jak w przypadku /qn
+        		</td>
+            </tr>
+            
+            <tr> <!-- /q silent -->
+                <td class="HelpItem" style="width: 55px;">/passive</td>
+                <td class="HelpItem">
+                    Tryb nienadzorowany — tylko pasek postępu. Tak jak w przypadku /qb
+        		</td>
+            </tr>
+            
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    <br /><br />
+                    <u>Opcje zapisywania w dzienniku:</u>
+                </td>
+            </tr>
+            
+            <tr> <!-- /l log -->
+                <td class="HelpItem" style="width: 55px;">/l[i|w|e|a|r|u|c|m|o|p|v|x|*]</td>
+                <td class="HelpItem">
+                    Umożliwia zapisywanie w pliku dziennika ogólnych informacji dotyczących przebiegu instalacji. Jeżeli ścieżka i nazwa pliku nie zostaną określone, plik dziennika jest tworzony w folderze tymczasowym bieżącego użytkownika. <br /><br />
+                    i — komunikaty o stanie <br />
+            		w — ostrzeżenia niekrytyczne <br />
+            		e — wszystkie komunikaty o błędach <br />
+            		a — wywołanie działań <br />
+            		r — zapisy dla określonych działań <br />
+            		u — żądania użytkownika <br />
+            		c — parametry początkowego interfejsu użytkownika <br />
+            		m — informacje o braku pamięci lub krytycznym zamknięciu <br />
+            		o — komunikaty o braku miejsca na dysku <br />
+            		p — właściwości terminala <br />
+            		v — szczegółowe komunikaty <br />
+            		x — dodatkowe informacje o debugowaniu <br />
+            		* — zapisywanie wszystkich informacji z wyjątkiem opcji v oraz x <br /><br />
+            		Domyślnie: /lvoicewarmup<br /><br />
+            		Setup.exe /l"C:\Install.log"
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    <br /><br />
+                    <u>Opcje naprawy:</u>
+                </td>
+            </tr>
+            
+            <tr> <!-- /a admin -->
+                <td class="HelpItem" style="width: 55px;">/f[p|e|c|m|s|o|d|a|u]</td>
+                <td class="HelpItem">
+                Umożliwia naprawę produktu.<br />
+                p — tylko w przypadku braku pliku<br />
+		        o — w przypadku braku pliku lub wykrycia starszej wersji instalacji (domyślnie)<br />
+        		e — w przypadku braku pliku lub wykrycia starszej lub takiej samej wersji instalacji<br />
+		        d — w przypadku braku pliku lub wykrycia innej wersji instalacji<br />
+        		c — w przypadku braku pliku lub gdy suma kontrolna nie odpowiada obliczonej wartości<br />
+		        a — wymuszenie ponownej instalacji wszystkich plików<br />
+        		u — wszystkie wymagane wpisy do rejestru dla danego użytkownika (domyślnie)<br />
+		        m — wszystkie wymagane wpisy do rejestru dla danego komputera (domyślnie)<br />
+        		s — wszystkie istniejące skróty (domyślnie)<br />
+        		<br /><br />
+        		Domyślnie: /foums<br /><br />
+        		Setup.exe /f
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    <br /><br />
+                    <u>Określanie właściwości publicznych:</u><br /><br />
+                    [PROPERTY=PropertyValue]
+                </td>
+            </tr>
+        
+        </table> <!-- table id="idContentTable" -->
+
+    </div> <!-- id="idContent" -->
+
+	<div class="DlgBlock"
+	     style="text-align: right;
+	            width: 450px;
+	            top: 470px;">
+	            
+	    <button onclick="window.external.EndModalLoop(0);" ID="idOk" accesskey="O"><u>O</u>K</button>
+	    
+    </div>
+		
+	</body>
+</html>

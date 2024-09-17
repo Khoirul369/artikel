@@ -1,0 +1,255 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+
+<html xmlns:ICA="ICA">
+
+<head>
+    <title>bula</title>
+    <link href="Style.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="MSThemeCompatible" content="Yes"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta content="text/html" name="ICADlg" id="ICADlg" 
+         ICA:DlgHW="702,588" 
+          ICA:DlgFrame="0"
+          ICA:TransparencyColorRBG="51,52,53"
+          ICA:DisableBackspace="1"        
+          ICA:ProgressState="TBPF_NOPROGRESS"
+    />
+<script language="jscript" type="text/jscript" src="js/topics.js"></script>
+<script language="jscript" type="text/jscript" src="js/Setup.js"></script>
+
+
+<script language="jscript" type="text/jscript">
+    
+    var Setup = window.external;
+    var g_iTimer = 0;
+    var g_iInterval = 500;
+      
+    function OnBodyLoad()
+    {
+        
+        var sLang, pEl, sEula;
+        initPage(document.title);
+        ConfigLocUI();
+        
+        try
+        {
+            
+            sEula = "BULA/BULA_EN.html"
+            document.frames['idEula'].location.href = sEula;
+            idEula.src =  sEula;
+            idChkEULA.accessKey = Setup.GetProperty("Str.Chk.EULA");
+
+        } 
+        catch(err) { }
+        
+		g_iTimer = window.setTimeout(enableAcceptBtn, g_iInterval);
+	   
+    }
+
+    function enableAcceptBtn() 
+    {
+
+        var iFrame = document.getElementById('idEula');
+
+        if (iFrame) {
+            var iFrameWnd = iFrame.contentWindow;
+            if (iFrameWnd) {
+                var iCloseEnough = 5;
+                
+                var scrollHeight = iFrameWnd.document.body.scrollHeight;
+                var offsetHeight = iFrameWnd.document.documentElement.offsetHeight;
+                var scrollTop = iFrameWnd.document.body.scrollTop;
+                var iBottom = scrollHeight - offsetHeight;
+                var iPos = scrollTop;
+                var iDiff = iBottom - iPos;
+
+                if (iDiff <= iCloseEnough) {
+                    DisableAccept(false);
+                    window.clearTimeout(g_iTimer);
+                    g_iTimer = 0;
+
+                    return;
+                }
+            }
+            g_iTimer = window.setTimeout(enableAcceptBtn, g_iInterval);
+        }
+    } //function enableAcceptBtn
+
+    function DisableAccept(bDisabled)
+    {
+        if (bDisabled) {
+            id_Str_Btn_AgreeDisabled.style.display = "block";
+            id_Str_Btn_AgreeEnabled.style.display = "none";
+        
+        }
+        else {
+            id_Str_Btn_AgreeDisabled.style.display = "none";
+            id_Str_Btn_AgreeEnabled.style.display = "block";
+            
+        }    
+    
+    }
+
+
+    function OnClickNext()
+    {
+
+    	g_Setup.ExecuteFN('JS_AcceptEULA');
+	    var sLang = Setup.GetProperty("SETUP_LANG").toUpperCase();
+        var location = "SN.htm";
+
+        if (g_bCoExists)
+        {
+            location = "InstallChoose.htm";
+        }
+        else if (g_bIsAdminPackage)
+        {
+            location = "InstallChoose.htm";
+        }
+        else if (g_UseSNT)
+        {
+
+            location  = "SNT.htm";  
+        }
+        else if (g_bIsAdmin)
+        {
+            location  = "AdminSN.htm";          
+        }
+
+        window.location = location;		
+		
+	}
+    function ConfigLocUI()
+    {
+        if (g_sLang == "NL")
+        {
+            id_Str_Btn_Disagree.style.width = "13em";
+            id_Str_AdminLicense_Scroll.style.top = "4em";
+            idEulaFrame.style.top = "7em";
+            id_PrivDesc.style.top = "28.25em";
+            
+        }
+
+    } 
+
+
+</script>
+
+<style type="text/css">
+    iframe
+    {
+        WIDTH: 100%; 
+        HEIGHT: 20em;
+        border: solid 1px dimgray;
+        background: white;
+        
+    } 
+    .disabledButton
+    {
+	    cursor: auto;
+	    width: 9.2em;
+	    font-family: 'Segoe UI' , Tahoma;
+	    font-size: 0.8125em;
+
+        color: #FFFFFF;
+	    border: solid 1px #B3B3B3; 
+	    background: #61A706;
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+  
+	
+    }
+    .enabledButton
+    {
+        
+        cursor: auto;
+	    width: 9.2em;
+	    
+	    font-family: 'Segoe UI' , Tahoma;
+	    font-size: 0.8125em;
+
+        color: #FFFFFF;
+	    border: solid 1px #B3B3B3; 
+	    background: #61A706;
+     
+    }   
+
+      a
+      {
+          color: #339966;
+          cursor: pointer;
+      }
+      
+      a:hover
+      {
+          color: #339966;
+          cursor: pointer;
+      }
+      
+      a:active
+      {
+          color: #339966;
+          cursor: pointer;
+      }
+      
+      a:visited
+      {
+          color: #339966;
+          cursor: pointer;
+      }      
+
+</style>
+
+</head>
+<body onload="OnBodyLoad()">
+<div id="dpi"></div>
+    <!-- background -->
+    <div id="idBackGrd">
+<img src="Images/backgrd.png" class="stretch" />
+
+</div>
+	<img id="idBrandingLeft" name="BrandingLeft" src="Images/banner" />  
+    <img id="idClose" alt="" class="CloseBtn" src="Images/close.png" onmouseover="HighLightClose();" onmouseout="UnHighLightClose();" ICA:Function="ICACancelSetup" />
+    <div id="idDragMe" class="Dragable">&nbsp;&nbsp;&nbsp;</div>
+    <!-- page content panel -->
+    <div id="idPanel" >
+    
+        <div class="DlgHeaderAdminLicense" id="id_Str_AdminLicense_Header" style="top: 0em;"></div>
+        <div class="DlgBlock" id="id_Str_AdminLicense_Scroll" style="top: 2.90em;"></div>
+        
+         
+        <div class="DlgBlock" id="idEulaFrame" style="top: 6em;">
+            <iframe id="idEula" frameborder="0" ></iframe>
+        </div>
+        <div class="DlgBlock" id="id_PrivDesc" style="top: 27.25em;">  
+            <div id="id_Str_AdminLicense_Privacy_Desc" ></div>
+         </div>
+
+    </div> <!-- div id="idTabPanel" END -->
+
+    <!-- ------------------------------------------------------------ -->
+    <!-- <div> Wizard Buttons (at bottom of dialog) - START -->
+    <div class="DlgWizardBtns">
+        <table border="0" width="100%">
+            <tr>
+                
+                <td align="left">
+                   
+                </td> 
+                <td width="7.50em" align="left">
+                    <button type="button" id="id_Str_Btn_Disagree" ICA:Function="ICACancelSetup"  ></button>    
+                </td>
+                <td width="7.50em" align="right">
+                    
+                    
+                    <button type="button" class="disabledButton" id="id_Str_Btn_AgreeDisabled"></span>
+                    <button type="button"  class="enabledButton" style="display: none;" id="id_Str_Btn_AgreeEnabled"  name="AcceptLicense" onclick="OnClickNext();" >Accept</button>           
+                </td>
+                
+            </tr>
+        </table>
+    </div>  <!-- <div class="DlgBlock"> Wizard Buttons (at bottom of dialog) - END -->
+
+</body>
+</html>

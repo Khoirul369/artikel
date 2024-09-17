@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+
+<html xmlns:ICA="ICA">
+<head>
+    <title>Init</title>
+    <link href="Style.css" rel="stylesheet" type="text/css" />
+    <meta http-equiv="MSThemeCompatible" content="Yes"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta content="text/html" name="ICADlg" id="ICADlg" 
+           ICA:DlgHW="702,588" 
+          ICA:DlgFrame="0"
+          ICA:TransparencyColorRBG="51,52,53"
+           ICA:Modal="0"
+          ICA:ProgressState="TBPF_INDETERMINATE" 
+          ICA:ProgressBarTBLR="634,655,28,558"
+         
+         
+    />
+<script language="jscript" type="text/jscript" src="js/topics.js"></script>
+<script language="jscript" type="text/jscript" src="js/Setup.js"></script>
+
+
+<script language="jscript" type="text/jscript">
+    var Setup = window.external;
+        function BodyLoad()
+        {
+
+		LoadImage(InitLogo);
+		 document.getElementById("ProgressTotalText").innerHTML = Setup.getProperty("Str_Init_PleaseWait");
+
+           LoadStrings();
+
+        }
+
+        
+
+
+        
+    </script>
+    <style type="text/css">
+
+        #idPanelInit
+        {
+	        background-color: Transparent;
+	        left: 1.75em;
+	        width: 33.125em;
+	        position: absolute;
+	        top: 4.06em;
+	        height: 31.25em;
+	        text-align: center;
+        }        
+  .center {margin: auto; width: 60%; padding: 10px;}
+	.wordmark{height: 3.88em; width: 16.56em;}
+	.shadow{height: 15.38em;width: 15.38em;}
+	.logo{height: 13.13em;width: 13.13em;}
+	.wordmarktop{top: 17em; width: 100%;	}
+	.logotop{position:absolute; left: 10em; top: 1.2em;	}
+
+    </style>    
+</head>
+
+<body onload="BodyLoad()">
+<div id="dpi"></div>
+    <!-- background -->
+<div id="idBackGrd">
+<img src="Images/backgrd.png" class="stretch" />
+</div>
+
+ 
+ 
+    <!-- ------------------------------------------------------------ -->
+    <!-- page content panel -->
+    <div id="idPanelInit">
+    	<div >
+			<!--img src="Images/main_graphic_shadow.png" name="InitLogoShadow" class="stretch center shadow" alt="" -->
+	        <div class="logotop">
+	        <img id="idInitLogo" class="stretch center logo" name="InitLogo" src="Images/init" alt="" >
+	        </div>
+	    </div>
+
+        <div class="DlgBlock" id="id_Str_Init_InitSetup" style="top: 20.88em; text-align: center; color: #000000; font-size: 1.38em;">
+                     
+        </div>
+
+        <div class="DlgBlock" style="top: 36.88em; text-align: center; color: #666666;">
+            <label id="ProgressTotalText" >Please wait ...</label>
+        </div>
+
+    </div> <!-- div id="idTabPanel" END -->
+
+
+
+    
+</body>
+</html>

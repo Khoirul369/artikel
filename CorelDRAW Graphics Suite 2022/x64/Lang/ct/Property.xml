@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ICA lang="CT">
+	<Properties>
+    <Property name="Str.ProductDisplayName" value="CorelDRAW Graphics Suite"/>
+    <Property name="Str.SetupAlreadyRunning" value="Setup.exe 已在執行中。"/> 
+		<Property name="Str.CancelSetupPrompt" value="您確定要取消安裝 %s 嗎？" comment="if %s is used in the string, it will be replaced with [Str.ProductDisplayName]"/>
+    <Property name="Str.CouldNotOpenCore" value="試圖設定軟體時，安裝發生問題。無法存取檔案: %s 您要繼續嗎？" comment="string displayed to the user if the core .msi could not be opened during initalization -- %s MUST be in the string, it is replaced with the reason for failure"/>
+    <Property name="Str.NoFolderAccess" value="無法存取資料夾: %s" comment="%s is replaced with the folder name"/>
+    <Property name="Str.PathTooLong" value="%s 的安裝目錄路徑限制最多 %s 個字元。請選取其他目的地。" comment="first %s is replaced with [Str.ProductDisplayName] -- second %s is replaced with [MAX_PATH]"/>
+    <Property name="Str.Initializing.Text" value="請稍候 ..."/>
+    <Property name="Str.Initializing.Text.Cancelling" value="正在放棄操作 ..."/>
+		<Property name="Str.Feature.MainApp" value="CorelDRAW Graphics Suite"/> 
+
+    
+    <Property name="Str.Feature.Utilities.VSTA.Desc.WithVS9" value="此功能將安裝對於 Visual Studio Tools for Applications 的支援 (若已安裝 Visual Studio 2008 SP1)。"/>
+    <Property name="Str.Feature.Programs64" value="64 位元程式檔案"/>
+    <Property name="Str.Feature.Programs64.Desc" value="64 位元程式檔案"/>
+    <Property name="Str.DestinationFolder" value="請選取您要安裝的資料夾位置。"/>
+    <Property name="Str.SerialNotValid" value="序號無效。"/>
+
+
+    <Property name="Str.ProgressText.Default" value="%d%% 完成" comment="this is the default progress text, you can override it using 'progresstext' attribute on the msi or dbm node -- optional %d%% is populated with the percent complete"/>
+    <Property name="Str.Running.VBA.exe.text" value="請稍候，我們正在設定 Visual Basic for Applications"/>
+    <Property name="Str.CacheSetupSource.Progress.text" value="請稍候，我們正在準備您的安裝程式檔案"/>
+
+    <Property name="Str.Text.RequiredFeature" value="(必要)"/>
+	<Property name="Str.ProgressText.CopyingPatches" value="正在複製修補程式檔案: "/>
+    <Property name="Str.ProgressText.Common" value="%d%% 完成 - 正在設定 CorelDRAW Graphics Suite"/>
+    <Property name="Str.ProgressText.Capture" value="%d%% 完成 - 正在設定 Corel CAPTURE"/>
+    <Property name="Str.ProgressText.Draw" value="%d%% 完成 - 正在設定 CorelDRAW"/>
+    <Property name="Str.ProgressText.Paint" value="%d%% 完成 - 正在設定 Corel PHOTO-PAINT"/>
+    <Property name="Str.ProgressText.CS" value="%d%% 完成 - 正在設定 CorelDRAW Graphics Suite 簡體中文語言套件"/>
+    <Property name="Str.ProgressText.CT" value="%d%% 完成 - 正在設定 CorelDRAW Graphics Suite 繁體中文語言套件"/>
+    <Property name="Str.ProgressText.CZ" value="%d%% 完成 - 正在設定 CorelDRAW Graphics Suite 捷克文語言套件"/>
+    <Property name="Str.ProgressText.NL" value="%d%% 完成 - 正在設定 CorelDRAW Graphics Suite 荷蘭文語言套件"/>
+    <Property name="Str.ProgressText.EN" value="%d%% 完成 - 正在設定 CorelDRAW Graphics Suite 英文語言套件"/>
+    <Property name="Str.ProgressText.FR" value="%d%% 完成 - 正在設定 CorelDRAW Graphics Suite 法文語言套件"/>
+    <Property name="Str.ProgressText.DE" value="%d%% 完成 - 正在設定 CorelDRAW Graphics Suite 德文語言套件"/>
+    <Property name="Str.ProgressText.IT" value="%d%% 完成 - 正在設定 CorelDRAW Graphics Suite 義大利文語言套件"/>
+    <Property name="Str.ProgressText.JP" value="%d%% 完成 - 正在設定 CorelDRAW Graphics Suite 日文語言套件"/>
+    <Property name="Str.ProgressText.PL" value="%d%% 完成 - 正在設定 CorelDRAW Graphics Suite 波蘭文語言套件"/>
+    <Property name="Str.ProgressText.BR" value="%d%% 完成 - 正在設定 CorelDRAW Graphics Suite 葡萄牙文 (巴西) 語言套件"/>
+    <Property name="Str.ProgressText.RU" value="%d%% 完成 - 正在設定 CorelDRAW Graphics Suite 俄文語言套件"/>
+    <Property name="Str.ProgressText.ES" value="%d%% 完成 - 正在設定 CorelDRAW Graphics Suite 西班牙文語言套件"/>
+    <Property name="Str.ProgressText.TR" value="%d%% 完成 - 正在設定 CorelDRAW Graphics Suite 土耳其文語言套件"/>
+	<Property name="Str.ProgressText.SV" value="%d%% 完成 - 正在配置 CorelDRAW Graphics Suite 瑞典文語言套件"/>
+    <Property name="Str.ProgressText.FontManager" value="%d%% 完成 - 正在設定 Corel Font Manager"/>
+    <Property name="Str.ProgressText.VBA" value="%d%% 完成 - 正在設定 Microsoft Visual Basic for Applications"/>
+    <Property name="Str.ProgressText.VSTA" value="正在安裝 Microsoft Visual Studio Tools for Applications"/>
+	<Property name="Str.ProgressText.WebView" value="正在安裝 Microsoft Edge WebView2 Runtime" />
+    <Property name="Str.ProgressText.VC" value="正在安裝適用於 Visual Studio 2019 的 Microsoft Visual C++ 可轉散發套件"/>
+    <Property name="Str.ProgressText.DotNet" value="正在安裝 Microsoft .NET Framework 4.7.2"/>
+    <Property name="Str.ProgressText.ShellExt" value="%d%% 完成 - 正在設定 Corel Windows 殼層延伸"/>
+    <Property name="Str.ProgressText.RemoveAll" value="%d%% 完成 - 解除安裝 CorelDRAW Graphics Suite" />
+    <Property name="Str.Feature.Lang" value="產品語言 "/>
+    <Property name="Str.Feature.Lang.CS" value="中文 (簡體)"/>
+    <Property name="Str.Feature.Lang.CT" value="中文 (繁體)"/>
+    <Property name="Str.Feature.Lang.CZ" value="捷克文"/>
+    <Property name="Str.Feature.Lang.NL" value="荷蘭文"/>
+    <Property name="Str.Feature.Lang.EN" value="英文"/>
+    <Property name="Str.Feature.Lang.FR" value="法文"/>
+    <Property name="Str.Feature.Lang.DE" value="德文"/>
+    <Property name="Str.Feature.Lang.IT" value="義大利文"/>
+    <Property name="Str.Feature.Lang.JP" value="日文"/>
+    <Property name="Str.Feature.Lang.PL" value="波蘭文"/>
+    <Property name="Str.Feature.Lang.BR" value="葡萄牙文 (巴西)"/>
+    <Property name="Str.Feature.Lang.RU" value="俄文"/>
+    <Property name="Str.Feature.Lang.ES" value="西班牙文"/>
+	<Property name="Str.Feature.Lang.SV" value="瑞典文"/>
+
+    <Property name="Str.Feature.Lang.TR" value="土耳其文"/>
+    <Property name="SETUP_LANG" value="CT"/>
+    <Property name="ICA.Lang.Transform" value="1028.mst"/>
+
+
+    <Property name="Str.Error.20000" value="序號無效。"/>
+    <Property name="Str.Error.30000" value="重要: 您必須先安裝 Microsoft .NET Framework 4.7.2，才能安裝 CorelDRAW Graphics Suite。如需 Microsoft .NET Framework 的相關資訊，請造訪 Microsoft 網站.  &lt;a href='https://www.microsoft.com/en-us/download/details.aspx?id=48137' target='_blank' onclick='window.external.EndModalLoop(0);'&gt;http://www.microsoft.com/NET/&lt;/a&gt;"/>
+    <Property name="Str.Error.30001" value="您電腦的運算器不符合軟體的最低系統要求，無法完成安裝。"/>
+    <Property name="Str.Error.30003" value="您的權限不足，無法完成此安裝程序。執行此安裝需要管理權限或更高的權限。請與您的管理員聯絡，然後再安裝一次。"/>
+    <Property name="Str.Error.30004" value="重要: 您必須先安裝 Microsoft .NET Framework 4.7.2，才能安裝 CorelDRAW Graphics Suite。如需 Microsoft .NET Framework 的相關資訊，請造訪 Microsoft 網站。  'https://www.microsoft.com/en-us/download/details.aspx?id=48137' - http://www.microsoft.com/NET/"/>
+    <Property name="Str.Error.30005" value="CorelDRAW Graphics Suite 的 64 位元版本無法安裝於 32 位元的系統。"/>
+	<Property name="Str.Error.5100" value="由於先前安裝時需要重新啟動電腦，因此安裝程式無法繼續。請重新啟動電腦並重新執行安裝程式。"/>
+<!--Coexistence Scenarios -->
+    <Property name="Str.Error.1638" value="您無法安裝本產品，因為已安裝其他版本。若要安裝本產品，您必須先解除安裝現有版本。請按一下 [結束] 退出安裝程式。" comment="Pink"/>
+    <Property name="Str.Error.30500" value="此電腦上已安裝有該應用程式的新版。如果您要安裝這一版本，請先解除安裝新版程式。 "/>
+    <Property name="Str.Error.30504" value="CorelDRAW Essentials 和 CorelDRAW Home and Student 無法安裝於同一台電腦。您的系統尚未修改。 欲安裝本產品，您必須先移除目前安裝的 CorelDRAW 產品。" comment="Rust"/>
+    <Property name="Str.Error.30508" value="您已安裝本產品，因此無法進行安裝作業。若要變更 32 位元或 64 位元版本的安裝，您必須先解除安裝現有版本。" coment="baby blue"/>
+    <Property name="Str.Error.30509" value="您已安裝 CorelDRAW Graphics Suite，無法安裝此試用板。若要安裝試用板，您必須先解除安裝現有產品。" comment="purple"/>
+    <Property name="Str.CDTS.PromptForUpgrade" value="系統在您的電腦偵測到 CorelDRAW Graphics Suite。CorelDRAW Technical Suite 提供 CorelDRAW Graphics Suite 的所有功能，以及更多其他功能！\n\n按一下「確定」以升級至 CorelDRAW Technical Suite。\n\n如果不想升級至 CorelDRAW Technical Suite，請按一下「取消」。" comment="dark blue"/>
+    
+    <Property name="Str.Error.35001" value="&lt;b&gt;詳細資料:&lt;/b&gt;&lt;br /&gt;無法驗證序號。您必須擁有 Internet 連線，才能完成安裝。&lt;br /&gt;&lt;br /&gt;"/>
+    <Property name="Str.Error.30512" value="你必須有網路連接。請連接到網際網路，然後再重試。"/>
+   <Property name="Str.Error.30510" value="您的作業系統並未安裝最新更新，因此無法繼續進行安裝。請安裝適用於 Windows 7 的最新更新，然後再試一次。" comment="OS Not Supported"/>
+	<Property name="Str.Error.30511" value="錯誤: 伺服器上發生未預期的錯誤。請檢查 Internet 連線，然後再試一次。"/>
+	<Property name="Str.Error.30516" value="我們無法安裝 CorelDRAW Graphics Suite 所需的 Microsoft .NET Framework 4.7.2。請確認您的作業系統具有最新的 Service Pack，並已安裝更新，然後再試一次。&lt;br /&gt;&lt;br /&gt;如需有關 Microsoft .NET Framework 4.7.2 的資訊，請造訪 Microsoft 網站。 &lt;a href='https://www.microsoft.com/en-us/download/details.aspx?id=48137' target='_blank' onclick='window.external.EndModalLoop(0);'&gt;http://www.microsoft.com/NET/&lt;/a&gt;" comment="Custom .NET error"/>
+	<Property name="Str.Error.30513" value="CorelDRAW Graphics Suite 無法安裝於 Windows XP 或 Windows Vista。請升級電腦的作業系統，然後再試一次。" comment="OS Not Supported"/>
+	<Property name="Str.Error.30515" value="此序號無法用來啟動您的試用版。請登入您的 Corel 帳戶，從&lt;a href=&quot;http://www.corel.com&quot; target=&quot;_blank&quot;&gt;會員及訂閱者專用下載項目&lt;/a&gt;下載您的組建。"/>
+	<Property name="Str.Error.30517" value="安奘本產品需要 Internet Explorer 11。請確認您的作業系統已經安裝最新的更新與 Service Pack，然後再試一次。" comment="IE8 Not Supported" />
+    <Property name="Str.Error.30518" value="您的作業系統並未安裝最新更新，因此無法繼續進行安裝。請安裝適用於 Windows 8 的最新更新，然後再試一次。" comment="Win8 Not Supported"/>    
+     <Property name="Str.Error.30519" value="CorelDRAW Graphics Suite 無法安裝在 Windows 7 或 Windows 8 上。請升級您電腦的作業系統並再試一次。" />
+    <Property name="Str.Error.30520" value="無法將此軟體版本部署至網路。如需與安裝軟體至網路相關的資訊，請參閱《部署指南》。" />
+    <Property name="Str.Error.30522" value="此序號不能用來下載訂閱帳戶專屬的 CorelDRAW Graphics Suite 版本。" />
+
+    <Property name="Str.DiskSpace.Bytes" value="位元組"/>
+    <Property name="Str.DiskSpace.Kb" value="KB"/>
+    <Property name="Str.DiskSpace.MB" value="MB"/>
+    <Property name="Str.DiskSpace.GB" value="GB"/>
+    <Property name="Str.DiskSpace.TB" value="TB"/>
+    <Property name="Str.DiskSpace.RequiredString" value="%s 所需的磁碟機 %s 空間: %s"/>
+    <Property name="Str.UpgradeProgressText" value="移除應用程式 "/>
+
+    <Property name="Str.Feature.Filters.GhostscriptGPL" value="GPL Ghostscript"/>
+    <Property name="Str.Feature.Filters.GhostscriptGPL.Installed.Text" value="&lt;b&gt;GPL Ghostscript (已安裝)&lt;/b&gt;"/>
+
+    <Property name="Str.PrerequisiteReboot.Prompt" value="您必須重新啟動系統才能繼續進行安裝。\n\n請按一下「是」 立即重新啟動，或若您打算稍後手動重新啟動，請按「否」。"/>
+    
+
+    <Property name="Str.Required.Dlg.InstallComplete" value="安裝完成"/>
+
+    <Property name="billboard_01.png" value="" />
+    <Property name="billboard_02.png" value="" />
+    <Property name="billboard_03.png" value="以 Corel 內容建立，並且包含於 2021 中"/>
+    <Property name="billboard_04.png" value="" />
+
+    <Property name="Str_Init_InitSetup" value="正在初始化安裝程式"/>
+    <Property name="Str_Init_PleaseWait" value="請稍候 ..."/>
+    <Property name="Str_License_Header" value="若要繼續安裝此軟體，您必須同意「Corel 使用者授權協議」 (EULA) 之條款。"/>
+    <Property name="Str_License_Privacy_Desc" value="我們重視您的隱私權。按一下&lt;a href='http://www.corel.com/privacy/' target='_blank'&gt;這裡&lt;/a&gt;以查看我們的隱私權政策。" />
+    <Property name="Str_License_Tooltip" value="您必須接受授權合約的條款方可繼續。"/>
+    <Property name="Str_SN_Header" value="請輸入您的資訊。"/>
+    <Property name="Str_SN_User" value="全名："/>
+    <Property name="Str_SN_SN" value="序號："/>
+    <Property name="Str_SN_Hint" value="如果您之前已安裝並在線上註冊您的產品，您可以在您的 &lt;a href='http://apps.corel.com/redirect/?_redirect=command&amp;function=registeredproducts&amp;app=all&amp;subfunction=ipm&amp;lang=ct' target='_blank'&gt;Corel 帳戶&lt;/a&gt;中找到您的序號。如果您需要尋找序號方面的協助，請造訪 &lt;a href='http://www.corel.com/installcenter' target='_blank'&gt;Corel 安裝中心&lt;/a&gt;。"/>
+    <Property name="Str_SNT_SNInput" value="我有序號。"/>
+    <Property name="Str_SNT_SNInputDesc" value="若已購買產品或產品訂閱，或是擁有取自合作夥伴的試用版序號，請選擇本選項。"/>
+    <Property name="Str_SNT_NoSN" value="我沒有序號，但想試用產品。"/>
+    <Property name="Str_SNT_NoSNDesc" value="選擇此選項，可在有限時間內試用產品的完整功能。試用期結束後，就只能使用有限功能。"/>
+    
+    <Property name="Str_InstallChoose_Header" value="選擇一個安裝選項。"/>
+    <Property name="Str_InstallChoose_InstallLink" value="一般安裝"/>
+    <Property name="Str_InstallChoose_InstallDesc" value="這個選項會將軟體安裝至預設位置，並包含大部分程式與選項。"/>
+    <Property name="Str_InstallChoose_InstallSize" value="安裝大小： "/>
+    <Property name="Str_InstallChoose_InstallSize2" value=" 可適用)"/>
+    <Property name="Str_InstallChoose_CustomLink" value="自訂安裝 ..."/>
+    <Property name="Str_InstallChoose_CustomDesc" value="這個選項可讓您選擇安裝軟體的方式。"/>
+    <Property name="Str_InstallChoose_AdminLink" value="部署..." />
+    <Property name="Str_InstallChoose_AdminDesc" value="此選項即可讓您建立伺服器影像，以便在個別工作站安裝此軟體。"/>
+    <Property name="Str_InstallChoose_AdminOnlineLink" value="開啟網際網路功能進行部署"/>
+    <Property name="Str_InstallChoose_AdminOnlineDesc" value="此選項可讓您建立伺服器映像，以便在個別工作站上部署軟體，且預設網際網路功能會是開啟狀態。"/>
+              
+    <Property name="Str_Install_InstallHeader" value="選擇您要安裝的程式。"/>
+    <Property name="Str_Install_OptionsHeader" value="選擇其他選項。"/>
+    <Property name="Str_Install_FeaturesHeader" value="選擇您要安裝的程式功能。"/>
+    <Property name="Str_Install_LocationHeader" value="選擇安裝位置及語言。"/>
+    <Property name="Str_Install_LocationHeader2" value="選擇安裝位置。"/>
+    <Property name="Str_Install_LangHeader" value=""/>
+
+    <Property name="Str_Install_Draw" value="CorelDRAW " />
+    <Property name="Str_Install_DrawDesc" value=" | 向量圖解與頁面版面"/>
+    <Property name="Str_Install_PP" value="Corel PHOTO-PAINT " />
+    <Property name="Str_Install_PPDesc" value=" | 點陣圖圖解與相片編輯"/>
+    <Property name="Str_Install_Capture" value="Corel CAPTURE "/>
+    <Property name="Str_Install_CaptureDesc" value=" | 進階螢幕擷取"/>
+    <Property name="Str_Install_FontManager" value="Corel Font Manager "/>
+    <Property name="Str_Install_FontManagerDesc" value=" | 字型管理員"/>
+
+    <Property name="Str_Install_WT" value="書寫工具"/>
+    <Property name="Str_Install_WTDesc" value="安裝各種語言的拼字檢查、同義字與文法檢查，以協助您校對文件。"/>
+    <Property name="Str_Install_Utilities" value="公用程式"/>
+    <Property name="Str_Install_UtilitiesDesc" value="安裝可搭配 CorelDRAW 及 Corel PHOTO-PAINT 使用的公用程式。"/>
+    <Property name="Str_Install_DupWiz" value="雙面列印精靈"/>
+    <Property name="Str_Install_VBA" value="Visual Basic for Applications 7.1"/>
+    <Property name="Str_Install_VSTA" value="Visual Studio Tools for Applications"/>
+    <Property name="Str_Install_Shell" value="Windows Shell Extension"/>
+    <Property name="Str_Install_GPL" value="啟用 EPS 相容性"/>
+    <Property name="Str_Install_GPL_Installed" value="啟用 EPS 相容性 (已安裝)"/>
+    <Property name="Str_Install_GPLDesc" value="安裝 GPL Ghostscript 以強化支援，以便匯入 EPS 與 PostScript 檔案。"/>
+
+    <Property name="Str_Install_Updates" value="允許產品更新"/>
+    <Property name="Str_Install_UpdatesDesc" value="自動下載產品更新，但會在安裝前會出現提示。"/>
+    <Property name="Str_Install_Shortcuts" value="安裝桌面捷徑"/>
+    <Property name="Str_Install_ShortcutsDesc" value="將程式捷徑安裝至桌面。"/>
+    <Property name="Str_Install_CopyCabs" value="複製安裝檔案"/>
+    <Property name="Str_Install_CopyCabsDesc" value="無須使用安裝光碟，即可讓您維持並更新軟體。此安裝程式需要 XXX MB 的空間。"/>
+
+    <Property name="Str_Install_Location_Desc" value="將 CorelDRAW Graphics Suite 安裝至下列資料夾。"/>
+    <Property name="Str_Install_Langs_Desc" value="選擇您要安裝的語言。"/>
+
+    <Property name="Str_Install_Langs" value="產品語言:"/>
+    <Property name="Str_Install_Enterprise" value="啟用 CorelDRAW.app Enterprise 的存取" />
+    <Property name="Str_Install_EnterpriseDesc" value="您可以使用您的 Microsoft 365 或 G Suite 帳戶登入。" />
+
+    <Property name="Str_Progress_Header" value="正在安裝，請稍候..."/>
+    <Property name="Str_Progress_Header_Remove" value="正在移除 CorelDRAW Graphics Suite，請稍候..." />
+
+    <Property name="Str_ARP_Header" value="目前已安裝 CorelDRAW Graphics Suite. 請選取下方選項，以變更或從電腦中移除此程式。"/>
+    <Property name="Str_ARP_Modify" value="修改"/>
+    <Property name="Str_ARP_ModifyDesc" value="變更安裝的程式功能。本選項可顯示「自訂選取」對話方塊，協助您變更程式的安裝方式。"/>
+    <Property name="Str_ARP_Repair" value="修復"/>
+    <Property name="Str_ARP_RepairDesc" value="修復修復程式安裝錯誤。 此選項會修正遺失或損毀的檔案、捷徑和登錄項目。"/>
+    <Property name="Str_ARP_Remove" value="移除"/>
+    <Property name="Str_ARP_RemoveDesc" value="將 CorelDRAW Graphics Suite 從您的電腦移除。"/>
+    <Property name="Str_ARP_UserFiles" value="移除使用者檔案"/>
+    <Property name="Str_ARP_UserFilesDesc" value="移除使用者檔案 (如工作區) 包含 CorelDRAW Graphics Suite 應用程式的個人設定。"/>
+	<Property name="Str_ARP_Offline_Uninstall" value="如果想在其他電腦上使用這組序號，請在連線至網際網路的情況下解除安裝。"/>
+    <Property name="Str_FinErr_Header" value="安裝尚未完成。"/>
+    <Property name="Str_FinErr_Desc" value="您的系統尚未修改。若要在其他時間完成安裝，請再次執行安裝程式。"/>
+
+    <Property name="Str_FinSuc_HeaderClean" value="安裝成功。"/>
+    <Property name="Str_FinSuc_HeaderModify" value="您的軟體已修改。"/>
+    <Property name="Str_FinSuc_HeaderRepair" value="成功完成修復。"/>
+    <Property name="Str_FinSuc_HeaderRemove" value="您的軟體已解除安裝。"/>
+
+
+    <Property name="Str_FinSuc_Fresh" value="感謝您選擇 CorelDRAW Graphics Suite！"/>
+    <Property name="Str_FinSuc_FreshFinish" value="請按一下「&lt;b&gt;完成&lt;/b&gt;」離開安裝程式。"/>
+    <Property name="Str_FinSuc_Modify" value="CorelDRAW Graphics Suite 已修改完成。&lt;br/&gt;&lt;br/&gt;請按一下&lt;b&gt;完成&lt;/b&gt;，退出「設定」。"/>
+    <Property name="Str_FinSuc_Repair" value="CorelDRAW Graphics Suite 已修復完成。&lt;br/&gt;&lt;br/&gt;請按一下&lt;b&gt;完成&lt;/b&gt;，退出「設定」。"/>
+    <Property name="Str_FinSuc_RemoveHeader" value="CorelDRAW Graphics Suite 已自您的電腦移除。"/>
+    <Property name="Str_FinSuc_Reboot" value="必須先重新啟動電腦，變更才會生效。請選取下列任一選項，然後按一下 &lt;b&gt;完成&lt;/b&gt;離開安裝程式。"/>
+    <Property name="Str_FinSuc_RebootThanks" value="感謝您選擇 CorelDRAW Graphics Suite。"/>
+    <Property name="Str_FinSuc_RebootYes" value="是，我要立刻重新啟動電腦。"/>
+    <Property name="Str_FinSuc_RebootNo" value="否，我稍候再重新啟動電腦。"/>
+    <Property name="Str_FinSuc_AdminThanks" value="感謝您安裝 CorelDRAW Graphics Suite！安裝程式已成功建立伺服器影像，按一下&lt;b&gt;完成&lt;/b&gt;離開安裝程式。"/>
+    <Property name="Str_FinSuc_AdminServer" value="伺服器影像位置："/>
+
+
+
+    <Property name="Str_MinSysD_Header" value="未符合下列一或多項最低系統需求。"/>
+    <Property name="Str_MinSysD_Desc" value="按一下「&lt;b&gt;繼續&lt;/b&gt;」以忽略建議的最低系統需求，並安裝 CorelDRAW Graphics Suite。按一下「&lt;b&gt;取消&lt;/b&gt;」離開安裝程式。"/>
+    <Property name="Str_MinSysD_Desc2" value="&lt;b&gt;&lt;u&gt;最低系統需求：&lt;/b&gt;&lt;/u&gt;"/>
+    <Property name="Str_MinSysD_IE" value="Internet Explorer 11" />
+    <Property name="Str_MinSysD_OS" value="包含最新 Service Pack 及重大更新的作業系統：Windows 10 64-bit。 此軟體可能無法在舊版 Windows 10 上如預期般正常運作。"/>
+	<Property name="Str_OS32Bit" value="CorelDRAW Graphics Suite 為 64 位元，因此無法安裝於您的 32 位元 (x86) 作業系統。必須配備最新的 Windows 10 64 位元作業系統。"/>
+    <Property name="Str_MinSysD_CPU" value="CPU:&lt;br/&gt;Intel Core i3 或 AMD Athlon 64"/>
+    <Property name="Str_MinSysD_RAM" value="RAM: 8 GB"/>
+    <Property name="Str_MinSysD_ScrRes" value="螢幕解析度： 1280 x 720"/>
+
+    <Property name="Str_PreInstall_Header" value="安裝程式先決條件。"/>
+    <Property name="Str_PreInstall_Desc" value="您必須更新作業系統的部分元件，才能安裝 CorelDRAW Graphics Suite。按一下「&lt;b&gt;繼續&lt;/b&gt;」以安裝下列元件，或是按一下「&lt;b&gt;取消&lt;/b&gt;」離開安裝程式。"/>
+    <Property name="Str_PreInstall_Desc2" value="必要元件："/>
+    <Property name="Str_PreInstall_Net" value="Microsoft .NET Framework 4.7.2"/>
+    <Property name="Str_PreInstall_NetDnld" value="Microsoft .NET Framework 4.7.2 (注意：此更新需要 Internet 連線。)"/>
+    <Property name="Str_PreInstall_Msi" value="Microsoft Windows Installer 4.6"/>
+<Property name="Str_PreInstall_Windows_Updates" value="在繼續前，請先檢查您的 Windows 更新設定，並確認最新 Service Pack 與重要更新已安裝完成。這將有助您快速安裝產品。"/>
+    <Property name="Str_RestMan_Header" value="我們在您的系統中偵測出以下應用程式正在執行。"/>
+    <Property name="Str_RestMan_Desc" value="為了盡可能減少重新啟動電腦的必要性，強烈建議您在繼續前關閉這些應用程式。&lt;br/&gt;&lt;br/&gt;請關閉這些應用程式，並按一下「&lt;b&gt;確定&lt;/b&gt;」繼續。"/>
+    <Property name="Str_RestMan_Restart" value="自動關閉並嘗試重新啟動應用程式。"/>
+    <Property name="Str_RestMan_NoRestart" value="不要關閉應用程式。(必須重新開機。)"/>
+
+    <Property name="Str_RebootPending_Header" value="繼續執行前，請先重新啟動您的電腦。"/>
+    <Property name="Str_RebootPending_Desc" value="若不重新啟動電腦，安裝程式便無法安裝 CorelDRAW Graphics Suite。按一下「&lt;b&gt;立即重新啟動&lt;/b&gt;」以重新啟動電腦並繼續安裝，或按一下「&lt;b&gt;不要重新啟動&lt;/b&gt;」離開安裝程式。"/>
+    
+    <Property name="Str_AdminLicense_Header" value="若要繼續安裝此軟體，您必須同意接受面向業務使用者的 Corel 授權合約 (BULA) 之規範。"/>
+    <Property name="Str_AdminLicense_Privacy_Desc" value="我們非常重視您的隱私。請按一下&lt;a href='http://www.corel.com/privacy/' target='_blank'&gt;此處&lt;/a&gt;以檢視我們的隱私權政策。同意接受 BULA 的條款，即表示您確認已閱讀、了解並接受我們的隱私權政策。" />
+    <Property name="Str_AdminLicense_Scroll" value="您必須先向下捲動至 BULA 底端，才能同意接受這些條款。" />
+    
+    <Property name="Str_AdminDes_Header" value="影像位置。"/>
+    <Property name="Str_AdminDes_Desc" value="您可以在指定的網路位置上安裝伺服器影像。"/>
+    <Property name="Str_AdminDes_Path" value="輸入影像路徑，或按一下 &lt;b&gt;變更&lt;/b&gt;瀏覽想要的位置:"/>
+    <Property name="Str_AdminDes_Error" value="選取或輸入您要建立伺服器影像的網路位置。"/>
+    <Property name="Str_AdminDes_ContentHeader" value="內容位置。"/>
+    <Property name="Str_AdminDes_ContentDesc" value="若已在網路共用上安裝額外內容，可將工作站指向此內容的位置。"/>
+    <Property name="Str_AdminDes_ContentPath" value="鍵入內容路徑，或是按一下「&lt;b&gt;變更&lt;/b&gt;」以瀏覽該路徑所安裝的位置:"/>
+
+    <Property name="Str_AdminNet_Header" value="控制網際網路存取權。" />
+    <Property name="Str_AdminNet_Updates" value="指定部署產品的更新設定：" />
+    <Property name="Str_AdminNet_Updates_OptIn" value="定期更新產品 (建議)" />
+    <Property name="Str_AdminNet_Updates_Optout" value="檢查更新資訊，並讓使用者選擇安裝時機" />
+    <Property name="Str_AdminNet_Updates_Disable" value="永遠不要檢查更新資訊" />
+    <Property name="Str_AdminNet_Internet" value="使用 Internet 功能:"/>
+    <Property name="Str_AdminNet_InternetDesc" value="允許工作站存取 Internet 型功能。"/>
+
+    <Property name="Str_AdminNet_WelcomeScreen" value="在歡迎畫面顯示線上內容" />
+    <Property name="Str_AdminNet_WelcomeScreenDesc" value="允許工作站存取線上學習資源、額外的下載項目，以及產品內購物。" />
+    <Property name="Str_AdminNet_Optional" value="離線安裝時無法使用這些選項。若要啟用這些選項，請重新啟動安裝，然後再登入。"/>
+    <Property name="Str_AdminNet_Collab" value="允許使用者以其企業帳戶登入" />
+    <Property name="Str_AdminNet_CollabDesc" value="啟用企業使用者間的檔案共享和協作。" />
+    <Property name="Str_AdminNet_CollabDesc2" value="允許存取「評論」區域和 Corel Cloud。" />
+    <Property name="Str_AdminNet_CDAEDesc" value="允許使用者使用 Microsoft 365 或 G Suite 帳戶登入。" />
+
+    <Property name="Str_AdminSN_Header" value="請輸入您的資訊。"/>
+    <Property name="Str_AdminSN_SN" value="序號:"/>
+    <Property name="Str_AdminSN_Optional" value="您可以選擇是否登入；若您未登入，則安裝作業將以離線方式繼續進行。在離線情況下，系統不會通知您有關產品更新的消息，而您也無法使用網路連線功能。"/>
+    <Property name="Str_AdminSN_Signin" value="您必須使用 &lt;a href='http://www.corel.com/account' target='_blank'&gt;corel.com&lt;/a&gt; 帳戶登入，以驗證您的軟體。登入之後，您可以選擇儲存伺服器映像及網際網路選項的位置。" />
+    <Property name="Str_AdminSN_Email" value="電子郵件位址:"/>
+    <Property name="Str_AdminSN_PWD" value="密碼:"/>
+    <Property name="Str_AdminSN_ForgotPwd" value="忘記密碼"/>
+    <Property name="Str_AdminSN_AcctDesc" value="您需要corel.com帳戶 &lt;a href='http://www.corel.com/account' target='_blank'&gt;corel.com&lt;/a&gt; 信息才能訪問在線功能，產品更新和內容。"/>
+    <Property name="Str_AdminSN_CreateAcct" value="沒有帳戶嗎？ &lt;a href='https://idp.corel.com/idp/Authn/UserPassword' target='_blank'&gt;建立帳戶&lt;/a&gt; 並返回此處登入。" />
+
+    <Property name="Str_Admin_Error_504" value="若要繼續，您必須登入您的 Corel 帳戶。" />
+    <Property name="Str_Admin_Error_503" value="若要繼續，您必須登入您的 Corel 帳戶。如果忘記您的帳戶認證，請參閱說明如何存取您多方訂閱的電子郵件。"/>
+    <Property name="Str_Admin_Error_502" value="企業版序號無法用於安裝產品的試用版本。請輸入有效序號。"/>
+    <Property name="Str_Admin_Error_501" value="序號無效。"/>
+    <Property name="Str_Admin_Error_500" value="驗證失敗。"/>
+    <Property name="Str_Admin_Error_1" value="您必須接受服務條款才能登入。" Comment="As_IT error - Must Accept TOS"/>
+    <Property name="Str_Admin_Error_1000" value="你必須有網路連接。請連接到網際網路，然後再重試。" Comment="As_IT error - not connected to internet"/>
+    <Property name="Str_Admin_Error_1005" value="電子郵件或密碼無效。請輸入正確的電子郵件位址。如果忘記密碼，請按一下上方連結以取回密碼。 " Comment="As_IT error - Invalid email or pwd"/>
+    <Property name="Str_Admin_Error_1003" value="此帳戶與下載產品時建立的帳戶不符。請查閱訂單確認上記載的帳戶。" Comment="As_IT error - Invalid account"/>
+    <Property name="Str_Admin_Error_0" value="不明錯誤"/>
+
+    <Property name="Str_FilesUse_Header" value="我們在您的系統中偵測出以下應用程式正在執行。"/>
+    <Property name="Str_FilesUse_Desc" value="為了盡可能避免電腦重新啟動，強烈建議您在繼續前先關閉這些應用程式。&lt;br /&gt;&lt;br /&gt;請關閉這些應用程式，然後按一下&lt;b&gt;重試&lt;/b&gt;以繼續。"/>
+
+
+    <Property name="Str_Btn_Cancel" value="取消 (&lt;u&gt;C&lt;/u&gt;)"/>
+	<Property name="Str_Btn_Cancel_AccessKey" value="C"/>
+    <Property name="Str_Btn_Install" value="立即安裝 (&lt;u&gt;I&lt;/u&gt;)"/>
+	<Property name="Str_Btn_Install_AccessKey" value="I"/>
+    <Property name="Str_Btn_OK" value="確定 (&lt;u&gt;O&lt;/u&gt;)"/>
+	<Property name="Str_Btn_OK_AccessKey" value="O"/>
+    <Property name="Str_Btn_Finish" value="完成 (&lt;u&gt;F&lt;/u&gt;)"/>
+	<Property name="Str_Btn_Finish_AccessKey" value="F"/>
+    <Property name="Str_Btn_Accept" value="接受 (&lt;u&gt;A&lt;/u&gt;)"/>
+	<Property name="Str_Btn_Accept_AccessKey" value="A"/>
+    <Property name="Str_Btn_Agree" value="同意 (&lt;u&gt;A&lt;/u&gt;)"/>
+    <Property name="Str_Btn_Agree_AccessKey" value="A"/>
+    <Property name="Str_Btn_AgreeEnabled" value="同意 (&lt;u&gt;A&lt;/u&gt;)"/>
+    <Property name="Str_Btn_AgreeDisabled" value="同意 (&lt;u&gt;A&lt;/u&gt;)"/>
+    <Property name="Str_Btn_Back" value="返回 (&lt;u&gt;B&lt;/u&gt;)"/>
+	<Property name="Str_Btn_Back_AccessKey" value="B"/>
+    <Property name="Str_Btn_Next" value="下一步 (&lt;u&gt;N&lt;/u&gt;)"/>
+	<Property name="Str_Btn_Next_AccessKey" value="N"/>
+    <Property name="Str_Btn_Continue" value="繼續 (&lt;u&gt;O&lt;/u&gt;)"/>
+	<Property name="Str_Btn_Continue_AccessKey" value="O" />
+    <Property name="Str_Btn_Change" value="變更 (&lt;u&gt;H&lt;/u&gt;)..."/>
+	<Property name="Str_Btn_Change_AccessKey" value="H"/>
+    <Property name="Str_Btn_Change2" value="變更 (&lt;u&gt;A&lt;/u&gt;)..."/>
+	<Property name="Str_Btn_Change2_AccessKey" value="A"/>
+    <Property name="Str_Btn_Disagree" value="不同意 (&lt;u&gt;D&lt;/u&gt;)"/>
+    <Property name="Str_Btn_Disagree_AccessKey" value="D"/>
+    <Property name="Str_Btn_Includes" value="包括："/>
+    <Property name="Str_Btn_Path" value="路徑:"/>
+    <Property name="Str_Btn_Retry" value="重試 (&lt;u&gt;R&lt;/u&gt;)"/>
+	<Property name="Str_Btn_Retry_AccessKey" value="R"/>
+    <Property name="Str_Btn_Ignore" value="忽略 (&lt;u&gt;I&lt;/u&gt;)"/>
+	<Property name="Str_Btn_Ignore_AccessKey" value="I"/>
+    <Property name="Str_Btn_RelNotes" value="發行版本備註 (&lt;u&gt;R&lt;/u&gt;)"/>
+	<Property name="Str_Btn_RelNotes_AccessKey" value="R"/>
+    <Property name="Str_Btn_Repair" value="修復 (&lt;u&gt;R&lt;/u&gt;)"/>
+	<Property name="Str_Btn_Repair_AccessKey" value="R"/>
+    <Property name="Str_Btn_Remove" value="移除 (&lt;u&gt;R&lt;/u&gt;)"/>
+	<Property name="Str_Btn_Remove_AccessKey" value="R"/>
+    <Property name="Str_Btn_Reset" value="重設 (&lt;u&gt;R&lt;/u&gt;)"/>
+	<Property name="Str_Btn_Reset_AccessKey" value="R"/>
+    <Property name="Str_Btn_RestartNow" value="立即重新啟動 (&lt;u&gt;R&lt;/u&gt;)"/>
+	<Property name="Str_Btn_RestartNow_AccessKey" value="R"/>
+    <Property name="Str_Btn_DoNotRestart" value="不要重新啟動 (&lt;u&gt;D&lt;/u&gt;)"/>
+	<Property name="Str_Btn_DoNotRestart_AccessKey" value="D"/>
+    <Property name="Str_Chk_EULA" value="A" comment="access key for eula checkbox"/>
+
+
+    <Property name="Pwd_Redirect" value="http://apps.corel.com/redirect?_redirect=command&amp;function=forgotpass&amp;app=all&amp;lang=CT"/>
+    
+    <Property name="Str.OutOfDiskSpace.Warning" value="安裝所需的磁碟空間超過可用的磁碟空間。" lang="English"/>
+
+  </Properties>
+</ICA>

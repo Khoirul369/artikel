@@ -1,0 +1,212 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:ICA="ICA">
+	<head>
+		<meta name="vs_showGrid" content="True" />
+		<title>Setup Wizard - Command Line Help</title>
+		<LINK href="../../_XX/Required/Style.css" type="text/css" rel="STYLESHEET" />
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1" />
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+		<meta name="ICADlg" 
+		      content="text/html" 
+		      id="ICADlg" 
+		      ICA:DlgHW="550,480" 
+		      ICA:DlgTitle="Setup.exe /? - command line help" 
+		      ICA:PromptForCancel="no" />
+		
+		<style type="text/css">
+    
+    	    .HelpTable
+		    {
+		        border-top-style: none;
+	            border-right-style: none;
+	            border-left-style: none;
+	            border-bottom-style: none;
+		    }
+		    
+            .HelpItem
+            {
+	            vertical-align: top;
+	            font-size: 14px;
+	            font-family: 'Segoe UI' , Tahoma;
+	            border-bottom: gray 1px solid;
+	            margin-top: 10px;
+	            margin-bottom: 10px;
+	            padding-top: 5;
+	            padding-bottom: 5;
+            }
+		</style>
+		
+	</head>
+	
+	<body>
+	
+	<div id="idContent"
+	     class="Panel"
+	     style="overflow: auto;
+	            padding: 5 5 5 5;
+	            border: double 3px silver;
+	            background-color: white;
+	            width: 450px;
+	            height: 440px; 
+	            text-align: left;">
+
+
+        <table id="idContentTable" cellspacing="0">
+        
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    Это краткое справочное руководство по общим командным строкам, используемым для программы Setup.exe.<br /><br />
+                    Setup.exe /параметр &lt;обязательный параметр&gt; [необязательный параметр]
+                    <br /><br />
+                    <u>Параметры установки:</u>
+                </td>
+            </tr>
+                        
+            <tr> <!-- /a admin -->
+                <td class="HelpItem" style="width: 55px;">/a</td>
+                <td class="HelpItem">
+                    Указывает на необходимость создания образа сервера.  Административная установка: установка ПО в сети
+                    <br /><br />
+                    Setup.exe /a
+                </td>
+            </tr>
+
+            <tr> <!-- /a /q(n) admin -->
+                <td class="HelpItem" style="width: 55px;">/a /q(n)</td>
+                <td class="HelpItem">
+                    Параметр командной строки /q(n) больше не поддерживается. Поддерживаемые параметры командной строки см. в последней версии руководства по развертыванию CorelDRAW Graphics Suite.
+                    <br /><br />
+                    Setup.exe /a /q(n)
+                </td>
+            </tr>
+            
+            <tr> <!-- /s push profile ID -->
+                <td class="HelpItem" style="width: 55px;">/s</td>
+                <td class="HelpItem">
+                    Используется для активной отправки PROFILEID на рабочие станции. Открытое свойство PROFILEID используется для входа всех пользователей в учетную запись путем активной отправки учетных данных на рабочие станции (без запроса).
+                    <br /><br />
+                    Setup.exe /s PROFILEID=XXXXXXXXXXXXXXX
+                </td>
+            </tr>            
+            <tr> <!-- /x uninstall -->
+                <td class="HelpItem" style="width: 55px;">/x <br /> /uninstall</td>
+                <td class="HelpItem">
+                    Указывает на необходимость удаления программного обеспечения.  Административная установка: установка ПО в сети
+                    <br /><br />
+                    Setup.exe /x
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    <br /><br />
+                    <u>Параметры отображения:</u>
+                </td>
+            </tr>
+            
+            <tr> <!-- /q silent -->
+                <td class="HelpItem" style="width: 55px;">/q[n|b|r|f]</td>
+                <td class="HelpItem">
+                    Задает степень детализации отображения интерфейса пользователя во время установки.
+                    <br />
+                    n - без интерфейса<br />
+            		b - основной интерфейс<br />
+        		    r - сокращенный интерфейс<br />
+		            f - полный интерфейс (по умолчанию)<br /><br />
+                    Setup.exe /q
+        		</td>
+            </tr>
+            
+            <tr> <!-- /q silent -->
+                <td class="HelpItem" style="width: 55px;">/quiet</td>
+                <td class="HelpItem">
+                    Тихий режим (без отображения пользовательского интерфейса). Аналогичен параметру /qn
+        		</td>
+            </tr>
+            
+            <tr> <!-- /q silent -->
+                <td class="HelpItem" style="width: 55px;">/passive</td>
+                <td class="HelpItem">
+                    Автоматический режим (отображается только индикатор процесса установки). Аналогичен параметру /qb
+        		</td>
+            </tr>
+            
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    <br /><br />
+                    <u>Параметры ведения журнала:</u>
+                </td>
+            </tr>
+            
+            <tr> <!-- /l log -->
+                <td class="HelpItem" style="width: 55px;">/l[i|w|e|a|r|u|c|m|o|p|v|x|*]</td>
+                <td class="HelpItem">
+                    В журнале сохраняются общие сведения об установке. Если путь и имя файла не заданы, файл журнала создается во временной папке текущего пользователя. <br /><br />
+                    i - сообщения о состоянии <br />
+            		w - некритические предупреждения <br />
+            		e - все сообщения об ошибках <br />
+            		a - запуск действий <br />
+            		r - записи, относящиеся к конкретным действиям <br />
+            		u - запросы пользователя <br />
+            		c - начальные параметры интерфейса пользователя <br />
+            		m - информация о нехватке памяти или аварийном завершении <br />
+            		o - сообщения о нехватке места на диске <br />
+            		p - свойства терминала <br />
+            		v - вывод подробных сведений <br />
+            		x - дополнительная отладочная информация <br />
+            		* - заносить в журнал все сведения, кроме параметров v и x <br /><br />
+            		По умолчанию используется параметр /lvoicewarmup<br /><br />
+            		Setup.exe /l"C:\Install.log"
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    <br /><br />
+                    <u>Параметры восстановления:</u>
+                </td>
+            </tr>
+            
+            <tr> <!-- /a admin -->
+                <td class="HelpItem" style="width: 55px;">/f[p|e|c|m|s|o|d|a|u]</td>
+                <td class="HelpItem">
+                Восстанавливает программное обеспечение.<br />
+                p - только если файл отсутствует<br />
+		        o - если файл отсутствует или имеется файл более ранней версии (по умолчанию)<br />
+        		e - если файл отсутствует или имеется файл с таким же или предыдущим номером версии<br />
+		        d - если файл отсутствует или имеется файл с несоответствующим номером версии<br />
+        		c - если файл отсутствует или контрольная сумма не совпадает с подсчитанным значением<br />
+		        a - выполняется принудительная переустановка всех файлов<br />
+        		u - все необходимые записи реестра для пользователя (по умолчанию)<br />
+		        m - все необходимые записи реестра для компьютера (по умолчанию)<br />
+        		s - все существующие ярлыки (по умолчанию)<br />
+        		<br /><br />
+        		По умолчанию используется параметр /foums<br /><br />
+        		Setup.exe /f
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    <br /><br />
+                    <u>Настройка общих свойств:</u><br /><br />
+                    [PROPERTY=PropertyValue]
+                </td>
+            </tr>
+        
+        </table> <!-- table id="idContentTable" -->
+
+    </div> <!-- id="idContent" -->
+
+	<div class="DlgBlock"
+	     style="text-align: right;
+	            width: 450px;
+	            top: 470px;">
+	            
+	    <button onclick="window.external.EndModalLoop(0);" ID="idOk" accesskey="O"><u>O</u>K</button>
+	    
+    </div>
+		
+	</body>
+</html>

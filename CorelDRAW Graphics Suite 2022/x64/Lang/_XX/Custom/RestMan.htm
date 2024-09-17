@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" >
+<!-- saved from url=(0014)about:internet -->
+
+<html xmlns:ICA="ICA">
+<head>
+    <title>RestMan</title>
+    <link href="Style.css" rel="stylesheet" type="text/css" />
+    <meta http-equiv="MSThemeCompatible" content="Yes"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta content="text/html" name="ICADlg" id="ICADlg" 
+  ICA:DlgHW="702,588" 
+          ICA:DlgFrame="0"
+          ICA:TransparencyColorRBG="51,52,53"
+     
+    />
+    
+    <script type="text/jscript" language="jscript" src="js/topics.js"></script>
+    <script language="jscript" type="text/jscript" src="js/Setup.js"></script>                
+    <script language="jscript" type="text/jscript">
+        
+        function OnBodyLoad()
+        {
+            initPage(document.title);
+        }
+
+    </script>
+
+</head>
+
+<body onload="OnBodyLoad();">
+<div id="dpi"></div>
+    <!-- background -->
+    <div id="idBackGrd">
+<img src="Images/backgrd.png" class="stretch" />
+
+</div>
+	<img id="idBrandingLeft" name="BrandingLeft" src="Images/banner" />  
+    <img id="idClose" alt="" class="CloseBtn" src="Images/close.png" onmouseover="HighLightClose();" onmouseout="UnHighLightClose();" ICA:Function="ICACancelSetup" />
+	<div id="idDragMe" class="Dragable">&nbsp;&nbsp;&nbsp;</div>
+    
+    <!-- page content panel -->
+    <div id="idPanel">
+    
+        <div class="DlgHeader" id="id_Str_RestMan_Header"></div>        
+        
+        <div class="DlgBlock" id="id_Str_RestMan_Desc" style="top: 5em; left: .13em;" ></div>
+        
+        <div class="DlgBlock" style="top: 11.25em;
+                                     BORDER-LEFT-COLOR: silver; BORDER-BOTTOM-COLOR: silver; 
+                                     BORDER-TOP-COLOR: silver; BORDER-RIGHT-COLOR: silver;
+                                     BORDER-TOP-STYLE: double; BORDER-RIGHT-STYLE: double;
+                                     BORDER-LEFT-STYLE: double; BORDER-BOTTOM-STYLE: double;
+                                     background-color: #f1f1f1;
+                                     height: 12.50em;">
+                                     
+            <div style="margin: .63em;">
+                <label ICA:Property="Files.In.Use.DisplayName.0">[Files.In.Use.DisplayName.0]</label><br>
+	    		<label ICA:Property="Files.In.Use.DisplayName.1">[Files.In.Use.DisplayName.1]</label><br>
+		    	<label ICA:Property="Files.In.Use.DisplayName.2">[Files.In.Use.DisplayName.2]</label><br>
+			    <label ICA:Property="Files.In.Use.DisplayName.3">[Files.In.Use.DisplayName.3]</label><br>
+    			<label ICA:Property="Files.In.Use.DisplayName.4">[Files.In.Use.DisplayName.4]</label><br>
+	    		<label ICA:Property="Files.In.Use.DisplayName.5">[Files.In.Use.DisplayName.5]</label><br>
+		    	<label ICA:Property="Files.In.Use.DisplayName.6">[Files.In.Use.DisplayName.6]</label><br>
+			    <label ICA:Property="Files.In.Use.DisplayName.7">[Files.In.Use.DisplayName.7]</label><br>
+    			<label ICA:Property="Files.In.Use.DisplayName.8">[Files.In.Use.DisplayName.8]</label><br>
+                <label ICA:Property="Files.In.Use.DisplayName.9">[Files.In.Use.DisplayName.9]</label>
+            </div>
+        </div>
+        
+        <div class="DlgBlock" style="top: 29.25em;">
+            <input id="idRadio1" type="radio" class="geomsize" name="RestartManagerOption" value="CloseRestart" checked >
+                <label for="idRadio1" id="id_Str_RestMan_Restart" ></label>
+            <br>
+            <input id="idRadio2" type="radio" class="geomsize" name="RestartManagerOption" value="Reboot" >
+                <label for="idRadio2" id="id_Str_RestMan_NoRestart" ></label>
+        </div>
+    
+    </div> <!-- div id="idTabPanel" END -->
+
+<!-- ------------------------------------------------------------ -->
+<!-- <div> Wizard Buttons (at bottom of dialog) - START -->
+<div class="DlgWizardBtns">
+    <table border="0" width="100%">
+        <tr>
+
+          <td align="left">
+              <button type="button" ICA:Function="ICACancelSetup" ID="id_Str_Btn_Cancel" ></button>
+          </td>
+                <td width="7.50em" align="right">
+                <button type="button" onmouseover="HighLightButton('id_Str_Btn_OK');" onmouseout="UnHighLightButton('id_Str_Btn_OK');" onclick="window.external.EndModalLoop(0);" ID="id_Str_Btn_OK" ></button>
+            </td>
+        </tr>
+    </table>
+</div>  <!-- <div class="DlgBlock"> Wizard Buttons (at bottom of dialog) - END -->
+
+</body>
+</html>

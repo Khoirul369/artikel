@@ -1,0 +1,331 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+
+<html xmlns:ICA="ICA">
+<head>
+    <title>AdminNet</title>
+    <link href="Style.css" rel="stylesheet" type="text/css" />
+    <meta http-equiv="MSThemeCompatible" content="Yes"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta content="text/html" name="ICADlg" id="ICADlg" 
+          ICA:DlgHW="702,588"
+          ICA:DlgFrame="0"
+          ICA:TransparencyColorRBG="51,52,53"
+        
+    />
+    <script type="text/jscript" language="jscript" src="js/topics.js"></script>    
+    <script language="jscript" type="text/jscript" src="js/Setup.js"></script>       
+    <script type="text/jscript" language="jscript">
+
+        var Setup = window.external;
+        var g_WS = "on";
+        var g_CLOUD = "1";
+        /*  function On_idInstallClick()    **************************
+        *
+        *   - verifies [TARGETDIR] is not blank before installing
+        **************************************************************/
+        function On_idInstallClick()
+        {
+            if (Setup.GetProperty("ALLOW_INTERNETFEATURES") == 0)
+            {
+                Setup.SetProperty("PROFILEID", "");
+            }
+             Setup.SetProperty("WELCOMESCREENONLINE", g_WS);
+             Setup.SetProperty("ALLOW_CORPORATECLOUDFEATURES", g_CLOUD);
+            Setup.EndModalLoop(0);
+            
+        
+        } //function On_idInstallClick()
+        
+                
+        function OnBodyLoad()
+        {
+            initPage(document.title);
+            ConfigLocUI();
+            Setup.SetProperty("ALLOW_PRODUCTUPDATES", "1");	   
+            var sID = Setup.GetProperty("PROFILEID"); 
+            if ("" == sID)
+            {
+                idChkInternetFeatures.disabled = true;
+                idChkInternetFeatures.checked = false;              
+                id_Str_AdminNet_Internet.style.color = "gray";
+                id_Str_AdminNet_InternetDesc.style.color = "gray";
+                Setup.SetProperty("ALLOW_INTERNETFEATURES", "0");
+                idUpdatesDD.value = 3;
+                idUpdatesDD.disabled = true;
+                id_Str_AdminNet_Updates.style.color = "gray";
+                Setup.SetProperty("ALLOW_PRODUCTUPDATES", "2");
+                idChkWelcomeScreen.disabled = true;
+                idChkWelcomeScreen.checked = false;
+                id_Str_AdminNet_WelcomeScreen.style.color = "gray";
+                id_Str_AdminNet_WelcomeScreenDesc.style.color = "gray";
+                g_WS = "off";
+                Setup.SetProperty("WELCOMESCREENONLINE", "off");
+
+                idChkCollab.disabled = true;
+                idChkCollab.checked = false;
+                id_Str_AdminNet_CollabDesc.style.color = "gray";
+                id_Str_AdminNet_CollabDesc2.style.color = "gray";
+                idChkCDAE.disabled = true;
+                idChkCDAE.checked = false;
+                id_Str_Install_Enterprise.style.color = "gray";
+                id_Str_AdminNet_CDAEDesc.style.color = "gray";
+                g_CLOUD = "0";
+
+            }
+            else
+            {
+                g_WS = "on";
+                g_CLOUD = "1";
+                Setup.SetProperty("WELCOMESCREENONLINE", "on");
+            }
+            if (g_bHideInternetFeatures)
+            {
+                Setup.SetProperty("ALLOW_INTERNETFEATURE", "1");
+                idInternetFeaturesBlock.style.display = "none";
+            }
+            if (Setup.GetProperty("CorpSNOffline") == 1 )
+            {
+                idChkInternetFeatures.checked = false;
+                Setup.SetProperty("ALLOW_INTERNETFEATURES", "0");
+                idUpdatesDD.value = 3;
+                idUpdatesDD.disabled = true;
+                id_Str_AdminNet_Updates.style.color = "gray";
+                Setup.SetProperty("ALLOW_PRODUCTUPDATES", "2");
+                idChkWelcomeScreen.disabled = true;
+                idChkWelcomeScreen.checked = false;
+                id_Str_AdminNet_WelcomeScreen.style.color = "gray";
+                id_Str_AdminNet_WelcomeScreenDesc.style.color = "gray";
+                g_WS = "off";
+                Setup.SetProperty("WELCOMESCREENONLINE", "off");
+            }
+        }
+
+	function ToggleInternetFeatures()
+	{
+ 	    if (idChkInternetFeatures.checked == false)
+	    {
+
+                Setup.SetProperty("ALLOW_INTERNETFEATURES", "0");
+                idUpdatesDD.value = 3;
+                idUpdatesDD.disabled = true;
+                id_Str_AdminNet_Updates.style.color = "gray";
+                Setup.SetProperty("ALLOW_PRODUCTUPDATES", "2");
+                idChkWelcomeScreen.disabled = true;
+                idChkWelcomeScreen.checked = false;
+                id_Str_AdminNet_WelcomeScreen.style.color = "gray";
+                id_Str_AdminNet_WelcomeScreenDesc.style.color = "gray";
+                    g_WS = "off";
+                Setup.SetProperty("WELCOMESCREENONLINE", "off");
+        }
+ 	    if (idChkInternetFeatures.checked == true)
+	    {
+                idChkInternetFeatures.disabled = false;
+                idChkInternetFeatures.checked = true;              
+                id_Str_AdminNet_Internet.style.color = "#000000";
+                id_Str_AdminNet_InternetDesc.style.color = "#333333";
+                Setup.SetProperty("ALLOW_INTERNETFEATURES", "1");
+                idUpdatesDD.value = 1;
+                idUpdatesDD.disabled = false;
+                id_Str_AdminNet_Updates.style.color = "#000000";
+                Setup.SetProperty("ALLOW_PRODUCTUPDATES", "1");
+                idChkWelcomeScreen.disabled = false;
+                idChkWelcomeScreen.checked = false;
+                id_Str_AdminNet_WelcomeScreen.style.color = "#000000";
+                id_Str_AdminNet_WelcomeScreenDesc.style.color = "#333333";
+                    g_WS = "off";
+                    Setup.SetProperty("WELCOMESCREENONLINE", "off");
+
+       }
+
+	}     
+
+    function ToggleUpdates()
+    {
+	    if (idUpdatesDD.value == "1") //optin
+        {
+           Setup.SetProperty("ALLOW_PRODUCTUPDATES", "1");	    
+	    }
+        else if (idUpdatesDD.value == "2") //optout
+	    {
+            Setup.SetProperty("ALLOW_PRODUCTUPDATES", "0");	    
+	    }
+        else if (idUpdatesDD.value == "3") //disable
+	    {
+                Setup.SetProperty("ALLOW_PRODUCTUPDATES", "2");	    
+            } 
+
+        }   
+        function ToggleWS()
+        {
+            if (idChkWelcomeScreen.checked == true)
+            {
+                g_WS = "on";
+            Setup.SetProperty("WELCOMESCREENONLINE", "1");
+            }
+            if (idChkWelcomeScreen.checked == false)
+            {
+                g_WS = "off";
+            Setup.SetProperty("WELCOMESCREENONLINE", "0");
+        }
+    } 
+    function ToggleCollab()
+    {
+        if (idChkCollab.checked == true)
+        {
+            idChkCDAE.disabled = false;
+            idChkCDAE.checked = false;
+            id_Str_Install_Enterprise.style.color = "#000000";
+            id_Str_AdminNet_CDAEDesc.style.color = "#333333";
+            Setup.SetProperty("CDAENTERPRISEACCESS", "0");
+            g_CLOUD = "1";
+        }
+        if (idChkCollab.checked == false)
+        {
+            idChkCDAE.checked = false;
+            idChkCDAE.disabled = true;
+            Setup.SetProperty("CDAENTERPRISEACCESS", "0");
+            id_Str_Install_Enterprise.style.color = "gray";
+            id_Str_AdminNet_CDAEDesc.style.color = "gray";
+            g_CLOUD = "0";
+        }
+        ToggleWS();
+    } 
+    function ToggleCDAE()
+    {
+        if (idChkCDAE.checked == true)
+        {
+            Setup.SetProperty("CDAENTERPRISEACCESS", "1");
+        }
+        if (idChkCDAE.checked == false)
+        {
+            Setup.SetProperty("CDAENTERPRISEACCESS", "0");
+        }
+        ToggleWS();
+    }
+    function ConfigLocUI()
+    {
+        if ((g_sLang == "DE")||(g_sLang == "RU"))
+        {
+            idCDAEBlock.style.top = "5em";
+            idCDAEDescBlock.style.top = "4.2em";
+            }
+
+        }           
+    </script>
+ 	<style type="text/css">
+        .Image
+        {
+	        width: 3em;
+	        height: 3em;
+        }
+	
+	</style>
+
+   
+</head>
+   
+<body onload="OnBodyLoad();">
+<div id="dpi"></div>
+    <!-- background -->
+    <div id="idBackGrd">
+<img src="Images/backgrd.png" class="stretch" >
+
+</div>
+	<img id="idBrandingLeft" name="BrandingLeft" src="Images/banner" >  
+    <img id="idClose" alt="" class="CloseBtn" src="Images/close.png" onmouseover="HighLightClose();" onmouseout="UnHighLightClose();" ICA:Function="ICACancelSetup" >
+	<div id="idDragMe" class="Dragable">&nbsp;&nbsp;&nbsp;</div>
+<!-- page content panel -->
+<div id="idPanel"  >
+    <div class="DlgHeader" id="id_Str_AdminNet_Header"></div>
+    <div class="DlgBlock" style="top: 4.06em;">
+        <label id="id_Str_AdminNet_Updates" ></label><br/>
+        <select class="dropdown geomsize" name="idUpdatesDD" onchange="ToggleUpdates();">
+            <option class="geomsize" value="1" id="id_Str_AdminNet_Updates_OptIn"></option>
+            <option class="geomsize" value="2" id="id_Str_AdminNet_Updates_Optout"></option>
+            <option class="geomsize" value="3" id="id_Str_AdminNet_Updates_Disable"></option>
+        </select>
+    </div>
+
+    <div id="idInternetFeaturesBlock" class="DlgBlock" style="top: 11.25em;"  >
+        <div class="DlgBlock" style="top: .31em;">
+            <input id="idChkInternetFeatures" type="checkbox" name="ALLOW_INTERNETFEATURES" class="geomsize" onclick="ToggleInternetFeatures();">
+        </div>
+        <div class="DlgBlockLeft">
+            <label for="idChkInternetFeatures">
+                <span class="Header" id="id_Str_AdminNet_Internet" ></span>
+                <br>
+                <span id="id_Str_AdminNet_InternetDesc"  class="Desc" ></span>
+            </label>
+        </div>
+    </div>    
+    <div id="idWelcomeScreenBlock" class="DlgBlock" style="top: 17.45em;"  >
+        <div class="DlgBlock" style="top: .31em;">
+            <input id="idChkWelcomeScreen" type="checkbox" name="WELCOMESCREENONLINE" class="geomsize" onclick="ToggleWS();" >
+        </div>
+        <div class="DlgBlockLeft">
+            <label for="idChkWelcomeScreen">
+                <span class="Header" id="id_Str_AdminNet_WelcomeScreen" ></span>
+                <br>
+                <span id="id_Str_AdminNet_WelcomeScreenDesc"  class="Desc" ></span>
+            </label>
+        </div>
+    </div>      
+    <div id="idCollabBlock" class="DlgBlock" style="top: 23.45em;"  >
+        <div class="DlgBlock" style="top: .31em;">
+            <input id="idChkCollab" type="checkbox" name="ALLOW_CORPORATECLOUDFEATURES" class="geomsize" onclick="ToggleCollab();" >
+        </div>
+        <div class="DlgBlockLeft">
+            <label for="idChkCollab">
+                <span class="Header" id="id_Str_AdminNet_CollabDesc" ></span>
+                <br>
+                <span id="id_Str_AdminNet_CollabDesc2"  class="Desc" ></span>
+            </label>
+        </div>
+        <div id="idCDAEBlock" class="DlgBlock" style="top: 4em; left: 1.94em;">
+            <input id="idChkCDAE" type="checkbox" name="CDAENTERPRISEACCESS" class="geomsize" onclick="ToggleCDAE();" >
+        </div>
+        <div id="idCDAEDescBlock" class="DlgBlockLeftSub" style="top: 3.4em;">
+            <label for="idChkCDAE">
+                <span class="Header" id="id_Str_Install_Enterprise" ></span>
+                <br>
+                <span id="id_Str_AdminNet_CDAEDesc"  class="Desc" ></span>
+            </label>
+        </div>
+    </div>             
+    <!-- ---------------------------------------------------------- -->
+    
+
+    <!-- ------------------------------------------------------------ -->
+    <!-- <div> Disk Space Requirements - START -->
+    <div class="DlgBlock" style="top: 30.88em; z-index: 1; background-color: transparent; text-align: left;">
+        &nbsp;<label ICA:AlwaysResolveStrings="1" ICA:Property="Str.DiskSpace.Formatted.1" style="font-size: 7pt; font-weight: bold;">XXX MB of XXX MB required on drive C:\</label><br />
+        <label ICA:AlwaysResolveStrings="1" ICA:Property="Str.DiskSpace.Formatted.0" style="font-size: 7pt; font-weight: bold;">XXX MB of XXX MB required on drive D:\</label>
+    </div>  <!-- <div class="DlgBlock"> Disk Space Requirements - END -->
+    
+</div> <!-- div id="idTabPanel" END -->
+
+
+<!-- ------------------------------------------------------------ -->
+<!-- <div> Wizard Buttons (at bottom of dialog) - START -->
+<div class="DlgWizardBtns">
+    <table border="0" width="100%">
+            <tr>
+                <td align="left">
+                    <button type="button" ICA:Function="ICACancelSetup" ID="id_Str_Btn_Cancel" ></button>
+                    
+                </td>
+                <td width="7.5em" align="left">
+                    <button type="button" onclick="window.location='AdminDes.htm';" ID="id_Str_Btn_Back" ></button>
+                </td>
+                <td width="7.5em" align="right">
+                <button class="Initiator" onmouseover="HighLightButton('id_Str_Btn_Install');" onmouseout="UnHighLightButton('id_Str_Btn_Install');" type="button" onclick="On_idInstallClick()" ID="id_Str_Btn_Install" ></button>
+                </td>
+            </tr>
+    </table>
+    
+</div>  <!-- <div class="DlgBlock"> Wizard Buttons (at bottom of dialog) - END -->
+
+
+</body>
+</html>

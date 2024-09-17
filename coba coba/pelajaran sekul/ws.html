@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="tes" class="class test">ini div tes</div>
+<button onclick="ubahClass()">Ubah Class</button>
+
+<script>  
+  function ubahClass() {
+    const elemen = document.getElementById('tes');
+    elemen.classList.replace('class test', 'class test2'); 
+  }
+</script>
+
+<p id="Paragraf 1">Ini adalah paragraf 1.</p>
+<button onclick="ubahWarna()">Ubah Warna Teks</button>
+
+<script>
+  function ubahWarna() {
+    const elemen = document.getElementById('Paragraf 1');
+    elemen.style.color = 'blue'; 
+  }
+</script>
+
+<p id="Text 1">Ini teks paragraf yang akan diubah.</p>
+<button onclick="ubahTeks1()">Ubah Teks</button>
+
+<script>
+  function ubahTeks1() {
+    const elemen = document.getElementById('Text 1');
+    elemen.innerHTML = "Teks paragraf berhasil diubah";
+  }
+</script>
+
+
+</body>
+</html>

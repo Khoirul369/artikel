@@ -1,0 +1,17 @@
+body {
+    justify-content:center ;
+    text-align: justify;
+}
+h1 {
+    text-align: justify;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+p {
+    text-align: justify;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+}
+image {
+    width: 930;
+    height: 620;
+}

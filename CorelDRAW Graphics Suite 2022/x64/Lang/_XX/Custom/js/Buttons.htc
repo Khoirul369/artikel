@@ -1,0 +1,38 @@
+<!-- saved from url=(0014)about:internet -->
+
+<PUBLIC:COMPONENT ID="SetupUIControls">
+    
+<PUBLIC:ATTACH EVENT="onmouseover" ONEVENT="ButtonsOnMouseOver()" />
+<PUBLIC:ATTACH EVENT="onmouseout" ONEVENT="ButtonsOnMouseOut()" />
+
+<SCRIPT LANGUAGE="JScript">
+    
+    function ButtonsOnMouseOver()
+    {
+        var pEl = window.event.srcElement;
+        if (null != pEl)
+        {
+          pEl.style.color = "#ffffff";
+         
+          pEl.style.filter = "progid:DXImageTransform.Microsoft.gradient(startColorstr='#2e2e2e', endColorstr='#4F4F4F')";
+         
+
+        }
+        
+    } //function ButtonsOnMouseOver()
+    
+    function ButtonsOnMouseOut()
+    {
+        var pEl = window.event.srcElement;
+        if (null != pEl)
+        {
+        pEl.style.filter = "progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#505050')";
+        pEl.style.color = "#c0c0c0";
+        }
+        
+    } //function ButtonsOnMouseOut()
+    
+
+   </SCRIPT>
+</PUBLIC:COMPONENT>
+

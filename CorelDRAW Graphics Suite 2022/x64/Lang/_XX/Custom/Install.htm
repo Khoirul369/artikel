@@ -1,0 +1,391 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+
+<html xmlns:ICA="ICA">
+<head>
+    <title>appSelection</title>
+    <link href="Style.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="MSThemeCompatible" content="Yes"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+    <meta content="text/html" name="ICADlg" id="ICADlg" 
+  ICA:DlgHW="702,588" 
+          ICA:DlgFrame="0"
+          ICA:TransparencyColorRBG="51,52,53"
+        
+    />
+    
+<script type="text/jscript" language="jscript" src="js/topics.js"></script> 
+<script language="jscript" type="text/jscript" src="js/Menu.js"></script>
+<script language="jscript" type="text/jscript" src="js/Setup.js"></script>  
+<script language="jscript" type="text/jscript" src="js/Install.js"></script>
+<script language="jscript" type="text/jscript">
+    var g_bMultiLang = false;
+    var Setup = window.external;
+    function OnLoadBody()
+    { 
+        initPage(document.title);
+        setPage("programs");
+        //generate size string
+        var str = Setup.getProperty("CACHE_SETUP_SOURCE_SIZE_IN_MB");
+        var str2 = Setup.getProperty("Str_Install_CopyCabsDesc");
+        str2 = str2.replace("XXX", str);
+        id_CopyCabsDesc.innerHTML = str2;
+        
+        g_bMultiLang = SetMultiLanguages();
+        idInstallDiv.style.display = "block";    
+        MenuUpdateSelectors();
+        id_Str_Btn_Next_1.style.display = "block";
+        //idHelp_Programs.style.display = "block";
+        LoadPageCounter_1("programs");
+        if (g_bInstalled)
+        {
+            id_Str_Btn_Back_1.style.display = "block";
+            id_Str_Btn_Reset.style.display = "none";
+        }
+       ConfigLocUI();
+            
+    }
+	function ConfigLocUI()
+	{
+		if (g_sLang == "RU")
+		{
+            idDraw.style.top = "0em";
+		}
+		if (g_sLang == "RU")
+		{		
+            idCaptureDes.style.top = "0em";
+        }
+		if (g_sLang == "RU")
+		{		
+            idPP.style.top = "0em";
+        }
+      
+	}	
+  document.attachEvent('onkeydown', function(){KeyCheck(event)});
+</script>
+
+<style type="text/css">
+        .Image
+        {
+	        width: 3em;
+	        height: 3em;
+        }
+
+    .blacktext label
+    {
+        color: black;
+    }
+    .help
+    {
+        width: 1.88em;
+        display: none;
+    }
+    .lang
+    {
+        padding-left: .3em;
+    }
+</style>
+
+</head>
+<body onload="OnLoadBody()">
+
+<div id="dpi"></div>    
+    <!-- background -->
+    <div id="idBackGrd">
+<img src="Images/backgrd.png" class="stretch" />
+
+</div>
+	<img id="idBrandingLeft" name="BrandingLeft" src="Images/banner" />  
+    <img id="idClose" alt="" class="CloseBtn" src="Images/close.png" onmouseover="HighLightClose();" onmouseout="UnHighLightClose();" ICA:Function="ICACancelSetup" />
+	<div id="idDragMe" class="Dragable">&nbsp;&nbsp;&nbsp;</div>
+    
+    <!-- Position the tabs -->
+
+        <!-- page content panel -->
+     <div id="idPanel">
+        <div id="idInstallDiv" style="display: none;">          
+            <div class="DlgHeader" id="id_Str_Install_InstallHeader"" ></div>
+
+            <!-- ------------------------------------------------------------ -->
+            <!-- <div> CorelDRAW Install controls - START -->
+            <div class="DlgBlock" style="top: 4.06em; z-index: 6;" >
+            
+                <input id="idChkDR" type="checkbox" class="geomsize" name="DRAW" onfocus="OnHideAllMenus()" onclick="OnMenuToggleFeature('idChkDR')" ICA:IgnoreElement="1" />
+                <label for="idChkDR">
+                    <span style="padding-left: 0.88em; padding-right: 1.13em;">
+                    <img src="Images/Draw.png" class="Image" alt="" style="vertical-align:middle;" /></span>
+                    <div style="left: 6.6em; position: absolute; top: .75em;" id="idDraw" >
+                    <font color="#000000" id="id_Str_Install_Draw"></font>
+                    <font color="#333333" id="id_Str_Install_DrawDesc"></font>
+                    </div>
+                </label>
+
+        
+            </div>  <!-- <div class="DlgBlock"> CorelDRAW Install controls - END -->
+            <!-- ---------------------------------------------------------- -->
+
+
+
+            <!-- ------------------------------------------------------------ -->
+            <!-- <div> CorelPHOTO-PAINT Install controls - START -->
+            <div class="DlgBlock" style="top: 8.19em; z-index: 5;" >
+                <input id="idChkPP" type="checkbox" class="geomsize" name="PP" onfocus="OnHideAllMenus()" ICA:IgnoreElement="1" onclick="OnMenuToggleFeature('idChkPP')" />
+                <label for="idChkPP">                
+                    <span style="padding-left: 0.88em; padding-right: 1.13em;"><img src="Images/paint.png" class="Image" alt="" style="vertical-align:middle;" /></span>
+                   <div style="left: 6.6em; position: absolute; top: .75em" id="idPP" >
+                  <font color="#000000" id="id_Str_Install_PP"></font>
+                  <font color="#333333" id="id_Str_Install_PPDesc"></font>
+                  </div>
+
+                </label>
+
+        
+            </div>  <!-- <div class="DlgBlock"> CorelPHOTO-PAINT Install controls - END -->
+            <!-- ---------------------------------------------------------- -->
+
+            <!-- ------------------------------------------------------------ -->
+            <!-- <div> Corel CAPTURE Install controls - START -->
+            <div class="DlgBlock" style="top: 12.25em; z-index: 4;" >
+
+                <input id="idChkCapture" type="checkbox" class="geomsize" onfocus="OnHideAllMenus()" name="CAPTURE" ICA:IgnoreElement="1" onclick="OnMenuToggleFeature('idChkCapture')" />                        
+                <label for="idChkCapture" >
+                    <span style="padding-left: 0.88em; padding-right: 1.13em;"><img src="Images/Capture.png" class="Image" alt="" style="vertical-align:middle;" /></span>
+                    <div style="left: 6.6em; position: absolute; top: .75em" id="idCaptureDes" >
+                  <font color="#000000" id="id_Str_Install_Capture"></font>
+                  <font color="#333333" id="id_Str_Install_CaptureDesc"></font>
+                  </div>  				  
+                </label>
+            </div>  <!-- <div class="DlgBlock"> Corel CAPTURE Install controls - END -->
+            <!-- ---------------------------------------------------------- -->
+
+
+            <!-- ------------------------------------------------------------ -->
+            <!-- <div> FontManager Install controls - START -->
+            <div class="DlgBlock" style="top: 16.31em; z-index: 5;" >
+            
+                <input id="idChkFontManager" type="checkbox" class="geomsize" onfocus="OnHideAllMenus()" name="FONTMANAGER" ICA:IgnoreElement="1" onclick="OnMenuToggleFeature('idChkFontManager')" />
+                <label for="idChkFontManager" >
+                    <span style="padding-left: 0.88em; padding-right: 1.13em;"><img src="Images/FontManager.png" class="Image" alt="" style="vertical-align:middle;" /></span>
+                    <div style="left: 6.6em; position: absolute; top: .75em" id="idFontManagerDes" >
+                  <font color="#000000" id="id_Str_Install_FontManager"></font>
+                  <font color="#333333" id="id_Str_Install_FontManagerDesc"></font>				
+                  </div>  
+                </label>
+            </div>  <!-- <div class="DlgBlock"> FontManager Install controls - END -->
+            <!-- ---------------------------------------------------------- -->
+     </div><!--<div id="idInstallDiv"> -->   
+ 
+
+
+        <div id="idFeaturesDiv" style="display: none;">
+     
+
+        <div class="DlgHeader" id="id_Str_Install_FeaturesHeader" ></div>
+        <!-- ------------------------------------------------------------ -->
+        <!-- <div> Utilities - START -->
+        
+        <div id="idUtilitiesVBABlock" class="DlgBlock" style="top: 4.06em; z-index: 4;">
+
+            <div style="z-index: 4;">
+            <input id="idChkUtilities" type="checkbox" class="geomsize" name="UTILITY" ICA:IgnoreElement="1" onclick="OnMenuToggleFeature('idChkUtilities')" onfocus="OnHideAllMenus()" />
+                <label for="idChkUtilities" style="left: 1.56em;" class="DlgBlockLeft">
+                    <span class="Header" id="id_Str_Install_Utilities" ></span><br />
+                    <span id="id_Str_Install_UtilitiesDesc" class="Desc" ></span>
+                </label>
+                
+                
+                <div id="idUtilities" class="Menu"
+                     onmouseover="OnShowIt('idUtilitiesMenu')" 
+                     onmouseout="OnHideIt('idUtilitiesMenu')"
+                     style="z-index: 3;">
+
+                    <button class="MenuBtn" onfocus="OnShowItBtn('idUtilitiesMenu')"></button>
+                    <label id="id_Str_Btn_Includes_2"></label>
+                    
+                    <div id="idUtilitiesMenu" class="MenuPopUp" style="height: 4.5em;">
+
+                        <div id="idUT1" onmouseover="menuitem_hover(this);" onmouseout="menuitem_out(this);" class="geomsize"><input type="checkbox" class="geomsize" id="idVBAFiles" name="VBAFILES" ICA:IgnoreElement="1" onclick="OnMenuToggleFeature('idVBAFiles')" />
+                        <label for="idVBAFiles" id="id_Str_Install_VBA" ></label><br /></div>
+
+                        <div id="idUT2" onmouseover="menuitem_hover(this);" onmouseout="menuitem_out(this);" class="geomsize"><input type="checkbox" class="geomsize" id="idVSTA" name="VSTA" ICA:IgnoreElement="1" onclick="OnMenuToggleFeature('idVSTA')" />
+                        <label for="idVSTA" id="id_Str_Install_VSTA" ></label><br /></div>                        
+                        
+                        <div id="idUT3" onmouseover="menuitem_hover(this);" onmouseout="menuitem_out(this);" class="geomsize"><input type="checkbox" class="geomsize" id="idShellExt" name="SHELLEXT" ICA:IgnoreElement="1" onclick="OnMenuToggleFeature('idShellExt')" />
+                        <label for="idShellExt" id="id_Str_Install_Shell" ></label><br /></div>
+                       
+                    </div>
+                </div> <!-- div class=Menu" -->                
+            </div>
+    
+        </div>  <!-- <div class="DlgBlock"> Utilities - END -->
+        <!-- ---------------------------------------------------------- -->
+
+            
+            <!-- ------------------------------------------------------------ -->
+            <!-- <div> GPL - START -->
+            <div class="DlgBlock" style="top: 11.25em; z-index: 1;">
+
+                <div style="z-index: 1;" id="idChkGPLDiv">
+                <input id="idChkGPL" type="checkbox" class="geomsize" name="GPL" onfocus="OnHideAllMenus()" />
+                    <label for="idChkGPL" class="DlgBlockLeft" id="idChkGPLLabel" style="left: 1.56em;">
+                        <span class="Header" id="id_Str_Install_GPL"></span><br />
+                        <span id="id_Str_Install_GPLDesc" class="Desc"></span>
+                    </label>
+                </div>
+            </div>  <!-- <div class="DlgBlock"> GPL - END -->
+            <!-- ---------------------------------------------------------- -->
+            <hr  class="DlgBlock" style="top: 17.45em; " >   
+            <div id="idShortcutBlock" class="DlgBlock" style="top: 19em; " >
+                <div style="top: 0.31em;">
+                    <input id="idShortcut" type="checkbox" class="geomsize" name="DESKTOPSHORTCUTS" />
+                    <label for="idShortcut" class="DlgBlockLeft">
+                        <span class="Header" id="id_Str_Install_Shortcuts"></span>
+                        <br>
+                        <span id="id_Str_Install_ShortcutsDesc" class="Desc"></span>
+                    </label>
+                </div>
+            </div>
+                        
+            <div id="idCopyCabsBlock" class="DlgBlock" style="display: block; top: 25.25em; " >
+                <div style="top: 0.31em;">
+                    <input id="idChkCopyCabs" type="checkbox" class="geomsize" ICA:Function="ICAToggleFeature" name="CACHE_SETUP_SOURCE" />
+                    <label for="idChkCopyCabs" class="DlgBlockLeft">
+                        <span id="id_Str_Install_CopyCabs" class="Header"></span> <br>
+                        <span style="width:36em;" id="id_CopyCabsDesc" class="Desc"></span>
+                    </label>
+                </div>
+            </div>         
+
+
+        </div><!--<div id="idFeaturesDiv">-->
+
+
+        <div id="idLocationDiv" style="display: none;" >
+
+            <div class="DlgHeader" id="id_Str_Install_LocationHeader"></div>
+            <!-- ------------------------------------------------------------ -->                        
+            <!-- <div> Select Folder - START -->
+            <div id="idInstallFolderDiv" class="DlgBlock" style="display: none; top: 4.06em;"> 
+   
+	            	<div id="id_Str_Install_Location_Desc" style="top: .38em; width: 100%; left:0em; position:absolute"></div>
+		             <div style="width: 2.81em; float: left; top: 3.2em; position:absolute;" id="idFolderImg">
+		                <img class="Image" src="images/Folder.png" alt="" >                    
+		            </div> 
+		            <div style="margin-left: 4em; top: 3em; width: 10.6em; left:0em; position:absolute;" id="id_Str_Btn_Path_1"></div>
+	            	<div id="id_Str_Install_Location_Desc" style="margin-left: 4em; top: 4.6em; width: 33.9em; left:0em; position:absolute;">		          
+		            
+		                <span>
+						<input type="text" maxlength="89" size="70" name="INSTALLDIR" ICA:Function="ICAPathInput" ID="idINSTALLDIR" onchange="OnPathChange();" style="width: 100%;" ></span>
+                       
+		            </div>
+	            	<div id="idButtonDiv" align="right" style="top: 6.6em; width: 100%; left:0em; position:absolute;">		          	            
+                 <button name="INSTALLDIR" type="button" ica:function="ICABrowse" id="id_Str_Btn_Change_1" class="Initiator" onmouseover="HighLightButton('id_Str_Btn_Change_1');" onmouseout="UnHighLightButton('id_Str_Btn_Change_1');"></button>
+                 </div>
+   
+            </div>
+
+            <!-- ---------------------------------------------------------- --> 
+            <div id="idEnterpriseDiv" style="display: none;" >
+                <hr id="idEnterpriseHR" class="DlgBlock" style="top: 14em; " >               
+                <div id="idEnterpriseBlock" class="DlgBlock" style="top: 15em; " >
+                    <div style="top: 0.31em;">
+                        <input id="idEnterprise" type="checkbox" class="geomsize" name="CDAENTERPRISEACCESS.UI" />
+                        <label for="idEnterprise" class="DlgBlockLeft">
+                            <span class="Header" id="id_Str_Install_Enterprise"></span>
+                            <br>
+                            <span id="id_Str_Install_EnterpriseDesc" class="Desc"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <!-- ------------------------------------------------------------ -->
+            <!-- <div> Languages - START DlgBlock  id="idSelectLangBlock" -->
+                <hr id="idLocationHR" class="DlgBlock" style="top: 17.45em; " >   
+            <div id="idSelectLangBlock" class="DlgBlock" style="top: 15em; visibility: hidden; z-index: 5;">
+                <!--div class="DlgHeader" id="id_Str_Install_LangHeader"></div-->
+            
+              
+                    <label style="top: 4.06em; position: absolute;">
+                        <span id="id_Str_Install_Langs_Desc"></span><br>
+                        <span id="id_Str_Install_Langs" style="top: 3.19em; position: absolute;" ></span>
+                    </label>
+                    
+                    <div id="idLang" class="Menu"
+                         onmouseover="OnShowIt('idLangMenu')" 
+                         onmouseout="OnHideIt('idLangMenu')"
+                         style="top: 7.15em; position: absolute; z-index: 5;" >
+                         
+                        <button class="MenuBtn" onfocus="OnShowItBtn('idLangMenu')"></button>
+                        <label id="id_Str_Btn_Includes_3"></label>
+                        
+                        <div id="idLangMenu" class="MenuPopUp" style="height: 20em; z-index: 5;">
+                            <div id="id1" onmouseover="menuitem_hover(this);" onmouseout="menuitem_out(this);" class="geomsize" title="CS"><input type="checkbox" class="geomsize" id="idCS" name="CS" onclick="OnMenuToggleFeature('idCS')" ICA:IgnoreElement="1" /><label for="idCS" class="lang" ICA:Property="Str.Feature.Lang.CS"></label></div>
+                            <div id="id2" onmouseover="menuitem_hover(this);" onmouseout="menuitem_out(this);" class="geomsize" title="CT"><input type="checkbox" class="geomsize" id="idCT" name="CT" onclick="OnMenuToggleFeature('idCT')" ICA:IgnoreElement="1" /><label for="idCT" class="lang" ICA:Property="Str.Feature.Lang.CT"></label></div>
+                            <div id="id3" onmouseover="menuitem_hover(this);" onmouseout="menuitem_out(this);" class="geomsize" title="CZ"><input type="checkbox" class="geomsize" id="idCZ" name="CZ" onclick="OnMenuToggleFeature('idCZ')" ICA:IgnoreElement="1" /><label for="idCZ" class="lang" ICA:Property="Str.Feature.Lang.CZ"></label></div>
+                            <div id="id4" onmouseover="menuitem_hover(this);" onmouseout="menuitem_out(this);" class="geomsize" title="NL"><input type="checkbox" class="geomsize" id="idNL" name="NL" onclick="OnMenuToggleFeature('idNL')" ICA:IgnoreElement="1" /><label for="idNL" class="lang" ICA:Property="Str.Feature.Lang.NL"></label></div>
+                            <div id="id5" onmouseover="menuitem_hover(this);" onmouseout="menuitem_out(this);" class="geomsize" title="EN"><input type="checkbox" class="geomsize" id="idEN" name="EN" onclick="OnMenuToggleFeature('idEN')" ICA:IgnoreElement="1" /><label for="idEN" class="lang" ICA:Property="Str.Feature.Lang.EN"></label></div>
+                            <div id="id6" onmouseover="menuitem_hover(this);" onmouseout="menuitem_out(this);" class="geomsize" title="FR"><input type="checkbox" class="geomsize" id="idFR" name="FR" onclick="OnMenuToggleFeature('idFR')" ICA:IgnoreElement="1" /><label for="idFR" class="lang" ICA:Property="Str.Feature.Lang.FR"></label></div>
+                            <div id="id7" onmouseover="menuitem_hover(this);" onmouseout="menuitem_out(this);" class="geomsize" title="DE"><input type="checkbox" class="geomsize" id="idDE" name="DE" onclick="OnMenuToggleFeature('idDE')" ICA:IgnoreElement="1" /><label for="idDE" class="lang" ICA:Property="Str.Feature.Lang.DE"></label></div>
+                            <div id="id8" onmouseover="menuitem_hover(this);" onmouseout="menuitem_out(this);" class="geomsize" title="IT"><input type="checkbox" class="geomsize" id="idIT" name="IT" onclick="OnMenuToggleFeature('idIT')" ICA:IgnoreElement="1" /><label for="idIT" class="lang" ICA:Property="Str.Feature.Lang.IT"></label></div>
+                            <div id="id9" onmouseover="menuitem_hover(this);" onmouseout="menuitem_out(this);" class="geomsize" title="JP"><input type="checkbox" class="geomsize" id="idJP" name="JP" onclick="OnMenuToggleFeature('idJP')" ICA:IgnoreElement="1" /><label for="idJP" class="lang" ICA:Property="Str.Feature.Lang.JP"></label></div>
+                            <div id="id10" onmouseover="menuitem_hover(this);" onmouseout="menuitem_out(this);" class="geomsize" title="PL"><input type="checkbox" class="geomsize" id="idPL" name="PL" onclick="OnMenuToggleFeature('idPL')" ICA:IgnoreElement="1" /><label for="idPL" class="lang" ICA:Property="Str.Feature.Lang.PL"></label></div>
+                            <div id="id11" onmouseover="menuitem_hover(this);" onmouseout="menuitem_out(this);" class="geomsize" title="BR"><input type="checkbox" class="geomsize" id="idBR" name="BR" onclick="OnMenuToggleFeature('idBR')" ICA:IgnoreElement="1" /><label for="idBR" class="lang" ICA:Property="Str.Feature.Lang.BR"></label></div>
+                            <div id="id12" onmouseover="menuitem_hover(this);" onmouseout="menuitem_out(this);" class="geomsize" title="RU"><input type="checkbox" class="geomsize" id="idRU" name="RU" onclick="OnMenuToggleFeature('idRU')" ICA:IgnoreElement="1" /><label for="idRU" class="lang" ICA:Property="Str.Feature.Lang.RU"></label></div>
+                            <div id="id13" onmouseover="menuitem_hover(this);" onmouseout="menuitem_out(this);" class="geomsize" title="ES"><input type="checkbox" class="geomsize" id="idES" name="ES" onclick="OnMenuToggleFeature('idES')" ICA:IgnoreElement="1" /><label for="idES" class="lang" ICA:Property="Str.Feature.Lang.ES"></label></div>
+                            <div id="id14" onmouseover="menuitem_hover(this);" onmouseout="menuitem_out(this);" class="geomsize" title="SV"><input type="checkbox" class="geomsize" id="idSV" name="SV" onclick="OnMenuToggleFeature('idSV')" ICA:IgnoreElement="1" /><label for="idSV" class="lang" ICA:Property="Str.Feature.Lang.SV"></label></div>
+                            <div id="id15" onmouseover="menuitem_hover(this);" onmouseout="menuitem_out(this);" class="geomsize" title="TR"><input type="checkbox" class="geomsize" id="idTR" name="TR" onclick="OnMenuToggleFeature('idTR')" ICA:IgnoreElement="1" /><label for="idTR" class="lang" ICA:Property="Str.Feature.Lang.TR"></label></div>
+
+                        </div>
+                    </div> <!-- div class=Menu" -->
+	            </div>
+                
+            <!--/div-->
+
+             
+        </div><!-- <div id="idLocationDiv">-->  
+    <!-- ------------------------------------------------------------ -->
+    <!-- <div> Disk Space Requirements - START -->
+    <div class="DlgBlock" style="top: 30.88em; z-index: 1; background-color: transparent; text-align: left;">
+        &nbsp;<label ICA:AlwaysResolveStrings="1" ICA:Property="Str.DiskSpace.Formatted.1" style="font-size: 7pt; font-weight: bold;">XXX MB of XXX MB required on drive C:\</label><br />
+        <label ICA:AlwaysResolveStrings="1" ICA:Property="Str.DiskSpace.Formatted.0" style="font-size: 7pt; font-weight: bold;">XXX MB of XXX MB required on drive D:\</label>
+    </div>  <!-- <div class="DlgBlock"> Disk Space Requirements - END -->
+
+    <div class="DlgBlock" id="id4Pages" style="top: 31.88em; z-index: 1; background-color: transparent;">
+        <div class="DlgBlock" id="idPage1_4" style="left: 41.35em; color: #61A706;  width: 2.19em;" >1</div> <div class="DlgBlock" id="idPage2_4" style="left: 41.98em; width: 1.56em;">2</div>
+        <div class="DlgBlock" id="idPage3_4" style="display: none; left: 42.6em; width: 0.94em;">3</div> <div class="DlgBlock" id="idPage4_4" style="display: none; left: 43.23em; width: 0.31em;">4</div>
+    </div>
+    
+    </div> <!-- div id="idTabPanel" END -->
+
+
+    <!-- ------------------------------------------------------------ -->
+    <!-- <div> Wizard Buttons (at bottom of dialog) - START -->
+    <div class="DlgWizardBtns">
+        <table border="0" width="100%">
+            <tr>
+
+                <td align="left">
+                    <button onclick="OnResetDefaults();" id="id_Str_Btn_Reset" onfocus="OnHideAllMenus()" ></button>
+                </td>
+                <td align="right">
+                    <button type="button" onclick="BackToARP();" ID="id_Str_Btn_Back_1" style="display: none;"></button>
+                    <button type="button" onclick="LoadPrograms();" ID="id_Str_Btn_Back_2" style="display: none;" ></button>
+                    <!--button type="button" onclick="LoadFeatures();" ID="id_Str_Btn_Back_3" style="display: none;" ></button-->
+                    <button type="button" onclick="LoadFeatures();" ID="id_Str_Btn_Back_4" style="display: none;" ></button>
+                    
+                </td>
+                <td width="7.50em" align="left">
+                    <button class="Initiator" onmouseover="HighLightButton('id_Str_Btn_Next_1');" onmouseout="UnHighLightButton('id_Str_Btn_Next_1');" onclick="LoadFeatures();" ID="id_Str_Btn_Next_1" onfocus="OnHideAllMenus()" style="display: none;" ></button>
+                    <button class="Initiator" onmouseover="HighLightButton('id_Str_Btn_Next_2');" onmouseout="UnHighLightButton('id_Str_Btn_Next_2');" onclick="LoadLocation();" ID="id_Str_Btn_Next_2" onfocus="OnHideAllMenus()" style="display: none;" ></button>
+                    <!--button class="Initiator" onmouseover="HighLightButton('id_Str_Btn_Next_3');" onmouseout="UnHighLightButton('id_Str_Btn_Next_3');" onclick="LoadLocation();" ID="id_Str_Btn_Next_3" onfocus="OnHideAllMenus()" style="display: none;" ></button-->
+                    <button class="Initiator" onmouseover="HighLightButton('id_Str_Btn_Install');" onmouseout="UnHighLightButton('id_Str_Btn_Install');" type="button" ICA:Function="ICABeginExecute" ID="id_Str_Btn_Install" onfocus="OnHideAllMenus()" style="display: none;" ></button>
+                    
+                </td>
+            </tr>
+        </table>
+    </div>  <!-- <div class="DlgBlock"> Wizard Buttons (at bottom of dialog) - END -->
+
+
+</body>
+</html>

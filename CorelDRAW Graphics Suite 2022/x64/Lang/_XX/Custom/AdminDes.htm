@@ -1,0 +1,194 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+
+<html xmlns:ICA="ICA">
+<head>
+    <title>AdminDes</title>
+    <link href="Style.css" rel="stylesheet" type="text/css" />
+    <meta http-equiv="MSThemeCompatible" content="Yes"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta content="text/html" name="ICADlg" id="ICADlg" 
+          ICA:DlgHW="702,588"
+          ICA:DlgFrame="0"
+          ICA:TransparencyColorRBG="51,52,53"
+        
+    />
+    <script type="text/jscript" language="jscript" src="js/topics.js"></script>    
+    <script language="jscript" type="text/jscript" src="js/Setup.js"></script>       
+    <script type="text/jscript" language="jscript">
+
+        var Setup = window.external;
+        
+        /*  function On_idInstallClick()    **************************
+        *
+        *   - verifies [TARGETDIR] is not blank before installing
+        **************************************************************/
+        function On_idInstallClick()
+        {
+            var str = Setup.GetProperty("TARGETDIR");
+            
+            if ("" == str)
+            {
+                idFolderErr.style.display = "block";
+                return false;
+            }
+            if (!Setup.ValidateInstallFolder())
+            {
+                return false;
+            }
+
+            idFolderErr.style.display = "none";
+
+            try
+                {
+                    window.location = "AdminNet.htm";
+                }
+                catch (err) {}
+
+              return true;
+            
+        
+        } //function On_idInstallClick()
+        
+                
+        function OnBodyLoad()
+        {
+            initPage(document.title);
+            ConfigAdminDesUI();
+
+        }
+	function ConfigAdminDesUI()
+	{
+        if (g_sLang == "BR" || g_sLang == "ES" || g_sLang == "IT" || g_sLang == "NL" || g_sLang == "PL"|| g_sLang == "RU" || g_sLang == "SV")
+        {
+                idImagePath.style.top = "6.5em";
+                idTargetDiv.style.top = "1.5em";
+				idChangeDiv.style.top = "3.13em"; 
+                id_Str_AdminDes_Path.style.top = "-1em"; 
+                idContentDiv.style.top = "1.5em";
+                idChangeContentDiv.style.top = "3.13em";
+                id_Str_AdminDes_ContentPath.style.top = "-1em";
+
+        }
+        if (g_sLang == "CZ" || g_sLang == "DE" || g_sLang == "FR")
+        {
+            idImagePath.style.top = "7.5em";
+            idTargetDiv.style.top = "2em";
+            idChangeDiv.style.top = "3.7em"; 
+            id_Str_AdminDes_Path.style.top = "-1em"; 
+            idContentDiv.style.top = "2em";
+            idChangeContentDiv.style.top = "3.7em";
+            id_Str_AdminDes_ContentPath.style.top = "-1em";
+
+        }
+
+        if (g_sLang == "CS" || g_sLang == "CT")
+        {
+            idContentPath.style.top = "4.5em";
+        }
+	} 
+    
+    </script>
+ 	<style type="text/css">
+        .Image
+        {
+	        width: 3em;
+	        height: 3em;
+        }
+	
+	</style>
+
+</head>
+   
+</head>
+   
+<body onload="OnBodyLoad();">
+<div id="dpi"></div>
+    <!-- background -->
+    <div id="idBackGrd">
+<img src="Images/backgrd.png" class="stretch" >
+
+</div>
+	<img id="idBrandingLeft" name="BrandingLeft" src="Images/banner" >  
+    <img id="idClose" alt="" class="CloseBtn" src="Images/close.png" onmouseover="HighLightClose();" onmouseout="UnHighLightClose();" ICA:Function="ICACancelSetup" >
+	<div id="idDragMe" class="Dragable">&nbsp;&nbsp;&nbsp;</div>
+<!-- page content panel -->
+<div id="idPanel"  >
+    
+        <div class="DlgHeader" id="id_Str_AdminDes_Header"  ></div>
+
+        <div id="id_Str_AdminDes_Desc" style="top: 3.06em; position:absolute;" ></div>
+        <div id="idImage" class="DlgBlock">
+        <div id="idImagePath" style="top: 7.5em; position:absolute;">
+            <div style=" position:absolute;">
+                <img src="Images/Folder.png" alt="" class="Image">
+            </div>
+                <div id="id_Str_AdminDes_Path" style="width: 33.8em; left: 3.8em; position:absolute;"></div>
+                <div id="idTargetDiv" style="top: 1.3em; width: 29.06em; left: 3.8em; position:absolute;">
+                <input type="text" maxlength="89" size="70" name="TARGETDIR" ICA:Function="ICAPathInput" ID="idTARGETDIR" style="width: 35.5em;" >
+                <br >
+                <span id="idFolderErr" style="color: Red; display: none;">
+                    <label id="id_Str_AdminDes_Error" ></label>                
+                </span>
+            </div>
+            <div id="idChangeDiv" style="top: 3.6em; position:absolute; width: 37.7em;" >
+                <button name="TARGETDIR" class="Initiator" onmouseover="HighLightButton('id_Str_Btn_Change_1');" onmouseout="UnHighLightButton('id_Str_Btn_Change_1');" ICA:Function="ICABrowse" style="float:right;" id="id_Str_Btn_Change_1" ></button>
+            </div>
+           
+        </div><!-- idImagePath -->
+    </div><!-- idImage -->
+    
+    <div id="idContentBlock" style="display: none" >
+        <div class="DlgHeader" id="id_Str_AdminDes_ContentHeader" style="top: 15.25em; display: none; " ></div>
+
+        <div id="id_Str_AdminDes_ContentDesc" style="top: 16.81em; position:absolute;" ></div>
+        <div id="idContentImage" class="DlgBlock"  style="top: 16.81em;">
+            <div id="idContentPath" style="top: 6.5em; position:absolute;">
+                <div style="position:absolute;">
+                    <img src="Images/Folder.png" alt="" class="Image">
+                </div>
+                <div id="id_Str_AdminDes_ContentPath" style="width: 33.8em; left: 3.8em; position:absolute;"></div>
+                <div id="idContentDiv" style="top: 1.3em; width : 29.06em; left: 3.8em; position:absolute;">
+                    <input type="text" maxlength="89" size="70" name="NETWORKINSTALLDIR" ICA:Function="ICAPathInput" ID="idNETWORKINSTALLDIR" style="width: 35.5em;" >
+                    <br >
+                </div>
+                <div id="idChangeContentDiv" style="top: 3.6em; position:absolute; width: 37.7em;" >
+                    <button name="NETWORKINSTALLDIR" class="Initiator" onmouseover="HighLightButton('id_Str_Btn_Change2');" onmouseout="UnHighLightButton('id_Str_Btn_Change2');" ICA:Function="ICABrowse2" style="float:right;" id="id_Str_Btn_Change2" ></button>
+                </div>
+            </div><!-- idContentPath -->
+        </div><!-- idContentImage -->
+    </div>
+
+    <!-- ------------------------------------------------------------ -->
+    <!-- <div> Disk Space Requirements - START -->
+    <div class="DlgBlock" style="top: 30.88em; z-index: 1; background-color: transparent; text-align: left;">
+        &nbsp;<label ICA:AlwaysResolveStrings="1" ICA:Property="Str.DiskSpace.Formatted.1" style="font-size: 7pt; font-weight: bold;">XXX MB of XXX MB required on drive C:\</label><br />
+        <label ICA:AlwaysResolveStrings="1" ICA:Property="Str.DiskSpace.Formatted.0" style="font-size: 7pt; font-weight: bold;">XXX MB of XXX MB required on drive D:\</label>
+    </div>  <!-- <div class="DlgBlock"> Disk Space Requirements - END -->
+    
+</div> <!-- div id="idTabPanel" END -->
+
+
+<!-- ------------------------------------------------------------ -->
+<!-- <div> Wizard Buttons (at bottom of dialog) - START -->
+<div class="DlgWizardBtns">
+    <table border="0" width="100%">
+            <tr>
+                <td align="left">
+                    <button type="button" ICA:Function="ICACancelSetup" ID="id_Str_Btn_Cancel" ></button>
+                    
+                </td>
+                <td width="7.5em" align="left">
+                    <!--button type="button" onclick="window.location='AdminSN.htm';" ID="id_Btn_Back" ></button-->
+                </td>
+                <td width="7.5em" align="right">
+                <button class="Initiator" onmouseover="HighLightButton('id_Str_Btn_Next');" onmouseout="UnHighLightButton('id_Str_Btn_Next');" type="button" onclick="On_idInstallClick()" ID="id_Str_Btn_Next" ><u>N</u>ext</button>
+                </td>
+            </tr>
+    </table>
+    
+</div>  <!-- <div class="DlgBlock"> Wizard Buttons (at bottom of dialog) - END -->
+
+
+</body>
+</html>

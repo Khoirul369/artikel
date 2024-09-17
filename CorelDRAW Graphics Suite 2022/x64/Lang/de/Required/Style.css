@@ -1,0 +1,47 @@
+﻿BODY
+{
+	background-color: buttonface;
+}
+
+.DlgBlock
+{ 
+	position: absolute;
+	background-color: Transparent;
+	z-index: 1;
+	/*border: solid  1px red;*/
+}
+
+.Panel
+{
+	border: solid 1px ButtonShadow;
+	position: absolute;
+	left: 14px;
+	width: 435px;
+	top: 14px;
+	height: 143px;
+}
+
+BUTTON
+{
+	font-size: 14px;
+	font-family: 'Segoe UI' , Tahoma;
+	width: 100px;
+}
+
+DIV
+{
+	font-size: 14px;
+	font-family: 'Segoe UI' , Tahoma;
+}
+
+
+.ProgressText
+{
+	font-family: 'Segoe UI' , Tahoma;
+	height: 18px;
+	text-align: left;
+	font-weight: normal;
+	font-size: 12px;
+	overflow: hidden;
+}
+

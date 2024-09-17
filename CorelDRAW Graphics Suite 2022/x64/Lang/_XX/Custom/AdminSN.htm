@@ -1,0 +1,225 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+
+<html xmlns:ICA="ICA">
+<head>
+    <title>AdminSN</title>
+    <link href="Style.css" rel="stylesheet" type="text/css" />
+    <meta http-equiv="MSThemeCompatible" content="Yes"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta content="text/html" name="ICADlg" id="ICADlg" 
+  ICA:DlgHW="702,588" 
+          ICA:DlgFrame="0"
+          ICA:TransparencyColorRBG="51,52,53"
+     
+    />
+    <script type="text/jscript" language="jscript" src="js/topics.js"></script>    
+    <script language="jscript" type="text/jscript" src="js/Setup.js"></script>       
+    <script language="jscript" type="text/jscript">
+
+        /*  Globals *******************************************************/
+        var g_ICA   = window.external;
+
+        
+        /*  function ValidateSN()   ***************************************
+        *
+        *   Returns: true/false
+
+
+        *   -   checks the serial number, if it is valid then
+        *       we move to the next page
+        *   -   page is only displayed for ACTION=INSTALL
+        *******************************************************************/
+        function Validate()
+        {
+            g_Setup.SetProperty("AS_PASSWORD", idPWDInput.value);
+            
+            idErrorBlock.style.display = "none";
+            id_Err_AdminSN.style.display = "none";
+            id_Str_Btn_Next.disabled=true;
+            var iResult = g_Setup.ExecuteFN('JS_Admin_Validate_SignIn');
+            id_Str_Btn_Next.disabled=false;
+            if (0 == iResult)
+            {		
+                try
+                {
+                    window.location = "AdminDes.htm";
+                }
+                catch (err) {}
+
+                return true;
+            }
+            else
+            {
+                
+                LoadAdminError(iResult, "id_Err_AdminSN");
+                idErrorBlock.style.display = "block";
+                id_Err_AdminSN.style.display = "block";
+                return false;
+                
+            }
+            
+            return true;
+            
+        } //function ValidateSN()
+
+        /*  OnBodyLoad  ********************************************
+        *
+        *   -   check to see if we already have a serial number
+        ************************************************************/
+        function OnBodyLoad()
+        {
+            initPage(document.title);
+             ConfigLocUI();
+            var iResult = g_ICA.ValidateSN2(false);
+            if (0 == iResult)
+            {
+                //is good
+                id_Str_AdminSN_SN.style.color = "Gray";
+                idSNInput.disabled = true;
+            }
+            if (g_bIsAdmin)
+            {
+                id_Str_AdminSN_Optional.innerHTML = g_Setup.getProperty("Str_AdminSN_Signin");
+            }
+
+            if (! g_bIsConnected) //not connected
+            {
+                id_Str_AdminSN_Email.style.color = "#C0C0C0";
+                idEmailInput.disabled = true;
+                id_Str_AdminSN_PWD.style.color = "#C0C0C0";
+                idPWDInput.disabled = true;
+                LoadAdminError("1000", "id_Err_AdminSN");
+                idErrorBlock.style.display = "block";
+                id_Err_AdminSN.style.display = "block";                
+            }
+            if (g_ICA.GetProperty("FromInstallChoose") == "1")
+            {
+              //window.location = "InstallChoose.htm";
+              id_Str_Btn_Back.style.display = "none";
+            }            
+        } //function OnBodyLoad()
+	   function OnBack()
+	   {
+				window.location = "Adminlicense.htm";
+	   }//function OnBack()
+	   function ResetPassword()
+	   {
+	        var url = g_Setup.GetProperty("Pwd_Redirect");
+	        document.getElementById("id_Str_AdminSN_ForgotPwd").href = url;
+	        return false;
+	   }
+    function ConfigLocUI()
+    {
+      if (g_sLang == "DE"||g_sLang == "BR"||g_sLang == "CZ"||g_sLang == "ES"||g_sLang == "FR" )
+      {
+        AdminSN_Email_Block.style.top="13.38em";
+        AdminSN_Pwd_Block.style.top="17.13em";
+        id_Str_AdminSN_AcctDesc.style.top="22.13em";
+      }
+    }	   
+    </script>
+    <style type="text/css">
+    
+        a
+        {
+            color: #333333;
+            text-decoration: underline;
+            cursor: default;
+            font-size: .63em; 
+        }
+        
+        a:hover
+        {
+            color: #333333;
+            text-decoration: underline;
+            cursor: auto;
+        }
+        
+        a:active
+        {
+            color: #333333;
+            text-decoration: underline;
+            cursor: auto;
+        }
+        
+        a:visited
+        {
+            color: #333333;
+            text-decoration: underline;
+            cursor: auto;
+        }
+
+        .account a
+        {
+            font-size: 1em;
+            color: #000000;
+        }
+
+    </style>
+    
+</head>
+<body onload="OnBodyLoad();">
+<div id="dpi"></div>
+    <!-- background -->
+    <div id="idBackGrd">
+<img src="Images/backgrd.png" class="stretch" />
+
+</div>
+	<img id="idBrandingLeft" name="BrandingLeft" src="Images/banner" />  
+    <img id="idClose" alt="" class="CloseBtn" src="Images/close.png" onmouseover="HighLightClose();" onmouseout="UnHighLightClose();" ICA:Function="ICACancelSetup" />
+	<div id="idDragMe" class="Dragable">&nbsp;&nbsp;&nbsp;</div>
+    
+    <!-- page content panel -->
+    <div id="idPanel">
+        <div class="DlgHeader" id="id_Str_AdminSN_Header"></div>
+    
+        <div class="DlgBlock" style="top: 3.75em;">
+            <label id="id_Str_AdminSN_SN" ></label><br/>
+            <input size="55" maxlength="45" type="text" ID="idSNInput" NAME="SERIALNUMBER" style="TEXT-TRANSFORM: uppercase; ime-mode:disabled;" />
+        </div>
+        <div class="DlgBlock" style="top: 8.13em;">
+            <label class="account" id="id_Str_AdminSN_Optional" ></label><br/>
+        </div>
+
+        <div class="DlgBlock" style="top: 13.38em;" id="AdminSN_Email_Block">
+            <label id="id_Str_AdminSN_Email" ></label><br/>
+            <input size="55" maxlength="45" type="text" ID="idEmailInput" NAME="AS_EMAILADDRESS" style="ime-mode:disabled;" />
+        </div>
+        <div class="DlgBlock" style="top: 17.13em;" id="AdminSN_Pwd_Block">
+            <label id="id_Str_AdminSN_PWD" ></label><br/>
+            <input size="56" maxlength="45" type="password" ID="idPWDInput" NAME="AS_PASSWORD" style="ime-mode:disabled;" />
+            <br />
+            <a href="#" id="id_Str_AdminSN_ForgotPwd" onclick="ResetPassword();" target=_blank ></a>
+        </div>
+        <div class="DlgBlock account" id="id_Str_AdminSN_AcctDesc" style="top: 22.13em;"></div>
+        <div class="DlgBlock account" id="id_Str_AdminSN_CreateAcct" style="top: 25.25em;"></div>
+
+        <div class="DlgBlock" id="idErrorBlock" style="height: auto; top: 28.38em; background-color: Red; color: White; padding:.63em; display: none;">
+        <label id="id_Err_AdminSN" style="display: none;"></label>
+        </div>
+        
+
+    </div> <!-- div id="idTabPanel" END -->
+
+    <!-- ------------------------------------------------------------ -->
+    <!-- <div> Wizard Buttons (at bottom of dialog) - START -->
+    <div class="DlgWizardBtns">
+        <table border="0" width="100%">
+            <tr>
+                <td align="left">
+                    <button type="button" ICA:Function="ICACancelSetup" ID="id_Str_Btn_Cancel" ></button>
+                    
+                </td>
+                <td width="7.5em" align="left">
+                    <button type="button" onclick="OnBack();" ID="id_Str_Btn_Back" ></button>
+                </td>
+                <td width="7.5em" align="right">
+                    <button class="Initiator" onmouseover="HighLightButton('id_Str_Btn_Next');" onmouseout="UnHighLightButton('id_Str_Btn_Next');" type="button" id="id_Str_Btn_Next" onclick="Validate()" ><u>N</u>ext</button>
+                </td>
+            </tr>
+        </table>
+    </div>  <!-- <div class="DlgBlock"> Wizard Buttons (at bottom of dialog) - END -->
+
+</body>
+</html>

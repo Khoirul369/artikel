@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: grey;
+}
+
+.container {
+    min-height: 100vh;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(2, 1fr); 
+    grid-template-areas:
+    "nav    nav" 
+    "main   main"
+    "footer    footer";
+    text-align: center;
+}
+
+.container div {
+    border: 2px solid rgb(0, 0, 0);
+    font-size: 10vh;
+}
+
+.container div :nth-child(1) {
+    color: aqua;
+    grid-area: auto;
+}
+.container div :nth-child(2) {
+    background-color: blue;
+    grid-area: main;
+}
+.container div :nth-child(3) {
+    background-color: black;
+    grid-area: sidebar;
+}
+.container div :nth-child(4) {
+    background-color: brown;
+    grid-area: sidebar2;
+}

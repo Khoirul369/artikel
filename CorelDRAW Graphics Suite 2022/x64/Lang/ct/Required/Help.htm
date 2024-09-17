@@ -1,0 +1,212 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:ICA="ICA">
+	<head>
+		<meta name="vs_showGrid" content="True" />
+		<title>Setup Wizard - Command Line Help</title>
+		<LINK href="../../_XX/Required/Style.css" type="text/css" rel="STYLESHEET" />
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1" />
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+		<meta name="ICADlg" 
+		      content="text/html" 
+		      id="ICADlg" 
+		      ICA:DlgHW="550,480" 
+		      ICA:DlgTitle="Setup.exe /? - command line help" 
+		      ICA:PromptForCancel="no" />
+		
+		<style type="text/css">
+    
+    	    .HelpTable
+		    {
+		        border-top-style: none;
+	            border-right-style: none;
+	            border-left-style: none;
+	            border-bottom-style: none;
+		    }
+		    
+            .HelpItem
+            {
+	            vertical-align: top;
+	            font-size: 14px;
+	            font-family: 'Segoe UI' , Tahoma;
+	            border-bottom: gray 1px solid;
+	            margin-top: 10px;
+	            margin-bottom: 10px;
+	            padding-top: 5;
+	            padding-bottom: 5;
+            }
+		</style>
+		
+	</head>
+	
+	<body>
+	
+	<div id="idContent"
+	     class="Panel"
+	     style="overflow: auto;
+	            padding: 5 5 5 5;
+	            border: double 3px silver;
+	            background-color: white;
+	            width: 450px;
+	            height: 440px; 
+	            text-align: left;">
+
+
+        <table id="idContentTable" cellspacing="0">
+        
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    <Loc>此為 Setup.exe 中常用命令列的快速參考指南<br /><br />
+                    Setup.exe /Option &lt;必要的參數&gt; </Loc>[Optional Parameter]
+                    <br /><br />
+                    <u><Loc>安裝選項：</Loc></u>
+                </td>
+            </tr>
+                        
+            <tr> <!-- /a admin -->
+                <td class="HelpItem" style="width: 55px;">/a</td>
+                <td class="HelpItem">
+                    <Loc>表示您要建立伺服器影像。 系統管理安裝 - 在網路上安裝產品</Loc>
+                    <br /><br />
+                    <Loc>Setup.exe /a</Loc>
+                </td>
+            </tr>
+
+            <tr> <!-- /a /q(n) admin -->
+                <td class="HelpItem" style="width: 55px;">/a /q(n)</td>
+                <td class="HelpItem">
+                    命令列中的 /q(n) 交換器不再受到支援。請參閱最新版本的《CorelDRAW Graphics Suite 部署指南》，以了解受支援的交換器。
+                    <br /><br />
+                    Setup.exe /a /q(n)
+                </td>
+            </tr>
+            
+            <tr> <!-- /s push profile ID -->
+                <td class="HelpItem" style="width: 55px;">/s</td>
+                <td class="HelpItem">
+                    用來將 PROFILEID 推送至工作站。PROFILEID 公用屬性可用來將帳戶認證推送至工作站，藉此將所有使用者登入帳戶。
+                    <br /><br />
+                    Setup.exe /s PROFILEID=XXXXXXXXXXXXXXX
+                </td>
+            </tr>            
+            <tr> <!-- /x uninstall -->
+                <td class="HelpItem" style="width: 55px;">/x <br /> /uninstall</td>
+                <td class="HelpItem">
+                    <Loc>表示您要解除安裝軟體。 系統管理安裝 - 在網路上安裝產品</Loc>
+                    <br /><br />
+                    <Loc>Setup.exe /x</Loc>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    <br /><br />
+                    <u>Display Options:</u>
+                </td>
+            </tr>
+            
+            <tr> <!-- /q silent -->
+                <td class="HelpItem" style="width: 55px;">/q[n|b|r|f]</td>
+                <td class="HelpItem">
+                    <Loc>設定安裝的使用者介面之顯示範圍</Loc>
+                    <br />
+                    <Loc>n - 無 UI</Loc><br />
+            		<Loc>b - 基本 UI</Loc><br />
+        		    <Loc>r - 精簡 UI</Loc><br />
+		            <Loc>f - 完整 UI (預設值)</Loc><br /><br />
+                    <Loc>Setup.exe /q</Loc>
+        		</td>
+            </tr>
+            
+            <tr> <!-- /q silent -->
+                <td class="HelpItem" style="width: 55px;">/quiet</td>
+                <td class="HelpItem">
+                    <Loc>安靜模式，不需使用者互動。與 /qn 相同</Loc>
+        		</td>
+            </tr>
+            
+            <tr> <!-- /q silent -->
+                <td class="HelpItem" style="width: 55px;">/passive</td>
+                <td class="HelpItem">
+                    <Loc>自動安裝模式 - 只有進度列。與 /qb 相同</Loc>
+        		</td>
+            </tr>
+            
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    <br /><br />
+                    <u><Loc>記錄選項：</Loc></u>
+                </td>
+            </tr>
+            
+            <tr> <!-- /l log -->
+                <td class="HelpItem" style="width: 55px;">/l[i|w|e|a|r|u|c|m|o|p|v|x|*]</td>
+                <td class="HelpItem">
+                    <Loc>將與安裝相關的一般訊息記錄為記錄檔。如果您未指名路徑和檔案名稱，系統會將記錄檔建立在目前使用者的暫時資料夾中。</Loc> <br /><br />
+                    <Loc>i - 狀態訊息</Loc> <br />
+            		<Loc>w - 非嚴重警告</Loc> <br />
+            		<Loc>e - 所有錯誤訊息</Loc> <br />
+            		<Loc>a - 動作起始時</Loc> <br />
+            		<Loc>r - 特定動作記錄</Loc> <br />
+            		<Loc>u - 使用者要求</Loc> <br />
+            		<Loc>c - 初始 UI 參數</Loc> <br />
+            		<Loc>m - 記憶體用盡或嚴重結束資訊</Loc> <br />
+            		<Loc>o - 磁碟空間用盡訊息</Loc> <br />
+            		<Loc>p - 終端機內容</Loc> <br />
+            		<Loc>v - 詳細資訊輸出</Loc> <br />
+            		<Loc>x - 額外偵錯資訊</Loc> <br />
+            		<Loc>* - 記錄所有資訊，除了 v 和 x 選項</Loc> <br /><br />
+            		<Loc>預設值為 /lvoicewarmup</Loc><br /><br />
+            		<Loc>Setup.exe /l"C:\Install.log"</Loc>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    <br /><br />
+                    <u><Loc>修復選項：</Loc></u>
+                </td>
+            </tr>
+            
+            <tr> <!-- /a admin -->
+                <td class="HelpItem" style="width: 55px;">/f[p|e|c|m|s|o|d|a|u]</td>
+                <td class="HelpItem">
+                <Loc>修復產品。</Loc><br />
+                <Loc>p - 只有在檔案遺失</Loc><br />
+		        <Loc>o - 如果檔案遺失或已安裝了較舊的版本 (預設值)</Loc><br />
+        		<Loc>e - 如果檔案遺失或已安裝了相同或較舊的版本</Loc><br />
+		        <Loc>d - 如果檔案遺失或已安裝了不同的版本</Loc><br />
+        		<Loc>c - 如果檔案遺失或總合檢查碼跟計算的數值不相符</Loc><br />
+		        <Loc>a - 強制重新安裝所有檔案</Loc><br />
+        		<Loc>u - 所有需要的使用者特定的登錄項目 (預設值)</Loc><br />
+		        <Loc>m - 所有需要的電腦特定的登錄項目 (預設值)</Loc><br />
+        		<Loc>s - 所有現存的捷徑 (預設值)</Loc><br />
+        		<br /><br />
+        		<Loc>預設值為 /foums</Loc><br /><br />
+        		<Loc>Setup.exe /f</Loc>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    <br /><br />
+                    <u><Loc>設定公用屬性：</Loc></u><br /><br />
+                    [PROPERTY=PropertyValue]
+                </td>
+            </tr>
+        
+        </table> <!-- table id="idContentTable" -->
+
+    </div> <!-- id="idContent" -->
+
+	<div class="DlgBlock"
+	     style="text-align: right;
+	            width: 450px;
+	            top: 470px;">
+	            
+	    <button onclick="window.external.EndModalLoop(0);" ID="idOk" accesskey="O"><Loc>確定(<u>O</u>)</Loc></button>
+	    
+    </div>
+		
+	</body>
+</html>

@@ -1,0 +1,73 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:ICA="ICA">
+	<head>
+		<title>Setup Wizard</title>
+		<LINK href="Style.css" type="text/css" rel="STYLESHEET">
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta content="text/html" name="ICADlg" id="ICADlg" 
+            ICA:DlgHW="450,650" 
+            />
+
+		<script language="jscript" type="text/jscript" src="../../_XX/Custom/js/Setup.js"></script>
+		<script language="jscript" type="text/jscript">
+		    
+		    function OnBodyLoad()
+		    {
+		       
+		    }
+		    
+		</script>
+		
+	</head>
+	
+	<body onload="OnBodyLoad();" >
+	    
+	    <div class="DlgBlock" style="width: 625px;">
+	        <label style="font-weight: bold;" >В системе обнаружены следующие приложения</label>
+	        <br /><br />
+	        <label >Чтобы не потребовалась последующая перезагрузка компьютера, настоятельно рекомендуется закрыть эти приложения, прежде чем продолжить установку.<br /><br />Закройте эти приложения и нажмите кнопку <b>Повтор</b>, чтобы продолжить.</label>
+	    </div>
+
+        <div class="DlgBlock"
+             style="BORDER-LEFT-COLOR: silver; BORDER-BOTTOM-COLOR: silver; 
+                    BORDER-TOP-COLOR: silver; BORDER-RIGHT-COLOR: silver;
+                    BORDER-TOP-STYLE: double; BORDER-RIGHT-STYLE: double;
+                    BORDER-LEFT-STYLE: double; BORDER-BOTTOM-STYLE: double;
+                    background-color: #f1f1f1;
+                    height: 190px;
+                    width: 625px;
+                    top: 150px;">
+                                     
+            <div style="margin: 10px; height: 165px; overflow: auto;">
+                <label ICA:Property="Files.In.Use.DisplayName.0">[Files.In.Use.DisplayName.0]</label><br>
+	    		<label ICA:Property="Files.In.Use.DisplayName.1">[Files.In.Use.DisplayName.1]</label><br>
+		    	<label ICA:Property="Files.In.Use.DisplayName.2">[Files.In.Use.DisplayName.2]</label><br>
+			    <label ICA:Property="Files.In.Use.DisplayName.3">[Files.In.Use.DisplayName.3]</label><br>
+    			<label ICA:Property="Files.In.Use.DisplayName.4">[Files.In.Use.DisplayName.4]</label><br>
+	    		<label ICA:Property="Files.In.Use.DisplayName.5">[Files.In.Use.DisplayName.5]</label><br>
+		    	<label ICA:Property="Files.In.Use.DisplayName.6">[Files.In.Use.DisplayName.6]</label><br>
+			    <label ICA:Property="Files.In.Use.DisplayName.7">[Files.In.Use.DisplayName.7]</label><br>
+    			<label ICA:Property="Files.In.Use.DisplayName.8">[Files.In.Use.DisplayName.8]</label><br>
+                <label ICA:Property="Files.In.Use.DisplayName.9">[Files.In.Use.DisplayName.9]</label>
+            </div>
+        </div>
+        
+        <div class="DlgBlock" style="top: 360px; width: 625px;">
+            <table border="0" width="100%">
+                <tr>
+                    <td align="right">
+                        <button type="submit" ICA:Function="ICARetryFilesInUse" ID="idRetry" accesskey="П" ><u>П</u>oвтор</button>
+                    </td>
+                    <td width="120px" align="left">
+                        <button type="button" ICA:Function="ICABeginGeneric" ID="idIgnore" accesskey="P" >П<u>p</u>опустить</button>
+                    </td>
+                    <td width="120px" align="right">
+                        <button type="button" ICA:Function="ICACancelSetup" ID="idCancel" accesskey="O" ><u>О</u>тмена</button>
+                    </td>
+                </tr>
+            </table>
+            
+        </div>
+        
+	</body>
+</html>

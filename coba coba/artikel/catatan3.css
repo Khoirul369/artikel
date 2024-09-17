@@ -1,0 +1,32 @@
+a:link {
+    color: aqua;
+}
+a:hover {
+ color: red;   
+}
+a:active {
+    color: red;
+}
+a:visited {
+    color: red;
+}
+table, th, td {
+    border: 1px solid;
+}
+th {
+    height: 65px;
+    width: 100px;
+}
+td {
+    text-align: center;
+}
+#box1 {
+    width: 100px;
+    height: 100px;
+    background-color: violet;
+    margin-bottom: 10px;
+    border: 5px solid black;
+}
+ul li {
+    display: inline;
+}

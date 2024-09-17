@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ICA lang="TR">
+	<Properties>
+    <Property name="Str.ProductDisplayName" value="CorelDRAW Graphics Suite"/>
+    <Property name="Str.SetupAlreadyRunning" value="Setup.exe zaten çalisiyor."/> 
+		<Property name="Str.CancelSetupPrompt" value="%s yüklemesini durdurmak istediğinizden emin misiniz?" comment="if %s is used in the string, it will be replaced with [Str.ProductDisplayName]"/>
+    <Property name="Str.CouldNotOpenCore" value="Yükleme uygulaması yazılım ayarlamalarını yaparken bir sorunla karşılaştı.  Bu dosyaya ulaşılamıyor: %s Devam etmek ister misiniz?" comment="string displayed to the user if the core .msi could not be opened during initalization -- %s MUST be in the string, it is replaced with the reason for failure"/>
+    <Property name="Str.NoFolderAccess" value="Bu klasöre ulaşılamadı: %s" comment="%s is replaced with the folder name"/>
+    <Property name="Str.PathTooLong" value="%s yükleme dizini yolu en fazla %s karakter içerebilir. Lütfen farklı bir hedef seçin." comment="first %s is replaced with [Str.ProductDisplayName] -- second %s is replaced with [MAX_PATH]"/>
+    <Property name="Str.Initializing.Text" value="Baslatiliyor: lütfen bekleyin ..."/>
+    <Property name="Str.Initializing.Text.Cancelling" value="Islem Durduruluyor ..."/>
+		<Property name="Str.Feature.MainApp" value="CorelDRAW Graphics Suite"/> 
+    
+    <Property name="Str.Feature.Utilities.VSTA.Desc.WithVS9" value="Bu özellik Visual Studio Tools for Applications destegi yükler (eger Visual Studio 2008 SP1 yüklü ise)."/>
+
+		
+    <Property name="Str.Feature.Programs64" value="64 Bit Program Dosyalari"/>
+    <Property name="Str.Feature.Programs64.Desc" value="64 Bit Program Dosyalari"/>
+    <Property name="Str.DestinationFolder" value="Geçerli Hedef Klasörü Degistir."/>
+    <Property name="Str.SerialNotValid" value="Seri numarasi geçerli degil."/>
+
+
+    <Property name="Str.ProgressText.Default" value="%d%% Tamamlandı" comment="this is the default progress text, you can override it using 'progresstext' attribute on the msi or dbm node -- optional %d%% is populated with the percent complete"/>
+    <Property name="Str.Running.VBA.exe.text" value="Lütfen Visual Basic for Applications uygulamasini ayarlarken bekleyin"/>
+    <Property name="Str.CacheSetupSource.Progress.text" value="Lütfen, yükleme dosyalari hazirlanirken bekleyin"/>
+
+    <Property name="Str.Text.RequiredFeature" value="(Gerekli)"/>
+	<Property name="Str.ProgressText.CopyingPatches" value="Düzeltme Dosyası Kopyalanıyor: "/>
+    <Property name="Str.ProgressText.Common" value="%d%% Tamamlandı - CorelDRAW Graphics Suite Yapılandırılıyor"/>
+    <Property name="Str.ProgressText.Capture" value="%d%% Tamamlandi - Corel CAPTURE ayarlaniyor"/>
+    <Property name="Str.ProgressText.Draw" value="%d%% Tamamlandi - CorelDRAW ayarlaniyor"/>
+    <Property name="Str.ProgressText.Paint" value="%d%% Tamamlandi - Corel PHOTO-PAINT ayarlaniyor"/>
+    <Property name="Str.ProgressText.CS" value="%d%% Tamamlandi - CorelDRAW Graphics Suite Basitlestirilmis Çince Dil Paketi Yapilandiriliyor"/>
+    <Property name="Str.ProgressText.CT" value="%d%% Tamamlandi - CorelDRAW Graphics Suite Geleneksel Çince Dil Paketi Yapilandiriliyor"/>
+    <Property name="Str.ProgressText.CZ" value="%d%% Tamamlandi - CorelDRAW Graphics Suite Çekçe Dil Paketi Yapilandiriliyor"/>
+    <Property name="Str.ProgressText.NL" value="%d%% Tamamlandi - CorelDRAW Graphics Suite Hollandaca Dil Paketi Yapilandiriliyor"/>
+    <Property name="Str.ProgressText.EN" value="%d%% Tamamlandi - CorelDRAW Graphics Suite Ingilizce Dil Paketi Yapilandiriliyor"/>
+    <Property name="Str.ProgressText.FR" value="%d%% Tamamlandi - CorelDRAW Graphics Suite Fransizca Dil Paketi Yapilandiriliyor"/>
+    <Property name="Str.ProgressText.DE" value="%d%% Tamamlandi - CorelDRAW Graphics Suite Almanca Dil Paketi Yapilandiriliyor"/>
+    <Property name="Str.ProgressText.IT" value="%d%% Tamamlandi - CorelDRAW Graphics Suite Italyanca Dil Paketi Yapilandiriliyor"/>
+    <Property name="Str.ProgressText.JP" value="%d%% Tamamlandi - CorelDRAW Graphics Suite Japonca Dil Paketi Yapilandiriliyor"/>
+    <Property name="Str.ProgressText.PL" value="%d%% Tamamlandi - CorelDRAW Graphics Suite Lehçe Dil Paketi Yapilandiriliyor"/>
+    <Property name="Str.ProgressText.BR" value="%d%% Tamamlandi - CorelDRAW Graphics Suite Portekizce (Brezilya) Dil Paketi Yapilandiriliyor"/>
+    <Property name="Str.ProgressText.RU" value="%d%% Tamamlandi - CorelDRAW Graphics Suite Rusça Dil Paketi Yapilandiriliyor"/>
+    <Property name="Str.ProgressText.ES" value="%d%% Tamamlandi - CorelDRAW Graphics Suite Ispanyolca Dil Paketi Yapilandiriliyor"/>
+    <Property name="Str.ProgressText.TR" value="%d%% Tamamlandı - CorelDRAW Graphics Suite Türkçe Dil Paketi Yapılandırılıyor"/>
+	<Property name="Str.ProgressText.SV" value="%d%% Tamamlandı - CorelDRAW Graphics Suite İsveççe Dil Paketi Yapılandırılıyor"/>
+    <Property name="Str.ProgressText.FontManager" value="%d%% Tamamlandı - Corel Font Manager Yapılandırılıyor"/>
+    <Property name="Str.ProgressText.VBA" value="%d%% Tamamlandi - Microsoft Visual Basic for Applications Yapilandiriliyor"/>
+    <Property name="Str.ProgressText.VSTA" value="Microsoft Visual Basic for Applications Yükleniyor"/>
+	<Property name="Str.ProgressText.WebView" value="Microsoft Edge WebView2 Runtime Yükleniyor" />
+    <Property name="Str.ProgressText.VC" value="Microsoft Visual C++ Redistributable Packages for Visual Studio 2019 Yükleniyor"/>
+    <Property name="Str.ProgressText.DotNet" value="Microsoft .NET Framework 4.7.2 Yükleniyor"/>
+    <Property name="Str.ProgressText.ShellExt" value="%d%% Tamamlandi - Corel Windows Shell Extension Yapilandiriliyor"/>
+    <Property name="Str.Feature.Lang" value="Ürün dilleri "/>
+    <Property name="Str.ProgressText.RemoveAll" value="%%d% Tamamlandı -  CorelDRAW Graphics Suite Kaldırılıyor" />    
+    <Property name="Str.Feature.Lang.CS" value="Çince (Basitlestirilmis)"/>
+    <Property name="Str.Feature.Lang.CT" value="Çince (Geleneksel)"/>
+    <Property name="Str.Feature.Lang.CZ" value="Çekçe"/>
+    <Property name="Str.Feature.Lang.NL" value="Flemenkçe"/>
+    <Property name="Str.Feature.Lang.EN" value="İngilizce"/>
+    <Property name="Str.Feature.Lang.FR" value="Fransızca"/>
+    <Property name="Str.Feature.Lang.DE" value="Almanca"/>
+    <Property name="Str.Feature.Lang.IT" value="İtalyanca"/>
+    <Property name="Str.Feature.Lang.JP" value="Japonca"/>
+    <Property name="Str.Feature.Lang.PL" value="Lehçe"/>
+    <Property name="Str.Feature.Lang.BR" value="Portekizce"/>
+    <Property name="Str.Feature.Lang.RU" value="Rusça"/>
+    <Property name="Str.Feature.Lang.ES" value="İspanyolca"/>
+    <Property name="Str.Feature.Lang.TR" value="Türkçe"/>
+	<Property name="Str.Feature.Lang.SV" value="İsveççe"/>
+    <Property name="SETUP_LANG" value="TR"/>
+    <Property name="ICA.Lang.Transform" value="1033.mst"/>
+
+
+    <Property name="Str.Error.20000" value="Seri numarasi geçerli degil."/>
+    <Property name="Str.Error.30000" value="ÖNEMLİ: Microsoft .NET Framework 4.7.2'ı yüklemeden CorelDRAW Graphics Suite'yı yükleyemezsiniz.  Microsoft .NET Framework hakkında bilgi için lütfenMicrosoft Web sitesini ziyaret edin.  &lt;a href='https://www.microsoft.com/en-us/download/details.aspx?id=48137' target='_blank' onclick='window.external.EndModalLoop(0);'&gt;http://www.microsoft.com/NET/&lt;/a&gt;"/>
+    <Property name="Str.Error.30001" value="Bilgisayarınızdaki işlemci, yazılım için minimum sistem gereksinimini karşılamıyor. Yükleme tamamlanamıyor."/>
+    <Property name="Str.Error.30003" value="Bu yüklemeyi gerçekleştirmek için yeterli ayrıcalıklara sahip değilsiniz.  Bu yükleme için yönetim ayrıcalığı veya yükseltilmiş ayrıcalık gerekir.  Lütfen yöneticinizle görüştükten sonra bu yüklemeyi yeniden deneyin."/>
+    <Property name="Str.Error.30004" value="ÖNEMLİ: Microsoft .NET Framework 4.7.2'ı yüklemeden CorelDRAW Graphics Suite'yı yükleyemezsiniz.  Microsoft .NET Framework hakkında bilgi için lütfen Microsoft Web sitesini ziyaret edin. 'https://www.microsoft.com/en-us/download/details.aspx?id=48137' - http://www.microsoft.com/NET/"/>
+    <Property name="Str.Error.30005" value="CorelDRAW Graphics Suite'nın 64-Bit sürümü 32-Bit bir sisteme yüklenemez."/>
+	<Property name="Str.Error.5100" value="Kurulum devam edemiyor; çünkü daha önceki bir yükleme, bilgisayarınızın yeniden başlatılmasını gerektiriyor. Lütfen bilgisayarınızı yeniden başlatın ve Kurulum'u yeniden çalıştırın."/>
+<!--Coexistence Scenarios -->
+    <Property name="Str.Error.1638" value="Başka bir sürümü yüklü olduğundan bu ürünü yükleyemezsiniz. Ürünü yüklemek için önce mevcut sürümü kaldırmalısınız. Kurulumdan çıkmak için Son'u tıklatın." comment="Pink"/>
+    <Property name="Str.Error.30500" value="Bu uygulamanın daha yeni bir sürümü bu bilgisayarda zaten kurulu. Bu sürümü kurmak istiyorsanız, lütfen ilk önce daha yeni sürümü kaldırın. "/>
+    <Property name="Str.Error.30504" value="CorelDRAW Essentials ve CorelDRAW Home and Student aynı bilgisayara yüklenemez.  Sisteminiz değiştirilmemiş.  Ürünü yüklemek için önce geçerli CorelDRAW ürününü kaldırmanız gerekir." comment="Rust"/>
+    <Property name="Str.Error.30508" value="Bu ürünü yükleyemezsiniz; çünkü bu ürün zaten yüklü. 32-Bit veya 64-Bit yüklemenizi değiştirmek için öncelikle mevcut sürümü kaldırmanız gerekir." coment="baby blue"/>
+    <Property name="Str.Error.30509" value="CorelDRAW Graphics Suite zaten yüklü olduğundan bu deneme sürümünü yükleyemezsiniz. Bu deneme sürümünü yüklemek için, önce var olan ürünü kaldırmanız gerekir." comment="purple"/>
+    <Property name="Str.CDTS.PromptForUpgrade" value="Bilgisayarınızda CorelDRAW Graphics Suite algılandı. CorelDRAW Technical Suite, CorelDRAW Graphics Suite'in tüm özelliklerini ve çok daha fazlasını sunar!\n\nCorelDRAW Technical Suite'e yükseltmek için Tamam'a tıklayın. \n\nCorelDRAW Technical Suite'e yükseltmek istemiyorsanız İptal'e tıklayın." comment="dark blue"/>
+    
+    <Property name="Str.Error.35001" value="&lt;b&gt;Ayrıntılar:&lt;/b&gt;&lt;br /&gt;Seri numarası doğrulanamıyor. Yüklemeyi tamamlamak için bir Internet bağlantısı gerekiyor.&lt;br /&gt;&lt;br /&gt;"/>
+    <Property name="Str.Error.30510" value="İşletim sisteminizde en son güncelleştirmeler yüklü olmadığından yükleme işlemine devam edemiyoruz. Lütfen Windows 7 için en son güncelleştirmeleri yükleyin ve tekrar deneyin." comment="OS Not Supported"/>
+    <Property name="Str.Error.30512" value="Bir Internet bağlantısı gerekiyor.  Lütfen Internet'e bağlanın ve tekrar deneyin."/>
+	<Property name="Str.Error.30511" value="Hata: Sunucuda beklenmeyen bir hata oluştu. Lütfen Internet bağlantınızı kontrol edin ve tekrar deneyin."/>
+	<Property name="Str.Error.30516" value="CorelDRAW Graphics Suite için gerekli olan .NET Framework 4.7.2'yı yükleyemiyoruz. Lütfen işletim sisteminizde en son hizmet paketlerinin ve güncelleştirmelerin yüklü olduğundan emin olun ve tekrar deneyin.&lt;br /&gt;&lt;br /&gt;Microsoft .NET Framework 4.7.2 hakkında bilgi edinmek için lütfen Microsoft web sitesini ziyaret edin. &lt;a href='https://www.microsoft.com/en-us/download/details.aspx?id=48137' target='_blank' onclick='window.external.EndModalLoop(0);'&gt;http://www.microsoft.com/NET/&lt;/a&gt;" comment="Custom .NET error"/>
+	<Property name="Str.Error.30513" value="CorelDRAW Graphics Suite Windows XP veya Windows Vista üzerine yüklenemez. Lütfen bilgisayarınızın işletim sistemini yükseltin ve tekrar deneyin." comment="OS Not Supported"/>
+	<Property name="Str.Error.30515" value="Bu seri numarası deneme sürümünüzü etkinleştirmek için kullanılamaz.  &lt;a href='http://www.corel.com' target='_blank' &gt;Üyeler ve Aboneler için İndirmeler&lt;/a&gt; sayfasından derlemenizi indirmek için lütfen Corel Hesabınızda oturum açın."/>
+	<Property name="Str.Error.30517" value="Bu ürünü yüklemek için Internet Explorer 11 gereklidir. Lütfen işletim sisteminizde en son güncelleştirme ve hizmet paketlerinin yüklü olduğundan emin olun." comment="IE8 Not Supported" />
+    <Property name="Str.Error.30518" value="İşletim sisteminizde en son güncelleştirmeler yüklü olmadığından yükleme işlemine devam edemiyoruz. Lütfen Windows 8 için en son güncelleştirmeleri yükleyin ve tekrar deneyin." comment="Win8 Not Supported"/>
+    <Property name="Str.Error.30519" value="CorelDRAW Graphics Suite, Windows 7 ya da Windows 8'de yüklenemez. Lütfen bilgisayarınızın işletim sistemini yükseltip tekrar deneyin." />
+    <Property name="Str.Error.30520" value="Yazılımın bu sürümü bir ağa dağıtılamaz. Yazılımı bir ağa yükleme hakkında bilgi için Dağıtım Kılavuzu'na bakın." />
+    <Property name="Str.Error.30522" value="Bu seri numarası, CorelDRAW Graphics Suite'in abonelere özel bu sürümünü kurmak için kullanılamaz." />
+            
+    <Property name="Str.DiskSpace.Bytes" value="byte"/>
+    <Property name="Str.DiskSpace.Kb" value="Kb"/>
+    <Property name="Str.DiskSpace.MB" value="MB"/>
+    <Property name="Str.DiskSpace.GB" value="GB"/>
+    <Property name="Str.DiskSpace.TB" value="TB"/>
+    <Property name="Str.DiskSpace.RequiredString" value="%s sürücüsünde %s / %s gerekiyor"/>
+    <Property name="Str.UpgradeProgressText" value="Uygulamalar kaldiriliyor "/>
+
+    <Property name="Str.Feature.Filters.GhostscriptGPL" value="GPL Ghostscript"/>
+    <Property name="Str.Feature.Filters.GhostscriptGPL.Installed.Text" value="&lt;b&gt;GPL Ghostscript (Zaten Yüklü)&lt;/b&gt;"/>
+
+    <Property name="Str.PrerequisiteReboot.Prompt" value="Yüklemeyi tamamlamak için sisteminizi yeniden başlatmanız gerekiyor.&#xA;&#xA;Şimdi yeniden başlatmak için Evet düğmesine veya daha sonra yeniden başlatmak istiyorsanız Hayır düğmesine tıklayın."/>
+    
+
+    <Property name="Str.Required.Dlg.InstallComplete" value="Yükleme Tamamlandı"/>
+
+    <Property name="billboard_01.png" value="" />
+    <Property name="billboard_02.png" value="" />
+    <Property name="billboard_03.png" value="2021'de bulunan Corel İçeriği ile oluşturuldu"/>
+    <Property name="billboard_04.png" value="" />
+
+    <Property name="Str_Init_InitSetup" value="Kurulum başlatılıyor"/>
+    <Property name="Str_Init_PleaseWait" value="Baslatiliyor: lütfen bekleyin ..."/>
+    <Property name="Str_License_Header" value="Bu yazılımı yüklemeye devam etmek için Corel Son Kullanıcı Lisans Sözleşmesinin (EULA) hükümlerini kabul etmelisiniz."/>
+    <Property name="Str_License_Privacy_Desc" value="Gizliliğinize önem veriyoruz. Gizlilik politikamızı görmek için &lt;a href='http://www.corel.com/privacy/' target='_blank'&gt;buraya&lt;/a&gt; tıklayın." />
+    <Property name="Str_License_Tooltip" value="Devam edebilmeniz için önce lisans anlaşmasının koşullarını kabul etmeniz gerekir."/>
+    <Property name="Str_SN_Header" value="Lütfen bilgilerinizi girin."/>
+    <Property name="Str_SN_User" value="Tam Ad:"/>
+    <Property name="Str_SN_SN" value="Seri Numarası:"/>
+    <Property name="Str_SN_Hint" value="Ürününüzü daha önce yüklediyseniz ve kaydettiyseniz seri numaranızı &lt;a href='http://apps.corel.com/redirect/?_redirect=command&amp;function=registeredproducts&amp;app=all&amp;subfunction=ipm&amp;lang=tr' target='_blank'&gt;Corel hesabınızda&lt;/a&gt; bulabilirsiniz. Seri numaranızı bulma konusunda yardıma ihtiyacınız olursa &lt;a href='http://www.corel.com/installcenter' target='_blank'&gt;Corel Install Center&lt;/a&gt; sayfasını ziyaret edin."/>
+
+    <Property name="Str_SNT_SNInput" value="Seri numaram var."/>
+    <Property name="Str_SNT_SNInputDesc" value="Ürünü ya da bir ürün aboneliğini satın aldıysanız veya bir ortağımızın deneme sürümü seri numarasına sahipseniz bu seçeneği belirleyin."/>
+    <Property name="Str_SNT_NoSN" value="Seri numaram yok ve ürünü denemek istiyorum."/>
+    <Property name="Str_SNT_NoSNDesc" value="Tam olarak çalışan ürünü sınırlı bir süreyle denemek için bu seçeneği tercih edin. Deneme süresi sona erdiğinde, yalnızca belirli bir grup özellik kullanılabilir."/>
+    
+    <Property name="Str_InstallChoose_Header" value="Yükleme seçeneklerinden birini belirtin."/>
+    <Property name="Str_InstallChoose_InstallLink" value="Normal Yükleme" />
+    <Property name="Str_InstallChoose_InstallDesc" value="Bu seçenek, yazılımı varsayılan konuma yükler ve program ve seçeneklerin çoğunu içerir."/>
+    <Property name="Str_InstallChoose_InstallSize" value="Yükleme boyutu: "/>
+    <Property name="Str_InstallChoose_InstallSize2" value=" kullanılabilir)"/>
+    <Property name="Str_InstallChoose_CustomLink" value="Özel Yükleme..."/>
+    <Property name="Str_InstallChoose_CustomDesc" value="Bu seçenek yazılımın nasıl yükleneceğini seçmenizi sağlar."/>
+    <Property name="Str_InstallChoose_AdminLink" value="Dağıtım ..." />
+    <Property name="Str_InstallChoose_AdminDesc" value="Bu seçenek, yazılımı ayrı ayrı iş istasyonlarına yüklemek için bir sunucu görüntüsü oluşturmanıza olanak sağlar."/>
+    <Property name="Str_InstallChoose_AdminOnlineLink" value="İnternet özellikleri açık olarak dağıt"/>
+    <Property name="Str_InstallChoose_AdminOnlineDesc" value="Bu seçenek, yazılımı internet özellikleri varsayılan olarak açık şekilde bireysel iş istasyonlarına dağıtmak için bir sunucu görüntüsü oluşturmanıza olanak tanır."/>
+
+    <Property name="Str_Install_InstallHeader" value="Yüklemek istediğiniz programları seçin."/>
+    <Property name="Str_Install_OptionsHeader" value="Ek seçenekleri belirtin."/>
+    <Property name="Str_Install_FeaturesHeader" value="Yüklemek istediğiniz program özelliklerini seçin."/>
+    <Property name="Str_Install_LocationHeader" value="Yükleme konumunu ve dilleri seçin:"/>
+    <Property name="Str_Install_LocationHeader2" value="Yükleme konumunu seçin:"/>
+    <Property name="Str_Install_LangHeader" value=""/>
+
+    <Property name="Str_Install_Draw" value="CorelDRAW " />
+    <Property name="Str_Install_DrawDesc" value=" | vektör çizim ve sayfa düzeni"/>
+    <Property name="Str_Install_PP" value="Corel PHOTO-PAINT " />
+    <Property name="Str_Install_PPDesc" value=" | bit eşlem çizim ve fotoğraf düzenleme"/>
+    <Property name="Str_Install_Capture" value="Corel CAPTURE "  />
+    <Property name="Str_Install_CaptureDesc" value=" | gelişmiş ekran yakalama"/>
+    <Property name="Str_Install_FontManager" value="Corel Font Manager " />
+    <Property name="Str_Install_FontManagerDesc" value=" | yazıtipi yöneticisi"/>
+
+    <Property name="Str_Install_Utilities" value="Yardımcı programlar" />
+    <Property name="Str_Install_UtilitiesDesc" value="CorelDRAW ve Corel PHOTO-PAINT ile kullanılabilecek yardımcı programları yükler."/>
+    <Property name="Str_Install_DupWiz" value="Dupleks Sihirbazı"/>
+    <Property name="Str_Install_VBA" value="Visual Basic for Applications 7.1"/>
+    <Property name="Str_Install_VSTA" value="Visual Studio Tools for Applications"/>
+    <Property name="Str_Install_Shell" value="Windows Shell Extension"/>
+    <Property name="Str_Install_GPL" value="Gelişmiş EPS uyumluluğunu etkinleştir" />
+    <Property name="Str_Install_GPL_Installed" value="Gelişmiş EPS uyumluluğunu etkinleştir (Zaten Yüklü)"/>
+    <Property name="Str_Install_GPLDesc" value="EPS ve PostScript dosyalarını içe aktarmaya yönelik gelişmiş destek için GPL Ghostscript'i yükler."/>
+
+    <Property name="Str_Install_Updates" value="Ürün güncelleştirmelerine izin ver" />
+    <Property name="Str_Install_UpdatesDesc" value="Ürün güncelleştirmelerini otomatik olarak indirir; ancak bunları yüklemeden önce sizden onay ister."/>
+    <Property name="Str_Install_Shortcuts" value="Masaüstü kısayollarını yükle" />
+    <Property name="Str_Install_ShortcutsDesc" value="Programların kısayollarını masaüstünüze yükler."/>
+    <Property name="Str_Install_CopyCabs" value="Yükleme dosyalarını kopyala" />
+    <Property name="Str_Install_CopyCabsDesc" value="Yükleme diskini kullanmadan yazılımın bakımını yapmanıza ve yazılımı yüklemenize olanak sağlar.  Bu ayar için XXX MB boş alan gerekir."/>
+
+    <Property name="Str_Install_Location_Desc" value="CorelDRAW Graphics Suite programını şu klasöre yükleyin."/>
+    <Property name="Str_Install_Langs_Desc" value="Yüklemek istediğiniz dilleri seçin."/>
+
+    <Property name="Str_Install_Langs" value="Ürün dilleri:"/>
+    <Property name="Str_Install_Enterprise" value="CorelDRAW.app Enterprise'a erişimi etkinleştirin" />
+    <Property name="Str_Install_EnterpriseDesc" value="Microsoft 365 veya G Suite hesabınızla oturum açabilirsiniz." />
+
+    <Property name="Str_Progress_Header" value="Yükleniyor, lütfen bekleyin ..."/>
+    <Property name="Str_Progress_Header_Remove" value="CorelDRAW Graphics Suite kaldırılıyor, lütfen bekleyin ..." />
+
+    <Property name="Str_ARP_Header" value="CorelDRAW Graphics Suite şu anda yüklü. Bu programı değiştirmek veya bilgisayarınızdan kaldırmak için aşağıdaki seçeneklerden birini belirtin."/>
+    <Property name="Str_ARP_Modify" value="Düzenle"/>
+    <Property name="Str_ARP_ModifyDesc" value="Yüklenecek program özelliklerini değiştirin. Bu seçenek, Özel Seçim iletişim kutusunu görüntüler. Bu iletişim kutusunda özelliklerin yüklenme şeklini değiştirebilirsiniz."/>
+    <Property name="Str_ARP_Repair" value="Onar"/>
+    <Property name="Str_ARP_RepairDesc" value="Programdaki yükleme hatalarını onarın. Bu seçenek, eksik veya bozuk dosyaları, kısayolları ve kayıt defteri girdilerini düzeltir."/>
+    <Property name="Str_ARP_Remove" value="Kaldır"/>
+    <Property name="Str_ARP_RemoveDesc" value="CorelDRAW Graphics Suite uygulamasını bilgisayarınızdan kaldırın."/>
+    <Property name="Str_ARP_UserFiles" value="Kullanıcı Dosyalarını Kaldır"/>
+    <Property name="Str_ARP_UserFilesDesc" value="Kullanıcı dosyaları (örneğin, çalışma alanları) CorelDRAW Graphics Suite uygulamalarıyla ilgili kişisel ayarlar içerir."/>
+	<Property name="Str_ARP_Offline_Uninstall" value="Bu seri numarasını başka bir bilgisayarda kullanmak istiyorsanız lütfen yazılımı Internet'e bağlıyken kaldırın."/>
+    <Property name="Str_FinErr_Header" value="Yükleme tamamlanmadı."/>
+    <Property name="Str_FinErr_Desc" value="Sisteminizde değişiklik yapılmadı. Yüklemeyi başka bir zaman tamamlamak için lütfen kurulumu tekrar çalıştırın."/>
+
+    <Property name="Str_FinSuc_HeaderClean" value="Yükleme başarılı."/>
+    <Property name="Str_FinSuc_HeaderModify" value="Yazılımınız değiştirildi."/>
+    <Property name="Str_FinSuc_HeaderRepair" value="Onarım başarılıydı."/>
+    <Property name="Str_FinSuc_HeaderRemove" value="Yazılımınız kaldırıldı."/>
+
+    <Property name="Str_FinSuc_Fresh" value="CorelDRAW Graphics Suite'i seçtiğiniz için teşekkür ederiz!"/>
+    <Property name="Str_FinSuc_FreshFinish" value="Kurulumdan çıkmak için &lt;b&gt;Son&lt;/b&gt;'u tıklatın."/>
+    <Property name="Str_FinSuc_Modify" value="CorelDRAW Graphics Suite başarıyla değiştirildi.&lt;br/&gt;&lt;br/&gt;Kur'dan çıkmak için &lt;b&gt;Son&lt;/b&gt;'u tıklatın."/>
+    <Property name="Str_FinSuc_Repair" value="CorelDRAW Graphics Suite başarıyla onarıldı.&lt;br/&gt;&lt;br/&gt;Kur'dan çıkmak için &lt;b&gt;Son&lt;/b&gt;'u tıklatın."/>
+    <Property name="Str_FinSuc_RemoveHeader" value="CorelDRAW Graphics Suite bilgisayarınızdan kaldırıldı."/>
+    <Property name="Str_FinSuc_Reboot" value="Değişikliklerin etkinleşmesi için bilgisayarınızı yeniden başlatmanız gerekir. Aşağıdaki seçeneklerden birini belirtin ve kurulumdan çıkmak için &lt;b&gt;Son&lt;/b&gt;'u tıklatın."/>
+    <Property name="Str_FinSuc_RebootThanks" value="CorelDRAW Graphics Suite ürününü seçtiğiniz için teşekkür ederiz."/>
+    <Property name="Str_FinSuc_RebootYes" value="Evet, bilgisayarımı şimdi yeniden başlatmak istiyorum."/>
+    <Property name="Str_FinSuc_RebootNo" value="Hayır, bilgisayarımı daha sonra yeniden başlatacağım."/>
+    <Property name="Str_FinSuc_AdminThanks" value="CorelDRAW Graphics Suite ürününü seçtiğiniz için teşekkür ederiz. Kurulum, sunucu görüntünüzü başarıyla oluşturdu. Kurulumdan çıkmak için &lt;b&gt;Son&lt;/b&gt;'u tıklatın."/>
+    <Property name="Str_FinSuc_AdminServer" value="Sunucu görüntüsü konumu:"/>
+
+
+
+    <Property name="Str_MinSysD_Header" value="Aşağıdaki minimum sistem gereksinimlerinden biri veya birkaçı karşılanmadı."/>
+    <Property name="Str_MinSysD_Desc" value="Önerilen minimum sistem gereksinimlerini göz ardı edip CorelDRAW Graphics Suite yazılımını yüklemek için &lt;b&gt;Devam&lt;/b&gt;'ı tıklatın. Kurulumdan çıkmak için &lt;b&gt;İptal&lt;/b&gt;'i tıklatın."/>
+    <Property name="Str_MinSysD_Desc2" value="&lt;b&gt;&lt;u&gt;Minimum Sistem Gereksinimleri:&lt;/b&gt;&lt;/u&gt;"/>
+
+    <Property name="Str_MinSysD_OS" value="En güncel servis paketini ve kritik güncellemeleri içeren işletim sistemi: Windows 10 64 bit. Bu yazılım, Windows 10'un önceki sürümlerinde beklendiği şekilde çalışmayabilir."/>
+	<Property name="Str_OS32Bit" value="CorelDRAW Graphics Suite, 64 bit'tir ve 32 bit (x86) işletim sisteminize kurulamaz. En yeni Windows 10 64 bit işletim sistemi gereklidir."/>
+    <Property name="Str_MinSysD_IE" value="Internet Explorer 11" />
+    <Property name="Str_MinSysD_CPU" value="CPU:&lt;br/&gt;Intel Core i3 veya AMD Athlon 64"/>
+    <Property name="Str_MinSysD_RAM" value="RAM: 8 GB"/>
+    <Property name="Str_MinSysD_ScrRes" value="Ekran Çözünürlüğü: 1280 x 720"/>
+
+    <Property name="Str_PreInstall_Header" value="Kurulum Ön Koşulları."/>
+    <Property name="Str_PreInstall_Desc" value="CorelDRAW Graphics Suite'nın yüklenebilmesi için öncelikle işletim sisteminizin bazı bileşenlerinin güncelleştirilmesi gerekir. Aşağıdaki bileşenleri yüklemek için &lt;b&gt;Devam&lt;/b&gt;'ı tıklatın veya kurulumdan çıkmak için &lt;b&gt;İptal&lt;/b&gt;'i tıklatın."/>
+    <Property name="Str_PreInstall_Desc2" value="Gerekli Bileşenler:"/>
+    <Property name="Str_PreInstall_Net" value="Microsoft .NET Framework 4.7.2"/>
+    <Property name="Str_PreInstall_NetDnld" value="Microsoft .NET Framework 4.7.2 (NOT: Bu güncelleştirme için Internet bağlantısı gerekir.)"/>
+    <Property name="Str_PreInstall_Msi" value="Microsoft Windows Installer 4.6"/>
+<Property name="Str_PreInstall_Windows_Updates" value="Devam etmeden önce, Windows Update ayarlarınızı kontrol edin ve en son hizmet paketinin ve önemli güncellemelerin yüklendiğinden emin olun. Bu, ürünü hızlı bir şekilde yüklemenize yardımcı olur."/>
+    <Property name="Str_RestMan_Header" value="Aşağıdaki uygulamaların sisteminizde çalıştığı tespit edildi."/>
+    <Property name="Str_RestMan_Desc" value="Bilgisayarınızı yeniden başlatma ihtiyacını en aza indirmek için, devam etmeden önce bu uygulamaları kapatmanız ısrarla önerilir.&lt;br /&gt;&lt;br /&gt; Lütfen bu uygulamaları kapatın ve devam etmek için &lt;b&gt;Tamam&lt;/b&gt;'ı tıklatın."/>
+    <Property name="Str_RestMan_Restart" value="Uygulamaları otomatik olarak kapat ve yeniden başlatmaya çalış."/>
+    <Property name="Str_RestMan_NoRestart" value="Uygulamaları kapatma. (Yeniden başlatma gerekir.)"/>
+
+    <Property name="Str_RebootPending_Header" value="Lütfen devam etmeden önce bilgisayarınızı yeniden başlatın."/>
+    <Property name="Str_RebootPending_Desc" value="Kurulum, bilgisayarınızı yeniden başlatmadan CorelDRAW Graphics Suite'i yükleyemiyor. Bilgisayarınızı yeniden başlatmak için &lt;b&gt;Şimdi Yeniden Başlat&lt;/b&gt;'a tıklayın ve yüklemeye devam edin veya kurulumdan çıkmak için &lt;b&gt;Yeniden Başlatma&lt;/b&gt;'ya tıklayın."/>
+    
+    <Property name="Str_AdminLicense_Header" value="Bu yazılımı yüklemeye devam etmek için Corel Kurumsal Kullanıcı Lisans Sözleşmesi (BULA) koşullarını kabul etmeniz gerekir."/>
+    <Property name="Str_AdminLicense_Privacy_Desc" value="Gizliliğiniz bizim için değerlidir. Gizlilik politikamızı görmek için &lt;a href='http://www.corel.com/privacy/' target='_blank'&gt;buraya&lt;/a&gt; tıklayın. BULA koşullarını kabul ederek gizlilik politikamızı okuduğunuzu, anladığınızı ve kabul ettiğinizi onaylarsınız." />
+    <Property name="Str_AdminLicense_Scroll" value="Bu koşulları kabul etmek için önce sayfayı BULA'nın sonuna kaydırmanız gerekir." />
+    
+    <Property name="Str_AdminDes_Header" value="Görüntü Konumu."/>
+    <Property name="Str_AdminDes_Desc" value="Sunucu görüntüsünü belirtilen bir ağ konumuna yükleyebilirsiniz."/>
+    <Property name="Str_AdminDes_Path" value="Görüntü yolunu yazın veya &lt;b&gt;Değiştir&lt;/b&gt;'i tıklatıp istediğiniz konuma göz atın:"/>
+    <Property name="Str_AdminDes_Error" value="Sunucu görüntünüzü oluşturmak istediğiniz ağ konumunu seçin veya girin."/>
+    <Property name="Str_AdminDes_ContentHeader" value="İçerik Konumu."/>
+    <Property name="Str_AdminDes_ContentDesc" value="Ek içeriği bir ağ paylaşımı üzerinde ayarladıysanız, iş istasyonlarını onun konumuna yöneltebilirsiniz."/>
+    <Property name="Str_AdminDes_ContentPath" value="İçerik yolunu yazın veya &lt;b&gt;Değiştir&lt;/b&gt;'i tıklatıp yüklenen konumuna göz atın:"/>
+
+    <Property name="Str_AdminNet_Header" value="İnternet erişiminizi kontrol edin." />
+    <Property name="Str_AdminNet_Updates" value="Dağıtım ürünü güncelleme ayarlarını belirtin:" />
+    <Property name="Str_AdminNet_Updates_OptIn" value="Ürünü en yeni sürümüne güncelleyin (önerilir)" />
+    <Property name="Str_AdminNet_Updates_Optout" value="Güncelleme olup olmadığını kontrol edin ve kullanıcıya güncellemenin ne zaman yükleneceğini belirleme imkanı verin" />
+    <Property name="Str_AdminNet_Updates_Disable" value="Güncellemeri asla kontrol etme" />
+    <Property name="Str_AdminNet_Internet" value="İnternet özelliklerini kullan:"/>
+    <Property name="Str_AdminNet_InternetDesc" value="İş istasyonlarının internet tabanlı özelliklere erişmesine izin ver."/>
+    <Property name="Str_AdminNet_WelcomeScreen" value="Karşılama Ekranı'nda çevrimiçi içerikleri göster" />
+    <Property name="Str_AdminNet_WelcomeScreenDesc" value="İş istasyonlarının çevrimiçi öğrenime, ekstra indirmelere ve ürün içi satın alımlara erişmesine izin verin." />
+    <Property name="Str_AdminNet_Optional" value="Çevrimdışı bir yükleme sırasında bu seçenekler kullanılamaz. Bu seçenekleri etkinleştirmek için lütfen yüklemeyi yeniden başlatın ve oturum açın."/>
+    <Property name="Str_AdminNet_Collab" value="Kullanıcıların kurumsal hesaplarıyla oturum açmasına izin ver" />
+    <Property name="Str_AdminNet_CollabDesc" value="Kurumsal kullanıcılar arasında dosya paylaşımını ve işbirliğini etkinleştirin." />
+    <Property name="Str_AdminNet_CollabDesc2" value="Comments docker'a ve Corel Cloud'a erişime izin verin." />
+    <Property name="Str_AdminNet_CDAEDesc" value="Kullanıcıların Microsoft 365 veya G Suite hesaplarıyla oturum açmasına izin verin." />
+
+    <Property name="Str_AdminSN_Header" value="Lütfen bilgilerinizi girin."/>
+    <Property name="Str_AdminSN_SN" value="Seri Numarası:"/>
+    <Property name="Str_AdminSN_Optional" value="Oturum açma isteğe bağlıdır. Oturum açmazsanız yükleme çevrimdışı olarak devam eder. Çevrimdışı olduğunuzda, ürün güncellemeleri hakkında size bilgi verilemez ve internet özelliklerini kullanamazsınız."/>
+    <Property name="Str_AdminSN_Signin" value="Yazılımınızın kimliğini doğrulamak için &lt;a href='http://www.corel.com/account' target='_blank'&gt;corel.com&lt;/a&gt; hesabınızla oturum açmalısınız. Oturum açtıktan sonra sunucu görüntüsünün konumunu seçebilir ve internet seçeneklerini belirleyebilirsiniz." />
+    <Property name="Str_AdminSN_Email" value="E-posta Adresi:"/>
+    <Property name="Str_AdminSN_PWD" value="Parola:"/>
+    <Property name="Str_AdminSN_ForgotPwd" value="Parolayı Unuttum"/>
+    <Property name="Str_AdminSN_AcctDesc" value="Çevrimiçi özelliklere, ürün güncellemelerine ve içeriklere erişmek için corel.com hesap bilgileriniz gerekir &lt;a href='http://www.corel.com/account' target='_blank'&gt;corel.com&lt;/a&gt; ."/>
+    <Property name="Str_AdminSN_CreateAcct" value="Hesabınız yok mu? &lt;a href='https://idp.corel.com/idp/Authn/UserPassword' target='_blank'&gt;Hesap oluşturun&lt;/a&gt; ve oturum açmak için buraya dönün." />
+
+    <Property name="Str_Admin_Error_504" value="Devam etmek için Corel hesabınızda oturum açmalısınız." />
+    <Property name="Str_Admin_Error_503" value="Devam etmek için Corel hesabınızda oturum açmalısınız. Hesap kimlik bilgilerinizi unuttuysanız, lütfen çok kullanıcılı aboneliğinize nasıl erişileceğinizi açıklayan e-postaya başvurun."/>
+    <Property name="Str_Admin_Error_502" value="Ürünün bir deneme sürümünü yüklemek için kurumsal bir seri numarası kullanılamaz. Lütfen geçerli bir seri numara girin."/>
+    <Property name="Str_Admin_Error_501" value="Seri numarasi geçerli degil."/>
+    <Property name="Str_Admin_Error_500" value="Kimlik doğrulama başarısız."/>
+    <Property name="Str_Admin_Error_1" value="Oturum açmak için hizmet koşullarını kabul etmelisiniz." Comment="As_IT error - Must Accept TOS"/>
+    <Property name="Str_Admin_Error_1000" value="Bir Internet bağlantısı gerekiyor.  Lütfen Internet'e bağlanın ve tekrar deneyin." Comment="As_IT error - not connected to internet"/>
+    <Property name="Str_Admin_Error_1005" value="Geçersiz e-posta veya parola. Lütfen e-posta adresini doğru girdiğinizden emin olun.  Parolanızı unuttuysanız, parolanızı almak için lütfen yukarıdaki bağlantıya tıklayın. " Comment="As_IT error - Invalid email or pwd"/>
+    <Property name="Str_Admin_Error_1003" value="Bu hesap, ürününüzü indirmek için oluşturulan hesapla eşleşmiyor.  Lütfen sipariş onayınızda atıfta bulunulan hesabı kontrol edin." Comment="As_IT error - Invalid account"/>
+    <Property name="Str_Admin_Error_0" value="Bilinmeyen Hata"/>
+
+    <Property name="Str_FilesUse_Header" value="Aşağıdaki uygulamaların sisteminizde çalıştığı tespit edildi."/>
+    <Property name="Str_FilesUse_Desc" value="Bilgisayarınızı yeniden başlatma ihtiyacını en aza indirmek için, devam etmeden önce bu uygulamaları kapatmanız ısrarla önerilir.&lt;br /&gt;&lt;br /&gt; Lütfen bu uygulamaları kapatın ve devam etmek için &lt;b&gt;Tamam&lt;/b&gt;'ı tıklatın."/>
+
+
+    <Property name="Str_Btn_Cancel" value="İ&lt;u&gt;p&lt;/u&gt;tal" />
+	<Property name="Str_Btn_Cancel_AccessKey" value="P"/>
+    <Property name="Str_Btn_Install" value="Ş&lt;u&gt;i&lt;/u&gt;mdi Yükle" />
+	<Property name="Str_Btn_Install_AccessKey" value="I"/>
+    <Property name="Str_Btn_OK" value="&lt;u&gt;O&lt;/u&gt;K" />
+	<Property name="Str_Btn_OK_AccessKey" value="O"/>
+    <Property name="Str_Btn_Finish" value="&lt;u&gt;S&lt;/u&gt;on" />
+	<Property name="Str_Btn_Finish_AccessKey" value="S"/>
+    <Property name="Str_Btn_Accept" value="&lt;u&gt;K&lt;/u&gt;abul Et" />
+	<Property name="Str_Btn_Accept_AccessKey" value="K"/>
+    <Property name="Str_Btn_Agree" value="&lt;u&gt;K&lt;/u&gt;abul et"/>
+    <Property name="Str_Btn_Agree_AccessKey" value="K"/>
+    <Property name="Str_Btn_AgreeEnabled" value="&lt;u&gt;K&lt;/u&gt;abul et"/>
+    <Property name="Str_Btn_AgreeDisabled" value="&lt;u&gt;K&lt;/u&gt;abul et"/>
+    <Property name="Str_Btn_Back" value="&lt;u&gt;G&lt;/u&gt;eri" />
+	<Property name="Str_Btn_Back_AccessKey" value="G"/>
+    <Property name="Str_Btn_Next" value="İ&lt;u&gt;l&lt;/u&gt;eri" />
+	<Property name="Str_Btn_Next_AccessKey" value="L"/>
+    <Property name="Str_Btn_Continue" value="&lt;u&gt;D&lt;/u&gt;evam" />
+	<Property name="Str_Btn_Continue_AccessKey" value="D"/>
+    <Property name="Str_Btn_Change" value="D&lt;u&gt;e&lt;/u&gt;ğiştir..." />
+	<Property name="Str_Btn_Change_AccessKey" value="E"/>
+    <Property name="Str_Btn_Change2" value="Değiş&lt;u&gt;t&lt;/u&gt;ir..." />
+	<Property name="Str_Btn_Change2_AccessKey" value="T"/>
+    <Property name="Str_Btn_Disagree" value="&lt;u&gt;R&lt;/u&gt;eddet"/>
+    <Property name="Str_Btn_Disagree_AccessKey" value="R"/>
+    <Property name="Str_Btn_Includes" value="Şunları içerir:"/>
+    <Property name="Str_Btn_Path" value="Yol:"/>
+    <Property name="Str_Btn_Retry" value="&lt;u&gt;Y&lt;/u&gt;eniden dene" />
+	<Property name="Str_Btn_Retry_AccessKey" value="Y"/>
+    <Property name="Str_Btn_Ignore" value="&lt;u&gt;G&lt;/u&gt;öz ardı et" />
+	<Property name="Str_Btn_Ignore_AccessKey" value="G"/>
+    <Property name="Str_Btn_RelNotes" value="Sürüm &lt;u&gt;N&lt;/u&gt;otları" />
+	<Property name="Str_Btn_RelNotes_AccessKey" value="N"/>
+    <Property name="Str_Btn_Repair" value="&lt;u&gt;O&lt;/u&gt;nar" />
+	<Property name="Str_Btn_Repair_AccessKey" value="O"/>
+    <Property name="Str_Btn_Remove" value="&lt;u&gt;K&lt;/u&gt;aldır" />
+	<Property name="Str_Btn_Remove_AccessKey" value="K"/>
+    <Property name="Str_Btn_Reset" value="&lt;u&gt;S&lt;/u&gt;ıfırla" />
+	<Property name="Str_Btn_Reset_AccessKey" value="S"/>
+    <Property name="Str_Btn_RestartNow" value="Ş&lt;u&gt;i&lt;/u&gt;mdi Yeniden Başlat" />
+	<Property name="Str_Btn_RestartNow_AccessKey" value="I"/>
+    <Property name="Str_Btn_DoNotRestart" value="&lt;u&gt;Y&lt;/u&gt;eniden Başlatma" />
+	<Property name="Str_Btn_DoNotRestart_AccessKey" value="Y"/>
+    <Property name="Str_Chk_EULA" value="A" comment="access key for eula checkbox"/>
+
+
+    <Property name="Pwd_Redirect" value="http://apps.corel.com/redirect?_redirect=command&amp;function=forgotpass&amp;app=all&amp;lang=TR"/>
+    
+    <Property name="Str.OutOfDiskSpace.Warning" value="Yükleme için gerekli olan disk alanı, kullanılabilir durumdaki disk alanından daha büyük." lang="English"/>
+
+  </Properties>
+</ICA>
+
+

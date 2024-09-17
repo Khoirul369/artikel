@@ -1,0 +1,184 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" >
+<!-- saved from url=(0014)about:internet -->
+
+<html xmlns:ICA="ICA">
+<head>
+    <title>minSystems</title>
+    <link href="Style.css" rel="stylesheet" type="text/css" />
+    <meta http-equiv="MSThemeCompatible" content="Yes"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta content="text/html" name="ICADlg" id="ICADlg" 
+  ICA:DlgHW="702,588" 
+          ICA:DlgFrame="0"
+          ICA:TransparencyColorRBG="51,52,53"
+
+    />
+    <script type="text/jscript" language="jscript" src="js/topics.js"></script>    
+    <script language="jscript" type="text/jscript" src="js/Setup.js"></script>       
+    <script language="jscript" type="text/jscript">
+        var Setup   = window.external;
+        function OnBodyLoad()
+        {
+            
+            var pEl     = null;
+            var bkColor = "#94BF4B"; //91be44
+			initPage(document.title);   
+			 ConfigLocUI();   
+
+            try
+            {
+                if ("1" == Setup.GetProperty("MinSysFail_idOS"))
+                {
+                    pEl = document.getElementById("id_Str_MinSysD_OS")
+                    if (null != pEl)
+                        pEl.style.backgroundColor = g_brandingDark;
+                        pEl.style.color = "black";
+                }
+
+
+
+                
+                if ("1" == Setup.GetProperty("MinSysFail_idRAM"))
+                {
+                    pEl = document.getElementById("id_Str_MinSysD_RAM")
+                    if (null != pEl)
+                        pEl.style.backgroundColor = g_brandingDark;
+                        pEl.style.color = "black";
+                }
+                
+                if ("1" == Setup.GetProperty("MinSysFail_idScrRes"))
+                {
+                    pEl = document.getElementById("id_Str_MinSysD_ScrRes")
+                    if (null != pEl)
+                        pEl.style.backgroundColor = g_brandingDark;
+                        pEl.style.color = "black";
+                }
+                
+                
+                
+                                
+            }
+            catch (err) {}
+            
+
+            
+        } //OnBodyLoad()
+        function OnClickNext()
+        {  
+          try
+          {
+            Setup.SetProperty("CalledFromMinSys", "1")
+              if (g_LaunchedFromStub == true)
+              {
+              
+                if (g_UseSNT == false)
+                    window.location = "SN.htm";
+                else
+                    window.location = "SNT.htm";
+              }
+              else
+              {
+                if (Setup.GetProperty("BULA_SHOWUI") == "1")
+                {
+                    window.location = "AdminLicense.htm";
+                }
+                else
+                {      
+                  if (Setup.GetProperty("EULA_SHOWUI") == "1")
+                  {
+                    window.location = "License.htm";
+                  }
+                  else
+                  {
+                    if (g_UseSNT == false)
+                        window.location = "SN.htm";
+                    else
+                        window.location = "SNT.htm";                      
+                  }
+                } 
+              }
+           }
+           catch (err){}
+        }
+		function ConfigLocUI()
+		{
+			if ((g_sLang == "FR")||(g_sLang == "PL")||(g_sLang == "EN"))
+			{
+	
+				id_Str_MinSysD_Desc.style.top = "5.56em";
+				idMinSysBlock.style.top = "11.3em";
+			}
+	
+		}	        
+    </script>
+    
+</head>
+
+<body onload="OnBodyLoad();">
+<div id="dpi"></div>
+    <!-- background -->
+    <div id="idBackGrd">
+<img src="Images/backgrd.png" class="stretch" />
+
+</div>
+	<img id="idBrandingLeft" name="BrandingLeft" src="Images/banner" />  
+    <img id="idClose" alt="" class="CloseBtn" src="Images/close.png" onmouseover="HighLightClose();" onmouseout="UnHighLightClose();" ICA:Function="ICACancelSetup" />
+	<div id="idDragMe" class="Dragable">&nbsp;&nbsp;&nbsp;</div>
+   
+    <!-- ------------------------------------------------------------ -->
+    <!-- page content panel -->
+    <div id="idPanel">
+    
+        <div class="DlgHeader" id="id_Str_MinSysD_Header"></div>
+        
+        <div class="DlgBlock" id="id_Str_MinSysD_Desc" style="top: 4.06em;"></div>
+        
+        <div class="DlgBlock" id="idMinSysBlock" style="top: 9.8em;
+                                     BORDER-LEFT-COLOR: silver; BORDER-BOTTOM-COLOR: silver; 
+                                     BORDER-TOP-COLOR: silver; BORDER-RIGHT-COLOR: silver;
+                                     BORDER-TOP-STYLE: double; BORDER-RIGHT-STYLE: double;
+                                     BORDER-LEFT-STYLE: double; BORDER-BOTTOM-STYLE: double;
+                                     background-color: #ffffff;
+                                     height: 15.63em;                               
+                                     color: Black;">
+            
+            <div style="margin: 0.63em;">
+                <div id="id_Str_MinSysD_Desc2"></div>
+                
+                <br />
+                
+	        	<div id="id_Str_MinSysD_OS"></div>
+                
+                <br />
+    	    	
+    	    	<div id="id_Str_MinSysD_RAM"></div>
+        		
+                <br />        		
+        		
+        		<div id="id_Str_MinSysD_ScrRes"></div>
+		        
+		        <br />
+                
+		        
+            </div>
+        </div>
+    
+    </div> <!-- div id="idTabPanel" END -->
+
+<!-- ------------------------------------------------------------ -->
+<!-- <div> Wizard Buttons (at bottom of dialog) - START -->
+<div class="DlgWizardBtns">
+    <table border="0" width="100%">
+        <tr>
+          <td align="left">
+              <button type="button" ICA:Function="ICACancelSetup" ID="id_Str_Btn_Cancel" ></button>
+          </td>
+            <td width="7.50em" align="right">
+                <button class="Initiator" type="submit" onmouseover="HighLightButton('id_Str_Btn_Continue');" onmouseout="UnHighLightButton('id_Str_Btn_Continue');" onclick="OnClickNext();" ID="id_Str_Btn_Continue" ></button>
+            </td>
+        </tr>
+    </table>
+</div>  <!-- <div class="DlgBlock"> Wizard Buttons (at bottom of dialog) - END -->
+
+</body>
+</html>

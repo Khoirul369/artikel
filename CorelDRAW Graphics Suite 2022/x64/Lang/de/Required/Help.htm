@@ -1,0 +1,167 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:ICA="ICA">
+	<head>
+		<meta name="vs_showGrid" content="True" />
+		<title>Setup Wizard - Command Line Help</title>
+		<LINK href="../../_XX/Required/Style.css" type="text/css" rel="STYLESHEET" />
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1" />
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+		<meta name="ICADlg" 
+		      content="text/html" 
+		      id="ICADlg" 
+		      ICA:DlgHW="550,480" 
+		      ICA:DlgTitle="Setup.exe /? - command line help" 
+		      ICA:PromptForCancel="no" />
+		
+		<style type="text/css">
+    
+    	    .HelpTable
+		    {
+		        border-top-style: none;
+	            border-right-style: none;
+	            border-left-style: none;
+	            border-bottom-style: none;
+		    }
+		    
+            .HelpItem
+            {
+	            vertical-align: top;
+	            font-size: 14px;
+	            font-family: 'Segoe UI' , Tahoma;
+	            border-bottom: gray 1px solid;
+	            margin-top: 10px;
+	            margin-bottom: 10px;
+	            padding-top: 5;
+	            padding-bottom: 5;
+            }
+		</style>
+		
+	</head>
+	
+	<body>
+	
+	<div id="idContent"
+	     class="Panel"
+	     style="overflow: auto;
+	            padding: 5 5 5 5;
+	            border: double 3px silver;
+	            background-color: white;
+	            width: 450px;
+	            height: 440px; 
+	            text-align: left;">
+
+
+        <table id="idContentTable" cellspacing="0">
+        
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    Hier finden Sie eine Kurzreferenz zu den wichtigsten Befehlszeilen f&uuml;r Setup.exe.<br /><br /> Setup.exe /Option &lt;Erforderliche Parameter&gt; [Optionale Parameter] <br /><br /> <u>Installationsoptionen:</u>
+                </td>
+            </tr>
+                        
+            <tr> <!-- /a admin -->
+                <td class="HelpItem" style="width: 55px;">/a</td>
+                <td class="HelpItem">
+                    Erstellt ein Serverimage.  Administrative Installation &ndash; Installiert ein Produkt im Netzwerk<br /><br /> Setup.exe /a
+                </td>
+            </tr>
+
+            <tr> <!-- /a /q(n) admin -->
+                <td class="HelpItem" style="width: 55px;">/a /q(n)</td>
+                <td class="HelpItem">
+                    Der Schalter /q(n) in Befehlszeilen wird nicht mehr unterstützt. Für weitere Informationen, welche Schalter unterstützt werden, verweisen wir Sie auf die neueste Version des Bereitstellungshandbuches für die CorelDRAW Graphics Suite.
+                    <br /><br />
+                    Setup.exe /a /q(n)
+                </td>
+            </tr>
+            
+            <tr> <!-- /s push profile ID -->
+                <td class="HelpItem" style="width: 55px;">/s</td>
+                <td class="HelpItem">
+                    Wird zur Übertragung von PROFILEID an die Arbeitsplatzrechner verwendet. Die öffentliche Eigenschaft PROFILEID wird verwendet, um mittels der Übertragung der Kontozugangsdaten an die Arbeitsplatzrechner alle Nutzer beim Konto anzumelden.
+                    <br /><br />
+                    Setup.exe /s PROFILEID=XXXXXXXXXXXXXXX
+                </td>
+            </tr>            
+            <tr> <!-- /x uninstall -->
+                <td class="HelpItem" style="width: 55px;">/x <br /> /uninstall</td>
+                <td class="HelpItem">
+                    Deinstalliert die Software.  Administrative install - Installs a product on the network <br /><br /> Setup.exe /x
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    <br /><br /> <u>Anzeigeoptionen:</u>
+                </td>
+            </tr>
+            
+            <tr> <!-- /q silent -->
+                <td class="HelpItem" style="width: 55px;">/q[n|b|r|f]</td>
+                <td class="HelpItem">
+                    Legt den Umfang der Benutzeroberfl&auml;che w&auml;hrend der Installation fest. <br /> n &ndash; Keine Benutzeroberfl&auml;che<br /> b &ndash; Einfache Benutzeroberfl&auml;che<br /> r &ndash; Reduzierte Benutzeroberfl&auml;che<br /> f &ndash; Vollst&auml;ndige Benutzeroberfl&auml;che (Standard)<br /><br /> Setup.exe /q
+        		</td>
+            </tr>
+            
+            <tr> <!-- /q silent -->
+                <td class="HelpItem" style="width: 55px;">/quiet</td>
+                <td class="HelpItem">
+                    Hintergrundmodus, keine Benutzerinteraktion. Identisch mit /qn
+        		</td>
+            </tr>
+            
+            <tr> <!-- /q silent -->
+                <td class="HelpItem" style="width: 55px;">/passive</td>
+                <td class="HelpItem">
+                    Unbeaufsichtigter Modus &ndash; nur Statusleiste. Identisch mit /qb
+        		</td>
+            </tr>
+            
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    <br /><br /> <u>Protokollierungsoptionen:</u>
+                </td>
+            </tr>
+            
+            <tr> <!-- /l log -->
+                <td class="HelpItem" style="width: 55px;">/l[i|w|e|a|r|u|c|m|o|p|v|x|*]</td>
+                <td class="HelpItem">
+                    Protokolliert allgemeine Informationen zum Installationsvorgang in einer Logdatei. Wenn Sie keinen Pfad und Dateinamen angeben, wird die Logdatei im tempor&auml;ren Ordner des aktuellen Benutzers angelegt. <br /><br /> i &ndash; Statusmeldungen <br /> w &ndash; Nicht schwerwiegende Warnungen <br /> e &ndash; Alle Fehlermeldungen <br /> a &ndash; Ausf&uuml;hrung von Aktionen <br /> r &ndash; Aktionsspezifische Eintr&auml;ge <br /> u &ndash; Benutzeranforderungen <br /> c &ndash; Urspr&uuml;ngliche Benutzeroberfl&auml;chenparameter<br /> m &ndash; Informationen betreffend zu wenig Arbeitsspeicher oder schwerwiegendem Abbruch<br /> o &ndash; Meldungen betreffend zu wenig Speicherplatz<br /> p &ndash; Terminaleigenschaften<br /> v &ndash; Ausf&uuml;hrliche Ausgabe<br /> x &ndash; Zus&auml;tzliche Debuginformationen<br /> * &ndash; Alle Informationen mit Ausnahme der Optionen v und x protokollieren <br /><br /> Standard ist /lvoicewarmup<br /><br /> Setup.exe /l&quot;C:\Install.log&quot;
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    <br /><br /> <u>Reparaturoptionen:</u>
+                </td>
+            </tr>
+            
+            <tr> <!-- /a admin -->
+                <td class="HelpItem" style="width: 55px;">/f[p|e|c|m|s|o|d|a|u]</td>
+                <td class="HelpItem">
+                Repariert ein Produkt.<br /> p &ndash; nur wenn eine Datei fehlt<br /> o &ndash; wenn eine Datei fehlt oder eine &auml;ltere Version installiert ist (Standard)<br /> e &ndash; wenn eine Datei fehlt oder eine gleiche bzw. &auml;ltere Version installiert ist<br /> d &ndash; wenn eine Datei fehlt oder eine andere Version installiert ist<br /> c &ndash; wenn eine Datei fehlt oder die Pr&uuml;fsumme nicht mit dem berechneten Wert &uuml;bereinstimmt<br /> a &ndash; Erzwingt die Neuinstallation aller Dateien<br /> u &ndash; Alle erforderlichen benutzerspezifischen Registrierungseintr&auml;ge (Standard)<br /> m &ndash; Alle erforderlichen computerspezifischen Registrierungseintr&auml;ge (Standard)<br /> s &ndash; Alle vorhandenen Verkn&uuml;pfungen (Standard)<br /> <br /><br /> Standard ist /foums<br /><br /> Setup.exe /f
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    <br /><br /> <u>&Ouml;ffentliche Eigenschaften einstellen:</u><br /><br /> [PROPERTY=PropertyValue]
+                </td>
+            </tr>
+        
+        </table> <!-- table id="idContentTable" -->
+
+    </div> <!-- id="idContent" -->
+
+	<div class="DlgBlock"
+	     style="text-align: right;
+	            width: 450px;
+	            top: 470px;">
+	            
+	    <button onclick="window.external.EndModalLoop(0);" ID="idOk" accesskey="O"><u>O</u>K</button>
+	    
+    </div>
+		
+	</body>
+</html>

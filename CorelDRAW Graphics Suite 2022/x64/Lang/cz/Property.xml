@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ICA lang="CZ">
+	<Properties>
+    <Property name="Str.ProductDisplayName" value="CorelDRAW Graphics Suite"/>
+    <Property name="Str.SetupAlreadyRunning" value="Soubor Setup.exe je již spuštěn."/> 
+		<Property name="Str.CancelSetupPrompt" value="Opravdu chcete zrušit instalaci aplikace %s?" comment="if %s is used in the string, it will be replaced with [Str.ProductDisplayName]"/>
+    <Property name="Str.CouldNotOpenCore" value="Instalační program narazil na problém při pokusu o konfiguraci softwaru.  Nelze získat přístup k souboru: %s Chcete pokračovat?" comment="string displayed to the user if the core .msi could not be opened during initalization -- %s MUST be in the string, it is replaced with the reason for failure"/>
+    <Property name="Str.NoFolderAccess" value="Následující složka není přístupná: %s" comment="%s is replaced with the folder name"/>
+    <Property name="Str.PathTooLong" value="Délka cesty k instalačnímu adresáři pro položku %s může být maximálně %s znaků. Vyberte jiné umístění." comment="first %s is replaced with [Str.ProductDisplayName] -- second %s is replaced with [MAX_PATH]" />
+    <Property name="Str.Initializing.Text" value="Počkejte prosím..."/>
+    <Property name="Str.Initializing.Text.Cancelling" value="Probíhá zrušení operace ..."/>
+		<Property name="Str.Feature.MainApp" value="CorelDRAW Graphics Suite"/> 
+
+    
+    <Property name="Str.Feature.Utilities.VSTA.Desc.WithVS9" value="Tato funkce nainstaluje podporu sady Visual Studio Tools for Applications (je-li nainstalována aplikace Visual Studio 2008 SP1)."/>
+    <Property name="Str.Feature.Programs64" value="Programové soubory pro 64bitovou verzi"/>
+    <Property name="Str.Feature.Programs64.Desc" value="Programové soubory pro 64bitovou verzi"/>
+    <Property name="Str.DestinationFolder" value="Zmena aktualni cilove slozky."/>
+    <Property name="Str.SerialNotValid" value="Seriove cislo je neplatne."/>
+
+
+    <Property name="Str.ProgressText.Default" value="Dokonceno %d %%" comment="this is the default progress text, you can override it using 'progresstext' attribute on the msi or dbm node -- optional %d%% is populated with the percent complete"/>
+    <Property name="Str.Running.VBA.exe.text" value="Probíhá konfigurace jazyka Visual Basic for Applications. Počkejte prosím"/>
+    <Property name="Str.CacheSetupSource.Progress.text" value="Připravují se instalační soubory. Počkejte prosím"/>
+
+    <Property name="Str.Text.RequiredFeature" value="(Povinne)"/>
+	<Property name="Str.ProgressText.CopyingPatches" value="Kopírování souboru opravy: "/>
+    <Property name="Str.ProgressText.Common" value="Dokončeno %d %%  – konfigurace sady CorelDRAW Graphics Suite"/>
+    <Property name="Str.ProgressText.Capture" value="Dokonceno %d %% - konfigurace aplikace Corel CAPTURE"/>
+    <Property name="Str.ProgressText.Draw" value="Dokonceno %d %% - konfigurace aplikace CorelDRAW"/>
+    <Property name="Str.ProgressText.Paint" value="Dokonceno %d %% - konfigurace aplikace Corel PHOTO-PAINT"/>
+    <Property name="Str.ProgressText.CS" value="Dokončeno %d %% – konfigurace jazykového balíčku sady CorelDRAW Graphics Suite pro zjednodušenou čínštinu"/>
+    <Property name="Str.ProgressText.CT" value="Dokončeno %d %% – konfigurace jazykového balíčku sady CorelDRAW Graphics Suite pro tradiční čínštinu"/>
+    <Property name="Str.ProgressText.CZ" value="Dokončeno %d %% – konfigurace jazykového balíčku sady CorelDRAW Graphics Suite pro češtinu"/>
+    <Property name="Str.ProgressText.NL" value="Dokončeno %d %% – konfigurace jazykového balíčku sady CorelDRAW Graphics Suite pro holandštinu"/>
+    <Property name="Str.ProgressText.EN" value="Dokončeno %d %% – konfigurace jazykového balíčku sady CorelDRAW Graphics Suite pro angličtinu"/>
+    <Property name="Str.ProgressText.FR" value="Dokončeno %d %% – konfigurace jazykového balíčku sady CorelDRAW Graphics Suite pro francouzštinu"/>
+    <Property name="Str.ProgressText.DE" value="Dokončeno %d %% – konfigurace jazykového balíčku sady CorelDRAW Graphics Suite pro němčinu"/>
+    <Property name="Str.ProgressText.IT" value="Dokončeno %d %% – konfigurace jazykového balíčku sady CorelDRAW Graphics Suite pro italštinu"/>
+    <Property name="Str.ProgressText.JP" value="Dokončeno %d %% – konfigurace jazykového balíčku sady CorelDRAW Graphics Suite pro japonštinu"/>
+    <Property name="Str.ProgressText.PL" value="Dokončeno %d %% – konfigurace jazykového balíčku sady CorelDRAW Graphics Suite pro polštinu"/>
+    <Property name="Str.ProgressText.BR" value="Dokončeno %d %% – konfigurace jazykového balíčku sady CorelDRAW Graphics Suite pro portugalštinu"/>
+    <Property name="Str.ProgressText.RU" value="Dokončeno %d %% – konfigurace jazykového balíčku sady CorelDRAW Graphics Suite pro ruštinu"/>
+    <Property name="Str.ProgressText.ES" value="Dokončeno %d %% – konfigurace jazykového balíčku sady CorelDRAW Graphics Suite pro španělštinu"/>
+    <Property name="Str.ProgressText.TR" value="Dokončeno %d %% – konfigurace jazykového balíčku sady CorelDRAW Graphics Suite pro turečtinu"/>
+	<Property name="Str.ProgressText.SV" value="Dokončeno %d %% – konfigurace jazykového balíčku sady CorelDRAW Graphics Suite pro švédština"/>
+    <Property name="Str.ProgressText.FontManager" value="Dokonceno %d %% - konfigurace programu Corel Font Manager"/>
+    <Property name="Str.ProgressText.VBA" value="Dokonceno %d %% - konfigurace jazyka Microsoft Visual Basic for Applications"/>
+    <Property name="Str.ProgressText.VSTA" value="Instalace sady Microsoft Visual Studio Tools for Applications"/>
+	<Property name="Str.ProgressText.WebView" value="Instalace WebView2 Runtime pro Microsoft Edge" />
+    <Property name="Str.ProgressText.VC" value="Instalace balíčků Microsoft Visual C++ Redistributable pro Visual Studio 2019"/>
+    <Property name="Str.ProgressText.DotNet" value="Instalace aplikace Microsoft .NET Framework 4.7.2"/>
+
+    <Property name="Str.ProgressText.ShellExt" value="Dokončeno %d %% – konfigurace rozšíření Corel Windows Shell Extension"/>
+    <Property name="Str.ProgressText.RemoveAll" value="%d %% dokončeno – odinstalace softwaru CorelDRAW Graphics Suite" />
+    <Property name="Str.Feature.Lang" value="Jazyky produktu "/>
+    <Property name="Str.Feature.Lang.CS" value="Čínština (zjednodušená)"/>
+    <Property name="Str.Feature.Lang.CT" value="Čínština (tradiční)"/>
+    <Property name="Str.Feature.Lang.CZ" value="Čeština"/>
+    <Property name="Str.Feature.Lang.NL" value="Holandstina"/>
+    <Property name="Str.Feature.Lang.EN" value="Anglictina"/>
+    <Property name="Str.Feature.Lang.FR" value="Francouzstina"/>
+    <Property name="Str.Feature.Lang.DE" value="Nemcina"/>
+    <Property name="Str.Feature.Lang.IT" value="Italština"/>
+    <Property name="Str.Feature.Lang.JP" value="Japonština"/>
+    <Property name="Str.Feature.Lang.PL" value="Polština"/>
+    <Property name="Str.Feature.Lang.BR" value="Portugalsky (brazilska)"/>
+    <Property name="Str.Feature.Lang.RU" value="Rustina"/>
+    <Property name="Str.Feature.Lang.ES" value="Spanelstina"/>
+    <Property name="Str.Feature.Lang.TR" value="Turečtina"/>
+	<Property name="Str.Feature.Lang.SV" value="Švédština"/>
+    <Property name="SETUP_LANG" value="CZ"/>
+    <Property name="ICA.Lang.Transform" value="1029.mst"/>
+
+
+    <Property name="Str.Error.20000" value="Seriove eislo je neplatne."/>
+    <Property name="Str.Error.30000" value="DŮLEŽITÉ: Sadu CorelDRAW Graphics Suite nelze nainstalovat bez instalace rozhraní Microsoft .NET Framework 4.7.2. Informace o rozhraní Microsoft .NET Framework najdete na webových stránkách společnosti Microsoft. &lt;a href='https://www.microsoft.com/en-us/download/details.aspx?id=48137' target='_blank' onclick='window.external.EndModalLoop(0);'&gt;http://www.microsoft.com/NET/&lt;/a&gt;"/>
+    <Property name="Str.Error.30001" value="Procesor ve vasem pocitaci nesplnuje minimalni pozadavky softwaru na system. Instalaci nelze dokoncit."/>
+    <Property name="Str.Error.30003" value="Nemate dostatecna opravneni pro dokonceni instalace. Instalace vyzaduje opravneni spravce nebo zv?sena opravneni. Obratte se na spravce a opakujte instalaci."/>
+    <Property name="Str.Error.30004" value="DŮLEŽITÉ: Sadu CorelDRAW Graphics Suite nelze nainstalovat bez instalace rozhraní Microsoft .NET Framework 4.7.2. Informace o rozhraní Microsoft .NET Framework najdete na webových stránkách společnosti Microsoft.  'https://www.microsoft.com/en-us/download/details.aspx?id=48137' - http://www.microsoft.com/NET/"/>
+    <Property name="Str.Error.30005" value="64bitovou verzi sady CorelDRAW Graphics Suite nelze instalovat v 32bitových systémech."/>
+	<Property name="Str.Error.5100" value="Instalace nemůže pokračovat, protože předchozí instalace vyžaduje restartování počítače. Restartujte prosím počítač a spusťte instalaci znovu."/>
+<!--Coexistence Scenarios -->
+    <Property name="Str.Error.1638" value="Tento produkt nelze instalovat, protože je již instalována jiná verze. Chcete-li tento produkt instalovat, je nutné nejdříve odinstalovat existující verzi. Kliknutím na tlačítko Dokončit ukončíte instalaci." comment="Pink"/>
+    <Property name="Str.Error.30500" value="V tomto počítači je již instalována novější verze této aplikace. Přejete-li si instalovat tuto verzi, odinstalujte nejdříve novější verzi aplikace. "/>
+    <Property name="Str.Error.30504" value="Aplikaci CorelDRAW Essentials a CorelDRAW Home and Student nelze nainstalovat do stejného počítače. Váš systém nebyl upraven.  Chcete-li produkt nainstalovat, musíte nejprve odinstalovat stávající produkt CorelDRAW." comment="Rust"/>
+    <Property name="Str.Error.30508" value="Tento produkt nelze nainstalovat, protože již byl nainstalován. Chcete-li změnit svou instalaci z 32bitové nebo 64bitové verze, je nutné nejprve odinstalovat stávající verzi." coment="baby blue"/>
+    <Property name="Str.Error.30509" value="Tuto zkušební verzi nelze nainstalovat, protože sada CorelDRAW Graphics Suite je již nainstalována. Chcete-li tuto zkušební verzi nainstalovat, je nutné nejprve odinstalovat stávající produkt." comment="purple"/>
+    <Property name="Str.CDTS.PromptForUpgrade" value="V počítači byla nalezena sada CorelDRAW Graphics Suite. CorelDRAW Technical Suite nabízí veškeré funkce sady CorelDRAW Graphics Suite – a mnohem více!\n\nKliknutím na tlačítko OK provedete upgrade na sadu CorelDRAW Technical Suite. \n\nPokud na aplikaci CorelDRAW Technical Suite upgradovat nechcete, klikněte na tlačítko Storno." comment="dark blue"/>
+    
+    <Property name="Str.Error.35001" value="&lt;b&gt;Podrobnosti:&lt;/b&gt;&lt;br /&gt;Nelze ověřit sériové číslo. K dokončení instalace je nutné připojení k Internetu.&lt;br /&gt;&lt;br /&gt;"/>
+   <Property name="Str.Error.30510" value="Váš operační systém nemá nainstalované poslední aktualizace, takže nemůžeme pokračovat v instalaci. Nainstalujte nejnovější aktualizace pro systém Windows 7 a zkuste to znovu." comment="OS Not Supported"/>
+    <Property name="Str.Error.30512" value="Error: An unexpected error occurred on the server. Please check your Internet connection and try again later."/>
+	<Property name="Str.Error.30516" value="Nepodařilo se nám nainstalovat rozhraní Microsoft .NET Framework 4.7.2, které je vyžadováno aplikací CorelDRAW Graphics Suite. Ověřte, zda má váš operační systém nainstalované nejnovější servisní balíčky a aktualizace a zkuste to znovu.&lt;br /&gt;&lt;br /&gt;Pro informace o rozhraní Microsoft .NET Framework 4.7.2 navštivte webovou stránku společnosti Microsoft. &lt;a href='https://www.microsoft.com/en-us/download/details.aspx?id=48137' target='_blank' onclick='window.external.EndModalLoop(0);'&gt;http://www.microsoft.com/NET/&lt;/a&gt;" comment="Custom .NET error"/>
+	<Property name="Str.Error.30511" value="Je vyžadováno připojení k Internetu.  Připojte se k Internetu a akci opakujte."/>
+	<Property name="Str.Error.30513" value="Aplikaci CorelDRAW Graphics Suite nelze nainstalovat do systému Windows XP nebo Windows Vista. Upgradujte operační systém vašeho počítače a zkuste to znovu." comment="OS Not Supported"/>
+	<Property name="Str.Error.30515" value="Toto sériové číslo nelze použít k aktivaci vaší zkušební verze. Přihlaste se ke svému účtu Corel a stáhněte si svou verzi ze stránky &lt;a href='http://www.corel.com' target='_blank' &gt;Soubory ke stažení pro členy a předplatitele&lt;/a&gt;."/>
+	<Property name="Str.Error.30517" value="K instalaci tohoto produktu je zapotřebí aplikace Internet Explorer 11. Ujistěte se, že máte v operačním systému nainstalovány nejnovější aktualizace a sady Service Pack, a zkuste to znovu." comment="IE8 Not Supported" />
+    <Property name="Str.Error.30518" value="Váš operační systém nemá nainstalované poslední aktualizace, takže nemůžeme pokračovat v instalaci. Nainstalujte nejnovější aktualizace pro systém Windows 8 a zkuste to znovu." comment="Win8 Not Supported"/>
+     <Property name="Str.Error.30519" value="CorelDRAW Graphics Suite nelze nainstalovat v systému Windows 7 nebo Windows 8. Upgradujte operační systém v počítači a zkuste to znovu." />   
+    <Property name="Str.Error.30520" value="Tuto verzi softwaru nelze nasadit do sítě. Informace o instalaci softwaru do sítě najdete v příručce k nasazení." />
+    <Property name="Str.Error.30522" value="Toto sériové číslo nelze použít pro instalaci tohoto registrovaného uživatele bez verze CorelDRAW Graphics Suite." />
+
+    <Property name="Str.DiskSpace.Bytes" value="bajtů"/>
+    <Property name="Str.DiskSpace.Kb" value="kb"/>
+    <Property name="Str.DiskSpace.MB" value="MB"/>
+    <Property name="Str.DiskSpace.GB" value="GB"/>
+    <Property name="Str.DiskSpace.TB" value="TB"/>
+    <Property name="Str.DiskSpace.RequiredString" value="Je vyžadováno %s z %s dostupných na disku: %s"/>
+    <Property name="Str.UpgradeProgressText" value="Odstraňování aplikací "/>
+
+    <Property name="Str.Feature.Filters.GhostscriptGPL" value="GPL Ghostscript"/>
+    <Property name="Str.Feature.Filters.GhostscriptGPL.Installed.Text" value="&lt;b&gt;GPL Ghostscript (již nainstalován)&lt;/b&gt;"/>
+
+    <Property name="Str.PrerequisiteReboot.Prompt" value="Abyste mohli pokračovat v instalaci, musíte restartovat počítač.\n\nChcete-li počítač restartovat nyní, klikněte na tlačítko Ano, chcete-li jej restartovat později ručně, klikněte na tlačítko Ne."/>
+    
+
+    <Property name="Str.Required.Dlg.InstallComplete" value="Instalace dokončena"/>
+
+    <Property name="billboard_01.png" value="" />
+    <Property name="billboard_02.png" value="" />
+    <Property name="billboard_03.png" value="Vytvořeno pomocí obsahu aplikace Corel, obsaženo ve verzi 2021"/>
+    <Property name="billboard_04.png" value="" />
+
+    <Property name="Str_Init_InitSetup" value="Inicializace instalace"/>
+    <Property name="Str_Init_PleaseWait" value="Počkejte prosím..."/>
+    <Property name="Str_License_Header" value="Abyste mohli pokračovat v instalaci tohoto softwaru, musíte odsouhlasit podmínky Licenční smlouvy s koncovým uživatelem (EULA) společnosti Corel."/>
+    <Property name="Str_License_Privacy_Desc" value="Vážíme si vašeho soukromí. Kliknutím &lt;a href='http://www.corel.com/privacy/' target='_blank'&gt;sem&lt;/a&gt; zobrazíte naše zásady ochrany osobních údajů." />
+    <Property name="Str_License_Tooltip" value="Chcete-li pokračovat, je třeba nejprve přijmout podmínky licenční smlouvy."/>
+    <Property name="Str_SN_Header" value="Zadejte potřebné údaje."/>
+    <Property name="Str_SN_User" value="Celé jméno:"/>
+    <Property name="Str_SN_SN" value="Sériové číslo:"/>
+    <Property name="Str_SN_Hint" value="Pokud jste produkt stáhli z webu www.corel.com nebo jste jej registrovali online, najdete sériové číslo na svém &lt;a href='http://apps.corel.com/redirect/?_redirect=command&amp;function=registeredproducts&amp;app=all&amp;subfunction=ipm&amp;lang=cz' target='_blank'&gt;účtu Corel&lt;/a&gt;. Potřebujete-li pomoci s nalezením sériového čísla, navštivte stránku &lt;a href='http://www.corel.com/installcenter' target='_blank'&gt;instalačního centra společnosti Corel&lt;/a&gt;."/>
+
+    <Property name="Str_SNT_SNInput" value="Mám sériové číslo."/>
+    <Property name="Str_SNT_SNInputDesc" value="Tuto možnost vyberte, pokud jste zakoupili produkt nebo předplatné produktu nebo máte sériové číslo zkušební verze od partnera."/>
+    <Property name="Str_SNT_NoSN" value="Nemám sériové číslo a chci produkt vyzkoušet."/>
+    <Property name="Str_SNT_NoSNDesc" value="Zvolte tuto možnost a po omezenou dobu můžete vyzkoušet plně funkční produkt. Po ukončení zkušebního období bude k dispozici pouze omezená sada funkcí."/>
+    
+    <Property name="Str_InstallChoose_Header" value="Zvolte způsob instalace."/>
+    <Property name="Str_InstallChoose_InstallLink" value="Typická instalace" />
+    <Property name="Str_InstallChoose_InstallDesc" value="Tato volba nainstaluje software do výchozího umístění a zahrnuje většinu programů a doplňků."/>
+    <Property name="Str_InstallChoose_InstallSize" value="Velikost instalace: "/>
+    <Property name="Str_InstallChoose_InstallSize2" value=" jsou k dispozici)"/>
+    <Property name="Str_InstallChoose_CustomLink" value="Vlastní instalace ..." />
+    <Property name="Str_InstallChoose_CustomDesc" value="Tato volba vám umožňuje vybrat způsob instalace softwaru."/>
+    <Property name="Str_InstallChoose_AdminLink" value="Nasazení..." />
+    <Property name="Str_InstallChoose_AdminDesc" value="Pomocí této možnosti můžete vytvořit serverovou bitovou kopii pro instalaci softwaru na jednotlivých pracovních stanicích."/>
+    <Property name="Str_InstallChoose_AdminOnlineLink" value="Nasadit se zapnutými internetovými funkcemi"/>
+    <Property name="Str_InstallChoose_AdminOnlineDesc" value="Tato možnost umožňuje vytvořit bitovou kopii serveru pro nasazení softwaru na jednotlivé pracovní stanice se zapnutými internetovými funkcemi ve výchozím nastavení."/>
+          
+    <Property name="Str_Install_InstallHeader" value="Zvolte programy, které chcete nainstalovat."/>
+    <Property name="Str_Install_OptionsHeader" value="Vyberte další možnosti."/>
+    <Property name="Str_Install_FeaturesHeader" value="Zvolte součásti programu, které chcete nainstalovat."/>
+    <Property name="Str_Install_LocationHeader" value="Vyberte umístění instalace a jazyky."/>
+    <Property name="Str_Install_LocationHeader2" value="Zvolte umístění instalace."/>
+    <Property name="Str_Install_LangHeader" value=""/>
+
+    <Property name="Str_Install_Draw" value="CorelDRAW "/>
+    <Property name="Str_Install_DrawDesc" value=" | vektorové ilustrace a rozvržení stránek"/>
+    <Property name="Str_Install_PP" value="Corel PHOTO-PAINT "/>
+    <Property name="Str_Install_PPDesc" value=" | rastrové ilustrace a úprava fotografií"/>
+    <Property name="Str_Install_Capture" value="Corel CAPTURE "/>
+    <Property name="Str_Install_CaptureDesc" value=" | pokročilé zachycování obrazovky"/>
+    <Property name="Str_Install_FontManager" value="Corel Font Manager " />
+    <Property name="Str_Install_FontManagerDesc" value=" | správce písma"/>
+
+    <Property name="Str_Install_Utilities" value="Nástroje" />
+    <Property name="Str_Install_UtilitiesDesc" value="Nainstaluje pomůcky, které lze používat v aplikaci CorelDRAW a Corel PHOTO-PAINT."/>
+    <Property name="Str_Install_DupWiz" value="Průvodce oboustranným tiskem"/>
+    <Property name="Str_Install_VBA" value="Visual Basic for Applications 7.1"/>
+    <Property name="Str_Install_VSTA" value="Visual Studio Tools for Applications"/>
+    <Property name="Str_Install_Shell" value="Windows Shell Extension"/>
+    <Property name="Str_Install_GPL" value="Povolit vylepšenou kompatibilitu EPS" />
+    <Property name="Str_Install_GPL_Installed" value="Povolit vylepšenou kompatibilitu EPS (již nainstalován)"/>
+    <Property name="Str_Install_GPLDesc" value="Nainstaluje GPL Ghostscript pro vylepšenou podporu importu souborů EPS a PostScript."/>
+
+    <Property name="Str_Install_Updates" value="Povolit aktualizace produktu" />
+    <Property name="Str_Install_UpdatesDesc" value="Automaticky stahuje aktualizace produktu, před instalací se však zobrazí výzva."/>
+    <Property name="Str_Install_Shortcuts" value="Vytvořit na ploše zástupce" />
+    <Property name="Str_Install_ShortcutsDesc" value="Vytvoří na ploše zástupce programů."/>
+    <Property name="Str_Install_CopyCabs" value="Kopírovat instalační soubory" />
+    <Property name="Str_Install_CopyCabsDesc" value="Umožňuje spravovat a aktualizovat software bez instalačního disku. Toto nastavení vyžaduje XXX MB místa na disku."/>
+
+    <Property name="Str_Install_Location_Desc" value="Instalovat sadu CorelDRAW Graphics Suite do následující složky."/>
+    <Property name="Str_Install_Langs_Desc" value="Vyberte jazyky, které chcete nainstalovat."/>
+
+    <Property name="Str_Install_Langs" value="Jazyky produktu:"/>
+    <Property name="Str_Install_Enterprise" value="Povoluje přístup k CorelDRAW.app Enterprise" />
+    <Property name="Str_Install_EnterpriseDesc" value="Můžete se přihlásit pomocí svého účtu Microsoft 365 nebo G Suite." />
+
+    <Property name="Str_Progress_Header" value="Probíhá instalace, čekejte prosím..."/>
+    <Property name="Str_Progress_Header_Remove" value="Probíhá odebírání sady CorelDRAW Graphics Suite, prosím čekejte..." />
+
+    <Property name="Str_ARP_Header" value="Sada CorelDRAW Graphics Suite je již nainstalována. Z níže uvedených možností vyberte, zda chcete program změnit nebo odebrat z počítače."/>
+    <Property name="Str_ARP_Modify" value="Upravit"/>
+    <Property name="Str_ARP_ModifyDesc" value="Změna instalovaných funkcí programu. Tato možnost zobrazí dialogové okno Vlastní výběr, ve kterém můžete měnit způsob, jakým se funkce instalují."/>
+    <Property name="Str_ARP_Repair" value="Opravit"/>
+    <Property name="Str_ARP_RepairDesc" value="Opravte chyby instalace v programu. Tato možnost opravuje chybějící nebo porušené soubory, zástupce a záznamy registru."/>
+    <Property name="Str_ARP_Remove" value="Odebrat"/>
+    <Property name="Str_ARP_RemoveDesc" value="Odeberte sadu CorelDRAW Graphics Suite z počítače."/>
+    <Property name="Str_ARP_UserFiles" value="Odebrat uživatelské soubory"/>
+    <Property name="Str_ARP_UserFilesDesc" value="Uživatelské soubory, jako jsou pracovní prostory, obsahují osobní nastavení sady CorelDRAW Graphics Suite."/>
+	<Property name="Str_ARP_Offline_Uninstall" value="Chcete-li toto sériové číslo použít v jiném počítači, proveďte prosím odinstalaci během připojení k internetu."/>
+    <Property name="Str_FinErr_Header" value="Instalace nebyla dokončena."/>
+    <Property name="Str_FinErr_Desc" value="Systém nebyl změněn. Chcete-li instalaci dokončit později, spusťte ji znovu."/>
+
+    <Property name="Str_FinSuc_HeaderClean" value="Instalace proběhla úspěšně."/>
+    <Property name="Str_FinSuc_HeaderModify" value="Váš software byl upraven."/>
+    <Property name="Str_FinSuc_HeaderRepair" value="Oprava byla úspěšná."/>
+    <Property name="Str_FinSuc_HeaderRemove" value="Software byl odinstalován."/>
+
+    <Property name="Str_FinSuc_Fresh" value="Děkujeme, že jste si vybrali sadu CorelDRAW Graphics Suite!"/>
+    <Property name="Str_FinSuc_FreshFinish" value="Ukončete instalaci kliknutím na tlačítko &lt;b&gt;Dokončit&lt;/b&gt;."/>
+    <Property name="Str_FinSuc_Modify" value="Úprava sady CorelDRAW Graphics Suite proběhla úspěšně.&lt;br/&gt;&lt;br/&gt;Ukončete instalaci kliknutím na tlačítko &lt;b&gt;Dokončit&lt;/b&gt;."/>
+    <Property name="Str_FinSuc_Repair" value="Sada CorelDRAW Graphics Suite byla úspěšně opravena.&lt;br/&gt;&lt;br/&gt;Kliknutím na tlačítko &lt;b&gt;Dokončit&lt;/b&gt; ukončíte instalaci."/>
+    <Property name="Str_FinSuc_RemoveHeader" value="Sada CorelDRAW Graphics Suite byla odebrána z počítače."/>
+    <Property name="Str_FinSuc_Reboot" value="Aby se změny projevily, je třeba restartovat počítač. Vyberte jednu z následujících možností a kliknutím na tlačítko &lt;b&gt;Dokončit&lt;/b&gt; ukončete instalaci."/>
+    <Property name="Str_FinSuc_RebootThanks" value="Děkujeme, že jste si vybrali sadu CorelDRAW Graphics Suite."/>
+    <Property name="Str_FinSuc_RebootYes" value="Ano, chci nyní restartovat svůj počítač."/>
+    <Property name="Str_FinSuc_RebootNo" value="Ne, restartuji počítač později."/>
+    <Property name="Str_FinSuc_AdminThanks" value="Děkujeme, že jste si vybrali sadu CorelDRAW Graphics Suite. Instalace úspěšně vytvořila bitovou kopii na vašem serveru.&lt;br/&gt;&lt;br/&gt;Kliknutím na tlačítko &lt;b&gt;Dokončit&lt;/b&gt; instalaci ukončíte."/>
+    <Property name="Str_FinSuc_AdminServer" value="Umístění bitové kopie na serveru:"/>
+
+
+
+    <Property name="Str_MinSysD_Header" value="Nebyly splněny některé z následujících minimálních požadavků na systém."/>
+    <Property name="Str_MinSysD_Desc" value="Klikněte na tlačítko &lt;b&gt;Pokračovat&lt;/b&gt;, pokud chcete ignorovat doporučené minimální systémové požadavky a nainstalovat sadu CorelDRAW Graphics Suite. Chcete-li instalaci ukončit, klikněte na tlačítko &lt;b&gt;Storno&lt;/b&gt;."/>
+    <Property name="Str_MinSysD_Desc2" value="&lt;b&gt;&lt;u&gt;Minimální požadavky na systém:&lt;/b&gt;&lt;/u&gt;"/>
+
+    <Property name="Str_MinSysD_OS" value="Operační systém s nejnovější aktualizací Service Pack a kritickými aktualizacemi: Windows 10, 64 bitů. Ve starších verzích systému Windows 10 tento software nemusí fungovat podle očekávání."/>
+	<Property name="Str_OS32Bit" value="Sada CorelDRAW Graphics Suite má 64bitovou architekturu a nelze ji nainstalovat na 32bitový (x86) operační systém. Vyžaduje nejnovější 64bitovou verzi operačního systému Windows 10."/>
+    <Property name="Str_MinSysD_IE" value="Internet Explorer 11" />
+    <Property name="Str_MinSysD_CPU" value="Procesor:&lt;br/&gt;Intel Core i3 nebo AMD Athlon 64"/>
+    <Property name="Str_MinSysD_RAM" value="Paměť RAM: 8 GB"/>
+    <Property name="Str_MinSysD_ScrRes" value="Rozlišení obrazovky: 1280 x 720"/>
+
+    <Property name="Str_PreInstall_Header" value="Požadavky pro instalaci."/>
+    <Property name="Str_PreInstall_Desc" value="Některé komponenty vašeho operačního systému je nutné aktualizovat před instalací sady CorelDRAW Graphics Suite. Kliknutím na tlačítko &lt;b&gt;Pokračovat&lt;/b&gt; nainstalujte následující komponenty, nebo kliknutím na tlačítko &lt;b&gt;Storno&lt;/b&gt; ukončete instalaci."/>
+    <Property name="Str_PreInstall_Desc2" value="Požadované komponenty:"/>
+    <Property name="Str_PreInstall_Net" value="Microsoft .NET Framework 4.7.2"/>
+    <Property name="Str_PreInstall_NetDnld" value="Microsoft .NET Framework 4.7.2 (POZNÁMKA: Tato aktualizace vyžaduje připojení k Internetu.)"/>
+    <Property name="Str_PreInstall_Msi" value="Microsoft Windows Installer 4.6"/>
+    <Property name="Str_PreInstall_Windows_Updates" value="Před pokračováním zkontrolujte nastavení aktualizací systému Windows a ujistěte se, že jsou nainstalovány nejnovější aktualizace Service Pack a jiné důležité aktualizace. Instalace produktu tak proběhne rychleji."/>
+    <Property name="Str_RestMan_Header" value="Bylo zjištěno, že jsou ve vašem počítači spuštěny následující aplikace."/>
+    <Property name="Str_RestMan_Desc" value="Chcete-li minimalizovat nutnost restartování počítače, důrazně doporučujeme pokračovat až po ukončení všech těchto aplikací.&lt;br/&gt;&lt;br/&gt;Ukončete tyto aplikace a pokračujte kliknutím na tlačítko &lt;b&gt;OK&lt;/b&gt;."/>
+    <Property name="Str_RestMan_Restart" value="Automaticky ukončit a pokusit se znovu spustit aplikace."/>
+    <Property name="Str_RestMan_NoRestart" value="Nezavírat aplikace. (Bude nutné provést restart.)"/>
+
+    <Property name="Str_RebootPending_Header" value="Před pokračováním prosím restartujte počítač."/>
+    <Property name="Str_RebootPending_Desc" value="Instalace nemůže nainstalovat sadu CorelDRAW Graphics Suite bez restartování počítače. Kliknutím na tlačítko &lt;b&gt;Restartovat&lt;/b&gt; restartujete počítač a budete moci pokračovat v instalaci. Kliknutím na tlačítko &lt;b&gt;Nerestartovat&lt;/b&gt; instalaci ukončíte."/>
+    
+    <Property name="Str_AdminLicense_Header" value="Chcete-li pokračovat v instalaci tohoto softwaru, musíte souhlasit s podmínkami licenční smlouvy Business User Agreement (BULA) uzavírané se společností Corel."/>
+    <Property name="Str_AdminLicense_Privacy_Desc" value="Vážíme si vašeho soukromí. Naše zásady ochrany soukromí najdete &lt;a href='http://www.corel.com/privacy/' target='_blank'&gt;zde&lt;/a&gt;. Odsouhlasením podmínek smlouvy BULA potvrzujete, že jste si přečetli naše zásady ochrany soukromí, rozumíte jim a přijímáte je." />
+    <Property name="Str_AdminLicense_Scroll" value="S těmito podmínkami můžete souhlasit až poté, co odrolujete až na konec smlouvy BULA." />
+
+    <Property name="Str_AdminDes_Header" value="Umístění bitové kopie."/>
+    <Property name="Str_AdminDes_Desc" value="Bitovou kopii na serveru můžete nainstalovat do určeného síťového umístění."/>
+    <Property name="Str_AdminDes_Path" value="Zadejte cestu k bitové kopii nebo klikněte na tlačítko  &lt;b&gt;Změnit&lt;/b&gt; a procházejte až k požadovanému umístění:"/>
+    <Property name="Str_AdminDes_Error" value="Vyberte nebo zadejte síťové umístění, kde chcete bitovou kopii na serveru vytvořit."/>
+    <Property name="Str_AdminDes_ContentHeader" value="Umístění obsahu."/>
+    <Property name="Str_AdminDes_ContentDesc" value="Pokud jste u sdílení po síti nastavili dodatečný obsah, můžete odkázat pracovní stanice na toto umístění."/>
+    <Property name="Str_AdminDes_ContentPath" value="Zadejte cestu k obsahu nebo klikněte na tlačítko &lt;b&gt;Změnit&lt;/b&gt; a přejděte do umístění instalace:"/>
+
+    <Property name="Str_AdminNet_Header" value="Ovládání přístupu k internetu." />
+    <Property name="Str_AdminNet_Updates" value="Zadejte nastavení nasazení aktualizace produktu:" />
+    <Property name="Str_AdminNet_Updates_OptIn" value="Pravidelně produkt aktualizovat (doporučeno)" />
+    <Property name="Str_AdminNet_Updates_Optout" value="Vyhledávat aktualizace a umožnit uživateli zvolit, kdy se mají nainstalovat" />
+    <Property name="Str_AdminNet_Updates_Disable" value="Nevyhledávat aktualizace" />
+    <Property name="Str_AdminNet_Internet" value="Používat funkce Internetu:"/>
+    <Property name="Str_AdminNet_InternetDesc" value="Povolit pracovním stanicím přístup k funkcím pracujícím přes Internet."/>
+    <Property name="Str_AdminNet_WelcomeScreen" value="Zobrazte online data na uvítací obrazovce" />
+    <Property name="Str_AdminNet_WelcomeScreenDesc" value="Umožněte na pracovních stanicích přístup ke vzdělávacím materiálům online, dodatečnému stahování a nákupy v rámci produktu." />
+    <Property name="Str_AdminNet_Optional" value="Tyto možnosti jsou při instalaci v režimu offline nedostupné. Chcete-li je zpřístupnit, restartujte prosím instalaci a přihlaste se."/>
+    <Property name="Str_AdminNet_Collab" value="Povolit uživatelům přihlášení pomocí jejich podnikových účtů" />
+    <Property name="Str_AdminNet_CollabDesc" value="Povoluje sdílení souborů a spolupráci mezi uživateli organizace" />
+    <Property name="Str_AdminNet_CollabDesc2" value="Umožňuje přístup k ukotvitelnému panelu Komentáře a Corel Cloud." />
+    <Property name="Str_AdminNet_CDAEDesc" value="Umožňuje uživatelům se přihlásit pomocí jejich účtů Microsoft 365 nebo G Suite." />
+
+    <Property name="Str_AdminSN_Header" value="Zadejte své údaje."/>
+    <Property name="Str_AdminSN_SN" value="Sériové číslo:"/>
+    <Property name="Str_AdminSN_Optional" value="Přihlášení je volitelné. Pokud se nepřihlásíte, bude instalace pokračovat v režimu offline. V režimu offline nebudete moci dostávat oznámení o aktualizacích produktů a využívat internetové funkce."/>
+    <Property name="Str_AdminSN_Signin" value="Software musíte ověřit tím, že se přihlásíte pomocí svého účtu &lt;a href='http://www.corel.com/account' target='_blank'&gt;corel.com&lt;/a&gt;. Po přihlášení můžete zvolit umístění bitové kopie serveru a možnosti internetu." />
+    <Property name="Str_AdminSN_Email" value="E-mailová adresa:"/>
+    <Property name="Str_AdminSN_PWD" value="Heslo:"/>
+    <Property name="Str_AdminSN_ForgotPwd" value="Zapomenuté heslo"/>
+    <Property name="Str_AdminSN_AcctDesc" value="Abyste mohli využívat online funkce, aktualizace produktů a obsah, je nutné zadat údaje k účtu corel.com &lt;a href='http://www.corel.com/account' target='_blank'&gt;corel.com&lt;/a&gt; ."/>
+    <Property name="Str_AdminSN_CreateAcct" value="Nemáte účet?  &lt;a href='https://idp.corel.com/idp/Authn/UserPassword' target='_blank'&gt;Vytvořte si účet&lt;/a&gt;, a vraťte se s možností se přihlásit." />
+
+    <Property name="Str_Admin_Error_504" value="Chcete-li pokračovat, musíte se přihlásit k účtu Corel." />
+    <Property name="Str_Admin_Error_503" value="Chcete-li pokračovat, musíte se přihlásit k účtu Corel. Pokud jste zapomněli přihlašovací údaje k účtu, otevřete si e-mail, ve kterém naleznete vysvětlení, jak používat předplatné s více licencemi."/>
+    <Property name="Str_Admin_Error_502" value="Pro instalaci zkušební verze produktu nelze použít sériové číslo společnosti. Zadejte platné sériové číslo."/>
+    <Property name="Str_Admin_Error_501" value="Seriove eislo je neplatne."/>
+    <Property name="Str_Admin_Error_500" value="Ověření se nezdařilo."/>
+    <Property name="Str_Admin_Error_1" value="Chcete-li se přihlásit, musíte nejprve přijmout podmínky služby." Comment="As_IT error - Must Accept TOS"/>
+    <Property name="Str_Admin_Error_1000" value="Je vyžadováno připojení k Internetu. Připojte se k Internetu a zkuste to znovu." Comment="As_IT error - not connected to internet"/>
+    <Property name="Str_Admin_Error_1005" value="Neplatný e-mail nebo heslo. Ověřte, zda jste zadali správnou e-mailovou adresu. Pokud jste zapomněli heslo, získáte ho po kliknutí na odkaz nahoře. " Comment="As_IT error - Invalid email or pwd"/>
+    <Property name="Str_Admin_Error_1003" value="Tento účet se neshoduje s účtem vytvořeným ke stažení vašeho produktu. Zkontrolujte účet uvedený v potvrzení objednávky." Comment="As_IT error - Invalid account"/>
+    <Property name="Str_Admin_Error_0" value="Neznámá chyba"/>
+
+    <Property name="Str_FilesUse_Header" value="Bylo zjištěno, že jsou ve vašem počítači spuštěny následující aplikace."/>
+    <Property name="Str_FilesUse_Desc" value="Chcete-li minimalizovat nutnost restartování počítače, důrazně doporučujeme pokračovat až po ukončení těchto aplikací.&lt;br/&gt;&lt;br/&gt;Ukončete tyto aplikace a pokračujte kliknutím na tlačítko &lt;b&gt;Opakovat&lt;/b&gt;."/>
+
+
+    <Property name="Str_Btn_Cancel" value="&lt;u&gt;S&lt;/u&gt;torno"/>
+	<Property name="Str_Btn_Cancel_AccessKey" value="S"/>
+    <Property name="Str_Btn_Install" value="&lt;u&gt;I&lt;/u&gt;nstalovat"/>
+	<Property name="Str_Btn_Install_AccessKey" value="I"/>
+    <Property name="Str_Btn_OK" value="&lt;u&gt;O&lt;/u&gt;K" />
+	<Property name="Str_Btn_OK_AccessKey" value="O"/>
+    <Property name="Str_Btn_Finish" value="&lt;u&gt;D&lt;/u&gt;okončit" />
+	<Property name="Str_Btn_Finish_AccessKey" value="D"/>
+    <Property name="Str_Btn_Accept" value="&lt;u&gt;P&lt;/u&gt;řijmout" />
+    <Property name="Str_Btn_Accept_AccessKey" value="P"/>
+    <Property name="Str_Btn_Agree" value="&lt;u&gt;S&lt;/u&gt;ouhlasím"/>
+    <Property name="Str_Btn_Agree_AccessKey" value="S"/>
+    <Property name="Str_Btn_AgreeEnabled" value="&lt;u&gt;S&lt;/u&gt;ouhlasím"/>
+    <Property name="Str_Btn_AgreeDisabled" value="&lt;u&gt;S&lt;/u&gt;ouhlasím"/>
+    <Property name="Str_Btn_Back" value="&lt;u&gt;Z&lt;/u&gt;pět" />
+	<Property name="Str_Btn_Back_AccessKey" value="Z"/>
+    <Property name="Str_Btn_Next" value="&lt;u&gt;D&lt;/u&gt;alší" />
+	<Property name="Str_Btn_Next_AccessKey" value="D"/>
+    <Property name="Str_Btn_Continue" value="P&lt;u&gt;o&lt;/u&gt;kračovat" />
+	<Property name="Str_Btn_Continue_AccessKey" value="O"/>
+    <Property name="Str_Btn_Change" value="&lt;u&gt;Z&lt;/u&gt;měnit..." />
+	<Property name="Str_Btn_Change_AccessKey" value="Z"/>
+    <Property name="Str_Btn_Change2" value="Z&lt;u&gt;m&lt;/u&gt;ěnit..." />
+	<Property name="Str_Btn_Change_AccessKey" value="M"/>
+    <Property name="Str_Btn_Disagree" value="&lt;u&gt;N&lt;/u&gt;esouhlasím"/>
+    <Property name="Str_Btn_Disagree_AccessKey" value="N"/>
+    <Property name="Str_Btn_Includes" value="Zahrnuje:"/>
+    <Property name="Str_Btn_Path" value="Cesta:" />
+    <Property name="Str_Btn_Retry" value="&lt;u&gt;Z&lt;/u&gt;kusit znovu" />
+	<Property name="Str_Btn_Retry_AccessKey" value="Z"/>
+    <Property name="Str_Btn_Ignore" value="&lt;u&gt;I&lt;/u&gt;gnorovat" />
+	<Property name="Str_Btn_Ignore_AccessKey" value="I"/>
+    <Property name="Str_Btn_RelNotes" value="&lt;u&gt;P&lt;/u&gt;oznámky k verzi" />
+	<Property name="Str_Btn_RelNotes_AccessKey" value="P"/>
+    <Property name="Str_Btn_Repair" value="&lt;u&gt;O&lt;/u&gt;pravit" />
+	<Property name="Str_Btn_Repair_AccessKey" value="O"/>
+    <Property name="Str_Btn_Remove" value="&lt;u&gt;O&lt;/u&gt;debrat" />
+	<Property name="Str_Btn_Remove_AccessKey" value="O"/>
+    <Property name="Str_Btn_Reset" value="&lt;u&gt;O&lt;/u&gt;bnovit" />
+	<Property name="Str_Btn_Reset_AccessKey" value="O"/>
+    <Property name="Str_Btn_RestartNow" value="&lt;u&gt;R&lt;/u&gt;estartovat" />
+	<Property name="Str_Btn_RestartNow_AccessKey" value="R"/>
+    <Property name="Str_Btn_DoNotRestart" value="&lt;u&gt;N&lt;/u&gt;erestartovat" />
+	<Property name="Str_Btn_DoNotRestart_AccessKey" value="N"/>
+    <Property name="Str_Chk_EULA" value="A" comment="access key for eula checkbox"/>
+
+
+    <Property name="Pwd_Redirect" value="http://apps.corel.com/redirect?_redirect=command&amp;function=forgotpass&amp;app=all&amp;lang=CZ"/>
+    
+    <Property name="Str.OutOfDiskSpace.Warning" value="Na disku není dostatek místa pro instalaci." lang="English"/>
+
+  </Properties>
+</ICA>

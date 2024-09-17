@@ -1,0 +1,51 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:ICA="ICA">
+	<head>
+		<title>Setup Wizard</title>
+		<LINK href="Style.css" type="text/css" rel="STYLESHEET">
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="ICADlg" content="text/html" id="ICADlg" 
+		        ICA:DlgHW="205,470" 
+		        ICA:PromptForCancel="no" 
+		        ICA:ProgressBarGraphicWidth="0"
+		        ICA:ProgressState="TBPF_INDETERMINATE" 
+                ICA:ProgressBarTBLR="50,65,75,435"
+                ICA:Modal="0"
+        />
+        <script language="jscript" type="text/jscript" src="..\..\_XX\Custom\js\Setup.js"></script>
+        <script language="jscript" type="text/jscript">
+    
+        function BodyLoad()
+        {
+            
+            
+            try
+            {
+                ProgressTotalText.innerHTML = window.external.GetProperty("Str.Initializing.Text");
+            }
+            catch(err) {}
+            
+        }
+   
+    </script>
+	</head>
+	<body onload="BodyLoad();">
+
+
+		<div class="Panel">
+		
+		    <img class="DlgBlock" style="left: 10px; top: 10px;" src="Images/arp.gif" alt="">
+		
+		    <div class="DlgBlock" style="left: 60px; top: 10px;">
+		        <label id="ProgressTotalText" class="ProgressText">[ProgressTotalText]</label>
+            </div>
+            
+            <div class="DlgBlock" style="top: 105px; width: 420px; text-align: right;">
+                <button  ICA:Function="ICACancelSetup" ID="idCancel" accesskey="C"><u>C</u>ancelar</button>
+            </div>
+
+		</div>
+		
+	</body>
+	
+</html>

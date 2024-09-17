@@ -1,0 +1,270 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" >
+<!-- saved from url=(0014)about:internet -->
+
+<html xmlns:ICA="ICA">
+<head>
+    <title>serialNumber</title>
+    <link href="Style.css" rel="stylesheet" type="text/css" />
+    <meta http-equiv="MSThemeCompatible" content="Yes"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta content="text/html" name="ICADlg" id="ICADlg" 
+          ICA:DlgHW="702,588"
+          ICA:DlgFrame="0"
+          ICA:TransparencyColorRBG="51,52,53"
+     
+    />
+    <script type="text/jscript" language="jscript" src="js/topics.js"></script>        
+    <script language="jscript" type="text/jscript" src="js/Setup.js"></script>   
+    <script language="jscript" type="text/jscript">
+ 
+        /*  Globals *******************************************************/
+        var g_ICA   = window.external;
+ 
+        
+        /*  function ValidateSN()   ***************************************
+        *
+        *   Returns: true/false
+        *
+        *   -   checks the serial number, if it is valid then
+        *       we move to the next page
+        *   -   page is only displayed for ACTION=INSTALL
+        *******************************************************************/
+        function ValidateSN()
+        {
+            if (idInputSerial.checked)
+            {
+
+            }
+            else
+            {
+                var sn = g_ICA.GetProperty("Default.SN");
+                g_ICA.SetProperty("SERIALNUMBER", sn);
+            }
+            
+            var iResult = g_Setup.ExecuteFN('JS_ValidateSN');
+            if (0 == iResult)
+            {
+                return false;
+            }
+            if ("30522" == iResult)
+            {
+                g_Setup.EndModalLoop(iResult);
+                return false;
+            }
+            try
+            {
+                  if ("ADMIN" == g_ICA.GetProperty("ACTION"))
+                  {
+                      window.location = "AdminDes.htm";
+                  }
+                  else
+                  {
+
+                         if ((iResult == 3) && (!g_DisableAdminInstall))
+                         {
+                            g_ICA.SetProperty("SHOW_DEPLOY", "1");  
+                            g_ICA.SetProperty("SHOW_CDAE", "1");  
+                         }
+                      window.location = "InstallChoose.htm";
+                  }
+            }
+            catch (err) {}
+                       
+            return true;
+            
+        } //function ValidateSN()
+        
+        /*  SetupUI  ***********************************************
+        *
+        *   - sets up the sn input box, based on the radio buttons
+        ************************************************************/
+        function SetupUI()
+        {
+            if (idInputSerial.checked)
+            {
+                //enable the serial number input
+                id_Str_SN_SN.style.color = "#333333";
+                idSNInput.disabled = false;
+            }
+            else
+            {
+                //disable the serial number input
+                id_Str_SN_SN.style.color = "Gray";
+                idSNInput.value = "";
+                idSNInput.disabled = true;
+                g_ICA.SetProperty("SERIALNUMBER", "");
+            }
+            
+        } //function SetupUI()
+ 
+ 
+ 
+        /*  OnBodyLoad  ********************************************
+        *
+        *   -   setup the radio buttons based already having a
+        *       valid [SERIALNUMBER]
+        ************************************************************/
+        function OnBodyLoad()
+        {
+            initPage(document.title);
+
+            id_Str_Btn_Next_1.style.display = "Block";            
+            if (g_bIsAdmin)
+            {
+                window.location = "SN.htm";
+            }
+            idInputSerial.checked = true;
+            g_ICA.SetProperty("InputSN", "idInputSerial");
+          OnBodyLoadInstall();
+            if (g_ICA.GetProperty("CalledFromMinSys") == "1" || g_ICA.GetProperty("EULA_SHOWUI") == "1")
+                id_Str_Btn_Back.style.display = "Block";
+            else
+                id_Str_Btn_Back.style.display = "none";            
+        } //function OnBodyLoad()
+        
+        function OnBodyLoadInstall()
+        {
+            var iResult = g_ICA.ValidateSN2(false);
+            if (0 == iResult)
+            {
+                //is good ...hide controls
+                 id_Str_SN_SN.style.color = "Gray";
+                idSNInput.disabled = true;
+            
+                idInputSerial.checked = true;
+
+            }
+            
+        } //function OnBodyLoadInstall()
+	   function OnBack()
+	   {
+	    if (g_ICA.GetProperty("CalledFromMinSys") == "1")
+                if (g_ICA.GetProperty("BULA_SHOWUI") == "1")
+                {
+                    window.location = "AdminLicense.htm";
+                }
+                else if (g_ICA.GetProperty("EULA_SHOWUI") == "1")
+                {    
+                     window.location = "License.htm";
+                }
+                 else
+                 {
+                     window.location = "MinSysD.htm";
+                 }
+             else
+             {
+                if (g_ICA.GetProperty("BULA_SHOWUI") == "1")
+                {
+                    window.location = "AdminLicense.htm";
+                }
+                else if (g_ICA.GetProperty("EULA_SHOWUI") == "1")
+                {
+                     window.location = "License.htm";
+                }     
+             }                      
+	   }//function OnBack()
+    </script>
+    <style type="text/css">
+    
+        a
+        {
+            color: #333333;
+            text-decoration: underline;
+            cursor: default;
+        }
+        
+        a:hover
+        {
+            color: #333333;
+            text-decoration: underline;
+            cursor: auto;
+        }
+        
+        a:active
+        {
+            color: #333333;
+            text-decoration: underline;
+            cursor: auto;
+        }
+        
+        a:visited
+        {
+            color: #333333;
+            text-decoration: underline;
+            cursor: auto;
+        }
+
+
+    </style> 
+</head>
+<body onload="OnBodyLoad();">
+<div id="dpi"></div>
+    <!-- background -->
+<div id="idBackGrd">
+    <img src="Images/backgrd.png" class="stretch" />
+</div>
+	<img id="idBrandingLeft" name="BrandingLeft" src="Images/banner" />  
+    <img id="idClose" alt="" class="CloseBtn" src="Images/close.png" onmouseover="HighLightClose();" onmouseout="UnHighLightClose();" ICA:Function="ICACancelSetup" />
+    <div id="idDragMe" class="Dragable">&nbsp;&nbsp;&nbsp;</div>
+    <!-- page content panel -->
+    <div id="idPanel">
+
+        <div class="DlgHeader" id="id_Str_SN_Header"></div>
+    
+	    <div class="DlgBlock" style="top: 4.06em;" >
+	        <input type="radio" name="InputSN" id="idNoInputSerial" class="geomsize" value="idNoInputSerial" onclick="SetupUI()" >
+	        <label id="idNoInputSerialLabel" for="idNoInputSerial">
+	            <span id="id_Str_SNT_NoSN"></span>
+	        </label>
+	    </div>
+	    
+	
+	    <div class="DlgBlock" style="top: 7.06em;">
+	        <input type="radio" name="InputSN" id="idInputSerial" value="idInputSerial" class="geomsize" onclick="SetupUI()" >
+	        <label id="idInputSerialLabel" for="idInputSerial">
+	            <span id="id_Str_SNT_SNInput"></span>
+	        </label>
+	    </div>
+	    
+	    <div id="idUser" class="DlgBlock" style="top: 10.06em; left: 1.3em; width: 34.5em;">
+	        <label id="id_Str_SN_User" ></label><br/>
+	        <input size="55" maxlength="63" type="text" ID="idTextbox0" NAME="USERNAME" >
+		</div>
+	    <div id="idSN" class="DlgBlock" style="top: 14.06em; left: 1.3em; width: 34.5em;">		
+	        <label id="id_Str_SN_SN" ></label><br/>
+	        <input size="55" maxlength="45" type="text" ID="idSNInput" NAME="SERIALNUMBER" style="TEXT-TRANSFORM: uppercase; ime-mode:disabled;" >
+	    </div>
+	  
+	
+	    
+	    <div class="DlgBlock" id="id_Str_SN_Hint" style="top: 28.5em; color: #333333;" ></div>   
+
+            
+     </div><!--panel -->
+
+    
+
+ 
+    <!-- ------------------------------------------------------------ -->
+    <!-- <div> Wizard Buttons (at bottom of dialog) - START -->
+    <div class="DlgWizardBtns">
+        <table border="0" width="100%">
+            <tr>
+                
+                <td align="left">
+                    <button type="button" ICA:Function="ICACancelSetup" ID="id_Str_Btn_Cancel" ></button>
+                    
+                </td>
+                <td width="7.50em" align="left">
+                    <button type="button" onclick="OnBack();" ID="id_Str_Btn_Back" ></button>
+                </td>
+                <td width="7.50em" align="right">
+                    <button class="Initiator" onmouseover="HighLightButton('id_Str_Btn_Next_1');" onmouseout="UnHighLightButton('id_Str_Btn_Next_1');" type="button" id="id_Str_Btn_Next_1" onclick="ValidateSN()" style="display: none;" ></button>
+                </td>
+            </tr>
+        </table>
+    </div>  <!-- <div class="DlgBlock"> Wizard Buttons (at bottom of dialog) - END -->
+ 
+</body>
+</html>
+

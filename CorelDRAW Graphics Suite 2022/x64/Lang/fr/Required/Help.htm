@@ -1,0 +1,167 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:ICA="ICA">
+	<head>
+		<meta name="vs_showGrid" content="True" />
+		<title>Setup Wizard - Command Line Help</title>
+		<LINK href="../../_XX/Required/Style.css" type="text/css" rel="STYLESHEET" />
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1" />
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+		<meta name="ICADlg" 
+		      content="text/html" 
+		      id="ICADlg" 
+		      ICA:DlgHW="550,480" 
+		      ICA:DlgTitle="Setup.exe /? - command line help" 
+		      ICA:PromptForCancel="no" />
+		
+		<style type="text/css">
+    
+    	    .HelpTable
+		    {
+		        border-top-style: none;
+	            border-right-style: none;
+	            border-left-style: none;
+	            border-bottom-style: none;
+		    }
+		    
+            .HelpItem
+            {
+	            vertical-align: top;
+	            font-size: 14px;
+	            font-family: 'Segoe UI' , Tahoma;
+	            border-bottom: gray 1px solid;
+	            margin-top: 10px;
+	            margin-bottom: 10px;
+	            padding-top: 5;
+	            padding-bottom: 5;
+            }
+		</style>
+		
+	</head>
+	
+	<body>
+	
+	<div id="idContent"
+	     class="Panel"
+	     style="overflow: auto;
+	            padding: 5 5 5 5;
+	            border: double 3px silver;
+	            background-color: white;
+	            width: 450px;
+	            height: 440px; 
+	            text-align: left;">
+
+
+        <table id="idContentTable" cellspacing="0">
+        
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    Ceci est un guide de r&eacute;f&eacute;rence rapide relatif aux lignes de commande courantes utilis&eacute;es avec Setup.exe.<br /><br /> Setup.exe /Option &lt;Param&egrave;tre obligatoire&gt; [Param&egrave;tre facultatif] <br /><br /> <u>Options d&rsquo;installation&nbsp;:</u>
+                </td>
+            </tr>
+                        
+            <tr> <!-- /a admin -->
+                <td class="HelpItem" style="width: 55px;">/a</td>
+                <td class="HelpItem">
+                    Indique que vous souhaitez cr&eacute;er une image serveur.  Installation administrative - Installe un produit sur le r&eacute;seau <br /><br /> Setup.exe /a
+                </td>
+            </tr>
+
+            <tr> <!-- /a /q(n) admin -->
+                <td class="HelpItem" style="width: 55px;">/a /q(n)</td>
+                <td class="HelpItem">
+                    Le commutateur /q(n) dans les lignes de commandes n'est plus pris en charge. Veuillez consulter la dernière version du guide de déploiement de CorelDRAW Graphics Suite pour savoir quels sont les commutateurs pris en charge.
+                    <br /><br />
+                    Setup.exe /a /q(n)
+                </td>
+            </tr>
+            
+            <tr> <!-- /s push profile ID -->
+                <td class="HelpItem" style="width: 55px;">/s</td>
+                <td class="HelpItem">
+                    Permet une transmission de type Push de PROFILEID vers les stations de travail.  La propriété publique PROFILEID permet de connecter tous les utilisateurs au compte grâce à une transmission de type Push des informations d’identification du compte vers les stations de travail.
+                    <br /><br />
+                    Setup.exe /s PROFILEID=XXXXXXXXXXXXXXX
+                </td>
+            </tr>            
+            <tr> <!-- /x uninstall -->
+                <td class="HelpItem" style="width: 55px;">/x <br /> /uninstall</td>
+                <td class="HelpItem">
+                    Indique que vous souhaitez d&eacute;sinstaller le logiciel.  Installation administrative - Installe un produit sur le r&eacute;seau <br /><br /> Setup.exe /x
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    <br /><br /> <u>Options d&rsquo;affichage&nbsp;:</u>
+                </td>
+            </tr>
+            
+            <tr> <!-- /q silent -->
+                <td class="HelpItem" style="width: 55px;">/q[n|b|r|f]</td>
+                <td class="HelpItem">
+                    D&eacute;finit l&rsquo;&eacute;tendue de l&rsquo;affichage de l&rsquo;interface utilisateur lors de l&rsquo;installation. <br /> n - Pas d&rsquo;interface utilisateur<br /> b - Interface utilisateur de base<br /> r - Interface utilisateur r&eacute;duite<br /> f - Interface utilisateur compl&egrave;te (option par d&eacute;faut)<br /><br /> Setup.exe /q
+        		</td>
+            </tr>
+            
+            <tr> <!-- /q silent -->
+                <td class="HelpItem" style="width: 55px;">/quiet</td>
+                <td class="HelpItem">
+                    Mode silencieux, aucune interaction avec l&rsquo;utilisateur. Identique &agrave; /qn
+        		</td>
+            </tr>
+            
+            <tr> <!-- /q silent -->
+                <td class="HelpItem" style="width: 55px;">/passive</td>
+                <td class="HelpItem">
+                    Mode autonome - barre de progression uniquement. Identique &agrave; /qb
+        		</td>
+            </tr>
+            
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    <br /><br /> <u>Options de journalisation&nbsp;:</u>
+                </td>
+            </tr>
+            
+            <tr> <!-- /l log -->
+                <td class="HelpItem" style="width: 55px;">/l[i|w|e|a|r|u|c|m|o|p|v|x|*]</td>
+                <td class="HelpItem">
+                    Consigne les informations g&eacute;n&eacute;rales concernant l&rsquo;installation dans un fichier journal. Si vous n&rsquo;indiquez pas de chemin ni de nom de fichier, le fichier journal est cr&eacute;&eacute; dans le dossier temporaire de l&rsquo;utilisateur actuel. <br /><br /> i - Messages d&rsquo;&eacute;tat <br /> w - Avertissements r&eacute;cup&eacute;rables <br /> e - Tous les messages d&rsquo;erreur <br /> a - D&eacute;marrage des actions <br /> r - Enregistrements sp&eacute;cifiques &agrave; certaines actions <br /> u - Requ&ecirc;tes de l&rsquo;utilisateur <br /> c - Param&egrave;tres d&rsquo;origine de l&rsquo;interface utilisateur <br /> m - M&eacute;moire insuffisante ou informations de sortie irr&eacute;cup&eacute;rables <br /> o - Messages d&rsquo;espace disque insuffisant <br /> p - Propri&eacute;t&eacute;s du terminal <br /> v - Mode document&eacute; <br /> x - Autres informations de d&eacute;bogage <br /> * - Enregistrer toutes les informations, sauf pour les options v et x <br /><br /> Le param&egrave;tre par d&eacute;faut est /lvoicewarmup<br /><br /> Setup.exe /l&quot;C:\Install.log&quot;
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    <br /><br /> <u>Options de r&eacute;paration&nbsp;:</u>
+                </td>
+            </tr>
+            
+            <tr> <!-- /a admin -->
+                <td class="HelpItem" style="width: 55px;">/f[p|e|c|m|s|o|d|a|u]</td>
+                <td class="HelpItem">
+                R&eacute;pare un produit.<br /> p - uniquement si un fichier est manquant<br /> o - si un fichier est manquant ou si une version ant&eacute;rieure est install&eacute;e (option par d&eacute;faut)<br /> e - si un fichier est manquant ou si une version &eacute;quivalente ou ant&eacute;rieure est install&eacute;e<br /> d - si un fichier est manquant ou si une version diff&eacute;rente est install&eacute;e<br /> c - si un fichier est manquant ou si la somme de contr&ocirc;le ne correspond pas &agrave; la valeur calcul&eacute;e<br /> a - force la r&eacute;installation de tous les fichiers<br /> u - toutes les entr&eacute;es de registre requises sp&eacute;cifiques &agrave; l&rsquo;utilisateur (option par d&eacute;faut)<br /> m - toutes les entr&eacute;es de registre requises sp&eacute;cifiques &agrave; l&rsquo;ordinateur (option par d&eacute;faut)<br /> s - tous les raccourcis existants (option par d&eacute;faut)<br /> <br /><br /> L&rsquo;option par d&eacute;faut est /foums<br /><br /> Setup.exe /f
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    <br /><br /> <u>D&eacute;finition des propri&eacute;t&eacute;s publiques&nbsp;:</u><br /><br /> [PROPERTY=PropertyValue]
+                </td>
+            </tr>
+        
+        </table> <!-- table id="idContentTable" -->
+
+    </div> <!-- id="idContent" -->
+
+	<div class="DlgBlock"
+	     style="text-align: right;
+	            width: 450px;
+	            top: 470px;">
+	            
+	    <button onclick="window.external.EndModalLoop(0);" ID="idOk" accesskey="O"><u>O</u>K</button>
+	    
+    </div>
+		
+	</body>
+</html>

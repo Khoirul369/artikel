@@ -1,0 +1,243 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+
+<html xmlns:ICA="ICA">
+<head>
+    <title>serialNumber</title>
+    <link href="Style.css" rel="stylesheet" type="text/css" />
+    <meta http-equiv="MSThemeCompatible" content="Yes"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta content="text/html" name="ICADlg" id="ICADlg" 
+  ICA:DlgHW="702,588" 
+          ICA:DlgFrame="0"
+          ICA:TransparencyColorRBG="51,52,53"
+   
+    />
+<script language="jscript" type="text/jscript" src="js/topics.js"></script>
+<script language="jscript" type="text/jscript" src="js/Setup.js"></script>
+
+
+<script language="jscript" type="text/jscript">
+
+        /*  Globals *******************************************************/
+        var g_ICA   = window.external;
+
+        
+        /*  function ValidateSN()   ***************************************
+        *
+        *   Returns: true/false
+
+
+        *   -   checks the serial number, if it is valid then
+        *       we move to the next page
+        *   -   page is only displayed for ACTION=INSTALL
+        *******************************************************************/
+        function ValidateSN()
+        {
+
+            var iResult = g_Setup.ExecuteFN('JS_ValidateSN');
+            if (0 == iResult)
+            {
+                return false;
+            }
+            if ("30522" == iResult)
+            {
+                g_Setup.EndModalLoop(iResult);
+                return false;
+            } 
+            try
+            {
+                  if ("ADMIN" == g_ICA.GetProperty("ACTION"))
+                  {
+                      window.location = "AdminDes.htm";
+                  }
+                  else if (5 == iResult)
+                  {
+                        g_Setup.ExecuteFN('JS_SetAdminProperties');
+                        g_Setup.SetProperty("InstallType", "Admin");
+                        g_Setup.SetProperty("FromInstallChoose", "1");
+                        g_Setup.SetProperty("CorpSNOffline" , "1");
+                        window.location = "AdminSNCorp.htm";
+                  }
+                  else
+                  {
+
+                         if ((iResult == 3) && (!g_DisableAdminInstall))
+                         {
+                            g_ICA.SetProperty("SHOW_DEPLOY", "1");  
+                            g_ICA.SetProperty("SHOW_CDAE", "1");  
+                           
+                         }
+                        
+                        if ((iResult == 4) && (!g_DisableAdminInstall))
+                        {
+                            g_ICA.SetProperty("SHOW_DEPLOY", "1");  
+                            g_ICA.SetProperty("SHOW_CDAE", "1");
+                            g_ICA.SetProperty("CorpSN" , "1");   
+                        }
+                        window.location = "InstallChoose.htm";
+                  }
+                
+            }
+            catch (err) {}
+            
+            return true;
+            
+        } //function ValidateSN()
+
+
+
+        /*  OnBodyLoad  ********************************************
+        *
+        *   -   check to see if we already have a serial number
+        ************************************************************/
+        function OnBodyLoad()
+        {
+            initPage(document.title);
+            ConfigSNUI();
+	        if ("1" == g_Setup.GetProperty("IsAdminPackage"))
+	        {
+		        id_Str_SN_Hint.style.display = "None";
+	        }            
+
+            var iResult = g_ICA.ValidateSN2(false);
+            if (0 == iResult)
+            {
+                //is good
+                id_Str_SN_SN.style.color = "Gray";
+                idSNInput.disabled = true;
+            }
+            else
+            {
+                id_Str_SN_Hint.style.display = "Block";
+            }
+            if (g_ICA.GetProperty("CalledFromMinSys") == "1" || g_ICA.GetProperty("EULA_SHOWUI") == "1")
+                id_Str_Btn_Back.style.display = "Block";
+            else
+                id_Str_Btn_Back.style.display = "none";            
+            
+        } //function OnBodyLoad()
+        function OnBack()
+        {
+             if (g_ICA.GetProperty("CalledFromMinSys") == "1")
+                if (g_ICA.GetProperty("BULA_SHOWUI") == "1")
+                {
+                    window.location = "AdminLicense.htm";
+                }
+                else if (g_ICA.GetProperty("EULA_SHOWUI") == "1")
+                {    
+                     window.location = "License.htm";
+                }
+                 else
+                 {
+                     window.location = "MinSysD.htm";
+                 }
+             else
+             {
+                if (g_ICA.GetProperty("BULA_SHOWUI") == "1")
+                {
+                    window.location = "AdminLicense.htm";
+                }
+                else if (g_ICA.GetProperty("EULA_SHOWUI") == "1")
+                {
+                     window.location = "License.htm";
+                }     
+             }                      
+	   }//function OnBack()
+	function ConfigSNUI()
+	{
+		if (g_sLang == "PL" || g_sLang == "RU")
+		{
+
+			id_Str_SN_Hint.style.top = "23.75em";
+		}
+
+	}	   
+    </script>
+    <style type="text/css">
+    
+        a
+        {
+            color: #333333;
+            text-decoration: underline;
+            cursor: default;
+        }
+        
+        a:hover
+        {
+            color: #333333;
+            text-decoration: underline;
+            cursor: auto;
+        }
+        
+        a:active
+        {
+            color: #333333;
+            text-decoration: underline;
+            cursor: auto;
+        }
+        
+        a:visited
+        {
+            color: #333333;
+            text-decoration: underline;
+            cursor: auto;
+        }
+
+
+    </style>
+    
+</head>
+<body onload="OnBodyLoad();">
+<div id="dpi"></div>
+    <!-- background -->
+    <div id="idBackGrd">
+<img src="Images/backgrd.png" class="stretch" />
+
+</div>
+	<img id="idBrandingLeft" name="BrandingLeft" src="Images/banner" />  
+    <img id="idClose" alt="" class="CloseBtn" src="Images/close.png" onmouseover="HighLightClose();" onmouseout="UnHighLightClose();" ICA:Function="ICACancelSetup" />
+	<div id="idDragMe" class="Dragable">&nbsp;&nbsp;&nbsp;</div>
+    
+    <!-- page content panel -->
+    <div id="idPanel">
+
+        <div class="DlgHeader" id="id_Str_SN_Header"></div>
+    
+        <div class="DlgBlock" style="top: 3.75em;">
+            <label id="id_Str_SN_User" ></label><br/>
+            <input size="55" maxlength="63" type="text" ID="idTextbox0" NAME="USERNAME" />
+        </div>
+    
+        <div class="DlgBlock" style="top: 7.50em;">
+            <label id="id_Str_SN_SN" ></label><br/>
+            <input size="55" maxlength="45" type="text" ID="idSNInput" NAME="SERIALNUMBER" style="TEXT-TRANSFORM: uppercase; ime-mode:disabled;" />
+        </div>
+    	<div class="DlgBlock" id="id_Str_SN_Hint" style="top: 26.5em; color: #333333;">
+        </div> <!-- <div id="idSerialHint" -->
+        
+        </div>
+    </div> <!-- div id="idTabPanel" END -->
+
+    <!-- ------------------------------------------------------------ -->
+    <!-- <div> Wizard Buttons (at bottom of dialog) - START -->
+    <div class="DlgWizardBtns">
+        <table border="0" width="100%">
+            <tr>
+
+                <td align="left">
+                    <button type="button" ICA:Function="ICACancelSetup" ID="id_Str_Btn_Cancel" ></button>
+                    
+                </td>
+                <td width="7.50em" align="left">
+                    <button type="button" onclick="OnBack();" ID="id_Str_Btn_Back" ></button>
+                </td>
+                <td width="7.50em" align="right">
+                    <button class="Initiator" onmouseover="HighLightButton('id_Str_Btn_Next_1');" onmouseout="UnHighLightButton('id_Str_Btn_Next_1');" type="button" id="id_Str_Btn_Next_1" onclick="ValidateSN()" ></button>                   
+                </td>
+            </tr>
+        </table>
+    </div>  <!-- <div class="DlgBlock"> Wizard Buttons (at bottom of dialog) - END -->
+
+</body>
+</html>

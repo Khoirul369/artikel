@@ -1,0 +1,82 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:ICA="ICA">
+	<head>
+		<title>Setup Wizard</title>
+		<LINK href="Style.css" type="text/css" rel="STYLESHEET">
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta content="text/html" name="ICADlg" id="ICADlg" 
+            ICA:DlgHW="450,650" 
+            />
+
+		<script language="jscript" type="text/jscript" src="../../_XX/Custom/js/Setup.js"></script>
+		<script language="jscript" type="text/jscript">
+		    
+		    function OnBodyLoad()
+		    {
+		        
+		    }
+		    
+		</script>
+		
+	</head>
+	
+	<body onload="OnBodyLoad();" >
+	    
+	    <div class="DlgBlock" style="width: 625px;">
+	        <label style="font-weight: bold;">Bylo zjištěno, že v počítači jsou nyní spuštěny následující aplikace</label>
+	        <br /><br />
+	        <label>
+	        Chcete-li omezit nutnost restartování počítače na minimum, měli byste nejprve tyto aplikace zavřít.<br /><br />Zavřete tyto aplikace a pokračujte klepnutím na tlačítko <b>OK</b>.
+	        </label>
+	    </div>
+
+        <div class="DlgBlock"
+             style="BORDER-LEFT-COLOR: silver; BORDER-BOTTOM-COLOR: silver; 
+                    BORDER-TOP-COLOR: silver; BORDER-RIGHT-COLOR: silver;
+                    BORDER-TOP-STYLE: double; BORDER-RIGHT-STYLE: double;
+                    BORDER-LEFT-STYLE: double; BORDER-BOTTOM-STYLE: double;
+                    background-color: #f1f1f1;
+                    height: 135px;
+                    width: 625px;
+                    top: 150px;">
+                                     
+            <div style="margin: 10px; height: 135px; overflow: auto;">
+                <label ICA:Property="Files.In.Use.DisplayName.0">[Files.In.Use.DisplayName.0]</label><br>
+	    		<label ICA:Property="Files.In.Use.DisplayName.1">[Files.In.Use.DisplayName.1]</label><br>
+		    	<label ICA:Property="Files.In.Use.DisplayName.2">[Files.In.Use.DisplayName.2]</label><br>
+			    <label ICA:Property="Files.In.Use.DisplayName.3">[Files.In.Use.DisplayName.3]</label><br>
+    			<label ICA:Property="Files.In.Use.DisplayName.4">[Files.In.Use.DisplayName.4]</label><br>
+	    		<label ICA:Property="Files.In.Use.DisplayName.5">[Files.In.Use.DisplayName.5]</label><br>
+		    	<label ICA:Property="Files.In.Use.DisplayName.6">[Files.In.Use.DisplayName.6]</label><br>
+			    <label ICA:Property="Files.In.Use.DisplayName.7">[Files.In.Use.DisplayName.7]</label><br>
+    			<label ICA:Property="Files.In.Use.DisplayName.8">[Files.In.Use.DisplayName.8]</label><br>
+                <label ICA:Property="Files.In.Use.DisplayName.9">[Files.In.Use.DisplayName.9]</label>
+            </div>
+        </div>
+        
+        <div class="DlgBlock" style="top: 320px; width: 625px;">
+            <input id="idRadio1" type="radio" name="RestartManagerOption" value="CloseRestart" checked />
+            <label for="idRadio1" >Automaticky ukoneit a pokusit se restartovat aplikace.</label>
+            <br>
+            <input id="idRadio2" type="radio" name="RestartManagerOption" value="Reboot" />
+            <label for="idRadio2" >Neukoneujte aplikace. (Je nutný restart poeítaee.)</label>
+        </div>
+        
+        <div class="DlgBlock" style="top: 370px; width: 625px;">
+            <table border="0" width="100%">
+                <tr>
+                    <td align="right">
+                        &nbsp;
+                    </td>
+                    <td width="120px" align="left">
+                        <button type="button" ICA:Function="ICABeginGeneric" ID="idOk" accesskey="O"><u>O</u>K</button>
+                    </td>
+                    <td width="120px" align="right">
+                        <button type="button" ICA:Function="ICACancelSetup" ID="idCancel" accesskey="S" ><u>S</u>torno</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+	</body>
+</html>

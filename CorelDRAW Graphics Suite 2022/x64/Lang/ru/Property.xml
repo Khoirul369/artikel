@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ICA lang="RU">
+	<Properties>
+    <Property name="Str.ProductDisplayName" value="CorelDRAW Graphics Suite"/>
+    <Property name="Str.SetupAlreadyRunning" value="Программа Setup.exe уже запущена."/> 
+		<Property name="Str.CancelSetupPrompt" value="Отменить установку %s?" comment="if %s is used in the string, it will be replaced with [Str.ProductDisplayName]"/>
+    <Property name="Str.CouldNotOpenCore" value="В процессе установки при конфигурировании программного обеспечения возникла проблема. Нет доступа к файлу: %s. Продолжить?" comment="string displayed to the user if the core .msi could not be opened during initalization -- %s MUST be in the string, it is replaced with the reason for failure"/>
+    <Property name="Str.NoFolderAccess" value="Не удается открыть папку: %s" comment="%s is replaced with the folder name"/>
+    <Property name="Str.PathTooLong" value="Длина пути к каталогу установки для [ProductName] не должна превышать %s знаков. Выберите другую папку." comment="first %s is replaced with [Str.ProductDisplayName] -- second %s is replaced with [MAX_PATH]"/>
+    <Property name="Str.Initializing.Text" value="Подождите ..."/>
+    <Property name="Str.Initializing.Text.Cancelling" value="Прерывание операции ..."/>
+		<Property name="Str.Feature.MainApp" value="CorelDRAW Graphics Suite"/> 
+    
+    <Property name="Str.Feature.Utilities.VSTA.Desc.WithVS9" value="Установка средств поддержки для набора Visual Studio Tools для работы с приложениями (необходим установленный пакет Visual Studio 2008 SP1)."/>
+
+		
+    <Property name="Str.Feature.Programs64" value="64-разрядные программы"/>
+    <Property name="Str.Feature.Programs64.Desc" value="64-разрядные программы"/>
+    <Property name="Str.DestinationFolder" value="Изменение текущей папки назначения."/>
+    <Property name="Str.SerialNotValid" value="Неверный серийный номер."/>
+
+    <Property name="Str.ProgressText.Default" value="Выполнено %d%%" comment="this is the default progress text, you can override it using 'progresstext' attribute on the msi or dbm node -- optional %d%% is populated with the percent complete"/>
+    <Property name="Str.Running.VBA.exe.text" value="Подождите, выполняется настройка Visual Basic для приложений"/>
+    <Property name="Str.CacheSetupSource.Progress.text" value="Подождите, выполняется подготовка установочных файлов"/>
+
+    <Property name="Str.Text.RequiredFeature" value="(обязательно)"/>
+	<Property name="Str.ProgressText.CopyingPatches" value="Копирование файла исправления: "/>
+    <Property name="Str.ProgressText.Common" value="Выполнено %d%% - настройка CorelDRAW Graphics Suite"/>
+    <Property name="Str.ProgressText.Capture" value="Выполнено %d%% - настройка Corel CAPTURE"/>
+    <Property name="Str.ProgressText.Draw" value="Выполнено %d%% - настройка CorelDRAW"/>
+    <Property name="Str.ProgressText.Paint" value="Выполнено %d%% - настройка Corel PHOTO-PAINT"/>
+    <Property name="Str.ProgressText.CS" value="Выполнено %d%%: настройка китайского (упрощенного) языкового пакета для CorelDRAW Graphics Suite"/>
+    <Property name="Str.ProgressText.CT" value="Выполнено %d%%: настройка китайского (традиционного) языкового пакета для CorelDRAW Graphics Suite"/>
+    <Property name="Str.ProgressText.CZ" value="Выполнено %d%%: настройка чешского языкового пакета для CorelDRAW Graphics Suite"/>
+    <Property name="Str.ProgressText.NL" value="Выполнено %d%%: настройка голландского языкового пакета для CorelDRAW Graphics Suite"/>
+    <Property name="Str.ProgressText.EN" value="Выполнено %d%%: настройка английского языкового пакета для CorelDRAW Graphics Suite"/>
+    <Property name="Str.ProgressText.FR" value="Выполнено %d%%: настройка французского языкового пакета для CorelDRAW Graphics Suite"/>
+    <Property name="Str.ProgressText.DE" value="Выполнено %d%%: настройка немецкого языкового пакета для CorelDRAW Graphics Suite"/>
+    <Property name="Str.ProgressText.IT" value="Выполнено %d%%: настройка итальянского языкового пакета для CorelDRAW Graphics Suite"/>
+    <Property name="Str.ProgressText.JP" value="Выполнено %d%%: настройка японского языкового пакета для CorelDRAW Graphics Suite"/>
+    <Property name="Str.ProgressText.PL" value="Выполнено %d%%: настройка польского языкового пакета для CorelDRAW Graphics Suite"/>
+    <Property name="Str.ProgressText.BR" value="Выполнено %d%%: настройка бразильского языкового пакета для CorelDRAW Graphics Suite"/>
+    <Property name="Str.ProgressText.RU" value="Выполнено %d%%: настройка русского языкового пакета для CorelDRAW Graphics Suite"/>
+    <Property name="Str.ProgressText.ES" value="Выполнено %d%%: настройка испанского языкового пакета для CorelDRAW Graphics Suite"/>
+    <Property name="Str.ProgressText.TR" value="Выполнено %d%%: настройка турецкого языкового пакета для CorelDRAW Graphics Suite"/>
+	<Property name="Str.ProgressText.SV" value="%d%% завершено - Настройка языкового пакета для шведского языка CorelDRAW Graphics Suite"/>
+    <Property name="Str.ProgressText.FontManager" value="Выполнено %d%%:  настройка Corel Font Manager"/>
+    <Property name="Str.ProgressText.VBA" value="Выполнено %d%%: настройка Microsoft Visual Basic для приложений"/>
+    <Property name="Str.ProgressText.VSTA" value="Установка набора средств Microsoft Visual Studio Tools для работы с приложениями"/>
+	<Property name="Str.ProgressText.WebView" value="Установка среды выполнения Microsoft Edge WebView2" />
+    <Property name="Str.ProgressText.VC" value="Установка распространяемых пакетов Microsoft Visual C++ для Visual Studio 2019"/>
+    <Property name="Str.ProgressText.DotNet" value="Установка Microsoft .NET Framework 4.7.2"/>
+    <Property name="Str.ProgressText.ShellExt" value="Выполнено %d%%: настройка расширения оболочки Windows для Corel"/>
+    <Property name="Str.ProgressText.RemoveAll" value="%d%% завершено - Удаление CorelDRAW Graphics Suite" />
+    <Property name="Str.Feature.Lang" value="Языки продуктов "/>
+    <Property name="Str.Feature.Lang.CS" value="Китайский (упрощенное письмо)"/>
+    <Property name="Str.Feature.Lang.CT" value="Китайский (традиционное письмо)"/>
+    <Property name="Str.Feature.Lang.CZ" value="Чешский"/>
+    <Property name="Str.Feature.Lang.NL" value="Голландский"/>
+    <Property name="Str.Feature.Lang.EN" value="Английский"/>
+    <Property name="Str.Feature.Lang.FR" value="Французский"/>
+    <Property name="Str.Feature.Lang.DE" value="Немецкий"/>
+    <Property name="Str.Feature.Lang.IT" value="Итальянский"/>
+    <Property name="Str.Feature.Lang.JP" value="Японский"/>
+    <Property name="Str.Feature.Lang.PL" value="Польский"/>
+    <Property name="Str.Feature.Lang.BR" value="Португальский (Бразильский)"/>
+    <Property name="Str.Feature.Lang.RU" value="Русский"/>
+    <Property name="Str.Feature.Lang.ES" value="Испанский"/>
+    <Property name="Str.Feature.Lang.TR" value="Турецкий"/>
+	<Property name="Str.Feature.Lang.SV" value="Шведский"/>
+    <Property name="SETUP_LANG" value="RU"/>
+    <Property name="ICA.Lang.Transform" value="1033.mst"/>
+
+
+
+    <Property name="Str.Error.20000" value="Неверный серийный номер."/>
+    <Property name="Str.Error.30000" value="ВАЖНО! Продукт CorelDRAW Graphics Suite нельзя установить без установки Microsoft .NET Framework 4.7.2. Сведения о Microsoft .NET Framework см. на веб-сайте Майкрософт. &lt;a href='https://www.microsoft.com/en-us/download/details.aspx?id=48137' target='_blank' onclick='window.external.EndModalLoop(0);'&gt;http://www.microsoft.com/NET/&lt;/a&gt;"/>
+    <Property name="Str.Error.30001" value="Процессор не соответствует минимальным требованиям к системе. Установка не может быть выполнена."/>
+    <Property name="Str.Error.30003" value="У вас недостаточно полномочий, чтобы выполнить установку. Для этой установки требуются администраторские или повышенные полномочия. Обратитесь к администратору, а затем повторно выполните установку."/>
+    <Property name="Str.Error.30004" value="ВАЖНО! Продукт CorelDRAW Graphics Suite нельзя установить без установки Microsoft .NET Framework 4.7.2. Сведения о Microsoft .NET Framework см. на веб-сайте Майкрософт. 'https://www.microsoft.com/en-us/download/details.aspx?id=48137' - http://www.microsoft.com/NET/"/>
+    <Property name="Str.Error.30005" value="64-разрядную версию CorelDRAW Graphics Suite X 6 нельзя установить в 32-разрядной системе."/>
+	<Property name="Str.Error.5100" value="Не удается выполнить установку: требуется перезагрузить систему после ранее выполненной установки. Перезагрузите компьютер и запустите установку повторно."/>
+<!--Coexistence Scenarios -->
+    <Property name="Str.Error.1638" value="Невозможно установить данный продукт, поскольку уже установлена другая версия. Для установки данного продукта необходимо сначала удалить существующую версию. Щелкните Готово для выхода из программы установки." comment="Pink"/>
+    <Property name="Str.Error.30500" value="Более новая версия этого приложения уже установлена в этой системе. Если вы хотите установить эту версию, сначала удалите более новую версию. "/>
+    <Property name="Str.Error.30504" value="CorelDRAW Essentials и CorelDRAW Home and Student не могут быть установлены на одном компьютере.  Ваша система не была изменена.  Для установки этого ПО необходимо сначала удалить текущую версию CorelDRAW." comment="Rust"/>
+    <Property name="Str.Error.30508" value="Установка невозможна, поскольку продукт уже установлен. Для перехода с 32-разрядной на 64-разрядную версию необходимо сначала удалить существующую версию продукта." coment="baby blue"/>
+    <Property name="Str.Error.30509" value="Невозможно установить эту пробную версию, так как уже установлено ПО CorelDRAW Graphics Suite. Для установки пробной версии удалите существующее ПО." comment="purple"/>
+    <Property name="Str.CDTS.PromptForUpgrade" value="На компьютере обнаружена программа CorelDRAW Graphics Suite. Программа CorelDRAW Technical Suite обладает всеми возможностями CorelDRAW Graphics Suite, а также многими другими функциями.\n\nНажмите кнопку «ОК» для перехода на CorelDRAW Technical Suite. \n\nНажмите кнопку «Отмена», чтобы не переходить на CorelDRAW Technical Suite." comment="dark blue"/>
+    
+    <Property name="Str.Error.35001" value="&lt;b&gt;Подробнее.&lt;/b&gt;&lt;br /&gt;Не удается подтвердить правильность серийного номера. Для завершения установки требуется подключение к Интернету.&lt;br /&gt;&lt;br /&gt;"/>
+   <Property name="Str.Error.30510" value="Невозможно продолжить установку, так как в вашей операционной системе не установлены последние обновления. Установите последние обновления для Windows 7 и повторите попытку." comment="OS Not Supported"/>
+    <Property name="Str.Error.30512" value="Требуется подключение к Интернету.  Установите подключение к Интернету и повторите попытку."/>
+	<Property name="Str.Error.30511" value="Ошибка: на сервере возникла непредвиденная ошибка. Проверьте подключение к Интернету и повторите попытку позже."/>
+	<Property name="Str.Error.30516" value="Невозможно установить Microsoft .NET Framework 4.7.2, что является необходимым условием для установки CorelDRAW Graphics Suite. Убедитесь, что в вашей операционной системе установлены все последние пакеты обновлений и повторите попытку.&lt;br /&gt;&lt;br /&gt;Информацию о Microsoft .NET Framework 4.7.2 см. на веб-сайте Майкрософт. &lt;a href='https://www.microsoft.com/en-us/download/details.aspx?id=48137' target='_blank' onclick='window.external.EndModalLoop(0);'&gt;http://www.microsoft.com/NET/&lt;/a&gt;" comment="Custom .NET error"/>
+	<Property name="Str.Error.30513" value="CorelDRAW Graphics Suite невозможно установить в ОС Windows XP или Windows Vista. Обновите операционную систему компьютера и повторите попытку." comment="OS Not Supported"/>
+	<Property name="Str.Error.30515" value="Данный серийный номер не может использоваться для активации пробной версии. Зайдите в учетную запись Corel и загрузите текущую версию программы с веб-страницы &lt;a href='http://www.corel.com' target='_blank' &gt;Загрузки для членов и подписчиков&lt;/a&gt;."/>
+	<Property name="Str.Error.30517" value="Для установки этого продукта требуется Internet Explorer 11. Убедитесь, что в операционной системе установлены последние обновления и пакеты обновлений, и повторите попытку." comment="IE8 Not Supported" />
+    <Property name="Str.Error.30518" value="Невозможно продолжить установку, так как в вашей операционной системе не установлены последние обновления. Установите последние обновления для Windows 8 и повторите попытку." comment="Win8 Not Supported"/>
+    <Property name="Str.Error.30519" value="CorelDRAW Graphics Suite не может быть установлено в ОС Windows 7 или Windows 8. Обновите операционную систему на вашем ПК и повторите попытку." />
+    <Property name="Str.Error.30520" value="Развертывание этой версии программного обеспечения в сетевом окружении невозможно. Сведения об установке ПО в сетевом окружении см. в Руководстве по развертыванию." />
+    <Property name="Str.Error.30522" value="Этот серийный номер непригоден для установки эксклюзивного выпуска CorelDRAW Graphics Suite для данного подписчика." />
+            
+    <Property name="Str.DiskSpace.Bytes" value="байт"/>
+    <Property name="Str.DiskSpace.Kb" value="КБ"/>
+    <Property name="Str.DiskSpace.MB" value="МБ"/>
+    <Property name="Str.DiskSpace.GB" value="ГБ"/>
+    <Property name="Str.DiskSpace.TB" value="ТБ"/>
+    <Property name="Str.DiskSpace.RequiredString" value="Требуется %s из %s на диске %s"/>
+    <Property name="Str.UpgradeProgressText" value="Удаление приложений "/>
+
+    <Property name="Str.Feature.Filters.GhostscriptGPL" value="GPL Ghostscript"/>
+    <Property name="Str.Feature.Filters.GhostscriptGPL.Installed.Text" value="&lt;b&gt;GPL Ghostscript (уже установлен)&lt;/b&gt;"/>
+
+    <Property name="Str.PrerequisiteReboot.Prompt" value="Чтобы продолжить установку, необходимо перезагрузить компьютер.\n\nНажмите кнопку «Да», чтобы перезагрузить компьютер сейчас, либо кнопку «Нет», чтобы перезагрузить его позже."/>
+    
+
+    <Property name="Str.Required.Dlg.InstallComplete" value="Установка завершена"/>
+
+    <Property name="billboard_01.png" value="" />
+    <Property name="billboard_02.png" value="" />
+    <Property name="billboard_03.png" value="Создано с помощью материалов Corel 2021"/>
+    <Property name="billboard_04.png" value="" />
+
+    <Property name="Str_Init_InitSetup" value="Инициализация программы установки"/>
+    <Property name="Str_Init_PleaseWait" value="Подождите ..."/>
+    <Property name="Str_License_Header" value="Чтобы продолжить установку этого программного обеспечения, необходимо принять условия Лицензионного соглашения Corel с конечным пользователем (EULA)."/>
+    <Property name="Str_License_Privacy_Desc" value="Мы ценим вашу конфиденциальность. Нажмите &lt;a href='http://www.corel.com/privacy/' target='_blank'&gt;здесь&lt;/a&gt;, чтобы ознакомиться с нашей политикой конфиденциальности." />
+    <Property name="Str_License_Tooltip" value="Для продолжения необходимо принять условия лицензионного соглашения."/>
+    <Property name="Str_SN_Header" value="Введите сведения."/>
+    <Property name="Str_SN_User" value="Ф. И. О.:"/>
+    <Property name="Str_SN_SN" value="Серийный номер:"/>
+    <Property name="Str_SN_Hint" value="Если ранее вы устанавливали и регистрировали свой продукт в Интернете, серийный номер можно найти в &lt;a href='http://apps.corel.com/redirect/?_redirect=command&amp;function=registeredproducts&amp;app=all&amp;subfunction=ipm&amp;lang=ru' target='_blank'&gt;учетной записи Corel&lt;/a&gt;. Если вам нужна помощь для поиска серийного номера, откройте &lt;a href='http://www.corel.com/installcenter' target='_blank'&gt;Corel Install Center&lt;/a&gt;."/>
+
+    <Property name="Str_SNT_SNInput" value="Есть серийный номер."/>
+    <Property name="Str_SNT_SNInputDesc" value="Выберите этот вариант, если вы приобрели продукт или подписку на продукт или если у вас есть серийный номер пробной версии, полученный от партнера."/>
+    <Property name="Str_SNT_NoSN" value="Серийный номер отсутствует, требуется пробное использование продукта."/>
+    <Property name="Str_SNT_NoSNDesc" value="Выберите этот параметр, чтобы воспользоваться полнофункциональной версией продукта в течение ограниченного времени.  По истечении периода действия пробной версии можно пользоваться только ограниченным набором функций."/>
+    
+    <Property name="Str_InstallChoose_Header" value="Выберите вариант установки."/>
+    <Property name="Str_InstallChoose_InstallLink" value="Oбычная установка" />
+    <Property name="Str_InstallChoose_InstallDesc" value="Программное обеспечение устанавливается в заданную по умолчанию папку. Этот вариант включает в себя большинство программ и параметров."/>
+    <Property name="Str_InstallChoose_InstallSize" value="Требуемый объем свободного места на диске: "/>
+    <Property name="Str_InstallChoose_InstallSize2" value=" доступно)"/>
+    <Property name="Str_InstallChoose_CustomLink" value="Bыборочная установка ..." />
+    <Property name="Str_InstallChoose_CustomDesc" value="Параметры установки ПО выбираются по усмотрению пользователя."/>
+    <Property name="Str_InstallChoose_AdminLink" value="Развертывание..." />
+    <Property name="Str_InstallChoose_AdminDesc" value="С помощью этого параметра можно создать образ сервера для установки программы на отдельных рабочих местах."/>
+    <Property name="Str_InstallChoose_AdminOnlineLink" value="Развернуть со включенными интернет-функциями"/>
+    <Property name="Str_InstallChoose_AdminOnlineDesc" value="Этот параметр позволяет создать образ сервера для развертывания ПО на отдельных рабочих станциях со включенными по умолчанию интернет-функциями."/>
+
+    <Property name="Str_Install_InstallHeader" value="Выберите программы, которые необходимо установить."/>
+    <Property name="Str_Install_OptionsHeader" value="Выберите дополнительные параметры."/>
+    <Property name="Str_Install_FeaturesHeader" value="Выберите компоненты программы, которые необходимо установить."/>
+    <Property name="Str_Install_LocationHeader" value="Выберите путь и язык установки."/>
+    <Property name="Str_Install_LocationHeader2" value="Выберите путь установки."/>
+    <Property name="Str_Install_LangHeader" value=""/>
+
+    <Property name="Str_Install_Draw" value="CorelDRAW " />
+    <Property name="Str_Install_DrawDesc" value=" | это приложение для создания векторных иллюстраций и макетов страниц"/>
+    <Property name="Str_Install_PP" value="Corel PHOTO-PAINT " />
+    <Property name="Str_Install_PPDesc" value=" | это приложение для создания растровых изображений и редактирования фотографий"/>
+    <Property name="Str_Install_Capture" value="Corel CAPTURE " />
+    <Property name="Str_Install_CaptureDesc" value=" | это дополнительная программа создания снимков экрана"/>
+    <Property name="Str_Install_FontManager" value="Corel Font Manager " />
+    <Property name="Str_Install_FontManagerDesc" value=" | диспетчер шрифтов"/>
+
+    <Property name="Str_Install_WT" value="Средства проверки правописания"/>
+    <Property name="Str_Install_WTDesc" value="Установка компонентов орфографии, грамматики и тезауруса на различных языках, помогающих выполнять проверку документов."/>
+    <Property name="Str_Install_Utilities" value="Утилиты" />
+    <Property name="Str_Install_UtilitiesDesc" value="Установка утилит, которые можно использовать с программами CorelDRAW и Corel PHOTO-PAINT."/>
+    <Property name="Str_Install_DupWiz" value="Мастер двусторонней печати"/>
+    <Property name="Str_Install_VBA" value="Visual Basic for Applications 7.1"/>
+    <Property name="Str_Install_VSTA" value="Visual Studio Tools for Applications"/>
+    <Property name="Str_Install_Shell" value="Windows Shell Extension" />
+    <Property name="Str_Install_GPL" value="Включить расширенную совместимость с файлами EPS" />
+    <Property name="Str_Install_GPL_Installed" value="Включить расширенную совместимость с файлами EPS (уже установлен)"/>
+    <Property name="Str_Install_GPLDesc" value="Установка компонента GPL Ghostscript для расширения поддержки импорта файлов EPS и PostScript."/>
+
+    <Property name="Str_Install_Updates" value="Обновления продукта"/>
+    <Property name="Str_Install_UpdatesDesc" value="Автоматическая загрузка обновлений программ и запрос разрешения на установку."/>
+    <Property name="Str_Install_Shortcuts" value="Установить ярлыки на рабочий стол" />
+    <Property name="Str_Install_ShortcutsDesc" value="Установка ярлыков программ на рабочем столе."/>
+    <Property name="Str_Install_CopyCabs" value="Копировать файлы установки" />
+    <Property name="Str_Install_CopyCabsDesc" value="Управление программами и загрузка обновлений без использования установочного диска. Для работы этой функции требуется XXX МБ свободного места."/>
+
+    <Property name="Str_Install_Location_Desc" value="Установите CorelDRAW Graphics Suite в следующую папку."/>
+    <Property name="Str_Install_Langs_Desc" value="Выберите языки, которые необходимо установить."/>
+
+    <Property name="Str_Install_Langs" value="Языки интерфейса:"/>
+    <Property name="Str_Install_Enterprise" value="Разрешить доступ к CorelDRAW.app Enterprise" />
+    <Property name="Str_Install_EnterpriseDesc" value="Вы можете войти со своей учетной записью Microsoft Office 365 или G Suite." />
+
+    <Property name="Str_Progress_Header" value="Выполняется установка. Подождите..."/>
+    <Property name="Str_Progress_Header_Remove" value="Выполняется удаление CorelDRAW Graphics Suite. Подождите..." />
+
+    <Property name="Str_ARP_Header" value="Пакет CorelDRAW Graphics Suite установлен. Выберите один из перечисленных ниже вариантов, чтобы изменить или удалить данную программу."/>
+    <Property name="Str_ARP_Modify" value="Изменить"/>
+    <Property name="Str_ARP_ModifyDesc" value="Изменить способ установки функций. При выборе этого параметра отображается диалоговое окно &quot;Пользовательские настройки выбора&quot;, в котором можно изменить способ установки функций."/>
+    <Property name="Str_ARP_Repair" value="Исправить"/>
+    <Property name="Str_ARP_RepairDesc" value="Исправление ошибок установки в программе. Восстановление отсутствующих или поврежденных файлов, ярлыков и записей реестра."/>
+    <Property name="Str_ARP_Remove" value="Удалить"/>
+    <Property name="Str_ARP_RemoveDesc" value="Удаление CorelDRAW Graphics Suite с данного компьютера."/>
+    <Property name="Str_ARP_UserFiles" value="Удалить файлы пользователя"/>
+    <Property name="Str_ARP_UserFilesDesc" value="Пользовательские файлы, такие как рабочие пространства, содержат личные параметры для приложений CorelDRAW Graphics Suite."/>
+	<Property name="Str_ARP_Offline_Uninstall" value="Для использования этого серийного номера на другом компьютере удалите программу при активном подключении к Интернету."/>
+    <Property name="Str_FinErr_Header" value="Установка не завершена."/>
+    <Property name="Str_FinErr_Desc" value="Чтобы завершить установку позднее, программу установки потребуется запустить еще раз."/>
+
+    <Property name="Str_FinSuc_HeaderClean" value="Установка выполнена успешно."/>
+    <Property name="Str_FinSuc_HeaderModify" value="Программное обеспечение изменено."/>
+    <Property name="Str_FinSuc_HeaderRepair" value="Устранение неполадок завершено."/>
+    <Property name="Str_FinSuc_HeaderRemove" value="Программное обеспечение удалено."/>
+
+    <Property name="Str_FinSuc_Fresh" value="Спасибо, что выбрали CorelDRAW Graphics Suite!"/>
+    <Property name="Str_FinSuc_FreshFinish" value="Для выхода из программы установки щелкните &lt;b&gt;Готово&lt;/b&gt;."/>
+    <Property name="Str_FinSuc_Modify" value="Пакет CorelDRAW Graphics Suite успешно изменен.&lt;br/&gt;&lt;br/&gt;Для выхода из программы установки нажмите &lt;b&gt;Готово&lt;/b&gt;."/>
+    <Property name="Str_FinSuc_Repair" value="Пакет CorelDRAW Graphics Suite успешно восстановлен.&lt;br/&gt;&lt;br/&gt;Для выхода из программы установки нажмите &lt;b&gt;Готово&lt;/b&gt;."/>
+    <Property name="Str_FinSuc_RemoveHeader" value="Программа CorelDRAW Graphics Suite удалена с вашего компьютера."/>
+    <Property name="Str_FinSuc_Reboot" value="Перезагрузите компьютер, чтобы изменения вступили в силу. Установите или снимите следующие флажки, после чего нажмите кнопку &lt;b&gt;Готово&lt;/b&gt;}."/>
+    <Property name="Str_FinSuc_RebootThanks" value="Благодарим за выбор CorelDRAW Graphics Suite."/>
+    <Property name="Str_FinSuc_RebootYes" value="Да, перезагрузить компьютер сейчас."/>
+    <Property name="Str_FinSuc_RebootNo" value="Нет, я перезагружу компьютер позже."/>
+    <Property name="Str_FinSuc_AdminThanks" value="Благодарим за установку ПО CorelDRAW Graphics Suite! Программа установки успешно создала образ сервера. Нажмите кнопку &lt;b&gt;Готово&lt;/b&gt;, чтобы выйти из программы установки."/>
+    <Property name="Str_FinSuc_AdminServer" value="Образ сервера расположен в папке:"/>
+
+
+
+    <Property name="Str_MinSysD_Header" value="Минимальные системные требования."/>
+    <Property name="Str_MinSysD_Desc" value="Щелкните &lt;b&gt;Продолжить&lt;/b&gt;, чтобы пропустить рекомендации по минимальным системным требованиям и перейти к установке CorelDRAW Graphics Suite. Для выхода из программы установки щелкните &lt;b&gt;Отмена&lt;/b&gt;."/>
+    <Property name="Str_MinSysD_Desc2" value="&lt;b&gt;&lt;u&gt;Минимальные системные требования:&lt;/b&gt;&lt;/u&gt;"/>
+    <Property name="Str_MinSysD_IE" value="Internet Explorer 11" />
+    <Property name="Str_MinSysD_OS" value="Операционная система с последним пакетом обновлений и критическими обновлениями: Windows 10 64-разрядная. Это ПО может не функционировать должным образом на более ранних версиях Windows 10."/>
+	<Property name="Str_OS32Bit" value="Версия CorelDRAW Graphics Suite является 64-разрядной и не может быть установлена в 32-разрядной операционной системе (x86). Требуется последняя 64-разрядная операционная система Windows 10."/>
+    <Property name="Str_MinSysD_CPU" value="CPU:&lt;br/&gt;Intel Core i3 или AMD Athlon 64"/>
+    <Property name="Str_MinSysD_RAM" value="ОЗУ: 8 ГБ"/>
+    <Property name="Str_MinSysD_ScrRes" value="Разрешение экрана: 1280 x 720"/>
+
+    <Property name="Str_PreInstall_Header" value="Предварительные требования для установки."/>
+    <Property name="Str_PreInstall_Desc" value="Необходимо обновить некоторые компоненты операционной системы перед установкой CorelDRAW Graphics Suite. Для установки следующих компонентов щелкните &lt;b&gt;Продолжить&lt;/b&gt;, для выхода из программы установки щелкните &lt;b&gt;Отмена&lt;/b&gt;."/>
+    <Property name="Str_PreInstall_Desc2" value="Требуемые компоненты:"/>
+    <Property name="Str_PreInstall_Net" value="Microsoft .NET Framework 4.7.2"/>
+    <Property name="Str_PreInstall_NetDnld" value="Microsoft .NET Framework 4.7.2 (ПРИМЕЧАНИЕ. Для выполнения этого обновления необходимо подключение к Интернету.)"/>
+    <Property name="Str_PreInstall_Msi" value="Microsoft Windows Installer 4.6"/>
+<Property name="Str_PreInstall_Windows_Updates" value="Прежде чем продолжить, проверьте параметры Центра обновления Windows и убедитесь, что установлены последние пакеты обновления и критические обновления. Это поможет ускорить установку продукта."/>
+    <Property name="Str_RestMan_Header" value="В вашей системе обнаружены следующие запущенные приложения."/>
+    <Property name="Str_RestMan_Desc" value="Чтобы снизить необходимость перезагрузки компьютера, настоятельно рекомендуем закрыть эти приложения.&lt;br/&gt;&lt;br/&gt;Закройте эти приложения и нажмите кнопку &lt;b&gt;ОК&lt;/b&gt;, чтобы продолжить."/>
+    <Property name="Str_RestMan_Restart" value="Автоматически закрыть и повторно запустить приложения."/>
+    <Property name="Str_RestMan_NoRestart" value="Не закрывать приложения (потребуется перезагрузка)"/>
+
+    <Property name="Str_RebootPending_Header" value="Перед тем как продолжить, перезапустите компьютер."/>
+    <Property name="Str_RebootPending_Desc" value="Для установки CorelDRAW Graphics Suite требуется перезагрузить компьютер. Нажмите кнопку &lt;b&gt;Перезагрузить сейчас&lt;/b&gt;, чтобы перезагрузить компьютер и продолжить установку. Для выхода из программы установки нажмите &lt;b&gt;Не перезагружать&lt;/b&gt;."/>
+    
+    <Property name="Str_AdminLicense_Header" value="Чтобы продолжить установку этого программного обеспечения, вы должны принять условия лицензионного соглашения бизнес-пользователя Corel (BULA)."/>
+    <Property name="Str_AdminLicense_Privacy_Desc" value="Мы ценим вашу конфиденциальность. Щелкните &lt;a href='http://www.corel.com/privacy/' target='_blank'&gt;здесь&lt;/a&gt;, чтобы просмотреть нашу политику конфиденциальности. Соглашаясь с условиями BULA, вы признаете, что прочли, поняли и приняли нашу политику конфиденциальности." />
+    <Property name="Str_AdminLicense_Scroll" value="Согласие с этими условиями возможно только после прокрутки BULA вниз до конца." />
+    
+    <Property name="Str_AdminDes_Header" value="Расположение образа."/>
+    <Property name="Str_AdminDes_Desc" value="Можно установить образ сервера в указанном местоположении в сети."/>
+    <Property name="Str_AdminDes_Path" value="Введите путь к образу или нажмите кнопку &lt;b&gt;Изменить&lt;/b&gt;, чтобы выбрать необходимую папку:"/>
+    <Property name="Str_AdminDes_Error" value="Выберите или введите путь к сетевой папке, в которой требуется создать образ сервера."/>
+    <Property name="Str_AdminDes_ContentHeader" value="Расположение содержимого."/>
+    <Property name="Str_AdminDes_ContentDesc" value="Если в сетевом каталоге задан дополнительный контент, можно указать путь к его местоположению для рабочей станции."/>
+    <Property name="Str_AdminDes_ContentPath" value="Для поиска установленного местоположения контента укажите путь к нему или щелкните &lt;b&gt;Изменить&lt;/b&gt;:"/>
+
+
+    <Property name="Str_AdminNet_Header" value="Управление доступом к Интернету." />
+    <Property name="Str_AdminNet_Updates" value="Задайте настройки обновления продукта в развертывании:" />
+    <Property name="Str_AdminNet_Updates_OptIn" value="Автоматически устанавливать обновления (рекомендуется)" />
+    <Property name="Str_AdminNet_Updates_Optout" value="Выполнять проверку на наличие обновлений и предоставлять пользователям возможность устанавливать их в удобное время" />
+    <Property name="Str_AdminNet_Updates_Disable" value="Не выполнять проверку на наличие обновлений" />
+    <Property name="Str_AdminNet_Internet" value="Использовать интернет-функции:"/>
+    <Property name="Str_AdminNet_InternetDesc" value="рабочие станции получают доступ к интернет-функциям."/>
+    <Property name="Str_AdminNet_WelcomeScreen" value="Отображать онлайн-содержимое на экране приветствия" />
+    <Property name="Str_AdminNet_WelcomeScreenDesc" value="Разрешить доступ рабочих станций к интерактивным учебным ресурсам, дополнительным материалам для загрузки и покупкам в программе." />
+    <Property name="Str_AdminNet_Optional" value="При установке в автономном режиме эти параметры недоступны. Чтобы включить их, перезапустите установку и войдите в свою учетную запись."/>
+    <Property name="Str_AdminNet_Collab" value="Разрешить пользователям выполнять вход с помощью корпоративных учетных данных" />
+    <Property name="Str_AdminNet_CollabDesc" value="Разрешить корпоративным пользователям совместный доступ к файлам и совместную работу." />
+    <Property name="Str_AdminNet_CollabDesc2" value="Разрешить доступ к докеру «Комментарии» и Corel Cloud." />
+    <Property name="Str_AdminNet_CDAEDesc" value="Разрешить пользователям вход с использованием учетных записей Microsoft Office 365 или G Suite." />
+
+    <Property name="Str_AdminSN_Header" value="Укажите сведения о себе."/>
+    <Property name="Str_AdminSN_SN" value="Серийный номер:"/>
+    <Property name="Str_AdminSN_Optional" value="Входить в учетную запись не обязательно. Если не выполнять вход, программа будет установлена в автономном режиме. В этом случае вы не сможете получать уведомления об обновлениях продукта и использовать интернет-функции."/>
+    <Property name="Str_AdminSN_Signin" value="Для аутентификации ПО выполните вход со своей учетной записью  &lt;a href='http://www.corel.com/account' target='_blank'&gt;corel.com&lt;/a&gt;. После входа выберите расположение образа сервера и параметры Интернета." />
+    <Property name="Str_AdminSN_Email" value="Адрес электронной почты:"/>
+    <Property name="Str_AdminSN_PWD" value="Пароль:"/>
+    <Property name="Str_AdminSN_ForgotPwd" value="Забыли пароль"/>
+    <Property name="Str_AdminSN_AcctDesc" value="Для доступа к функциям, обновлениям продуктов и материалов онлайн требуются данные вашей учетной записи corel.com &lt;a href='http://www.corel.com/account' target='_blank'&gt;corel.com&lt;/a&gt;."/>
+    <Property name="Str_AdminSN_CreateAcct" value="Нет учетной записи? &lt;a href='https://idp.corel.com/idp/Authn/UserPassword' target='_blank'&gt;Создайте учетную запись&lt;/a&gt; и выполните регистрацию." />
+
+    <Property name="Str_Admin_Error_504" value="Чтобы продолжить, необходимо войти в учетную запись Corel." />
+    <Property name="Str_Admin_Error_503" value="Чтобы продолжить, необходимо войти в учетную запись Corel. Если вы забыли учетные данные, прочтите сообщение электронной почты с информацией о получении подписки на несколько устройств."/>
+    <Property name="Str_Admin_Error_502" value="Корпоративный серийный номер не может использоваться для установки пробной версии продукта. Введите действительный серийный номер."/>
+    <Property name="Str_Admin_Error_501" value="Неверный серийный номер."/>
+    <Property name="Str_Admin_Error_500" value="Сбой аутентификации."/>
+    <Property name="Str_Admin_Error_1" value="Чтобы войти в систему, необходимо принять условия обслуживания." Comment="As_IT error - Must Accept TOS"/>
+    <Property name="Str_Admin_Error_1000" value="Требуется подключение к Интернету.  Установите подключение к Интернету и повторите попытку." Comment="As_IT error - not connected to internet"/>
+    <Property name="Str_Admin_Error_1005" value="Неверный адрес электронной почты или пароль. Убедитесь, что адрес электронной почты указан верно. Если вы забыли пароль, щелкните ссылку выше для его восстановления. " Comment="As_IT error - Invalid email or pwd"/>
+    <Property name="Str_Admin_Error_1003" value="Указанная учетная запись не совпадает с учетной записью, созданной для загрузки продукта. Проверьте правильность учетной записи в сообщении с подтверждением заказа." Comment="As_IT error - Invalid account"/>
+    <Property name="Str_Admin_Error_0" value="Неизвестная ошибка"/>
+
+    <Property name="Str_FilesUse_Header" value="В вашей системе обнаружены следующие запущенные приложения."/>
+    <Property name="Str_FilesUse_Desc" value="Чтобы минимизировать потребность в перезагрузке компьютера, перед продолжением настоятельно рекомендуется закрыть эти приложения.&lt;br /&gt;&lt;br /&gt;Закройте эти приложения и нажмите кнопку &lt;b&gt;Повторить&lt;/b&gt;, чтобы продолжить."/>
+
+
+    <Property name="Str_Btn_Cancel" value="&lt;u&gt;О&lt;/u&gt;тмена"/>
+	<Property name="Str_Btn_Cancel_AccessKey" value="O"/>
+    <Property name="Str_Btn_Install" value="&lt;u&gt;У&lt;/u&gt;становить"/>
+	<Property name="Str_Btn_Install_AccessKey" value="У"/>
+    <Property name="Str_Btn_OK" value="&lt;u&gt;O&lt;/u&gt;K"/>
+	<Property name="Str_Btn_OK_AccessKey" value="O"/>
+    <Property name="Str_Btn_Finish" value="&lt;u&gt;Г&lt;/u&gt;отово"/>
+	<Property name="Str_Btn_Finish_AccessKey" value="Г"/>
+    <Property name="Str_Btn_Accept" value="&lt;u&gt;П&lt;/u&gt;ринимаю" />
+	<Property name="Str_Btn_Accept_AccessKey" value="П"/>
+    <Property name="Str_Btn_Agree" value="&lt;u&gt;П&lt;/u&gt;ринимаю"/>
+    <Property name="Str_Btn_Agree_AccessKey" value="П"/>
+    <Property name="Str_Btn_AgreeEnabled" value="&lt;u&gt;П&lt;/u&gt;ринимаю"/>
+    <Property name="Str_Btn_AgreeDisabled" value="&lt;u&gt;П&lt;/u&gt;ринимаю"/>
+    <Property name="Str_Btn_Back" value="&lt;u&gt;Н&lt;/u&gt;азад" />
+	<Property name="Str_Btn_Back_AccessKey" value="H"/>
+    <Property name="Str_Btn_Next" value="&lt;u&gt;Д&lt;/u&gt;алее" />
+	<Property name="Str_Btn_Next_AccessKey" value="Д"/>
+    <Property name="Str_Btn_Continue" value="П&lt;u&gt;р&lt;/u&gt;одолжить" />
+	<Property name="Str_Btn_Continue_AccessKey" value="P"/>
+    <Property name="Str_Btn_Change" value="&lt;u&gt;И&lt;/u&gt;зменить..." />
+	<Property name="Str_Btn_Change_AccessKey" value="И"/>
+    <Property name="Str_Btn_Change2" value="И&lt;u&gt;з&lt;/u&gt;зменить..." />
+	<Property name="Str_Btn_Change2_AccessKey" value="з"/>
+    <Property name="Str_Btn_Disagree" value="&lt;u&gt;H&lt;/u&gt;е принимаю"/>
+    <Property name="Str_Btn_Disagree_AccessKey" value="H"/>
+    <Property name="Str_Btn_Includes" value="Содержит:"/>
+    <Property name="Str_Btn_Path" value="Путь:" accesskey="P"/>
+    <Property name="Str_Btn_Retry" value="&lt;u&gt;П&lt;/u&gt;овторить" />
+	<Property name="Str_Btn_Retry_AccessKey" value="П"/>
+    <Property name="Str_Btn_Ignore" value="&lt;u&gt;И&lt;/u&gt;гнорировать" />
+	<Property name="Str_Btn_Ignore_AccessKey" value="И"/>
+    <Property name="Str_Btn_RelNotes" value="П&lt;u&gt;p&lt;/u&gt;имечания к выпуску" />
+	<Property name="Str_Btn_RelNotes_AccessKey" value="P"/>
+    <Property name="Str_Btn_Repair" value="&lt;u&gt;В&lt;/u&gt;осстановить" />
+	<Property name="Str_Btn_Repair_AccessKey" value="B"/>
+    <Property name="Str_Btn_Remove" value="&lt;u&gt;У&lt;/u&gt;далить" />
+	<Property name="Str_Btn_Remove_AccessKey" value="У"/>
+    <Property name="Str_Btn_Reset" value="&lt;u&gt;С&lt;/u&gt;брос" />
+	<Property name="Str_Btn_Reset_AccessKey" value="C"/>
+    <Property name="Str_Btn_RestartNow" value="&lt;u&gt;П&lt;/u&gt;ерезагрузить сейчас" />
+	<Property name="Str_Btn_RestartNow_AccessKey" value="П"/>
+    <Property name="Str_Btn_DoNotRestart" value="&lt;u&gt;Н&lt;/u&gt;е перезагружать" />
+	<Property name="Str_Btn_DoNotRestart_AccessKey" value="H"/>
+    <Property name="Str_Chk_EULA" value="A" comment="access key for eula checkbox"/>
+
+    <Property name="Pwd_Redirect" value="http://apps.corel.com/redirect?_redirect=command&amp;function=forgotpass&amp;app=all&amp;lang=RU"/>
+    
+    <Property name="Str.OutOfDiskSpace.Warning" value="Свободного места на диске меньше, чем требуется для установки." lang="English"/>
+
+  </Properties>
+</ICA>
+

@@ -1,0 +1,212 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:ICA="ICA">
+	<head>
+		<meta name="vs_showGrid" content="True" />
+		<title>Průvodce instalací – nápověda příkazového řádku</title>
+		<LINK href="../../_XX/Required/Style.css" type="text/css" rel="STYLESHEET" />
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1" />
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+		<meta name="ICADlg" 
+		      content="text/html" 
+		      id="ICADlg" 
+		      ICA:DlgHW="550,480" 
+		      ICA:DlgTitle="Setup.exe /? - command line help" 
+		      ICA:PromptForCancel="no" />
+		
+		<style type="text/css">
+    
+    	    .HelpTable
+		    {
+		        border-top-style: none;
+	            border-right-style: none;
+	            border-left-style: none;
+	            border-bottom-style: none;
+		    }
+		    
+            .HelpItem
+            {
+	            vertical-align: top;
+	            font-size: 14px;
+	            font-family: 'Segoe UI' , Tahoma;
+	            border-bottom: gray 1px solid;
+	            margin-top: 10px;
+	            margin-bottom: 10px;
+	            padding-top: 5;
+	            padding-bottom: 5;
+            }
+		</style>
+		
+	</head>
+	
+	<body>
+	
+	<div id="idContent"
+	     class="Panel"
+	     style="overflow: auto;
+	            padding: 5 5 5 5;
+	            border: double 3px silver;
+	            background-color: white;
+	            width: 450px;
+	            height: 440px; 
+	            text-align: left;">
+
+
+        <table id="idContentTable" cellspacing="0">
+        
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    Toto je stručná referenční příručka pro běžné příkazové řádky používané se souborem Setup.exe.<br /><br />
+                    Setup.exe /Možnost &lt;Požadovaný parametr&gt; [Volitelný parametr]
+                    <br /><br />
+                    <u>Možnosti instalace:</u>
+                </td>
+            </tr>
+                        
+            <tr> <!-- /a admin -->
+                <td class="HelpItem" style="width: 55px;">/a</td>
+                <td class="HelpItem">
+                    Signalizuje, že chcete vytvořit bitovou kopii na serveru. Administrativní instalace – instaluje produkt v síti
+                    <br /><br />
+                    Setup.exe /a
+                </td>
+            </tr>
+
+            <tr> <!-- /a /q(n) admin -->
+                <td class="HelpItem" style="width: 55px;">/a /q(n)</td>
+                <td class="HelpItem">
+                    Přepínač /q(n) v příkazových řádcích již nadále není podporován. Seznam podporovaných přepínačů najdete v nejnovější verzi příručky CorelDRAW Graphics Suite Deployment Guide.
+                    <br /><br />
+                    Setup.exe /a /q(n)
+                </td>
+            </tr>
+            
+            <tr> <!-- /s push profile ID -->
+                <td class="HelpItem" style="width: 55px;">/s</td>
+                <td class="HelpItem">
+                    Slouží k přenesení vlastnosti PROFILEID do pracovních stanic. Veřejná vlastnost PROFILEID slouží k přihlášení všech uživatelů k účtu prostřednictvím přenesení přihlašovacích údajů účtu do pracovních stanic.
+                    <br /><br />
+                    Setup.exe /s PROFILEID=XXXXXXXXXXXXXXX
+                </td>
+            </tr>            
+            <tr> <!-- /x uninstall -->
+                <td class="HelpItem" style="width: 55px;">/x <br /> /uninstall</td>
+                <td class="HelpItem">
+                    Signalizuje, že chcete software odinstalovat. Administrativní instalace – instaluje produkt v síti
+                    <br /><br />
+                    Setup.exe /x
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    <br /><br />
+                    <u>Možnosti zobrazení:</u>
+                </td>
+            </tr>
+            
+            <tr> <!-- /q silent -->
+                <td class="HelpItem" style="width: 55px;">/q[n|b|r|f]</td>
+                <td class="HelpItem">
+                    Určuje rozsah, v jakém se zobrazuje uživatelské rozhraní instalace.
+                    <br />
+                    n – žádné UR<br />
+            		b – základní UR<br />
+        		    r – omezené UR<br />
+		            f – úplné UR (výchozí)<br /><br />
+                    Setup.exe /q
+        		</td>
+            </tr>
+            
+            <tr> <!-- /q silent -->
+                <td class="HelpItem" style="width: 55px;">/quiet</td>
+                <td class="HelpItem">
+                    Tichý režim, žádná uživatelská interakce. Stejný jako /qn
+        		</td>
+            </tr>
+            
+            <tr> <!-- /q silent -->
+                <td class="HelpItem" style="width: 55px;">/passive</td>
+                <td class="HelpItem">
+                    Režim bez obsluhy – pouze indikátor průběhu. Stejný jako /qb
+        		</td>
+            </tr>
+            
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    <br /><br />
+                    <u>Možnosti protokolování:</u>
+                </td>
+            </tr>
+            
+            <tr> <!-- /l log -->
+                <td class="HelpItem" style="width: 55px;">/l[i|w|e|a|r|u|c|m|o|p|v|x|*]</td>
+                <td class="HelpItem">
+                    Zaznamenává do souboru protokolu obecné informace o instalaci. Pokud nezadáte cestu a název souboru, soubor protokolu se vytvoří v aktuální dočasné složce uživatele. <br /><br />
+                    i – stavové zprávy <br />
+            		w – nezávažná varování <br />
+            		e – všechny chybové zprávy <br />
+            		a – spuštění činností <br />
+            		r – záznamy specifické pro činnost <br />
+            		u – požadavky uživatele <br />
+            		c – počáteční parametry UR <br />
+            		m – informace o nedostatku paměti nebo o závažném ukončení <br />
+            		o – zprávy o nedostatku volného místa na disku <br />
+            		p – vlastnosti terminálu <br />
+            		v – verbalistický výstup <br />
+            		x – dodatečné informace o odstranění chyb <br />
+            		* – záznam všech informací kromě možností v a x <br /><br />
+            		Výchozí nastavení je /lvoicewarmup<br /><br />
+            		Setup.exe /l"C:\Install.log"
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    <br /><br />
+                    <u>Možnosti opravy:</u>
+                </td>
+            </tr>
+            
+            <tr> <!-- /a admin -->
+                <td class="HelpItem" style="width: 55px;">/f[p|e|c|m|s|o|d|a|u]</td>
+                <td class="HelpItem">
+                Opraví produkt.<br />
+                p – pouze pokud chybí soubor<br />
+		        o – pokud chybí soubor nebo je instalována starší verze (výchozí)<br />
+        		e – pokud chybí soubor nebo je instalována starší nebo odpovídající verze<br />
+		        d – pokud chybí soubor nebo je instalována jiná verze<br />
+        		c – pokud chybí soubor nebo kontrolní součet neodpovídá vypočítané hodnotě<br />
+		        a – vynutí opakovanou instalaci všech souborů<br />
+        		u – všechny požadované údaje registru specifické pro uživatele (výchozí)<br />
+		        m – všechny požadované údaje registru specifické pro počítač (výchozí)<br />
+        		s – všechny stávající zástupci (výchozí)<br />
+        		<br /><br />
+        		Výchozí nastavení je /foums<br /><br />
+        		Setup.exe /f
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    <br /><br />
+                    <u>Nastavení veřejných vlastností:</u><br /><br />
+                    [PROPERTY=PropertyValue]
+                </td>
+            </tr>
+        
+        </table> <!-- table id="idContentTable" -->
+
+    </div> <!-- id="idContent" -->
+
+	<div class="DlgBlock"
+	     style="text-align: right;
+	            width: 450px;
+	            top: 470px;">
+	            
+	    <button onclick="window.external.EndModalLoop(0);" ID="idOk" accesskey="O"><u>O</u>K</button>
+	    
+    </div>
+		
+	</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+
+<html xmlns:ICA="ICA">
+
+<head>
+    <title>eula</title>
+    <link href="Style.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="MSThemeCompatible" content="Yes"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta content="text/html" name="ICADlg" id="ICADlg" 
+         ICA:DlgHW="702,588" 
+          ICA:DlgFrame="0"
+          ICA:TransparencyColorRBG="51,52,53"
+          ICA:DisableBackspace="1"        
+          ICA:ProgressState="TBPF_NOPROGRESS"
+    />
+<script language="jscript" type="text/jscript" src="js/topics.js"></script>
+<script language="jscript" type="text/jscript" src="js/Setup.js"></script>
+
+
+<script language="jscript" type="text/jscript">
+    
+    var Setup = window.external;
+
+      
+    function OnBodyLoad()
+    {
+        
+        var sLang, pEl, sEula;
+        initPage(document.title);
+        //LoadLinks(id_Str_License_Read_EULA);
+        try
+        {
+            sLang       = Setup.GetProperty("SETUP_LANG").toUpperCase();
+            sEula       = "../../" + sLang + "/Custom/" + sLang + ".htm";
+            document.frames['idEula'].location.href = sEula;
+            idEula.src =  sEula;
+            idChkEULA.accessKey = Setup.GetProperty("Str.Chk.EULA");
+
+        } 
+        catch(err) { }        
+        
+    }
+
+
+    function OnClickNext()
+    {
+
+    	g_Setup.ExecuteFN('JS_AcceptEULA');
+	    var sLang = Setup.GetProperty("SETUP_LANG").toUpperCase();
+        var location = "SN.htm";
+
+        if (g_bCoExists)
+        {
+            location = "InstallChoose.htm";
+        }
+        else if (g_bIsAdminPackage)
+        {
+            location = "InstallChoose.htm";
+        }
+        else if (g_UseSNT)
+        {
+
+            location  = "SNT.htm";  
+        }
+        else if (g_bIsAdmin)
+        {
+            location  = "AdminSN.htm";          
+        }
+
+        window.location = location;		
+		
+	}
+  
+
+
+</script>
+
+<style type="text/css">
+    iframe
+    {
+        WIDTH: 100%; 
+        HEIGHT: 26em;
+        border: solid 1px dimgray;
+        background: white;
+        /*display: none;*/
+    }    
+
+      a
+      {
+          color: #339966;
+          cursor: pointer;
+      }
+      
+      a:hover
+      {
+          color: #339966;
+          cursor: pointer;
+      }
+      
+      a:active
+      {
+          color: #339966;
+          cursor: pointer;
+      }
+      
+      a:visited
+      {
+          color: #339966;
+          cursor: pointer;
+      }      
+
+</style>
+
+</head>
+<body onload="OnBodyLoad()">
+<div id="dpi"></div>
+    <!-- background -->
+    <div id="idBackGrd">
+<img src="Images/backgrd.png" class="stretch" />
+
+</div>
+	<img id="idBrandingLeft" name="BrandingLeft" src="Images/banner" />  
+    <img id="idClose" alt="" class="CloseBtn" src="Images/close.png" onmouseover="HighLightClose();" onmouseout="UnHighLightClose();" ICA:Function="ICACancelSetup" />
+    <div id="idDragMe" class="Dragable">&nbsp;&nbsp;&nbsp;</div>
+    <!-- page content panel -->
+    <div id="idPanel" >
+    
+        <div class="DlgHeaderLicense" id="id_Str_License_Header" style="top: 0em;"></div>
+        <!--
+        <div class="DlgBlock" id="id_Str_License_Desc" style="top: 4.06em;" ></div>
+        <div class="DlgBlock" id="id_DlgBlock_EULA" style="top: 7.81em;">
+		<div id="id_Str_License_Read_EULA" ></div>
+        </div> 
+        <div class="DlgBlock" style="top: 12.25em;">    
+         <input id="idChkEULA" class="geomsize" type="checkbox" name="AcceptLicense" onclick="OnCheck();">
+            <div class="DlgBlockLeft" id="idEULABox">   
+            <label for="idChkEULA">
+            	<span id="id_Str_License_Box"></span>
+            </label>
+            </div>
+         </div>
+         <div class="DlgBlock" style="top: 16.45em;">  
+            <div id="id_Str_License_Privacy_Desc" ></div>
+         </div>
+         -->
+         
+        <div class="DlgBlock" style="top: 4.06em;">
+            <iframe id="idEula" frameborder="0" ></iframe>
+        </div>
+        <div class="DlgBlock" style="top: 31.45em;">  
+            <div id="id_Str_License_Privacy_Desc" ></div>
+         </div>
+
+    </div> <!-- div id="idTabPanel" END -->
+
+    <!-- ------------------------------------------------------------ -->
+    <!-- <div> Wizard Buttons (at bottom of dialog) - START -->
+    <div class="DlgWizardBtns">
+        <table border="0" width="100%">
+            <tr>
+                
+                <td align="left">
+                   
+                </td> 
+                <td width="7.50em" align="left">
+                    <button type="button" id="id_Str_Btn_Disagree" ICA:Function="ICACancelSetup"  ></button>    
+                </td>
+                <td width="7.50em" align="right">
+                    <button type="button" class="Initiator"  onmouseover="HighLightButton('id_Str_Btn_Agree');" onmouseout="UnHighLightButton('id_Str_Btn_Agree');" id="id_Str_Btn_Agree" name="AcceptLicense" onclick="OnClickNext();" ></button>              
+                </td>
+                
+            </tr>
+        </table>
+    </div>  <!-- <div class="DlgBlock"> Wizard Buttons (at bottom of dialog) - END -->
+
+</body>
+</html>

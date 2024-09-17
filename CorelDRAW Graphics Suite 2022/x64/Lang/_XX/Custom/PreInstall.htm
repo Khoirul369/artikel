@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" >
+<!-- saved from url=(0014)about:internet -->
+
+<html xmlns:ICA="ICA">
+<head>
+    <title>dotNet</title>
+    <link href="Style.css" rel="stylesheet" type="text/css" />
+    <meta http-equiv="MSThemeCompatible" content="Yes"/>
+    <meta content="text/html" name="ICADlg" id="ICADlg" 
+  ICA:DlgHW="702,588" 
+          ICA:DlgFrame="0"
+          ICA:TransparencyColorRBG="51,52,53"
+
+          ICA:ShadowGraphicTransparency="255"
+    />
+    <script type="text/jscript" language="jscript" src="js/topics.js"></script>
+    <script language="jscript" type="text/jscript" src="js/Setup.js"></script>               
+    <script language="jscript" type="text/jscript">
+    
+        function OnBodyLoad()
+        {
+            
+            var Setup   = window.external;
+            var pEl     = null;
+            var bkColor = "#91be44";
+            
+            initPage(document.title);
+			ConfigLocUI();
+
+            try
+            {
+                if ("1" == Setup.GetProperty("InstallMsiEngine"))
+                {
+                    pEl = document.getElementById("idMsiEng")
+                    if (null != pEl)
+                        pEl.style.display = "block";
+                }
+                               
+
+                if ("DotNET" == Setup.GetProperty("NETVersion"))
+                {
+                    pEl = document.getElementById("idNet")
+                    if (null != pEl)
+                        pEl.style.display = "block";
+                }                
+                
+                if ("DotNETDnld" == Setup.GetProperty("NETVersion"))
+                {
+                    pEl = document.getElementById("idNetDnld")
+                    if (null != pEl)
+                        pEl.style.display = "block";
+                }
+                               
+            }
+            catch (err) {}
+            
+
+            
+        } //OnBodyLoad()
+		function ConfigLocUI()
+		{
+			if ((g_sLang == "DE")||(g_sLang == "JP")||(g_sLang == "RU"))
+			{
+	
+				id_Str_PreInstall_Windows_Updates.style.top = "10.5em";
+				idPrereqBlock.style.top = "15.75em";
+			}
+	
+		}	     
+    </script>
+    
+</head>
+
+<body onload="OnBodyLoad();">
+<div id="dpi"></div>
+    <!-- background -->
+    <div id="idBackGrd">
+<img src="Images/backgrd.png" class="stretch" />
+
+</div>
+	<img id="idBrandingLeft" name="BrandingLeft" src="Images/banner" />  
+    <img id="idClose" alt="" class="CloseBtn" src="Images/close.png" onmouseover="HighLightClose();" onmouseout="UnHighLightClose();" ICA:Function="ICACancelSetup" />
+	<div id="idDragMe" class="Dragable">&nbsp;&nbsp;&nbsp;</div>
+    
+    <!-- ------------------------------------------------------------ -->
+    <!-- page content panel -->
+    <div id="idPanel">
+    
+        <div class="DlgHeader" id="id_Str_PreInstall_Header"></div>
+             
+        <div class="DlgBlock" id="id_Str_PreInstall_Desc" style="top: 4.06em;"></div>
+        <div class="DlgBlock" id="id_Str_PreInstall_Windows_Updates" style="top: 9em;"></div>        
+        
+        <div class="DlgBlock" id="idPrereqBlock" style="top: 14.25em;
+                                     BORDER-LEFT-COLOR: silver; BORDER-BOTTOM-COLOR: silver; 
+                                     BORDER-TOP-COLOR: silver; BORDER-RIGHT-COLOR: silver;
+                                     BORDER-TOP-STYLE: double; BORDER-RIGHT-STYLE: double;
+                                     BORDER-LEFT-STYLE: double; BORDER-BOTTOM-STYLE: double;
+                                     background-color: #ffffff;
+                                     height: 14.06em;">
+            
+            <div style="margin: 0.63em; width: 31.25em;">
+                <div id="id_Str_PreInstall_Desc2" style="font-weight: bold; text-decoration: underline; color: #4f4f4f;"></div>
+                
+                <br />
+                
+			    <div id="idNet" style="display: none; color: #4f4f4f;">
+	        	    <div class="DlgBlock" style="left: 0.75em;"><input type="checkbox" class="geomsize" disabled checked /></div>
+	        	    <div class="DlgBlock" id="id_Str_PreInstall_Net" style="left: 2.19em; width: 31.25em;"></div>
+                    
+                </div>
+	        	<div id="idNetDnld" style="display: none; color: #4f4f4f;">
+	        	    <div class="DlgBlock" style="left: 0.75em;"><input type="checkbox" class="geomsize" disabled checked /></div>
+                    <div class="DlgBlock" id="id_Str_PreInstall_NetDnld" style="left: 2.19em; width: 31.25em;"></div>
+                </div>
+                
+                <div id="idMsiEng" style="display: none; color: #4f4f4f;">
+                    <div class="DlgBlock" style="left: 0.75em;"><input type="checkbox" class="geomsize" disabled checked /></div>
+                    <div class="DlgBlock" id="id_Str_PreInstall_Msi" style="left: 2.19em; width: 31.25em;"></div>
+                    
+                </div>
+                                       
+                <br />
+
+            </div>
+        </div>
+    
+    </div> <!-- div id="idTabPanel" END -->
+
+<!-- ------------------------------------------------------------ -->
+<!-- <div> Wizard Buttons (at bottom of dialog) - START -->
+<div class="DlgWizardBtns">
+    <table border="0" width="100%">
+        <tr>
+        
+          <td align="left">
+              <button type="button" ICA:Function="ICACancelSetup" ID="id_Str_Btn_Cancel" ></button>
+          </td>
+            <td width="7.50em" align="right">
+                <button class="Initiator" onmouseover="HighLightButton('id_Str_Btn_Continue');" onmouseout="UnHighLightButton('id_Str_Btn_Continue');"  onclick="window.external.EndModalLoop(11);" id="id_Str_Btn_Continue" ></button>
+            </td>
+
+        </tr>
+    </table>
+</div>  <!-- <div class="DlgBlock"> Wizard Buttons (at bottom of dialog) - END -->
+
+</body>
+</html>

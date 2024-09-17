@@ -1,0 +1,212 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:ICA="ICA">
+	<head>
+		<meta name="vs_showGrid" content="True" />
+		<title>Setup Wizard - Command Line Help</title>
+		<LINK href="../../_XX/Required/Style.css" type="text/css" rel="STYLESHEET" />
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1" />
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+		<meta name="ICADlg" 
+		      content="text/html" 
+		      id="ICADlg" 
+		      ICA:DlgHW="550,480" 
+		      ICA:DlgTitle="Setup.exe /? - command line help" 
+		      ICA:PromptForCancel="no" />
+		
+		<style type="text/css">
+    
+    	    .HelpTable
+		    {
+		        border-top-style: none;
+	            border-right-style: none;
+	            border-left-style: none;
+	            border-bottom-style: none;
+		    }
+		    
+            .HelpItem
+            {
+	            vertical-align: top;
+	            font-size: 14px;
+	            font-family: 'Segoe UI' , Tahoma;
+	            border-bottom: gray 1px solid;
+	            margin-top: 10px;
+	            margin-bottom: 10px;
+	            padding-top: 5;
+	            padding-bottom: 5;
+            }
+		</style>
+		
+	</head>
+	
+	<body>
+	
+	<div id="idContent"
+	     class="Panel"
+	     style="overflow: auto;
+	            padding: 5 5 5 5;
+	            border: double 3px silver;
+	            background-color: white;
+	            width: 450px;
+	            height: 440px; 
+	            text-align: left;">
+
+
+        <table id="idContentTable" cellspacing="0">
+        
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    <Loc>これは、Setup.exe で使用する一般的なコマンドラインのクイック リファレンス ガイドです。<br /><br />
+                    Setup.exe / オプション &lt;必須パラメータ&gt; </Loc>[Optional Parameter]
+                    <br /><br />
+                    <u><Loc>インストール オプション:</Loc></u>
+                </td>
+            </tr>
+                        
+            <tr> <!-- /a admin -->
+                <td class="HelpItem" style="width: 55px;">/a</td>
+                <td class="HelpItem">
+                    <Loc>サーバー イメージの作成を指定します。管理インストール - 製品をネットワーク上にインストールします。</Loc>
+                    <br /><br />
+                    <Loc>Setup.exe /a</Loc>
+                </td>
+            </tr>
+
+            <tr> <!-- /a /q(n) admin -->
+                <td class="HelpItem" style="width: 55px;">/a /q(n)</td>
+                <td class="HelpItem">
+                    コマンドラインの「/q(n)」スイッチのサポートは終了しています。サポートされているスイッチについては、CorelDRAW Graphics SuiteのDeployment Guide（展開ガイド）の最新版をご確認ください。
+                    <br /><br />
+                    Setup.exe /a /q(n)
+                </td>
+            </tr>
+
+            <tr> <!-- /s push profile ID -->
+                <td class="HelpItem" style="width: 55px;">/s</td>
+                <td class="HelpItem">
+                    PROFILEID をワークステーションにプッシュする場合に使用します。PROFILEID パブリック プロパティは、アカウント認証情報をワークステーションにプッシュして、すべてのユーザーをアカウントにサイン インする場合に使用します。
+                    <br /><br />
+                    Setup.exe /s PROFILEID=XXXXXXXXXXXXXXX
+                </td>
+            </tr>            
+            <tr> <!-- /x uninstall -->
+                <td class="HelpItem" style="width: 55px;">/x <br /> /uninstall</td>
+                <td class="HelpItem">
+                    <Loc>ソフトウェアのアンインストールを指定します。管理インストール - 製品をネットワーク上にインストールします。</Loc>
+                    <br /><br />
+                    <Loc>Setup.exe /x</Loc>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    <br /><br />
+                    <u>Display Options:</u>
+                </td>
+            </tr>
+            
+            <tr> <!-- /q silent -->
+                <td class="HelpItem" style="width: 55px;">/q[n|b|r|f]</td>
+                <td class="HelpItem">
+                    <Loc>インストール時に表示するユーザー インタフェースのレベルを設定します。</Loc>
+                    <br />
+                    <Loc>n - UI なし</Loc><br />
+            		<Loc>b - 標準 UI</Loc><br />
+        		    <Loc>r - 簡略 UI</Loc><br />
+		            <Loc>f - フル UI (デフォルト)</Loc><br /><br />
+                    <Loc>Setup.exe /q</Loc>
+        		</td>
+            </tr>
+            
+            <tr> <!-- /q silent -->
+                <td class="HelpItem" style="width: 55px;">/quiet</td>
+                <td class="HelpItem">
+                    <Loc>自動モード、ユーザー操作なし。/qn と同じです。</Loc>
+        		</td>
+            </tr>
+            
+            <tr> <!-- /q silent -->
+                <td class="HelpItem" style="width: 55px;">/passive</td>
+                <td class="HelpItem">
+                    <Loc>無人モード、進行状況バーのみ。/qb と同じです。</Loc>
+        		</td>
+            </tr>
+            
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    <br /><br />
+                    <u><Loc>ログイン オプション:</Loc></u>
+                </td>
+            </tr>
+            
+            <tr> <!-- /l log -->
+                <td class="HelpItem" style="width: 55px;">/l[i|w|e|a|r|u|c|m|o|p|v|x|*]</td>
+                <td class="HelpItem">
+                    <Loc>インストールに関する一般情報をログ ファイルに記録します。パスとファイル名を指定しない場合、ログ ファイルは現在のユーザーの一時フォルダに作成されます。</Loc> <br /><br />
+                    <Loc>i - ステータス メッセージ</Loc> <br />
+            		<Loc>w - 致命的でない警告</Loc> <br />
+            		<Loc>e - すべてのエラー メッセージ</Loc> <br />
+            		<Loc>a - 動作の開始</Loc> <br />
+            		<Loc>r - 動作に固有の記録</Loc> <br />
+            		<Loc>u - ユーザーのリクエスト</Loc> <br />
+            		<Loc>c - UI の初期パラメータ</Loc> <br />
+            		<Loc>m - メモリ不足、または致命的な終了の情報</Loc> <br />
+            		<Loc>o - ディスク容量不足のメッセージ</Loc> <br />
+            		<Loc>p - ターミナルのプロパティ</Loc> <br />
+            		<Loc>v - 冗長出力</Loc> <br />
+            		<Loc>x - 追加のデバッグ情報</Loc> <br />
+            		<Loc>* - v と x のオプション以外のすべての情報を記録</Loc> <br /><br />
+            		<Loc>デフォルトは /lvoicewarmup</Loc><br /><br />
+            		<Loc>Setup.exe /l"C:\Install.log"</Loc>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    <br /><br />
+                    <u><Loc>修復オプション:</Loc></u>
+                </td>
+            </tr>
+            
+            <tr> <!-- /a admin -->
+                <td class="HelpItem" style="width: 55px;">/f[p|e|c|m|s|o|d|a|u]</td>
+                <td class="HelpItem">
+                <Loc>製品を修復します。</Loc><br />
+                <Loc>p - ファイルが見つからない場合のみ</Loc><br />
+		        <Loc>o - ファイルが見つからないか、旧バージョンがインストールされている場合 (デフォルト)</Loc><br />
+        		<Loc>e - ファイルが見つからないか、現行バージョンまたは旧バージョンがインストールされている場合</Loc><br />
+		        <Loc>d - ファイルが見つからないか、別のバージョンがインストールされている場合</Loc><br />
+        		<Loc>c - ファイルが見つからないか、チェックサムが計算値と一致しない場合</Loc><br />
+		        <Loc>a - すべてのファイルを強制再インストール</Loc><br />
+        		<Loc>u - 必須のユーザー固有のレジストリ エントリすべて (デフォルト)</Loc><br />
+		        <Loc>m - 必須のコンピュータ固有のレジストリ エントリすべて (デフォルト)</Loc><br />
+        		<Loc>s - 既存のショートカットすべて (デフォルト)</Loc><br />
+        		<br /><br />
+        		<Loc>デフォルトは /foums</Loc><br /><br />
+        		<Loc>Setup.exe /f</Loc>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    <br /><br />
+                    <u><Loc>パブリックのプロパティの設定:</Loc></u><br /><br />
+                    [PROPERTY=PropertyValue]
+                </td>
+            </tr>
+        
+        </table> <!-- table id="idContentTable" -->
+
+    </div> <!-- id="idContent" -->
+
+	<div class="DlgBlock"
+	     style="text-align: right;
+	            width: 450px;
+	            top: 470px;">
+	            
+	    <button onclick="window.external.EndModalLoop(0);" ID="idOk" accesskey="O"><Loc>OK(<u>O</u>)</Loc></button>
+	    
+    </div>
+		
+	</body>
+</html>

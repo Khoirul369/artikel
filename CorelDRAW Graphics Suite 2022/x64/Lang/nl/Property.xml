@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ICA lang="NL">
+	<Properties>
+    <Property name="Str.ProductDisplayName" value="CorelDRAW Graphics Suite"/>
+    <Property name="Str.SetupAlreadyRunning" value="Setup.exe wordt momenteel al uitgevoerd."/> 
+		<Property name="Str.CancelSetupPrompt" value="Weet u zeker dat u de installatie van %s wilt annuleren?" comment="if %s is used in the string, it will be replaced with [Str.ProductDisplayName]"/>
+    <Property name="Str.CouldNotOpenCore" value="Er is tijdens de installatie een probleem opgetreden bij het configureren van de software. Geen toegang tot bestand: %s Wilt u doorgaan?" comment="string displayed to the user if the core .msi could not be opened during initalization -- %s MUST be in the string, it is replaced with the reason for failure"/>
+    <Property name="Str.NoFolderAccess" value="Geen toegang tot de map %s" comment="%s is replaced with the folder name"/>
+    <Property name="Str.PathTooLong" value="Het pad naar de installatiemap van %s is beperkt tot een maximum van %s tekens. Selecteer a.u.b. een andere bestemming." comment="first %s is replaced with [Str.ProductDisplayName] -- second %s is replaced with [MAX_PATH]"/>
+    <Property name="Str.Initializing.Text" value="Even wachten..."/>
+    <Property name="Str.Initializing.Text.Cancelling" value="Bewerking wordt afgebroken ..."/>
+		<Property name="Str.Feature.MainApp" value="CorelDRAW Graphics Suite"/> 
+    
+    <Property name="Str.Feature.Utilities.VSTA.Desc.WithVS9" value="Deze functie installeert ondersteuning voor Visual Studio Tools for Applications (als Visual Studio 2008 SP1 geïnstalleerd is)."/>
+		
+    <Property name="Str.Feature.Programs64" value="64-bits programmabestanden"/>
+    <Property name="Str.Feature.Programs64.Desc" value="64-bits programmabestanden"/>
+    <Property name="Str.DestinationFolder" value="Bladeren om de doelmap te vinden."/>
+    <Property name="Str.SerialNotValid" value="Het serienummer is ongeldig."/>
+
+
+    <Property name="Str.ProgressText.Default" value="%d%% voltooid" comment="this is the default progress text, you can override it using 'progresstext' attribute on the msi or dbm node -- optional %d%% is populated with the percent complete"/>
+    <Property name="Str.Running.VBA.exe.text" value="Wacht even op de configuratie van Visual Basic for Applications"/>
+    <Property name="Str.CacheSetupSource.Progress.text" value="De installatiebestanden worden voorbereid. Een ogenblik geduld"/>
+
+    <Property name="Str.Text.RequiredFeature" value="(Vereist)"/>
+	<Property name="Str.ProgressText.CopyingPatches" value="Patchbestand kopiëren: "/>
+    <Property name="Str.ProgressText.Common" value="%d%% Voltooid - CorelDRAW Graphics Suite wordt geconfigureerd"/>
+    <Property name="Str.ProgressText.Capture" value="%d%% Voltooid - Corel CAPTURE wordt geconfigureerd"/>
+    <Property name="Str.ProgressText.Draw" value="%d%% Voltooid - CorelDRAW wordt geconfigureerd"/>
+    <Property name="Str.ProgressText.Paint" value="%d%% Voltooid - Corel PHOTO-PAINT wordt geconfigureerd"/>
+    <Property name="Str.ProgressText.CS" value="%d%% voltooid - Configuratie van CorelDRAW Graphics Suite-taalmodule voor Chinees vereenvoudigd"/>
+    <Property name="Str.ProgressText.CT" value="%d%% voltooid - Configuratie van CorelDRAW Graphics Suite-taalmodule voor Chinees traditioneel"/>
+    <Property name="Str.ProgressText.CZ" value="%d%% voltooid - Configuratie van CorelDRAW Graphics Suite-taalmodule voor Tsjechisch"/>
+    <Property name="Str.ProgressText.NL" value="%d%% voltooid - Configuratie van CorelDRAW Graphics Suite-taalmodule voor Nederlands"/>
+    <Property name="Str.ProgressText.EN" value="%d%% voltooid - Configuratie van CorelDRAW Graphics Suite-taalmodule voor Engelse"/>
+    <Property name="Str.ProgressText.FR" value="%d%% voltooid - Configuratie van CorelDRAW Graphics Suite-taalmodule voor Frans"/>
+    <Property name="Str.ProgressText.DE" value="%d%% voltooid - Configuratie van CorelDRAW Graphics Suite-taalmodule voor Duits"/>
+    <Property name="Str.ProgressText.IT" value="%d%% voltooid - Configuratie van CorelDRAW Graphics Suite-taalmodule voor Italiaans"/>
+    <Property name="Str.ProgressText.JP" value="%d%% voltooid - Configuratie van CorelDRAW Graphics Suite-taalmodule voor Japans"/>
+    <Property name="Str.ProgressText.PL" value="%d%% voltooid - Configuratie van CorelDRAW Graphics Suite-taalmodule voor Pools"/>
+    <Property name="Str.ProgressText.BR" value="%d%% voltooid - Configuratie van CorelDRAW Graphics Suite-taalmodule voor Braziliaans-Portugees"/>
+    <Property name="Str.ProgressText.RU" value="%d%% voltooid - Configuratie van CorelDRAW Graphics Suite-taalmodule voor Russisch"/>
+    <Property name="Str.ProgressText.ES" value="%d%% voltooid - Configuratie van CorelDRAW Graphics Suite-taalmodule voor Spaans"/>
+    <Property name="Str.ProgressText.TR" value="%d%% voltooid; Het Turkse taalpakket van CorelDRAW Graphics Suite configureren"/>
+	<Property name="Str.ProgressText.SV" value="%d%% Voltooid - CorelDRAW Graphics Suite wordt geïnstalleerd Zweeds pakket"/>
+    <Property name="Str.ProgressText.FontManager" value="%d%% Voltooid - Corel Font Manager wordt geconfigureerd"/>
+    <Property name="Str.ProgressText.VBA" value="%d%% Voltooid - Microsoft Visual Basic for Applications wordt geconfigureerd"/>
+    <Property name="Str.ProgressText.VSTA" value="Microsoft Visual Studio Tools for Applications installeren"/>
+	<Property name="Str.ProgressText.WebView" value="Microsoft Edge WebView2 Runtime wordt geïnstalleerd" />
+    <Property name="Str.ProgressText.VC" value="Microsoft Visual C++ Redistributable Packages for Visual Studio 2019 installeren"/>
+    <Property name="Str.ProgressText.DotNet" value="Microsoft .NET Framework 4.7.2 installeren"/>
+    <Property name="Str.ProgressText.ShellExt" value="%d%% Voltooid - Corel Windows-uitbreiding wordt geconfigureerd"/>
+    <Property name="Str.ProgressText.RemoveAll" value="%d%% voltooid - CorelDRAW Graphics Suite deïnstalleren" />
+    <Property name="Str.Feature.Lang" value="Producttalen "/>
+    <Property name="Str.Feature.Lang.CS" value="Chinees (vereenvoudigd)"/>
+    <Property name="Str.Feature.Lang.CT" value="Chinees (traditioneel)"/>
+    <Property name="Str.Feature.Lang.CZ" value="Tsjechisch"/>
+    <Property name="Str.Feature.Lang.NL" value="Nederlands"/>
+    <Property name="Str.Feature.Lang.EN" value="Engels"/>
+    <Property name="Str.Feature.Lang.FR" value="Frans"/>
+    <Property name="Str.Feature.Lang.DE" value="Duits"/>
+    <Property name="Str.Feature.Lang.IT" value="Italiaans"/>
+    <Property name="Str.Feature.Lang.JP" value="Japans"/>
+    <Property name="Str.Feature.Lang.PL" value="Pools"/>
+    <Property name="Str.Feature.Lang.BR" value="Portugees"/>
+    <Property name="Str.Feature.Lang.RU" value="Russisch"/>
+    <Property name="Str.Feature.Lang.ES" value="Spaans"/>
+    <Property name="Str.Feature.Lang.TR" value="Turks"/>
+	<Property name="Str.Feature.Lang.SV" value="Zweeds"/>
+    <Property name="SETUP_LANG" value="NL"/>
+    <Property name="ICA.Lang.Transform" value="1043.mst"/>
+
+
+    <Property name="Str.Error.20000" value="Het serienummer is ongeldig."/>
+    <Property name="Str.Error.30000" value="BELANGRIJK: u kunt CorelDRAW Graphics Suite niet installeren als Microsoft .NET Framework 4.7.2 niet geïnstalleerd is. Meer informatie over Microsoft .NET Framework vindt u op de website van Microsoft..  &lt;a href='https://www.microsoft.com/en-us/download/details.aspx?id=48137' target='_blank' onclick='window.external.EndModalLoop(0);'&gt;http://www.microsoft.com/NET/&lt;/a&gt;"/>
+    <Property name="Str.Error.30001" value="De processor van deze computer voldoet niet aan de minimale systeemvereisten voor de software. De installatie kan niet worden voltooid."/>
+    <Property name="Str.Error.30003" value="U hebt niet voldoende gebruikersrechten om deze installatie te voltooien. Deze installatie vereist beheerders- of uitgebreide rechten. Neem contact op met de systeembeheerder en voer deze installatie opnieuw uit."/>
+    <Property name="Str.Error.30004" value="BELANGRIJK: u kunt CorelDRAW Graphics Suite niet installeren als Microsoft .NET Framework 4.7.2 niet geïnstalleerd is. Meer informatie over Microsoft .NET Framework vindt u op de website van Microsoft. 'https://www.microsoft.com/en-us/download/details.aspx?id=48137' - http://www.microsoft.com/NET/"/>
+    <Property name="Str.Error.30005" value="De 64-bits versie van CorelDRAW Graphics Suite kan niet op een 32-bits systeem worden geïnstalleerd."/>
+	<Property name="Str.Error.5100" value="De installatie kan niet worden voortgezet omdat de computer vanwege een eerdere installatie opnieuw moet worden gestart. Start uw computer opnieuw op en voer de installatie opnieuw uit."/>
+<!--Coexistence Scenarios -->
+    <Property name="Str.Error.1638" value="U kunt dit product niet installeren, omdat er al een andere versie is geïnstalleerd. Om dit product te kunnen installeren, moet u eerst de bestaande versie verwijderen. Klik op Voltooien om de installatie af te sluiten." comment="Pink"/>
+    <Property name="Str.Error.30500" value="Een nieuwere versie van deze toepassing is reeds op uw computer geïnstalleerd. Als u deze versie wilt installeren, dient u eerst de nieuwere versie te verwijderen. "/>
+    <Property name="Str.Error.30504" value="CorelDRAW Essentials en CorelDRAW Home and Student kunnen niet op dezelfde computer worden geïnstalleerd. Uw systeem is niet gewijzigd.  Als u dit product wilt installeren, moet u eerst het huidige CorelDRAW-product verwijderen." comment="Rust"/>
+    <Property name="Str.Error.30508" value="U kunt dit product niet installeren omdat het al geïnstalleerd is. Als u de installatie van 32-bits of 64-bits wilt wijzigen, moet u eerst de bestaande versie verwijderen." coment="baby blue"/>
+    <Property name="Str.Error.30509" value="U kunt deze probeerversie niet installeren, omdat CorelDRAW Graphics Suite al is geïnstalleerd. Als u deze probeerversie wilt installeren, moet u eerst het huidige product verwijderen." comment="purple"/>
+    <Property name="Str.CDTS.PromptForUpgrade" value="CorelDRAW Graphics Suite is op uw computer gedetecteerd. CorelDRAW Technical Suite biedt alle functies van CorelDRAW Graphics Suite, en nog veel meer.\n\nKlik op OK voor een upgrade naar CorelDRAW Technical Suite. \n\nKlik op Annuleren als u geen upgrade naar CorelDRAW Technical Suite wilt uitvoeren." comment="dark blue"/>
+    
+    <Property name="Str.Error.35001" value="&lt;b&gt;Details:&lt;/b&gt;&lt;br /&gt;Kan het serienummer niet verifiëren. Er is een internetverbinding vereist om de installatie te voltooien.&lt;br /&gt;&lt;br /&gt;"/>
+   <Property name="Str.Error.30510" value="Uw besturingssysteem beschikt niet over de nieuwste updates, waardoor we niet verder kunnen gaan met de installatie. Installeer de meest recente updates voor Windows 7 en probeer het opnieuw." comment="OS Not Supported"/>
+    <Property name="Str.Error.30512" value="Een internetverbinding is vereist. Verbind met internet en probeer het opnieuw."/>
+	<Property name="Str.Error.30511" value="Fout: Er is een onverwachte fout op de server opgetreden. Controleer uw internetverbinding en probeer het opnieuw."/>
+	<Property name="Str.Error.30516" value="Microsoft .NET Framework 4.7.2 kan niet worden geïnstalleerd. Dit wordt vereist door CorelDRAW Graphics Suite. Zorg ervoor dat uw besturingssysteem beschikt over de nieuwste servicepacks en updates, en probeer het opnieuw.&lt;br /&gt;&lt;br /&gt;Voor informatie over Microsoft .NET Framework 4.7.2 gaat u naar de website van Microsoft. &lt;a href='https://www.microsoft.com/en-us/download/details.aspx?id=48137' target='_blank' onclick='window.external.EndModalLoop(0);'&gt;http://www.microsoft.com/NET/&lt;/a&gt;" comment="Custom .NET error"/>
+	<Property name="Str.Error.30513" value="CorelDRAW Graphics Suite kan niet op Windows XP of Windows Vista worden geïnstalleerd. Upgrade het besturingssysteem op uw computer en probeer het opnieuw." comment="OS Not Supported"/>
+	<Property name="Str.Error.30515" value="Dit serienummer kan niet worden gebruikt om uw proefversie te activeren. Meld u aan bij uw Corel Account om uw versie te downloaden vanaf &lt;a href='http://www.corel.com' target='_blank' &gt;Downloads voor Leden en Klanten&lt;/a&gt;."/>
+	<Property name="Str.Error.30517" value="Internet Explorer 11 is vereist om dit product te installeren. Zorg ervoor dat uw besturingssysteem beschikt over de meest recente updates en servicepacks en probeer het opnieuw." comment="IE8 Not Supported" />
+    <Property name="Str.Error.30518" value="Uw besturingssysteem beschikt niet over de nieuwste updates, waardoor we niet verder kunnen gaan met de installatie. Installeer de meest recente updates voor Windows 8 en probeer het opnieuw." comment="Win8 Not Supported"/>
+    <Property name="Str.Error.30519" value="CorelDRAW Graphics Suite kan niet worden geïnstalleerd op Windows 7 of Windows 8. U kunt het besturingssysteem van uw computer upgraden en het opnieuw proberen." />
+    <Property name="Str.Error.30520" value="Deze versie van de software kan niet worden ingezet op een netwerk. Voor informatie over het installeren van de software op een netwerk, zie de Deployment Guide." />
+    <Property name="Str.Error.30522" value="Het serienummer kan niet worden gebruikt om dit abonnement exclusief voor de release van CorelDRAW Graphics Suite te Installeren." />
+        
+    <Property name="Str.DiskSpace.Bytes" value="bytes"/>
+    <Property name="Str.DiskSpace.Kb" value="Kb"/>
+    <Property name="Str.DiskSpace.MB" value="MB"/>
+    <Property name="Str.DiskSpace.GB" value="GB"/>
+    <Property name="Str.DiskSpace.TB" value="TB"/>
+    <Property name="Str.DiskSpace.RequiredString" value="%s van %s vereist op station %s"/>
+    <Property name="Str.UpgradeProgressText" value="Bezig met het verwijderen van toepassingen "/>
+
+    <Property name="Str.Feature.Filters.GhostscriptGPL" value="GPL Ghostscript"/>
+    <Property name="Str.Feature.Filters.GhostscriptGPL.Installed.Text" value="&lt;b&gt;GPL Ghostscript (reeds geïnstalleerd)&lt;/b&gt;"/>
+
+    <Property name="Str.PrerequisiteReboot.Prompt" value="Het systeem moet opnieuw worden opgestart om de installatie voort te zetten.\n\nKlik op Ja om nu opnieuw op te starten of op Nee als u de computer op een later tijdstip handmatig opnieuw wilt opstarten."/>
+    
+
+    <Property name="Str.Required.Dlg.InstallComplete" value="Installatie voltooid"/>
+
+    <Property name="billboard_01.png" value="" />
+    <Property name="billboard_02.png" value="" />
+    <Property name="billboard_03.png" value="Gemaakt met Corel Content, onderdeel van 2021"/>
+    <Property name="billboard_04.png" value="" />
+
+    <Property name="Str_Init_InitSetup" value="Installatie starten"/>
+    <Property name="Str_Init_PleaseWait" value="Even wachten..."/>
+    <Property name="Str_License_Header" value="Als u door wilt gaan met het installeren van deze software, moet u akkoord gaan met de algemene voorwaarden van de Corel End User License Agreement (EULA)."/>
+    <Property name="Str_License_Privacy_Desc" value="We respecteren uw privacy. Klik &lt;a href='http://www.corel.com/privacy/' target='_blank'&gt;hier&lt;/a&gt; om ons privacybeleid te bekijken." />
+    <Property name="Str_License_Tooltip" value="U moet de voorwaarden van de licentieovereenkomst accepteren voordat u verder kunt gaan."/>
+    <Property name="Str_SN_Header" value="Voer uw gegevens in."/>
+    <Property name="Str_SN_User" value="Volledige naam:"/>
+    <Property name="Str_SN_SN" value="Serienummer:"/>
+    <Property name="Str_SN_Hint" value="Als u uw product al online hebt geïnstalleerd en geregistreerd, vindt u het serienummer in uw &lt;a href='http://apps.corel.com/redirect/?_redirect=command&amp;function=registeredproducts&amp;app=all&amp;subfunction=ipm&amp;lang=nl' target='_blank'&gt;Corel account&lt;/a&gt;. Als u hulp nodig hebt om uw serienummer te vinden, gaat u naar het &lt;a href='http://www.corel.com/installcenter' target='_blank'&gt;Corel Install Center&lt;/a&gt;."/>
+    <Property name="Str_SNT_SNInput" value="Ik heb een serienummer."/>
+    <Property name="Str_SNT_SNInputDesc" value="Kies deze optie als u het product of een abonnement voor het product hebt aangeschaft, of een serienummer van een partner hebt."/>
+    <Property name="Str_SNT_NoSN" value="Ik heb geen serienummer en wil het product uitproberen."/>
+    <Property name="Str_SNT_NoSNDesc" value="Kies deze optie om het volledig functionele product gedurende een beperkte tijd uit te proberen. Als de probeerperiode teneinde loopt, blijft slechts een beperkt aantal functies beschikbaar."/>
+    
+    <Property name="Str_InstallChoose_Header" value="Kies een installatieoptie."/>
+    <Property name="Str_InstallChoose_InstallLink" value="Typische installatie" />
+    <Property name="Str_InstallChoose_InstallDesc" value="Deze optie installeert de software op een standaardlocatie met de meeste programma's en opties."/>
+    <Property name="Str_InstallChoose_InstallSize" value="Grootte van de installatie: "/>
+    <Property name="Str_InstallChoose_InstallSize2" value=" zijn beschikbaar)"/>
+    <Property name="Str_InstallChoose_CustomLink" value="Aangepaste installatie ..." />
+    <Property name="Str_InstallChoose_CustomDesc" value="Met deze optie kunt u kiezen hoe de software wordt geïnstalleerd."/>
+    <Property name="Str_InstallChoose_AdminLink" value="Implementatie..." />
+    <Property name="Str_InstallChoose_AdminDesc" value="Met deze optie kunt u een serverimage maken voor het installeren van de software op afzonderlijke werkstations."/>
+    <Property name="Str_InstallChoose_AdminOnlineLink" value="Installeren met internetfuncties aan"/>
+    <Property name="Str_InstallChoose_AdminOnlineDesc" value="Met deze optie kunt u een serverimage maken om de software te installeren op afzonderlijke werkstations met standaard ingeschakelde internetopties."/>
+
+    <Property name="Str_Install_InstallHeader" value="Selecteer de programma's die u wilt installeren."/>
+    <Property name="Str_Install_OptionsHeader" value="Kies extra opties."/>
+    <Property name="Str_Install_FeaturesHeader" value="Selecteer de programmaonderdelen die u wilt installeren."/>
+    <Property name="Str_Install_LocationHeader" value="Kies een locatie voor de installatie en talen."/>
+    <Property name="Str_Install_LocationHeader2" value="Kies een locatie voor de installatie."/>
+    <Property name="Str_Install_LangHeader" value=""/>
+
+    <Property name="Str_Install_Draw" value="CorelDRAW " />
+    <Property name="Str_Install_DrawDesc" value=" | vectorillustratie en paginaopmaak"/>
+    <Property name="Str_Install_PP" value="Corel PHOTO-PAINT " />
+    <Property name="Str_Install_PPDesc" value=" | bitmap-illustraties en fotobewerking"/>
+    <Property name="Str_Install_Capture" value="Corel CAPTURE " />
+    <Property name="Str_Install_CaptureDesc" value=" | geavanceerd programma voor schermopnamen"/>
+    <Property name="Str_Install_FontManager" value="Corel Font Manager " />
+    <Property name="Str_Install_FontManagerDesc" value=" | lettertypebeheer"/>
+
+    <Property name="Str_Install_Utilities" value="Hulpprogramma's" />
+    <Property name="Str_Install_UtilitiesDesc" value="Hiermee worden hulpprogramma's geïnstalleerd die u voor CorelDRAW en Corel PHOTO-PAINT kunt gebruiken."/>
+    <Property name="Str_Install_DupWiz" value="Wizard Dubbelzijdig afdrukken"/>
+    <Property name="Str_Install_VBA" value="Visual Basic for Applications 7.1"/>
+    <Property name="Str_Install_VSTA" value="Visual Studio Tools for Applications"/>
+    <Property name="Str_Install_Shell" value="Windows Shell Extension"/>
+    <Property name="Str_Install_GPL" value="Uitgebreide EPS-compatibiliteit inschakelen" />
+    <Property name="Str_Install_GPL_Installed" value="Uitgebreide EPS-compatibiliteit inschakelen (reeds geïnstalleerd)"/>
+    <Property name="Str_Install_GPLDesc" value="Hiermee wordt GPL Ghostscript geïnstalleerd voor uitgebreide ondersteuning bij het importeren van EPS- en PostScript-bestanden."/>
+
+    <Property name="Str_Install_Updates" value="Productupdates toestaan" />
+    <Property name="Str_Install_UpdatesDesc" value="Productupdates worden automatisch gedownload, maar u wordt om bevestiging gevraagd voor de installatie ervan."/>
+    <Property name="Str_Install_Shortcuts" value="Installeer snelkoppelingen bureaublad" />
+    <Property name="Str_Install_ShortcutsDesc" value="Snelkoppelingen naar de programma's worden op het bureaublad geïnstalleerd."/>
+    <Property name="Str_Install_CopyCabs" value="Installatiebestanden kopiëren" />
+    <Property name="Str_Install_CopyCabsDesc" value="Hiermee kunt u de software onderhouden en bijwerken zonder de installatieschijf te hoeven gebruiken. Voor deze instelling is XXX MB schijfruimte nodig."/>
+
+    <Property name="Str_Install_Location_Desc" value="Installeer CorelDRAW Graphics Suite naar de volgende map."/>
+    <Property name="Str_Install_Langs_Desc" value="Kies welke taal u wilt installeren."/>
+
+    <Property name="Str_Install_Langs" value="Producttalen:"/>
+    <Property name="Str_Install_Enterprise" value="Schakel toegang in voor CorelDRAW.app Enterprise" />
+    <Property name="Str_Install_EnterpriseDesc" value="U kunt zich aanmelden met uw Microsoft 365- of G Suite-account." />
+
+    <Property name="Str_Progress_Header" value="Bezig met installeren. Even geduld..."/>
+    <Property name="Str_Progress_Header_Remove" value="CorelDRAW Graphics Suite wordt verwijderd. Even geduld..." />
+
+    <Property name="Str_ARP_Header" value="Momenteel wordt CorelDRAW Graphics Suite geïnstalleerd. Maak een keuze uit de onderstaande opties om dit programma te wijzigen of van de computer te verwijderen."/>
+    <Property name="Str_ARP_Modify" value="Wijzigen"/>
+    <Property name="Str_ARP_ModifyDesc" value="Geïnstalleerde programmafuncties wijzigen. Bij deze optie wordt het dialoogvenster Aangepaste selectie getoond waar u de geïnstalleerde functies kunt wijzigen."/>
+    <Property name="Str_ARP_Repair" value="Herstellen"/>
+    <Property name="Str_ARP_RepairDesc" value="Repareer installatiefouten in het programma. Deze optie herstelt ontbrekende of beschadigde bestanden, snelkoppelingen en registervermeldingen."/>
+    <Property name="Str_ARP_Remove" value="Verwijderen"/>
+    <Property name="Str_ARP_RemoveDesc" value="Verwijder CorelDRAW Graphics Suite van uw computer."/>
+    <Property name="Str_ARP_UserFiles" value="Gebruikersbestanden verwijderen"/>
+    <Property name="Str_ARP_UserFilesDesc" value="Gebruikersbestanden, zoals werkruimten, bevatten persoonlijke instellingen voor toepassingen van CorelDRAW Graphics Suite."/>
+	<Property name="Str_ARP_Offline_Uninstall" value="Als u dit serienummer op een andere computer wilt gebruiken, moet u het programma verwijderen terwijl u verbinding met internet hebt."/>
+    <Property name="Str_FinErr_Header" value="De installatie is niet voltooid."/>
+    <Property name="Str_FinErr_Desc" value="Het systeem is niet aangepast. Start de installatie opnieuw om deze op een later tijdstip te voltooien."/>
+
+    <Property name="Str_FinSuc_HeaderClean" value="De installatie is voltooid."/>
+    <Property name="Str_FinSuc_HeaderModify" value="Uw software is aangepast."/>
+    <Property name="Str_FinSuc_HeaderRepair" value="Het repareren is geslaagd."/>
+    <Property name="Str_FinSuc_HeaderRemove" value="Uw software is verwijderd."/>
+
+    <Property name="Str_FinSuc_Fresh" value="Hartelijk dank dat u CorelDRAW Graphics Suite hebt gekozen."/>
+    <Property name="Str_FinSuc_FreshFinish" value="Klik op &lt;b&gt;Voltooien&lt;/b&gt; om de installatie af te sluiten."/>
+    <Property name="Str_FinSuc_Modify" value="Het aanpassen van CorelDRAW Graphics Suite is geslaagd.&lt;br/&gt;&lt;br/&gt;Klik op &lt;b&gt;Voltooien&lt;/b&gt; om de installatie af te sluiten."/>
+    <Property name="Str_FinSuc_Repair" value="Het repareren van CorelDRAW Graphics Suite is geslaagd.&lt;br/&gt;&lt;br/&gt;Klik op &lt;b&gt;Voltooien&lt;/b&gt; om de installatie af te sluiten."/>
+    <Property name="Str_FinSuc_RemoveHeader" value="CorelDRAW Graphics Suite is van uw computer verwijderd."/>
+    <Property name="Str_FinSuc_Reboot" value="U moet de computer opnieuw opstarten om de wijzigingen door te voeren. Selecteer een van de volgende opties en klik op  &lt;b&gt;Voltooie&lt;/b&gt; om de installatie af te sluiten."/>
+    <Property name="Str_FinSuc_RebootThanks" value="Hartelijk dank dat u voor CorelDRAW Graphics Suite hebt gekozen."/>
+    <Property name="Str_FinSuc_RebootYes" value="Ja, ik wil mijn computer nu opnieuw opstarten."/>
+    <Property name="Str_FinSuc_RebootNo" value="Nee, ik start mijn computer later opnieuw op."/>
+    <Property name="Str_FinSuc_AdminThanks" value="Hartelijk dank dat u voor CorelDRAW Graphics Suite hebt gekozen. Het installatieprogramma heeft uw serverimage gemaakt.&lt;br/&gt;&lt;br/&gt;Klik op &lt;b&gt;Voltooien&lt;/b&gt; om de installatie af te sluiten."/>
+    <Property name="Str_FinSuc_AdminServer" value="Locatie van de serverimage:"/>
+
+
+
+    <Property name="Str_MinSysD_Header" value="Het systeem voldoet niet aan een of meer van de volgende systeemvereisten."/>
+    <Property name="Str_MinSysD_Desc" value="Klik op &lt;b&gt;Doorgaan&lt;/b&gt; om de aanbevolen minimale systeemvereisten te negeren en CorelDRAW Graphics Suite te installeren. Klik op &lt;b&gt;Annuleren&lt;/b&gt; om de installatie af te sluiten."/>
+    <Property name="Str_MinSysD_Desc2" value="&lt;b&gt;&lt;u&gt;Minimale systeemvereisten:&lt;/b&gt;&lt;/u&gt;"/>
+
+    <Property name="Str_MinSysD_OS" value="Besturingssysteem met het nieuwste servicepakket en kritische updates: Windows 10 64-bit. Deze software werkt mogelijk niet zoals verwacht op eerdere versies van Windows 10."/>
+	<Property name="Str_OS32Bit" value="CorelDRAW Graphics Suite is 64-bits en kan niet op uw 32-bits (x86) besturingssysteem worden geïnstalleerd. Het nieuwste Windows 10 64-bits besturingssysteem is vereist."/>
+    <Property name="Str_MinSysD_IE" value="Internet Explorer 11" />
+    <Property name="Str_MinSysD_CPU" value="CPU:&lt;br/&gt;Intel Core i3 of AMD Athlon 64"/>
+    <Property name="Str_MinSysD_RAM" value="RAM: 8 GB"/>
+    <Property name="Str_MinSysD_ScrRes" value="Schermresolutie: 1280 x 720"/>
+
+    <Property name="Str_PreInstall_Header" value="Installatievereisten."/>
+    <Property name="Str_PreInstall_Desc" value="Enkele onderdelen van uw besturingssysteem moeten worden bijgewerkt voordat CorelDRAW Graphics Suite geïnstalleerd kan worden.  Klik op &lt;b&gt;Doorgaan&lt;/b&gt; om de volgende onderdelen te installeren of klik op &lt;b&gt;Annuleren&lt;/b&gt; om de installatie af te sluiten."/>
+    <Property name="Str_PreInstall_Desc2" value="Vereiste onderdelen:"/>
+    <Property name="Str_PreInstall_Net" value="Microsoft .NET Framework 4.7.2"/>
+    <Property name="Str_PreInstall_NetDnld" value="Microsoft .NET Framework 4.7.2 (LET OP: voor deze update hebt u een internetverbinding nodig.)"/>
+    <Property name="Str_PreInstall_Msi" value="Microsoft Windows Installer 4.6"/>
+<Property name="Str_PreInstall_Windows_Updates" value="Ongeldig e-mailadres of wachtwoord. Controleer uw Windows Update-instellingen en zorg ervoor dat de nieuwste service pack en kritieke updates zijn geïnstalleerd. Hierdoor kunt u het product snel installeren."/>
+    <Property name="Str_RestMan_Header" value="De volgende toepassingen zijn actief op uw systeem."/>
+    <Property name="Str_RestMan_Desc" value="Wij raden aan om deze toepassingen te sluiten voordat u doorgaat om te voorkomen dat uw computer vaker dan nodig opnieuw moet worden opgestart.&lt;br/&gt;&lt;br/&gt;Sluit deze toepassingen en klik op &lt;b&gt;OK&lt;/b&gt; om door te gaan."/>
+    <Property name="Str_RestMan_Restart" value="Toepassingen automatisch afsluiten en opnieuw opstarten."/>
+    <Property name="Str_RestMan_NoRestart" value="Toepassingen niet sluiten. (Systeem moet opnieuw worden opgestart.)"/>
+
+    <Property name="Str_RebootPending_Header" value="Start uw computer opnieuw op voordat u doorgaat."/>
+    <Property name="Str_RebootPending_Desc" value="CorelDRAW Graphics Suite kan pas worden geïnstalleerd nadat u de computer opnieuw hebt opgestart. Klik op &lt;b&gt;Nu opnieuw opstarten&lt;/b&gt; om de computer opnieuw op te starten en de installatie te voltooien of klik op &lt;b&gt;Niet opnieuw starten&lt;/b&gt; om de installatie af te sluiten."/>
+    
+    <Property name="Str_AdminLicense_Header" value="Als u door wilt gaan met de installatie van deze software, moet u akkoord gaan met de zakelijke gebruikerslicentieovereenkomst (Zakelijke gebruikerslicentieovereenkomst, BULA) van Corel."/>
+    <Property name="Str_AdminLicense_Privacy_Desc" value="We waarderen uw privacy. Klik &lt;a href='http://www.corel.com/privacy/' target='_blank'&gt;hier&lt;/a&gt; om ons privacybeleid te bekijken. Door akkoord te gaan met de voorwaarden van de BULA erkent u dat u ons privacybeleid hebt gelezen, begrepen en geaccepteerd." />
+    <Property name="Str_AdminLicense_Scroll" value="U moet omlaag scrollen naar het einde van de BULA voordat u akkoord kunt gaan met deze voorwaarden." />
+    
+    <Property name="Str_AdminDes_Header" value="Imagelocatie."/>
+    <Property name="Str_AdminDes_Desc" value="U kunt de serverimage op een gespecificeerde locatie installeren."/>
+    <Property name="Str_AdminDes_Path" value="Voer het imagepad in of klik op  &lt;b&gt;Wijzigen&lt;/b&gt; om naar de gewenste locatie te bladeren:"/>
+    <Property name="Str_AdminDes_Error" value="Selecteer een netwerklocatie of voer een locatie in waar u de serverimage wilt maken."/>
+    <Property name="Str_AdminDes_ContentHeader" value="Inhoudslocatie."/>
+    <Property name="Str_AdminDes_ContentDesc" value="Als u de extra inhoud op een netwerkshare hebt geïnstalleerd, kunt u de werkstations naar deze locatie laten wijzen."/>
+    <Property name="Str_AdminDes_ContentPath" value="Voer het pad voor de inhoud in of klik op &lt;b&gt;Wijzigen&lt;/b&gt; om naar de installatielocatie te bladeren:"/>
+
+    <Property name="Str_AdminNet_Header" value="Internettoegang beheren." />
+    <Property name="Str_AdminNet_Updates" value="Specifieer de update-instellingen voor het implementatieproduct:" />
+    <Property name="Str_AdminNet_Updates_OptIn" value="Het product regelmatig bijwerken (aanbevolen)" />
+    <Property name="Str_AdminNet_Updates_Optout" value="Controleren op updates en de gebruiker laten kiezen wanneer deze worden geïnstalleerd" />
+    <Property name="Str_AdminNet_Updates_Disable" value="Nooit controleren op updates" />
+    <Property name="Str_AdminNet_Internet" value="Internetfuncties gebruiken:"/>
+    <Property name="Str_AdminNet_InternetDesc" value="Werkstations toegang geven tot internetfuncties."/>
+    <Property name="Str_AdminNet_WelcomeScreen" value="Toon online inhoud in het welkomstscherm" />
+    <Property name="Str_AdminNet_WelcomeScreenDesc" value="Geef werkstations toegang tot online hulpmiddelen, extra downloads en aankopen binnen het product." />
+    <Property name="Str_AdminNet_Optional" value="Deze opties zijn niet beschikbaar tijdens een offline-installatie. Als u deze opties wilt inschakelen, moet u de installatie opnieuw starten en u aanmelden."/>
+    <Property name="Str_AdminNet_Collab" value="Laat gebruikers zich aanmelden met hun zakelijke accounts" />
+    <Property name="Str_AdminNet_CollabDesc" value="Schakel het delen van bestanden en samenwerken tussen zakelijke gebruikers in." />
+    <Property name="Str_AdminNet_CollabDesc2" value="Geef toegang aan de Comments-docker en Corel Cloud." />
+    <Property name="Str_AdminNet_CDAEDesc" value="Sta gebruikers toe om zich aan te melden met hun Microsoft 365- of G Suite-account." />
+
+    <Property name="Str_AdminSN_Header" value="Voer uw informatie in."/>
+    <Property name="Str_AdminSN_SN" value="Serienummer:"/>
+    <Property name="Str_AdminSN_Optional" value="Aanmelden is optioneel. Als u zich niet aanmeldt, wordt de installatie offline voortgezet. Als u offline bent, ontvangt u geen waarschuwingen over productupdates en kunt u geen internetfuncties gebruiken."/>
+    <Property name="Str_AdminSN_Signin" value="U moet zich aanmelden met uw &lt;a href='http://www.corel.com/account' target='_blank'&gt;corel.com-account&lt;/a&gt; om uw software te authenticeren. Na de aanmelding kunt u de locatie van de serverimage en internetopties kiezen." />
+    <Property name="Str_AdminSN_Email" value="E-mailadres:"/>
+    <Property name="Str_AdminSN_PWD" value="Wachtwoord:"/>
+    <Property name="Str_AdminSN_ForgotPwd" value="Wachtwoord vergeten"/>
+    <Property name="Str_AdminSN_AcctDesc" value="U hebt uw corel.com accountinformatie &lt;a href='http://www.corel.com/account' target='_blank'&gt;corel.com&lt;/a&gt;  nodig om online functies, productupdates en andere inhoud te kunnen gebruiken."/>
+    <Property name="Str_AdminSN_CreateAcct" value="Hebt u geen account? &lt;a href='https://idp.corel.com/idp/Authn/UserPassword' target='_blank'&gt;Maak een account&lt;/a&gt;, en kom terug om u aan te melden." />
+
+    <Property name="Str_Admin_Error_504" value="Om verder te gaan, moet u zich aanmelden bij uw Corel account." />
+    <Property name="Str_Admin_Error_503" value="Om verder te gaan, moet u zich aanmelden bij uw Corel account. Als u uw aanmeldgegevens bent vergeten, moet u de e-mail raadplegen die u vertelt hoe u uw abonnement voor meerdere delen bekijkt."/>
+    <Property name="Str_Admin_Error_502" value="Er kan geen bedrijfsserienummer worden gebruikt om een trialversie van het product te installeren. Voer een geldig serienummer in."/>
+    <Property name="Str_Admin_Error_501" value="Het serienummer is ongeldig."/>
+    <Property name="Str_Admin_Error_500" value="Verificatie niet geslaagd."/>
+    <Property name="Str_Admin_Error_1" value="U moet de servicevoorwaarden accepteren om u te kunnen aanmelden." Comment="As_IT error - Must Accept TOS"/>
+    <Property name="Str_Admin_Error_1000" value="Een internetverbinding is vereist. Verbind met internet en probeer het opnieuw." Comment="As_IT error - not connected to internet"/>
+    <Property name="Str_Admin_Error_1005" value="Ongeldig e-mailadres of wachtwoord. Controleer of u het e-mailadres juist hebt ingevoerd. Als u uw wachtwoord bent vergeten, kunt u op de bovenstaande koppeling klikken om uw wachtwoord op te halen. " Comment="As_IT error - Invalid email or pwd"/>
+    <Property name="Str_Admin_Error_1003" value="Dit account komt niet overeen met het account dat is gemaakt voor het downloaden van het product. Controleer het account dat in de orderbevestiging is genoemd." Comment="As_IT error - Invalid account"/>
+    <Property name="Str_Admin_Error_0" value="Onbekende fout"/>
+
+    <Property name="Str_FilesUse_Header" value="De volgende toepassingen zijn actief op uw systeem."/>
+    <Property name="Str_FilesUse_Desc" value="Wij raden aan om deze toepassingen te sluiten voordat u doorgaat om te voorkomen dat uw computer vaker dan nodig opnieuw moet worden opgestart.&lt;br/&gt;&lt;br/&gt;Sluit deze toepassingen en klik op &lt;b&gt;Opnieuw proberen&lt;/b&gt; om door te gaan."/>
+
+
+    <Property name="Str_Btn_Cancel" value="&lt;u&gt;A&lt;/u&gt;nnuleren"/>
+	<Property name="Str_Btn_Cancel_AccessKey" value="A"/>
+	<Property name="Str_Btn_Install" value="Nu &lt;u&gt;i&lt;/u&gt;nstalleren"/>
+    <Property name="Str_Btn_Install_AccessKey" value="I"/>	
+    <Property name="Str_Btn_OK" value="&lt;u&gt;O&lt;/u&gt;K"/>
+    <Property name="Str_Btn_OK_AccessKey" value="O"/>	
+    <Property name="Str_Btn_Finish" value="&lt;u&gt;V&lt;/u&gt;oltooien"/>
+	<Property name="Str_Btn_Finish_AccessKey" value="V"/>
+    <Property name="Str_Btn_Accept" value="A&lt;u&gt;c&lt;/u&gt;cepteren"/>
+    <Property name="Str_Btn_Accept_AccessKey" value="C"/>
+    <Property name="Str_Btn_Agree" value="&lt;u&gt;A&lt;/u&gt;kkoord gaan"/>
+    <Property name="Str_Btn_Agree_AccessKey" value="A"/>
+    <Property name="Str_Btn_AgreeEnabled" value="&lt;u&gt;A&lt;/u&gt;kkoord gaan"/>
+    <Property name="Str_Btn_AgreeDisabled" value="&lt;u&gt;A&lt;/u&gt;kkoord gaan"/>
+    <Property name="Str_Btn_Back" value="&lt;u&gt;T&lt;/u&gt;erug"/>
+    <Property name="Str_Btn_Back_AccessKey" value="T"/>	
+    <Property name="Str_Btn_Next" value="&lt;u&gt;V&lt;/u&gt;olgende"/>
+	<Property name="Str_Btn_Next_AccessKey" value="V"/>	
+    <Property name="Str_Btn_Continue" value="D&lt;u&gt;o&lt;/u&gt;orgaan"/>
+	<Property name="Str_Btn_Continue_AccessKey" value="O"/>
+    <Property name="Str_Btn_Change" value="&lt;u&gt;W&lt;/u&gt;ijzigen..."/>
+	<Property name="Str_Btn_Change_AccessKey" value="W"/>
+    <Property name="Str_Btn_Change2" value="Wi&lt;u&gt;j&lt;/u&gt;zigen..."/>
+	<Property name="Str_Btn_Change2_AccessKey" value="J"/>
+    <Property name="Str_Btn_Disagree" value="&lt;u&gt;N&lt;/u&gt;iet mee akkoord gaan"/>
+    <Property name="Str_Btn_Disagree_AccessKey" value="N"/>
+    <Property name="Str_Btn_Includes" value="Inclusief:"/>
+    <Property name="Str_Btn_Path" value="Pad:"/>
+    <Property name="Str_Btn_Retry" value="&lt;u&gt;O&lt;/u&gt;pnieuw"/>
+	<Property name="Str_Btn_Retry_AccessKey" value="O"/>
+    <Property name="Str_Btn_Ignore" value="&lt;u&gt;N&lt;/u&gt;egeren"/>
+	<Property name="Str_Btn_Ignore_AccessKey" value="N"/>
+    <Property name="Str_Btn_RelNotes" value="&lt;u&gt;R&lt;/u&gt;eleaseopmerkingen"/>
+	<Property name="Str_Btn_RelNotes_AccessKey" value="R"/>
+    <Property name="Str_Btn_Repair" value="&lt;u&gt;H&lt;/u&gt;erstellen"/>
+	<Property name="Str_Btn_Repair_AccessKey" value="H"/>
+    <Property name="Str_Btn_Remove" value="&lt;u&gt;V&lt;/u&gt;erwijderen"/>
+	<Property name="Str_Btn_Remove_AccessKey" value="V"/>
+    <Property name="Str_Btn_Reset" value="&lt;u&gt;H&lt;/u&gt;erstellen"/>
+	<Property name="Str_Btn_Reset_AccessKey" value="H"/>
+    <Property name="Str_Btn_RestartNow" value="&lt;u&gt;N&lt;/u&gt;u opnieuw opstarten"/>
+	<Property name="Str_Btn_RestartNow_AccessKey" value="N"/>
+    <Property name="Str_Btn_DoNotRestart" value="&lt;u&gt;N&lt;/u&gt;iet opnieuw starten"/>
+	<Property name="Str_Btn_DoNotRestart_AccessKey" value="N"/>
+    <Property name="Str_Chk_EULA" value="A" comment="access key for eula checkbox"/>
+
+
+    <Property name="Pwd_Redirect" value="http://apps.corel.com/redirect?_redirect=command&amp;function=forgotpass&amp;app=all&amp;lang=NL"/>
+    
+    <Property name="Str.OutOfDiskSpace.Warning" value="De vereiste schijfruimte voor de installatie is groter dan de beschikbare schijfruimte." lang="English"/>
+
+  </Properties>
+</ICA>
+

@@ -1,0 +1,212 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:ICA="ICA">
+	<head>
+		<meta name="vs_showGrid" content="True" />
+		<title>Setup Wizard - Command Line Help</title>
+		<LINK href="../../_XX/Required/Style.css" type="text/css" rel="STYLESHEET" />
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1" />
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+		<meta name="ICADlg" 
+		      content="text/html" 
+		      id="ICADlg" 
+		      ICA:DlgHW="550,480" 
+		      ICA:DlgTitle="Setup.exe /? - command line help" 
+		      ICA:PromptForCancel="no" />
+		
+		<style type="text/css">
+    
+    	    .HelpTable
+		    {
+		        border-top-style: none;
+	            border-right-style: none;
+	            border-left-style: none;
+	            border-bottom-style: none;
+		    }
+		    
+            .HelpItem
+            {
+	            vertical-align: top;
+	            font-size: 14px;
+	            font-family: 'Segoe UI' , Tahoma;
+	            border-bottom: gray 1px solid;
+	            margin-top: 10px;
+	            margin-bottom: 10px;
+	            padding-top: 5;
+	            padding-bottom: 5;
+            }
+		</style>
+		
+	</head>
+	
+	<body>
+	
+	<div id="idContent"
+	     class="Panel"
+	     style="overflow: auto;
+	            padding: 5 5 5 5;
+	            border: double 3px silver;
+	            background-color: white;
+	            width: 450px;
+	            height: 440px; 
+	            text-align: left;">
+
+
+        <table id="idContentTable" cellspacing="0">
+        
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    <Loc>以下快速参考指南介绍了与 Setup.exe 结合使用的常用命令行。<br /><br />
+                    Setup.exe /Option &lt;必需参数&gt; </Loc>[Optional Parameter]
+                    <br /><br />
+                    <u><Loc>安装选项:</Loc></u>
+                </td>
+            </tr>
+                        
+            <tr> <!-- /a admin -->
+                <td class="HelpItem" style="width: 55px;">/a</td>
+                <td class="HelpItem">
+                    <Loc>表示您想创建服务器映像。管理安装 - 将产品安装在网络上</Loc>
+                    <br /><br />
+                    <Loc>Setup.exe /a</Loc>
+                </td>
+            </tr>
+
+            <tr> <!-- /a /q(n) admin -->
+                <td class="HelpItem" style="width: 55px;">/a /q(n)</td>
+                <td class="HelpItem">
+                    不再支持命令行中的/q(n)交换机。关于支持的交换机，请参见最新版本的《CorelDRAW Graphics 套件部署指南》。
+                    <br /><br />
+                    Setup.exe /a /q(n)
+                </td>
+            </tr>
+            
+            <tr> <!-- /s push profile ID -->
+                <td class="HelpItem" style="width: 55px;">/s</td>
+                <td class="HelpItem">
+                    用于将 PROFILEID 推送到工作站。利用 PROFILEID 公共属性，可通过推送帐户凭据到工作站将所有用户登录到相关帐户。
+                    <br /><br />
+                    Setup.exe /s PROFILEID=XXXXXXXXXXXXXXX
+                </td>
+            </tr>            
+            <tr> <!-- /x uninstall -->
+                <td class="HelpItem" style="width: 55px;">/x <br /> /uninstall</td>
+                <td class="HelpItem">
+                    <Loc>表示您想卸载软件。管理安装 - 将产品安装在网络上</Loc>
+                    <br /><br />
+                    <Loc>Setup.exe /x</Loc>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    <br /><br />
+                    <u>Display Options:</u>
+                </td>
+            </tr>
+            
+            <tr> <!-- /q silent -->
+                <td class="HelpItem" style="width: 55px;">/q[n|b|r|f]</td>
+                <td class="HelpItem">
+                    <Loc>设置安装用户界面的显示范围。</Loc>
+                    <br />
+                    <Loc>n - 无用户界面</Loc><br />
+            		<Loc>b - 基本用户界面</Loc><br />
+        		    <Loc>r - 精简用户界面</Loc><br />
+		            <Loc>f - 完整用户界面 (默认)</Loc><br /><br />
+                    <Loc>Setup.exe /q</Loc>
+        		</td>
+            </tr>
+            
+            <tr> <!-- /q silent -->
+                <td class="HelpItem" style="width: 55px;">/quiet</td>
+                <td class="HelpItem">
+                    <Loc>安静模式，无用户互动。与 /qn 相同</Loc>
+        		</td>
+            </tr>
+            
+            <tr> <!-- /q silent -->
+                <td class="HelpItem" style="width: 55px;">/passive</td>
+                <td class="HelpItem">
+                    <Loc>无人参与模式 - 仅显示进度栏。与 /qb 相同</Loc>
+        		</td>
+            </tr>
+            
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    <br /><br />
+                    <u><Loc>日志选项:</Loc></u>
+                </td>
+            </tr>
+            
+            <tr> <!-- /l log -->
+                <td class="HelpItem" style="width: 55px;">/l[i|w|e|a|r|u|c|m|o|p|v|x|*]</td>
+                <td class="HelpItem">
+                    <Loc>将常规安装信息记录到日志文件中。如果您没有指定路径和文件名，则将在当前用户的临时文件夹中创建日志文件。</Loc> <br /><br />
+                    <Loc>i - 状态消息</Loc> <br />
+            		<Loc>w - 一般警告</Loc> <br />
+            		<Loc>e - 所有错误消息</Loc> <br />
+            		<Loc>a - 操作启动</Loc> <br />
+            		<Loc>r - 操作特有的记录</Loc> <br />
+            		<Loc>u - 用户请求</Loc> <br />
+            		<Loc>c - 初始用户界面参数</Loc> <br />
+            		<Loc>m - 内存不足或致命退出信息</Loc> <br />
+            		<Loc>o - 磁盘空间不足消息</Loc> <br />
+            		<Loc>p - 终端属性</Loc> <br />
+            		<Loc>v - 详细输出</Loc> <br />
+            		<Loc>x - 附加调试信息</Loc> <br />
+            		<Loc>* - 记录所有信息，但 v 和 x 选项除外</Loc> <br /><br />
+            		<Loc>默认为 /lvoicewarmup</Loc><br /><br />
+            		<Loc>Setup.exe /l"C:\Install.log"</Loc>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    <br /><br />
+                    <u><Loc>修复选项:</Loc></u>
+                </td>
+            </tr>
+            
+            <tr> <!-- /a admin -->
+                <td class="HelpItem" style="width: 55px;">/f[p|e|c|m|s|o|d|a|u]</td>
+                <td class="HelpItem">
+                <Loc>修复产品。</Loc><br />
+                <Loc>p - 仅当文件丢失时</Loc><br />
+		        <Loc>o - 如果文件丢失或安装了早期版本 (默认)</Loc><br />
+        		<Loc>e - 如果文件丢失或安装了相同版本或早期版本</Loc><br />
+		        <Loc>d - 如果文件丢失或安装了其他版本</Loc><br />
+        		<Loc>c - 如果文件丢失或校验和与计算得出的值不匹配</Loc><br />
+		        <Loc>a - 强制重新安装所有文件</Loc><br />
+        		<Loc>u - 所有必要的用户特有注册表项 (默认)</Loc><br />
+		        <Loc>m - 所有必要的计算机特有注册表项 (默认)</Loc><br />
+        		<Loc>s - 所有现有快捷键 (默认)</Loc><br />
+        		<br /><br />
+        		<Loc>默认为 /foums</Loc><br /><br />
+        		<Loc>Setup.exe /f</Loc>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="HelpItem" colspan="2">
+                    <br /><br />
+                    <u><Loc>设置公共属性:</Loc></u><br /><br />
+                    [PROPERTY=PropertyValue]
+                </td>
+            </tr>
+        
+        </table> <!-- table id="idContentTable" -->
+
+    </div> <!-- id="idContent" -->
+
+	<div class="DlgBlock"
+	     style="text-align: right;
+	            width: 450px;
+	            top: 470px;">
+	            
+	    <button onclick="window.external.EndModalLoop(0);" ID="idOk" accesskey="O"><Loc>OK(<u>O</u>)</Loc></button>
+	    
+    </div>
+		
+	</body>
+</html>

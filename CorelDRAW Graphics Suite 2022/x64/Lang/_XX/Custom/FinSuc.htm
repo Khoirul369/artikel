@@ -1,0 +1,263 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+
+<html xmlns:ICA="ICA">
+<head>
+    <title>FinSuc</title>
+    <link href="Style.css" rel="stylesheet" type="text/css" />
+    <meta http-equiv="MSThemeCompatible" content="Yes"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta content="text/html" name="ICADlg" id="ICADlg" 
+  ICA:DlgHW="702,588" 
+          ICA:DlgFrame="0"
+          ICA:TransparencyColorRBG="51,52,53"
+          ICA:PromptForCancel="no"
+
+          ICA:ProgressState="TBPF_NOPROGRESS"
+    />
+<script language="jscript" type="text/jscript" src="js/topics.js"></script>
+<script language="jscript" type="text/jscript" src="js/Setup.js"></script>
+
+
+<script language="jscript" type="text/jscript">
+    
+        var Setup = window.external;
+        
+        function OnBodyLoad()
+        {
+            initPage(document.title);
+            try
+            {
+                if ("ADMIN" == Setup.GetProperty("ACTION"))
+                {
+                    idAdmin.style.display = "block";    //admin
+                    id_Str_FinSuc_HeaderClean.style.display = "block";
+                }
+                else
+                {
+                    if ("1" == Setup.GetProperty("RebootPage"))
+                    {
+                        idReboot.style.display = "block";   //reboot
+                        id_Str_FinSuc_HeaderClean.style.display = "block";
+                    }
+                    else
+                    {
+                        //install
+                           
+                        if ("" == Setup.GetProperty("Installed"))
+                        {
+                            id_Str_FinSuc_HeaderClean.style.display = "block";
+                            idFreshInstall.style.display = "block";    //first install                                
+                            idFreshInstallNoSub.style.display = "none";
+                        }
+                        else
+                        {
+                        
+                            var mode = Setup.GetProperty("ICA.Maintenance.Mode")
+                            var strCompare = mode.toLowerCase();
+                            idMaintenance.style.display = "block";  //maintenance
+                            if (strCompare == "modify") 
+                            {
+                                id_Str_FinSuc_Modify.style.display = "block";
+                                id_Str_FinSuc_HeaderModify.style.display = "block";
+                            }
+                            if (strCompare == "repair") 
+                            {
+                                id_Str_FinSuc_Repair.style.display = "block";
+                                id_Str_FinSuc_HeaderRepair.style.display = "block";
+                            }
+                            if (strCompare == "remove") 
+                            {
+                                id_Str_FinSuc_HeaderRemove.style.display = "block";
+                                idRemove.style.display = "block";
+                                
+                            }   
+                        }
+                    }
+                }
+
+            }
+            catch (err)
+            {
+                idFreshInstall.style.display = "block";
+                id_Str_FinSuc_HeaderClean = "block";
+                idMaintenance.style.display = "block";
+            }
+            
+        } //function OnBodyLoad()
+	   
+
+   function LaunchFinish()
+   {
+        if (("" == Setup.GetProperty("Installed")) && ("1" == Setup.GetProperty("LAUNCHREGAPP")))
+        {
+            g_Setup.ExecuteFN('JS_LaunchRegApp');
+        }
+        else
+        {
+            var mode = Setup.GetProperty("ICA.Maintenance.Mode");
+            var strCompare = mode.toLowerCase();
+            if ((strCompare == "remove") && g_bIsConnected && !g_bIsAdminPackage)
+            {
+               // var url = Setup.GetProperty("SetupURL_Tokenized");
+               // if (Setup.GetProperty("SkipTracker") != "1")
+             //   {
+			//	window.open(url);
+             //   }
+              //  Setup.SetProperty("SetupURL_Launched", 1);
+            }
+        }	
+        g_Setup.EndModalLoop(0);
+   }
+
+
+    </script>
+    <style type="text/css">
+        .Image
+        {
+	        width: 3em;
+	        height: 3em;
+        }
+    
+        a
+        {
+            color: black;
+            cursor: default;
+            text-decoration: none;
+        }
+        
+        a:hover
+        {
+            color: black;
+            cursor: auto;
+            text-decoration: none;
+        }
+        
+        a:active
+        {
+            color: black;
+            cursor: auto;
+            text-decoration: none;
+        }
+        
+        a:visited
+        {
+            color: black;
+            cursor: auto;
+            text-decoration: none;
+        }
+        table, th, td
+        {
+			border: 0px;
+        }
+        .surveyLink a
+        {
+            color: #4B8007;
+            text-decoration: underline;
+        }
+        
+      
+    </style>  
+</head>
+
+<body onload="OnBodyLoad();">
+<div id="dpi"></div>
+    <!-- background -->
+    <div id="idBackGrd">
+<img src="Images/backgrd.png" class="stretch" />
+
+</div>
+	<img id="idBrandingLeft" name="BrandingLeft" src="Images/banner" />  
+    <img id="idClose" alt="" class="CloseBtn" src="Images/close.png" onmouseover="HighLightClose();" onmouseout="UnHighLightClose();" onclick="LaunchFinish();" />
+	<div id="idDragMe" class="Dragable">&nbsp;&nbsp;&nbsp;</div>
+    
+   
+    <!-- ------------------------------------------------------------ -->
+    <!-- page content panel -->
+    <div id="idPanel">
+
+        <div id="id_Str_FinSuc_HeaderClean" class="DlgHeader" style="display: none;" ></div>
+        <div id="id_Str_FinSuc_HeaderModify" class="DlgHeader" style="display: none;" ></div>
+        <div id="id_Str_FinSuc_HeaderRepair" class="DlgHeader" style="display: none;" ></div>                
+        <div id="id_Str_FinSuc_HeaderRemove" class="DlgHeader" style="display: none;" ></div>                
+
+        <!-- -------------------------------------------------------------------- -->
+        <!-- fresh workstation install -->
+        <div class="DlgBlock" style="top: 4.06em; display: none;" id="idFreshInstall">
+            <div id="id_Str_FinSuc_Fresh"></div>
+            <br /><br />          
+            <div id="id_Str_FinSuc_FreshFinish"></div>
+
+        </div>
+        <!-- -------------------------------------------------------------------- -->
+        
+        <!-- -------------------------------------------------------------------- -->
+        <!-- fresh workstation install - no subscription (corp, oem, trial) -->
+        <div class="DlgBlock" style="top: 4.06em; display: none;" id="idFreshInstallNoSub">
+            <div style="display: none;" id="id_Str_FinSuc_FreshLauncher"></div>
+            <div style="display: none;" id="id_Str_FinSuc_FreshNoLauncher"></div>
+
+        </div>
+        <!-- -------------------------------------------------------------------- -->
+
+
+        <!-- maintenance install -->
+        <div class="DlgBlock" style="top: 4.06em; display: none;" id="idMaintenance">
+            <div id="id_Str_FinSuc_Modify" style="display: none;"></div>
+            <div id="id_Str_FinSuc_Repair" style="display: none;"></div>
+            <div id="idRemove" style="display: none;">
+                <div id="id_Str_FinSuc_RemoveHeader"></div>
+  
+            </div>
+
+        </div>
+        
+        <!-- reboot install -->
+        <div class="DlgBlock" style="top: 4.06em; display: none;" id="idReboot">
+            <div class="DlgBlock" id="id_Str_FinSuc_Reboot"></div>
+            
+            <div class="DlgBlock" style="top: 5.63em;"  >
+                <label id="id_Str_FinSuc_RebootThanks"></label>
+                <br />
+                <input type="radio" id="idRebootYes" name="REBOOT" value="force" />
+                <label for="idRebootYes" id="id_Str_FinSuc_RebootYes" ></label>
+                <br />
+                <input type="radio" id="idRebootNo" name="REBOOT" value="ReallySuppress" />
+                <label for="idRebootNo" id="id_Str_FinSuc_RebootNo"></label>
+            </div>
+        </div>
+        
+        <!-- -------------------------------------------------------------------- -->
+        <!-- admin install -->
+        <div class="DlgBlock" style="top: 4.06em; display: none;" id="idAdmin">
+            
+            <div id="id_Str_FinSuc_AdminThanks"></div>
+            
+            <div class="DlgBlock" style="top: 6.25em;" id="id_Str_FinSuc_AdminServer"></div>
+        
+            <div class="DlgBlock" style="top: 8.13em; width: 2.81em; z-index: 1; left: 1.25em;">
+                <img src="Images/Folder.png" class="Image" alt="" style="vertical-align:middle;" />
+            </div>
+            <div class="DlgBlock" style="top: 8.75em; left: 5.13em; width: 29.06em; z-index: 2;">
+                <label style="DISPLAY: block; OVERFLOW: hidden; cursor: hand;" onclick="OnAdminOpenFolder();" id="idAdminOpenFolder" ICA:Property="TARGETDIR">[TARGETDIR]</label>
+            </div>
+        </div>
+        <!-- -------------------------------------------------------------------- -->
+        
+    </div> <!-- div id="idTabPanel" END -->
+
+
+    <!-- ------------------------------------------------------------ -->
+    <!-- <div> Wizard Buttons (at bottom of dialog) - START -->
+    <div class="DlgWizardBtns">
+        <table border="0" width="100%">
+            <tr>
+               <td align="right">
+                    <button type="button" class="Initiator" onmouseover="HighLightButton('id_Str_Btn_Finish');" onmouseout="UnHighLightButton('id_Str_Btn_Finish');" onclick="LaunchFinish();" ID="id_Str_Btn_Finish" ></button>
+                </td>
+            </tr>
+        </table>
+    </div>  <!-- <div class="DlgWizardBtns"> Wizard Buttons (at bottom of dialog) - END -->
+
+</body>
+</html>

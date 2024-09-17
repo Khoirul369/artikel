@@ -1,0 +1,286 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0014)about:internet -->
+
+<html xmlns:ICA="ICA">
+<head>
+    <title>installChoose</title>
+    <link href="Style.css" rel="stylesheet" type="text/css" />
+    <meta http-equiv="MSThemeCompatible" content="Yes"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta content="text/html" name="ICADlg" id="ICADlg" 
+  ICA:DlgHW="702,588" 
+          ICA:DlgFrame="0"
+          ICA:TransparencyColorRBG="51,52,53"
+    />
+<script language="jscript" type="text/jscript" src="js/topics.js"></script>
+<script language="jscript" type="text/jscript" src="js/Setup.js"></script>
+
+
+<script language="jscript" type="text/jscript">
+    
+        var Setup = window.external;
+    
+        function HighLightCustom(id)
+        {
+                                  
+            var pEl = document.getElementById(id + "Link");
+            if (null != pEl)
+            {
+                pEl.style.color = g_brandingDark;
+                pEl.focus();
+            }
+            
+            pEl = document.getElementById(id + "Desc");
+            if (null != pEl) {
+                pEl.style.color = g_brandingDark;
+            }
+
+            
+        } //function HighLightIt(pEl)
+        function HighLightTypical(id)
+        {                                 
+            var pEl = document.getElementById(id + "Link");
+            if (null != pEl)
+            {
+                pEl.style.color = g_brandingDark;
+                pEl.focus();
+            }
+            
+            pEl = document.getElementById(id + "Desc");
+            if (null != pEl) {
+                pEl.style.color = g_brandingDark;
+            }
+            pEl = document.getElementById(id + "Size");
+            if (null != pEl) {
+                pEl.style.color = g_brandingDark;
+            }
+            pEl = document.getElementById("id_Size");
+            if (null != pEl) {
+                pEl.style.color = g_brandingDark;
+            }
+            
+        } //function HighLightIt(pEl)
+          
+        function UnHighLightCustom(id)
+        {
+            var pEl = document.getElementById(id + "Link");
+            if (null != pEl)
+            {
+                pEl.style.color = "black";
+            }
+
+            pEl = document.getElementById(id + "Desc");
+            if (null != pEl) {
+                pEl.style.color = "#333333";
+            }
+            
+        } //function UnHighLightIt(pEl)
+        
+        function UnHighLightTypical(id)
+        {
+            var pEl = document.getElementById(id + "Link");
+            if (null != pEl)
+            {
+                pEl.style.color = "black";
+            }
+
+            pEl = document.getElementById(id + "Desc");
+            if (null != pEl) {
+                pEl.style.color = "#333333";
+            }
+            pEl = document.getElementById(id + "Size");
+            if (null != pEl) {
+                pEl.style.color = "#333333";
+            }
+            pEl = document.getElementById("id_Size");
+            if (null != pEl) {
+                pEl.style.color = "#333333";
+            }
+ 
+        } //function UnHighLightIt(pEl)        
+        function Install()
+        {
+            try
+            {
+                if (Setup.ValidateDiskSpace(true))
+                {
+                    Setup.SetProperty("InstallType", "Typical");
+                    Setup.EndModalLoop(0);
+                    }
+            }
+            catch(err) { window.alert("Install();"); }
+            
+            return false;
+            
+        } //function Install()
+        
+        function Custom()
+        {
+            try
+            {
+                var sPage = "Install.htm";                
+                window.location = sPage;
+                Setup.SetProperty("InstallType", "Custom");
+            }
+            catch(err) { window.alert("Custom();"); }
+            
+            return false;
+            
+        } //function Cancel()
+        function Admin()
+        {
+             try
+            {
+            
+                Setup.ExecuteFN('JS_SetAdminProperties');
+                    if ("1" == Setup.GetProperty("CorpSN"))
+                        {
+                            window.location = "AdminSNCorp.htm";
+                        }
+                    else
+                        {
+                window.location = "AdminSN.htm";
+                        }
+                Setup.SetProperty("InstallType", "Admin");
+            }
+            catch(err) { window.alert("Admin();"); }
+            Setup.SetProperty("FromInstallChoose", "1");
+            return false;       
+        
+        }//function Admin()        
+        function OnBodyLoad()
+        {
+            initPage(document.title);
+            //generate size string
+            var str = Setup.getProperty("Str_InstallChoose_InstallSize");
+            str = str.concat(Setup.getProperty("ICA.DiskSpace.Drive.Required.Formatted.0"));
+            str = str.concat(" (");
+            str = str.concat(Setup.getProperty("ICA.DiskSpace.Drive.Size.Formatted.0"));
+            str = str.concat(Setup.getProperty("Str_InstallChoose_InstallSize2"));           
+            id_Size.innerHTML = str;
+            if ("1" == Setup.GetProperty("SHOW_DEPLOY"))
+            {
+                idAdmin.style.display = "Block";
+                if ("1" == Setup.GetProperty("CorpSN"))
+                        {
+                          id_Str_InstallChoose_AdminLink.innerHTML = Setup.getProperty("Str_InstallChoose_AdminOnlineLink");
+                          id_Str_InstallChoose_AdminDesc.innerHTML = Setup.getProperty("Str_InstallChoose_AdminOnlineDesc");
+                        }
+            }			
+        }
+
+        
+    </script>
+    
+    <style type="text/css">
+    
+        .Image
+        {
+	        width: 3em;
+	        height: 3em;
+        }
+
+        
+        a
+        {
+            color: #000000;
+            text-decoration: none;
+            cursor: default;
+        }
+        
+        a:hover
+        {
+            color: #61A706;
+            text-decoration: none;
+            cursor: default;
+        }
+        
+        a:active
+        {
+            color: #61A706;
+            text-decoration: none;
+            cursor: default;
+            border: none;
+        }
+        
+        a:visited
+        {
+            color: #000000;
+            text-decoration: none;
+            cursor: default;
+        }
+
+
+    </style>
+        
+</head>
+<body onload="OnBodyLoad();">
+<div id="dpi"></div>
+                
+                
+    <!-- background -->
+    <div id="idBackGrd">
+<img src="Images/backgrd.png" class="stretch" />
+
+</div>
+	<img id="idBrandingLeft" name="BrandingLeft" src="Images/banner" />  
+    <img id="idClose" alt="" class="CloseBtn" src="Images/close.png" onmouseover="HighLightClose();" onmouseout="UnHighLightClose();" ICA:Function="ICACancelSetup" />
+	<div id="idDragMe" class="Dragable">&nbsp;&nbsp;&nbsp;</div>
+    
+    <!-- page content panel -->
+    <div id="idPanel">
+
+        <div class="DlgHeader" id="id_Str_InstallChoose_Header" ></div>
+  
+        
+        <div id="idInstall" class="DlgBlock" style="top: 4.06em; height: 4.38em;" onclick="Install();" onmouseover="HighLightTypical('id_Str_InstallChoose_Install');" onmouseout="UnHighLightTypical('id_Str_InstallChoose_Install');">
+           
+
+             <img id="idInstallImg" class="Image" src="Images/Typical.png" alt="" />
+            <div id="idTypicalBlock" style="margin-left: 3.75em; width: 34.5em; left: 0em; position: absolute; top: -.2em; height: 5.69em;">
+                <a id="id_Str_InstallChoose_InstallLink" href="InstallChoose.htm" class="Header" onclick="return false;" ></a>
+                <br />
+                <div id="id_Str_InstallChoose_InstallDesc" class="Desc" ></div>
+                <label id="id_Size" class="Desc" ></label>
+
+                
+
+            
+            </div>
+        </div>
+       
+        
+        <div id="idCustom" class="DlgBlock" style="top: 12.94em; height: 4.38em;" onclick="Custom();" onmouseover="HighLightCustom('id_Str_InstallChoose_Custom');" onmouseout="UnHighLightCustom('id_Str_InstallChoose_Custom');">
+            <img id="idCustomImg" class="Image" src="Images/Custom.png" alt="" />
+            <div id="idCustomBlock" style="margin-left: 3.75em; width: 34.5em; left: 0em; position: absolute; top: -.2em; height: 5.69em;">
+                <a id="id_Str_InstallChoose_CustomLink" href="InstallChoose.htm" class="Header" onclick="return false;" ></a>
+                <br />
+                <div id="id_Str_InstallChoose_CustomDesc" class="Desc"></div>
+            </div>
+        </div>
+    
+        <div id="idAdmin" class="DlgBlock" style="top: 21.82em; height: 4.38em; display: none; " onclick="Admin();" onmouseover="HighLightCustom('id_Str_InstallChoose_Admin');" onmouseout="UnHighLightCustom('id_Str_InstallChoose_Admin');">
+            <img id="idAdminImg" class="Image" src="Images/Deployment.png" alt="" />
+            <div id="idAdminBlock" style="margin-left: 3.75em; width: 34.5em; left: 0em; position: absolute; top: -.2em; height: 5.69em;">
+                <a id="id_Str_InstallChoose_AdminLink" href="InstallChoose.htm" class="Header" onclick="return false;" ></a>
+                <br />
+                <div id="id_Str_InstallChoose_AdminDesc" class="Desc"></div>
+            </div>
+        </div>    
+    </div> <!-- div id="idPanel" END -->
+
+    <!-- ------------------------------------------------------------ -->
+    <!-- <div> Wizard Buttons (at bottom of dialog) - START -->
+    <div class="DlgWizardBtns">
+        <table border="0" width="100%">
+            <tr>
+                <td align="left">
+                    <button type="button" ICA:Function="ICACancelSetup" ID="id_Str_Btn_Cancel" ></button>
+                    
+                </td>
+            </tr>
+        </table>
+    </div>  <!-- <div class="DlgBlock"> Wizard Buttons (at bottom of dialog) - END -->
+
+</body>
+</html>

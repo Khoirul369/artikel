@@ -1,0 +1,40 @@
+Peringatan!!:
+Jangan jalankan "setup.exe" dari folder instalasi "x64" 
+aktivasi tidak bekerja. Tidak perlu crack sob, sudah preactivated.
+
+1. Jalankan Install.bat.
+2. Sebelum tekan tombol continue, off antivirus dan extract file setupnya.
+3. Pada file setup klik kanan pilih extract here. password: 1234
+4. Biarkan di pilihan 'I have a serial number' klik Next.
+5. Pilih 'Typical Installation' atau Anda pilih custom, Next.
+6. Tunggu sampai proses instalasi selesai. Kalo sudah lanjut.
+7. Tekan tombol continue.
+8. Done! enjoy masee.
+9. Buka aplikasi CorelDRAW 2021, klik Agree.
+10. Kalo di minta isi email close aja.
+
+Note:
+Off kan sementara antivirus Anda seperti bitdefender, avg, avast, 
+avira, eset, kaspersky, norton dll. Kecuali Windows Defender biarkan 
+ON tidak perlu di OFF kan.
+
+Sebelum antivirus ON tambahkan folder instalasi ke pengecualian 
+deteksi dari antivirus seperti bitdefender dll: C:\Program Files\Corel
+Windows Defender  tidak perlu sudah saya tambah otomatis.
+
+Untuk pengguna windows firewall sudah saya tambahkan otomatis 
+tidak perlu ada tambahan firewall yang lainnya. Bagi pengguna firewall 
+sudah include antivirus seperti bitdefender dll atau ingin menggunakan 
+firewall lain, silakan di tambah sendiri di pengaturan firewall di sarankan 
+blok seluruh folder instalasi C:\Program Files\Corel atau download firewal lain 
+pilih salah satu gan.
+ 
+https://www.binisoft.org/wfc
+https://personalfirewall.comodo.com/
+https://tinywall.pados.hu/
+
+Keterangan:
+Fungsi unblockall menghapus semua pengaturan coreldraw ada di windows firewall.
+
+Admin
+r3ndy.com
